@@ -1,0 +1,74 @@
+---
+layout: post
+title: The Absolute Beginners Guide to Setting Up Craft on Mac
+date: '2013-08-13T10:02:35-05:00'
+tags:
+- local
+- server
+- CMS
+- installation
+- beginner
+- newbie
+- help
+- install
+- set up
+- MAMP
+- Apache
+- XAMPP
+- MySQL
+- Sequel Pro
+- Craft
+- Craft CMS
+tumblr_url: http://unakravets.tumblr.com/post/58150139083/the-absolute-beginners-guide-to-setting-up-craft-on-mac
+---
+<p><span>This blog post assumes that you&#8217;ve never set up any kind of server environment on your system before and have no idea how to get started. It&#8217;s not the only way, but its an inclusive set of directions to follow. If you&#8217;ve already read the </span><span></span><a href="http://docs.buildwithcraft.com/installing/installing.html" target="_blank">Craft Installation Docs</a><span>, and were confused, then this post is for you.</span></p>
+<ol><li>First you&#8217;ll want to install a program like <a href="http://www.mamp.info/" target="_blank">MAMP</a> or XAMPP. These programs basically bundle install Apache, MySQL, and PHP on your system, and make it easy to access them with a GUI that gives you start and stop buttons.</li>
+<li>Install <a href="http://www.sequelpro.com/" target="_blank">Sequel Pro</a> to help you manage your MySQL databases.</li>
+<li>Open MAMP (not MAMP Pro!) and click the &#8220;Start Servers&#8221; button<span><span>.<br/><br/><img alt="image" src="http://media.tumblr.com/1d2b2b164b688f96942c23f30083db09/tumblr_inline_mrec0iBxKR1qz4rgp.png"/></span></span><span><br/><br/></span></li>
+<li>In MAMP, click &#8220;Open Start Page&#8221; button right below &#8220;Start Servers&#8221;. The first chart on this page will show your your login parameters</li>
+<li>Open Sequel Pro and use these parameters to open a connection. Your host should be &#8220;localhost&#8221; or &#8220;127.0.0.1&#8221; and your use name and password are probably both &#8220;root.&#8221;<br/><img alt="image" src="http://media.tumblr.com/09f96e89575144a4a4b349c49efd1bfa/tumblr_inline_mrec19sE301qz4rgp.png"/><br/><br/></li>
+<li>After hitting &#8220;Connect,&#8221; create a new database by clicking Database &gt; Add Database, or option + shift + A. Name your database something that makes sense to your project.</li>
+<li>Go to <a href="http://buildwithcraft.com" target="_blank">buildwithcraft.com</a> and install the latest version of Craft.</li>
+<li>Unzip the file and place it in the httdocs folder inside of the MAMP Application.</li>
+<li>Navigate to craft/config/db.php and open the db.php file in any text editor.</li>
+<li>Edit this file with your MySQL and database information. If you used MAMP, yours will look similar to this example, except for the database name:
+<pre><code>&lt;?php 
+
+return array(
+
+/**
+ * The database server name or IP address.
+ */
+'server' =&gt; '127.0.0.1',
+
+/**
+ * The database username to connect with.
+ */
+'user' =&gt; 'root',
+
+/**
+ * The database password to connect with.
+ */
+'password' =&gt; 'root',
+
+/**
+ * The name of the database to select.
+ */
+'database' =&gt; 'unicorns',
+
+/**
+ * The prefix to use when naming tables. This can be no more than 5 characters.
+ */
+'tablePrefix' =&gt; 'craft',
+
+);</code></pre>
+</li>
+<li>Rename your &#8220;htaccess&#8221; file to &#8220;.htaccess&#8221; (just add a &#8220;.&#8221; in front of it) and delete the web config file. This can be tricky, as your computer may complain. If it says that this is a reserved name, make sure to go to enable hidden files. To do this, open your Terminal and type in:
+<pre><code>defaults write com.apple.Finder AppleShowAllFiles YES
+</code></pre>
+Restart finder and try to rename the file again.</li>
+<li>At this point, if you followed those instructions directly, you should be able to go to localhost/Craft/public/admin or 127.0.0.1/Craft/public/admin in your web browser. This is how you will access the admin panel later.</li>
+<li>From here, press the big Install button and let Craft take you through the setup process</li>
+<li>Your (public-facing) website should be accessible at localhost/Craft/public or 127.0.0.1/Craft/public/</li>
+</ol><p>Read about my experience using Craft to build <a href="http://proofessor.co" target="_blank">Proofessor</a> <a href="http://viget.com/extend/behind-the-scenes-building-proofessor" target="_blank">HERE</a>. That post will also show you how to get a little fancier and set up a virtual host. It also shows you the back end of how to actually use Craft.</p>
+<p>If you get confused, don&#8217;t feel shy to ask any questions here, or email me at una@ukrave.us. I&#8217;d be happy to help! <br/><br/><strong>TL;DR: A super beginner guide to installing Craft (similar to any CMS, really) </strong></p>

@@ -1,0 +1,115 @@
+---
+layout: post
+title: Creating a Truly "Cut Out" Div
+date: '2013-05-13T13:38:00-05:00'
+tags:
+- design
+- HTML
+- CSS
+- SVG
+- masking
+- mask
+- cut-out
+- effects
+- see-through
+- demo
+tumblr_url: http://unakravets.tumblr.com/post/50352178165/creating-a-truly-cut-out-div
+---
+<p class="p1">For a project at <a href="http://nclud.com" target="_blank">work</a>, I wanted to make a div with a true cut out &#8212; one that that wasn&#8217;t bound to clipped images, and didn&#8217;t affect any other page elements. It would essentially be a basic frame.</p>
+
+<p class="p3"><span class="s1">The internet says &#8220;</span>You first need to understand that a div in HTML<em> Cannot be Masked or Clipped</em> through SVG.&#8221; &#8212; April 2012.</p>
+<p class="p3"><br/>I politely disagree, so here we go:</p>
+
+<p class="p2"></p>
+<h3 class="teal"><strong>mask-box-image:</strong></h3>
+
+<p class="p1">This is absolutely the easiest method, but only works in Webkit browsers.</p>
+
+<p class="p1">WATCH THIS:</p>
+<pre><code>
+#clouds {
+  -webkit-mask-box-image: url(logo.svg);
+}
+</code></pre>
+<div class="greycode">
+
+</div>
+<p class="p1">//DONE. That&#8217;s basically all the code you need to knock out a div. Truly awesome. You just link to the .svg file, and you&#8217;re finished.</p>
+
+<p class="p1">Usage: -webkit-mask-box-image works for Google Chrome 1.0+ and Firefox 4.0+</p>
+
+<p class="p1">If this was all we needed to do, that would make our lives SO much easier, but unfortunately you need a little more work than that. In order to get the same effect for Firefox, we&#8217;ll need to create a clipPath and reference it in the CSS with clip-path (bear with me here). </p>
+
+<p class="p2"></p>
+<h3 class="teal"><strong>clipPath vs. clip-path</strong></h3>
+
+<p class="p1">Ladies and gentlemen, let me break the shocking news to you that sometimes code makes no sense.</p>
+
+<p class="p1">Exhibit A: clipPath&#160;!= clip-path</p>
+
+<p class="p1"><strong>clipPath</strong> is an SVG property which can only be used inside of the SVG element (sorry, for lack of better term) area as a way to tell the browser &#8220;only fill in this space&#8221;. You use it as a clipPath tag, as a means of essentially &#8220;drawing&#8221; a path (and it&#8217;s easy to just place an image behind it to have it crop that image). The only technical difference between clipPath and a regular SVG rendering except for the fact that you must tag it as one in order to use it as a clipping path:</p>
+
+<p class="p1"><strong>clip-path</strong> is a CSS property (only supported by Firefox right now &#8212; unfortunately!) which lets you separate your path and your div, and clip an entire div. YES! A div! With things animating inside of it, and any background properties you could ever want! This doesn&#8217;t just limit your clipping abilities to static images, but it opens up a whole slew of options.</p>
+
+<p class="p1">The clip-path <strong>definition</strong> <em>references</em> a clipPath <strong>element, s</strong>o they are interrelated in the sense that you can&#8217;t have one without the other.</p>
+<pre><code>
+&lt;html&gt;
+   &lt;svg width="100px" height="100px"&gt;
+       &lt;clipPath id="clipName"&gt;
+              &lt;!-- DRAW SVG HERE --&gt;
+       &lt;/clipPath&gt;
+     &lt;/svg&gt;
+&lt;/html&gt;
+
+&lt;style&gt;
+     #divname{
+          clip-path: url(#clipName);
+     }   
+&lt;/style&gt;
+</code></pre>
+<p class="p1">Usage: clip-path works in Firefox 3.5+</p>
+
+<h3 class="teal"><strong>CSS Masking</strong></h3>
+<p class="p2"></p>
+<p class="p1">I leave masking for last because it&#8217;s kind of mysterious (no pun intended) and flakey. However, it works in much the same way as the more specified -webkit-mask-box-image (it&#8217;s essentially the same thing if you add the suffix &#8220;top left / cover&#8221; to the end of your mask. This should work for newer versions of Opera and MS based browsers with vendor prefixes, but Firefox seems to dislike linking to .svg files and would need you to embed a mask (VERY MUCH like a clipPath) onto the page like this:</p>
+<pre><code>
+&lt;html&gt;
+     &lt;svg width="100px" height="100px"&gt;
+       &lt;mask id="maskName"&gt;
+              &lt;!— DRAW SVG HERE —&gt;
+       &lt;/mask&gt;
+     &lt;/svg&gt;
+&lt;/html&gt;
+&lt;style&gt;
+     #divname{
+          mask: url(#maskName);
+     }   
+&lt;/style&gt;
+</code></pre>
+<p class="p1">I used masking in this little demo to cover -o and -ms systems (and -webkit because who knows what&#8217;s going to happen in a few weeks with Chrome <a href="http://prng.net/blink-faq.html" target="_blank">Blink</a>). However, for Firefox, I chose the clipPath/ clip-path route instead. Give the site a second to see the animation pass by.</p>
+<p class="p1"><a href="http://unakravets.com/demos/cutoutdiv" target="_blank"><strong>HERE IS THE DEMO </strong></a></p>
+
+<p class="p2"></p>
+<h3 class="teal"><strong>Other Options</strong></h3>
+
+<p class="p1"><strong>Canvas:</strong></p>
+
+<p class="p1">Broken down simply, once you make your canvas element, these two lines are essentially what  gives you a &#8220;knock-out&#8221;:</p>
+<div class="greycode">
+
+<p class="p1">ctx.globalCompositeOperation = &#8216;destination-out&#8217;; //this tells you that you want to &#8220;destination-out&#8221; (knock-out) the following:</p>
+<p class="p1">ctx.fillText(&#8220;Hello&#8221;, 120, 50); //this is the text (in this case) or it can be an image image that you&#8217;re knocking out.</p>
+
+</div>
+<p class="p1"><strong>cut out .svg / .png</strong></p>
+
+<p class="p1">Lastly, the way it&#8217;s been done in the past is by creating a cut out .png file or .svg file overlaid as a background image or inserted image on a div. The .png may be your best option for older browsers, though is in my opinion, not as cool.</p>
+
+<p class="p1"><strong>TL;DR: <a href="http://unakravets.com/demos/cutoutdiv" target="_blank">SEE THE DEMO</a></strong></p>
+
+<p class="p2"></p>
+
+<p class="p1">Further Resources:</p>
+<p class="p7"><a href="http://docs.webplatform.org/wiki/css/properties/clip-path" target="_blank">http://docs.webplatform.org/wiki/css/properties/clip-path</a> <br/><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-mask-box-image" target="_blank">https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-mask-box-image</a> <br/><a href="https://developer.mozilla.org/en-US/docs/SVG/Element/clipPath" target="_blank">https://developer.mozilla.org/en-US/docs/SVG/Element/clipPath</a> <br/><a href="https://developer.mozilla.org/en-US/docs/Applying_SVG_effects_to_HTML_content" target="_blank">https://developer.mozilla.org/en-US/docs/Applying_SVG_effects_to_HTML_content</a><span class="s3"> </span> <br/><a href="http://trentwalton.com/2011/05/19/mask-image-text/" target="_blank">http://trentwalton.com/2011/05/19/mask-image-text/</a> <br/><a href="http://sawyerhollenshead.com/writing/23/using-svg-clippath/" target="_blank">http://sawyerhollenshead.com/writing/23/using-svg-clippath/</a><span class="s3"> </span></p>
+
+<p class="p1">The background used in the demo was chosen to prove the interdependence of the cutout element from anything else on the page (and b/c it makes me smile). It&#8217;s from an awesome resource called the code player. You can watch a walkthrough of how to make it here: <a href="http://thecodeplayer.com/walkthrough/pure-css3-animated-clouds-background" target="_blank"><span class="s4"><a href="http://thecodeplayer.com/walkthrough/pure-css3-animated-clouds-background" target="_blank">http://thecodeplayer.com/walkthrough/pure-css3-animated-clouds-background</a></span></a> </p>

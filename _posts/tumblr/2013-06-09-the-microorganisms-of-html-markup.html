@@ -1,0 +1,56 @@
+---
+layout: post
+title: The Microorganisms of HTML Markup
+date: '2013-06-09T00:44:00-05:00'
+tags:
+- HTML
+- semantic
+- markup
+- HTML5
+- ARIA
+- schema
+- schema.org
+- microformats
+- microdata
+tumblr_url: http://unakravets.tumblr.com/post/52518639462/the-microorganisms-of-html-markup
+---
+<p class="p1">This week, I started my new internship at <a href="http://www.viget.com" title="Viget" target="_blank">Viget</a>(!), and read through a super impressive, organized list of their standards and best practices. In doing so, I came across two interesting concepts that I had previously never heard of: microformats and microdata.</p>
+<p class="p1">Here is a brief summary of each and what the difference is between them:</p>
+
+<h3 class="teal"><strong>Microformats</strong></h3>
+<p class="p1">Microformats are a community-based approach to marking up content based on previous usage patterns (a lot of people refer to this approach as “paving the cowpaths”). They are essentially an open set of standards and HTML patterns used for items such as blog posts, resumes, calendars, reviews, etc.</p>
+<p class="p1">Though you can use microformats for a variety of content, the most popular use is definitely the hcard – which is basically like a business card for your website. To create one, you first wrap a block of content in a “vcard” to state that it is a microformat – then use basic hcard properties such as fn (fullname), email, tel, etc. in a class inside of the vcard. Some properties (such as name and adr (address)) have an additionally specific level of markup. Adr, for instance, allows you to specify postal-code, region, and locality. Here’s an example:</p>
+<pre><code>&lt;div class="vcard"&gt;&lt;span class="fn"&gt;Harry Potter&lt;/span&gt;
+      &lt;img class="photo" src="http://harrypotter.com/profile.jpg"/&gt;
+      &lt;a class="email" href="mailto:harry@harrypotter.com"&gt;Email&lt;/a&gt;
+      &lt;div class="adr"&gt;
+           &lt;div class="street-address"&gt;4 Privet Drive&lt;/div&gt;
+           &lt;span class="locality"&gt;Little Whinging&lt;/span&gt;,
+           &lt;div class="postal-code"&gt;39203&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;time class="bday"&gt;1992-22-07&lt;/time&gt; birthday
+      &lt;div class="category"&gt;wizard&lt;/div&gt;
+      &lt;div class="note"&gt;The boy who lived.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p class="p7">If that confused you, try referring to this handy <a href="http://microformats.org/code/hcard/creator" target="_blank"><span class="s3">hcard generator</span></a>.</p>
+<p class="p7">Microformats have been around for a while, and had the strongest impact around the time <a href="http://coding.smashingmagazine.com/2007/05/04/microformats-what-they-are-and-how-to-use-them/" target="_blank">this article</a> was written in 2007. Though they are still discussed and highly debated, official implementation for most of the specification has been spotty, and community momentum has since shifted.</p>
+
+<h3 class="teal"><strong>Microdata</strong></h3>
+<p class="p1">Used by popular search engines such as Google and Yahoo, microdata is a set of markup vocabulary that makes it easier for search engines to parse through your website and pull out key information. You can mark up any html element by using this vocabulary, but it seems to be best suited to blocks of information, because the syntax is organized in a hierarchal outline of schemas (hence, the reference page is <a href="http://schema.org/" target="_blank"><span class="s3">schema.org</span></a>).</p>
+<p class="p1">Basically, you mark up the containing element of a data block as an “itemscope,” which you can further specify by adding an “itemtype,” linking that to a section of the schema website. You would then specify each bit of information through an “itemprop.” Don’t be confused. Here is a basic example:</p>
+<pre><code>&lt;div itemscope itemtype ="http://schema.org/Event"&gt;
+    &lt;h1 itemprop="name"&gt; Webcatz Conf &lt;/h1&gt;
+        &lt;span&gt;Date:
+               &lt;span itemprop="startDate"&gt; June 5, 2014 &lt;/span&gt;
+               &lt;span itemprop="endDate"&gt; June 7, 2014 &lt;/span&gt;
+        &lt;/span&gt;
+       &lt;span&gt;Featuring:
+                &lt;span itemprop="performer"&gt; Nyan Cat &lt;/span&gt;
+       &lt;/span&gt;
+  &lt;a href="../afterparties/NyanCatDisco"itemprop="subEvent"&gt; Official Disco After Party &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+<p class="p1">Microdata is the preferred method now because it is being concretely used and currently being implemented by search engines and applications (mostly Google is to blame for popularizing this). It gives a great way to organize and mark up data, as broad as “person,” and as specific as the <a href="http://schema.org/Joint" target="_blank"><span class="s3">“biomechanicalClass” of a joint.</span></a> I don’t even know what that is&#8230; and I literally couldn’t make it up. It’s actually pretty fun (if you&#8217;re a nerd like me &lt;3) to read through the <a href="http://schema.org/docs/full.html" target="_blank"><span class="s3">entire list</span></a> of schemas.</p>
+<p><br/><br/></p>
+<p class="p1"><strong>TL;DR: Mark up is good for you &amp; your site.</strong></p>
+<p class="p10"><span> </span></p>
+<p class="p10"><span>(&amp; another great </span><a href="http://html5doctor.com/lets-talk-about-semantics/" target="_blank">article</a><span> for further reference.)</span></p>
