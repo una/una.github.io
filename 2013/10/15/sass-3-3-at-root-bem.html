@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Sass 3.3 @at-root & BEM!</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">Almost Profound</a></h1>
+            <a class="extra" href="/">home</a>
+          </div>
+
+          <h2>Sass 3.3 @at-root & BEM!</h2>
+<p class="meta">15 Oct 2013</p>
+
+<div class="post">
+<p><strong>NOTE: THIS ARTICLE IS OUT OF DATE AS OF MARCH 2014. SEE <a href="http://unakravets.tumblr.com/2014/03/06/sass-snippets-the-almighty-ampersand.html" target="_blank">THIS ONE</a> ABOUT USING AMPERSANDS FOR BEM INSTEAD</strong></p>
+
+<p>A few months ago, when I was interning at <a href="http://viget.com" title="viget" target="_blank">Viget</a>, I found myself engaged in a conversation about naming conventions. Tommy had read <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/" title="BEM" target="_blank">an article</a> about BEM (Block, Element, Modifier) syntax and was explaining the practicality of its use to me. Sure, it seemed like a good idea, but being a little stubborn, I thought of it as a passing trend, and never actually used it.</p>
+
+<p>Well, yesterday I was at <a href="http://sassconf.com" title="sassconf" target="_blank">SassConf</a> (which was AWESOME by the way), where they showed us new features of Sass 3.3! And it brought back this whole idea of BEM syntax. It really does make a lot of sense &#8212; and with the new @at-root directive, your code for it is about to get a whole lot cleaner.</p>
+
+
+
+<h3>Woah, New Sass Stuff!</h3>
+
+<p>First off, to <strong>install the brand new version of Sass: </strong>just make sure you have Ruby installed (it already is on Macs), then open terminal and type:</p>
+
+<pre><code> gem install sass --pre </code></pre>
+
+<p><strong>YAY! Now you have the latest version of Sass! </strong>Go get a treat! Be aware that this is an unreleased version since it&#8217;s still in development, but why not start playing around in it now?</p>
+
+<p>You can see the feature list <a href="https://github.com/nex3/sass/blob/master/doc-src/SASS_CHANGELOG.md" title="new sass" target="_blank"><strong>here</strong></a>!</p>
+
+<h3>A quick primer on BEM:</h3>
+
+<p>In short, BEM (Block, Element, Modifier) uses the following pattern of naming conventions for classes:</p>
+
+<pre><code>block{} //the section of content
+.block__element{} //an individual element inside of the content section
+.block--modifier{} //specifically edited element pieces </code></pre>
+
+<p>Take the following example:</p>
+
+<p><img alt="image" src="http://media.tumblr.com/fbc56ec89928775a6fe2fa07e924e3cd/tumblr_inline_mup2hsHJRB1rk3ey5.png"/></p>
+
+<p>There is a header, some text, and some colored links inside of the text. You could break up the elements in the speech bubble like this:</p>
+
+<pre><code>.speech-bubble{}
+.speech-bubble__header{}
+.speech-bubble__text{}
+.speech-bubble__text--link{}</code></pre>
+
+
+
+<h3>Lets Get Sassy</h3>
+
+<p>This new @at-root feature allows nesting in your Sass files without nesting the output! That&#8217;s great for structuring your files without sacrificing speed and efficient output! So let&#8217;s see what happens when we try to nest now (I&#8217;m also using BEM syntax, and this makes absolutely no sense to do):</p>
+
+<h3>SCSS:</h3>
+
+<pre>// Nesting: (this aint cute. never do this)
+.speech-bubble{
+ color: purple;
+  .speech-bubble__header{
+    color: orange;
+    }
+    .speech-bubble__text{
+     color: black;
+     .speech-bubble__text--link{
+       color: green;
+    }
+  }
+} </pre>
+
+<h3>CSS Output:</h3>
+
+<pre>.speech-bubble {
+  color: purple; }
+  .speech-bubble .speech-bubble__header {
+    color: orange; }
+  .speech-bubble .speech-bubble__text {
+    color: black; }
+    .speech-bubble .speech-bubble__text .speech-bubble__text--link {
+      color: green; }</pre>
+
+<p><strong>Yikes!! </strong>But let&#8217;s see what @at-root will do for us!</p>
+
+<h3>SCSS:</h3>
+
+<pre>// Nesting, but using @at-root
+.speech-bubble{
+  color: purple;
+   @at-root #{&amp;}__header{
+    color: orange;
+  }
+   @at-root #{&amp;}__text{
+    color: black;
+     @at-root #{&amp;}--link{
+      color: green;
+    }
+  }
+}</pre>
+
+<h3>CSS Output:</h3>
+
+<pre>.speech-bubble {
+  color: purple; }
+  .speech-bubble__header {
+    color: orange; }
+  .speech-bubble__text {
+    color: black; }
+    .speech-bubble__text--link {
+      color: green; }</pre>
+
+
+
+<p>Now, that&#8217;s SO much better!</p>
+
+<p>You can also get fancier with @at-root by using rules such as &#8220;with&#8221; and &#8220;without.&#8221; You can use this, for example, as a different approach to writing media queries.</p>
+
+<h3>SCSS:</h3>
+
+<pre>@media screen and (max-width: 320px){
+  .sidebar {
+    width: 40%;
+    @at-root (without: media screen) {
+      width: 100%;
+    }
+  }
+}</pre>
+
+<h3>CSS Output:</h3>
+
+<pre>@media screen and (max-width: 320px) {
+  .sidebar {
+    width: 40%; } 
+}
+  .sidebar {
+    width: 100%; }</pre>
+
+
+
+<p>For more information on the new Sass features, make sure to read <a href="https://github.com/nex3/sass/blob/master/doc-src/SASS_CHANGELOG.md" target="_blank">the Changelog</a>, and stay tuned for more posts from SassConf!</p>
+
+<p><strong>TL;DR: @at-root is great for nesting without the efficiency loss</strong></p>
+
+<h3>Edit:</h3>
+
+<p>After all of the awesome discussion going on in the comments, <a href="https://twitter.com/ScottKellum" title="scott" target="_blank">Scott Kellum</a> created this<a href="http://sassmeister.com/gist/6994632" title="mixin" target="_blank"> gist</a> to make the syntax of @at-root more concise (read: pretty). So using that mixin&#8222; the earlier example would look like this:</p>
+
+<h3>Scott&#8217;s Rad Mixins:</h3>
+
+<pre>//elements get appended with "__" and the $name
+@mixin e($name) {
+  @at-root   #{&amp;}__#{$name} {
+    @content;
+  }
+}
+
+//modifiers get appended with "--" and the $name
+@mixin m($name) {
+  @at-root   #{&amp;}--#{$name} {
+    @content;
+  }
+}</pre>
+
+<h3>SCSS</h3>
+
+<pre>.speech-bubble{
+  color: purple;
+   @include e(header){ //header element
+    color: orange;
+  }
+   @include e(text){ //text element
+    color: black;
+     @include m(link){ //link modifier
+      color: green;
+    }
+  }
+}</pre>
+
+<p>And we get the same CSS output!</p>
+
+<h3>CSS Output:</h3>
+
+<pre>.speech-bubble {
+  color: purple; }
+  .speech-bubble__header {
+    color: orange; }
+  .speech-bubble__text {
+    color: black; }
+    .speech-bubble__text--link {
+      color: green; }</pre>
+
+<p>Thank&#8217;s Scott!</p>
+
+</div>
+
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Your Name is<br />
+                What You Are<br />
+                you@example.com
+              </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>
