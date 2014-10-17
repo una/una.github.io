@@ -1,0 +1,121 @@
+.menu-section {
+	@include transition-duration(0.5s);
+	width: 100%;
+	
+	&.on {
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	display: block;
+	background-color: rgba(105,105,105,0.95);
+	position: fixed;
+	top:0;
+	bottom:0;
+	}
+}
+
+.menu-section__toggle {
+	width: 40px;
+	height: 30px;
+	position: fixed;
+	top: 20px;
+	right: 25px;
+	cursor: pointer;
+	z-index: 100;
+	
+	&.on {
+		.toggle--1 {
+			@include transform(rotate(45deg) translate(7px, 7px));
+		}
+
+		.toggle--2 {
+			opacity: 0;
+		}
+
+		.toggle--3 {
+			@include transform (rotate(-45deg) translate(8px, -10px));
+		}
+	}
+
+	@include breakpoint($phone-horiz) {
+		position: absolute;
+	}
+}
+
+.toggle--1,
+.toggle--2,
+.toggle--3 {
+	@include transition-duration(0.3s);
+	width: 100%;
+	height: 5px;
+	background: lighten($color--grey, 20%);
+	margin: 6px auto;
+	backface-visibility: hidden;
+}
+
+nav ul{
+	margin: 0;
+	padding: 0;
+	font-family: Open Sans;
+	list-style: none;
+	margin: 4em auto;
+	text-align: center;
+	
+	&.hidden {
+		display: none;
+	}
+		
+		a {
+		@include transition-duration(0.5s);
+		@include fontsize(40);
+		text-decoration: none;
+		color: white;
+		font-weight: 800;
+		line-height: 1.5;
+		width: 100%;
+		display: block;
+			&:hover,
+			&:focus {
+				background-color: rgba(255,255,255,0.8);
+				color: $color--grey;
+				outline: none;
+				-webkit-appearance: none;
+			}
+
+		@include breakpoint($small-tab) {
+			@include fontsize(35);
+		}
+		@include breakpoint($phone-horiz) {
+			@include fontsize(25);
+		}
+	}
+}
+
+.headroom--unpinned {
+	top: -75px;
+}
+
+.headroom--pinned {
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	
+	&.homepage {
+		.toggle--1,
+		.toggle--2,
+		.toggle--3 {
+			background: white;
+		}
+	}
+	
+	.toggle--1,
+	.toggle--2,
+	.toggle--3 {
+		background: $color--grey;
+	}
+}
+
+.logo {
+	color: white;
+	padding: 1em;
+}

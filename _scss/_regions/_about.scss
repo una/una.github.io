@@ -1,0 +1,70 @@
+.about--main {
+	max-width: 80%;
+	margin: 50px 0 -3px -10%;
+	
+	@include breakpoint(max-width 46.5em) {
+		margin: 20px 0 -3px 8%;
+	}
+}
+
+.about-page {
+	background-color: white;
+	overflow: hidden;
+}
+
+.about--info {
+	display: block;
+	max-width: 500px;
+	z-index: 2;
+	position: absolute;
+	left: 54%;
+	top: 16em;
+	
+	@include breakpoint(max-width 46.5em) {
+		left: 0;
+		top: 1em;
+		padding: 1em;
+		max-width: 100%;
+		position: relative;
+	}
+	
+	h2 {
+		margin-left: 0;
+		
+		@include breakpoint($tab-horiz) {
+			@include fontsize(28)
+		}
+	}
+
+	p {
+		@include fontsize(12);
+		margin-left: 0;
+		
+		@include breakpoint($layout-break) {
+			@include fontsize(10)
+		}
+	}
+
+	a {
+		color: $color--hotpink;
+		&:hover {
+			background: $color--hotpink;
+			color: white;
+		}
+
+		&.pull-link {
+			background: $color--hotpink;
+			color: white;
+			@include fontsize(12);
+			
+			&:hover {
+				background: white;
+				color: $color--hotpink;
+			}
+		}
+	}
+
+	span {
+		font-weight: 800;
+	}
+}

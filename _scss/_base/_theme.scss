@@ -1,0 +1,28 @@
+@mixin theme-me($color) {
+	color: $color;
+}
+
+%orange,
+.orange {
+	@include theme-me($color--orange);
+}
+
+%gold,
+.gold {
+	@include theme-me($color--gold);
+}
+
+%blue,
+.blue {
+	@include theme-me($color--blue);
+}
+
+%hotpink,
+.hotpink {
+	@include theme-me($color--hotpink);
+}
+
+%white,
+.white {
+	color: white;
+}

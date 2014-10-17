@@ -1,0 +1,91 @@
+footer {
+	padding: 6rem 1rem;
+	position: relative;
+	z-index: 10; 
+	
+	@include breakpoint($small-tab) {
+		padding: 3rem 1rem;
+	}
+
+	p {
+		@extend %white;
+		@include fontsize(12);
+		color: white;
+		line-height: 1.4;
+		margin: 3rem auto 0;
+		text-align: center;
+
+		@include breakpoint($phone-horiz) {
+			@include fontsize(10)
+		}
+
+		a {
+			color: $color--hotpink;
+			&:hover {
+				background: $color--hotpink;
+				color: white;
+			}
+		}
+	}
+}
+
+.footer--solid {
+	background-color: $color--grey;
+}
+
+.social-icons {
+	li {
+		display: inline-block;
+		a {
+			@include fontsize(24);
+			text-decoration: none;
+			color: white;
+			
+			&.icon-twitter:hover {
+				color: #55acee;
+			}
+
+			&.icon-dribbble:hover {
+				color: #ea4c89
+			}
+
+			&.icon-paragraph-left:hover {
+				color: #0ba6ab;
+			}
+
+			&.icon-pencil:hover {
+				color: #f86960;
+			}
+
+			&.icon-codepen:hover {
+				color: #666666;
+			}
+
+			&.icon-github2:hover {
+				color: #76cc1e;
+			}
+
+			&.icon-vimeo:hover {
+				color: #44bbff;
+			}
+
+			&.icon-linkedin:hover {
+				color: #0e76a8;
+			}
+
+			&.icon-mail2:hover {
+				color: gold;
+			}
+
+			@include breakpoint($small-tab) {
+				@include fontsize(20);
+				display: block;
+				margin: 0.5em; 
+			}
+
+			.tooltip {
+				width: 120px;
+			}
+		}
+	}
+}

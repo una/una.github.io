@@ -1,0 +1,21 @@
+// REM Font Size
+@mixin fontsize($size){
+	font-size: $size * 1.6px;
+	font-size: $size * 0.1rem;
+}
+
+//Animations
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content; 
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@-ms-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	} 
+}

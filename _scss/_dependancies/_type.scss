@@ -1,0 +1,37 @@
+//Specifying Font Families
+%font-copy {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300; 
+}
+
+%font-title {
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-weight: 900; 
+}
+
+%font-title-sm {
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-weight: 800; 
+}
+
+%font-blockquote {
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-weight: 400; 
+}
+
+
+//Font style helpers
+.uppercase,
+%uppercase {
+	text-transform: uppercase;
+}
+
+.lowercase,
+%lowercase {
+	text-transform: lowercase;
+}
+
+.italic,
+%italic {
+	font-style: italic;
+}
