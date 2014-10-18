@@ -21,9 +21,8 @@ margin-bottom: -0.7em;
 
 <h4>SCSS</h4>
 
-<p><code></code></p>
-
-<pre>.unicorn {
+```
+.unicorn {
   background-color: blue;
   &amp;:hover {
     outline: 2px solid yellow;
@@ -38,15 +37,14 @@ margin-bottom: -0.7em;
     }
   }
 }
-</pre>
+```
 
 
 
 <h4>CSS Output</h4>
 
-<p><code></code></p>
-
-<pre>.unicorn {
+```
+.unicorn {
   background-color: blue;
 }
 .unicorn:hover {
@@ -60,7 +58,8 @@ margin-bottom: -0.7em;
 }
 .unicorn.pink:hover {
   outine: 2px solid green;
-}</pre>
+}
+```
 
 
 
@@ -72,9 +71,8 @@ margin-bottom: -0.7em;
 
 <h4>SCSS</h4>
 
-<p><code></code></p>
-
-<pre>.unicorn {
+```
+.unicorn {
   .set-one &amp; {
     display: none;
   }
@@ -84,21 +82,22 @@ margin-bottom: -0.7em;
   .sidebar &amp; {
     font-size: 80%;
   }
-}</pre>
+}
+```
 
 
 
 <h4>CSS Output</h4>
 
-<p><code></code></p>
-
-<pre>.set-one .unicorn {
+```
+.set-one .unicorn {
   display: none;
 }
 
 .sidebar .button--large {
   font-size: 80%;
-}</pre>
+}
+```
 
 
 
@@ -106,9 +105,8 @@ margin-bottom: -0.7em;
 
 <h4>SCSS</h4>
 
-<p><code></code></p>
-
-<pre>@mixin highlight() {
+```
+@mixin highlight() {
   color: coral;
   .sub-nav &amp;, 
   .active &amp;, 
@@ -116,21 +114,20 @@ margin-bottom: -0.7em;
     background-color: gold; 
   }
 }
-li a { @include highlight; }</pre>
-
+li a { @include highlight; }
+```
 
 
 <h4>CSS Output</h4>
 
-<p><code></code></p>
-
-<pre>li a {
+```
+li a {
   color: coral;
 }
 .sub-nav li a, .active li a, .sidebar li a {
   background-color: gold;
 }
-</pre>
+```
 
 
 
@@ -142,9 +139,8 @@ li a { @include highlight; }</pre>
 
 <h4> Previous Markup (Sass 3.3rc1) </h4>
 
-<p><code></code></p>
-
-<pre>.speech-bubble{
+```
+.speech-bubble{
   color: purple;
    @at-root #{&amp;}__header{
     color: orange;
@@ -156,13 +152,12 @@ li a { @include highlight; }</pre>
     }
   }
 }
-</pre>
+```
 
 <h4> New Markup (Sass 3.3rc3) </h4>
 
-<p><code></code></p>
-
-<pre>.speech-bubble{
+```
+.speech-bubble{
   color: purple;
    &amp;__header{
     color: orange;
@@ -174,13 +169,12 @@ li a { @include highlight; }</pre>
     }
   }
 }
-</pre>
+```
 
 <h3> The result (CSS Output) </h3>
 
-<p><code></code></p>
-
-<pre>.speech-bubble{
+```
+.speech-bubble{
   color: purple; 
 }
 .speech-bubble__header{
@@ -192,7 +186,7 @@ li a { @include highlight; }</pre>
 .speech-bubble__text--link{
       color: green; 
 }
-</pre>
+```
 
 <p><a href="http://www.alwaystwisted.com/post.php?s=2014-02-27-even-easier-bem-ing-with-sass-33" target="_blank">Scott&#8217;s Post</a> is another great read on this topic.
 <br/><br/></p>
@@ -205,28 +199,26 @@ li a { @include highlight; }</pre>
 
 <h4>SCSS</h4>
 
-<p><code></code></p>
-
-<pre>.column--half {
+```
+.column--half {
   color: dimgrey;
   &amp; + &amp; {
     margin-left: 30px;
   }
-}</pre>
-
+}
+```
 
 
 <h4>CSS Output </h4>
 
-<p><code></code></p>
-
-<pre>.column--half {
+```
+.column--half {
   color: dimgrey;
 }
 .column--half + .column--half {
   margin-left: 30px;
-}</pre>
-
+}
+```
 
 
 <p>This gives both of the &#8216;column&#8212;half&#8217; class elements the same color (dimgrey), but only the second &#8216;column&#8212;half&#8217; element will get the left margin. The first one will flush left of the page.</p>
