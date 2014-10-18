@@ -13,9 +13,10 @@ layout: default
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 
 <script src="{{site.baseurl}}/js/vendor/highlight.pack.js"></script>
+
 <script>
 	$(document).ready(function() {
-		$('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+		$('pre code, code').each(function(i, e) {hljs.highlightBlock(e)});
 	});
 </script>
-<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/zenburn.min.css">
+

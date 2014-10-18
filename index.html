@@ -1,36 +1,27 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: Almost Profound
 ---
 
-<div id="home">
-<!--   <h1>Blog Posts</h1>
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-      	<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      	<span>{{ post.date | date_to_string }}</span>
-      	<p>{{ post.subtitle }}</p>
-      </li>
-    {% endfor %}
-  </ul>
- -->
- {% for post in paginator.posts %}
- <div class="post-preview">
+<div class="home">
+	
+<ul class="post-list">
+{% for post in paginator.posts %}
+ <li class="post-preview">
      <a href="{{ post.url | prepend: site.baseurl }}">
          <h2 class="post-title">
              {{ post.title }}
          </h2>
          {% if post.subtitle %}
-         <h3 class="post-subtitle">
+         <p class="post-subtitle">
              {{ post.subtitle }}
-         </h3>
+         </p>
          {% endif %}
      </a>
-     <p class="post-meta">Posted by {{ post.author }} on {{ post.date | date: "%B %-d, %Y" }}</p>
- </div>
- <hr>
+     <p class="post-meta">Posted on {{ post.date | date: "%B %-d, %Y" }}</p>
+ </li>
  {% endfor %}
+</ul>
 
  <!-- Pager -->
  {% if paginator.total_pages > 1 %}

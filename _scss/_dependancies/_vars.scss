@@ -2,13 +2,14 @@
 $color--orange: #ff6347; //tomato rgb(255,99,71)
 $color--blue: #6495ed; //cornflowerblue rgb(100,149,237)
 $color--gold: #ffd700; //gold rgb(255,215,0)
-$color--grey: #696969; // dimgray rgb(105,105,105)
+$color--darkgrey: #696969; // dimgray rgb(105,105,105)
+$color--lightgrey: #eee; // light grey
 $color--offwhite: #fffacd; // lemonchiffon rgb(255,250,205)
 $color--hotpink: #ff69b4; // hotpink
 
 $color--bg: white;
-$color--copy: $color--grey;
-$color--copy--dark: darken($color--grey, 15);
+$color--copy: $color--darkgrey;
+$color--copy--dark: darken($color--darkgrey, 15);
 
 // BREAKPOINTS
 $phone-vert: max-width 20em; // 20em (320px)

@@ -1,27 +1,36 @@
+// h1 { font-size: 64px }
+// h2 { font-size: 47.5px }
+// h3 { font-size: 32px }
+// h4 { font-size: 23.75px }
+ 
+// p { font-size: 16px }
+ 
+// small { font-size: 8px }
+
 h1 {
-	@include fontsize(48);
+	@include fontsize(47.5);
 	@extend %font-title;
 	@extend %blue;
 }
 
 h2 {
-	@include fontsize(42);
+	@include fontsize(32);
 	@extend %font-title;
 }
 
 h3 {
 	@extend %font-title-sm;
-	@include fontsize(16);
+	@include fontsize(23.75);
 	font-weight: 800;
 }
 
 p {
 	color: $color--copy;
-	line-height: 1.6;
+	line-height: 2;
 }
 
 a {
-	@extend %font-blockquote;
-	transition-duration: .5s;
-	padding: 0 0.2em;
+	// @extend %font-blockquote;
+	@extend %transition;
+	// padding: 0 0.2em;
 }

@@ -24,5 +24,15 @@
 
 %white,
 .white {
-	color: white;
+	@include theme-me(white);
+}
+
+%darkgrey,
+.darkgrey {
+	@include theme-me($color--darkgrey);
+}
+
+%lightgrey,
+.lightgrey {
+	@include theme-me($color--lightgrey);
 }

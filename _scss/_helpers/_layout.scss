@@ -69,3 +69,8 @@ blockquote.right {
 .clearfix {
 	clear: both;
 }
+
+%transition,
+.transition {
+	transition-duration: .5s;
+}
