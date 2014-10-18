@@ -12,5 +12,8 @@
 @import "_base/type";
 @import "_base/code-syntax";
 
+@import "_regions/footer.scss";
+
 @import "_components/lists";
 @import "_components/posts";
+@import "_components/tooltips";

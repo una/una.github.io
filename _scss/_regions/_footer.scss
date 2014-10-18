@@ -3,21 +3,21 @@ footer {
 	position: relative;
 	z-index: 10; 
 	
-	@include breakpoint($small-tab) {
-		padding: 3rem 1rem;
-	}
+	// @include breakpoint($small-tab) {
+	// 	padding: 3rem 1rem;
+	// }
 
 	p {
-		@extend %white;
+		// @extend %white;
 		@include fontsize(12);
-		color: white;
+		// color: white;
 		line-height: 1.4;
 		margin: 3rem auto 0;
 		text-align: center;
 
-		@include breakpoint($phone-horiz) {
-			@include fontsize(10)
-		}
+		// @include breakpoint($phone-horiz) {
+		// 	@include fontsize(10)
+		// }
 
 		a {
 			color: $color--hotpink;
@@ -30,7 +30,7 @@ footer {
 }
 
 .footer--solid {
-	background-color: $color--grey;
+	background-color: $color--darkgrey;
 }
 
 .social-icons {
@@ -39,7 +39,6 @@ footer {
 		a {
 			@include fontsize(24);
 			text-decoration: none;
-			color: white;
 			
 			&.icon-twitter:hover {
 				color: #55acee;
@@ -77,11 +76,11 @@ footer {
 				color: gold;
 			}
 
-			@include breakpoint($small-tab) {
-				@include fontsize(20);
-				display: block;
-				margin: 0.5em; 
-			}
+			// @include breakpoint($small-tab) {
+			// 	@include fontsize(20);
+			// 	display: block;
+			// 	margin: 0.5em; 
+			// }
 
 			.tooltip {
 				width: 120px;
