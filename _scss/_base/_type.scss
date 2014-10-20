@@ -30,9 +30,12 @@ p {
 }
 
 a {
-	// @extend %font-blockquote;
 	@extend %transition;
-	// padding: 0 0.2em;
+  color: $color--links;
+
+  &:hover {
+    color: $color--blue;
+  }
 }
 
 @font-face {

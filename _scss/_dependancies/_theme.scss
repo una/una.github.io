@@ -1,3 +1,9 @@
+// COLOR THEME
+$color--links: $color--hotpink;
+$color--bg: white;
+$color--copy: $color--darkgrey;
+$color--copy--dark: darken($color--darkgrey, 15);
+
 @mixin theme-me($color) {
 	color: $color;
 }

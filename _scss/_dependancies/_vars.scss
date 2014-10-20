@@ -7,10 +7,6 @@ $color--lightgrey: #eee; // light grey
 $color--offwhite: #fffacd; // lemonchiffon rgb(255,250,205)
 $color--hotpink: #ff69b4; // hotpink
 
-$color--bg: white;
-$color--copy: $color--darkgrey;
-$color--copy--dark: darken($color--darkgrey, 15);
-
 // BREAKPOINTS
 $phone-vert: max-width 20em; // 20em (320px)
 $phone-horiz: max-width 30em; // 30em (480px)

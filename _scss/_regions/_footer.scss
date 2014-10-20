@@ -34,12 +34,18 @@ footer {
 }
 
 .social-icons {
+	@extend %center;
+
 	li {
 		display: inline-block;
+		
 		a {
 			@include fontsize(24);
-			text-decoration: none;
-			
+			border-bottom: none;
+			color: $color--copy;
+
+
+			// these hovers are all brand-color specific
 			&.icon-twitter:hover {
 				color: #55acee;
 			}
@@ -73,7 +79,7 @@ footer {
 			}
 
 			&.icon-mail2:hover {
-				color: gold;
+				color: $color--gold;
 			}
 
 			// @include breakpoint($small-tab) {
