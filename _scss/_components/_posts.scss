@@ -2,3 +2,7 @@
 	max-width: 800px;
 	margin: 0 auto;
 }
+
+.post {
+	@extend %pink-links;
+}

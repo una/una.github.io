@@ -1,5 +1,4 @@
-.post-list {
-
+%post-list {
 	max-width: 700px;
 	margin: 0 auto;
 
@@ -13,19 +12,31 @@
 			background-color: $color--lightgrey;
 		}
 	}
-}
 
-ul {
-	margin: 1em auto;
+	ul {
+		margin: 1em auto;
 
-	li {
-		margin-left: 3em;
-		margin-bottom: .5em;
+		li {
+			margin-left: 3em;
+			margin-bottom: .5em;
+		}
+	}
+
+	a {
+		border-bottom: 1px solid currentColor;
+		padding-bottom: .05em;
 	}
 }
 
-a {
-	border-bottom: 1px solid currentColor;
-	padding-bottom: .05em;
+.post-list--home {
+	@extend %post-list;
 }
 
+
+.post-list--archive {
+	@extend %post-list;
+	
+	h2 {
+		@include fontsize(16);
+	}
+}

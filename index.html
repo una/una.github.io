@@ -5,7 +5,7 @@ title: Almost Profound
 
 <div class="home">
 	
-<ul class="post-list">
+<ul class="post-list--home">
 {% for post in paginator.posts %}
  <li class="post-preview">
      <a href="{{ post.url | prepend: site.baseurl }}">
@@ -39,3 +39,5 @@ title: Almost Profound
  </ul>
  {% endif %}
 </div>
+
+<button><a href="/archive.html" class="view-all"> View All Posts</a></button>

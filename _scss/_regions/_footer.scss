@@ -1,4 +1,5 @@
 footer {
+	
 	padding: 6rem 1rem;
 	position: relative;
 	z-index: 10; 
@@ -8,9 +9,8 @@ footer {
 	// }
 
 	p {
-		// @extend %white;
+		@extend %pink-links;
 		@include fontsize(12);
-		// color: white;
 		line-height: 1.4;
 		margin: 3rem auto 0;
 		text-align: center;
@@ -18,15 +18,9 @@ footer {
 		// @include breakpoint($phone-horiz) {
 		// 	@include fontsize(10)
 		// }
-
-		a {
-			color: $color--hotpink;
-			&:hover {
-				background: $color--hotpink;
-				color: white;
-			}
-		}
 	}
+
+
 }
 
 .footer--solid {
@@ -43,7 +37,6 @@ footer {
 			@include fontsize(24);
 			border-bottom: none;
 			color: $color--copy;
-
 
 			// these hovers are all brand-color specific
 			&.icon-twitter:hover {

@@ -1,0 +1,26 @@
+header {
+	@extend %transition;
+	position: absolute;
+	width: 100%;
+	background: white;
+	z-index: 10;
+	top: 0;
+	opacity: 1;
+
+	.title {
+		@include fontsize(16);
+		margin: 1rem;
+	}
+
+
+	&.headroom--unpinned {
+		top: -75px;
+		opacity: 0;
+	}
+
+	&.headroom--pinned {
+		position: fixed;
+		top: 0;
+		
+	}
+}

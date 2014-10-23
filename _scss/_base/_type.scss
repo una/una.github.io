@@ -31,10 +31,17 @@ p {
 
 a {
 	@extend %transition;
-  color: $color--links;
+}
 
-  &:hover {
-    color: $color--blue;
+%pink-links {
+  a {
+    color: $color--links;
+    padding: 0 .2em;
+
+    &:hover {
+      background: $color--hotpink;
+      color: white;
+    }
   }
 }
 
