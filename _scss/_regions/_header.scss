@@ -2,7 +2,7 @@ header {
 	@extend %transition;
 	position: absolute;
 	width: 100%;
-	background: white;
+	
 	z-index: 10;
 	top: 0;
 	opacity: 1;
@@ -21,6 +21,10 @@ header {
 	&.headroom--pinned {
 		position: fixed;
 		top: 0;
-		
+		background: white;
+	}
+
+	&.headroom--top {
+		background: none;
 	}
 }

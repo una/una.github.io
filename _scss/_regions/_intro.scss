@@ -1,0 +1,56 @@
+.intro {
+	@include fontsize(18);
+	background: lavender;
+	padding: 4em 2em;
+
+	p {
+		max-width: 700px;
+		@extend %center;
+		font-weight: 400;
+	}
+
+	a {
+		text-decoration: underline;
+	}
+}
+
+
+// pattern mixin
+@mixin intro-pattern($bg-primary,$bg-secondary) {
+  background:
+    repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 1em,
+    rgba($bg-secondary,0.4) 0,
+    rgba($bg-secondary,0.1) 2em,
+    transparent 0,
+    transparent 1em,
+    rgba($bg-secondary,0.3) 0,
+    rgba($bg-secondary,0.2) 4em,
+    transparent 0,
+    transparent 1em,
+    rgba($bg-primary,0.6) 0,
+    rgba($bg-primary,0.2) 2em
+  ),
+  repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 1em,
+    rgba($bg-secondary,0.4) 0,
+    rgba($bg-secondary,0.1) 2em,
+    transparent 0,
+    transparent 1em,
+    rgba($bg-secondary,0.3) 0,
+    rgba($bg-secondary,0.2) 4em,
+    transparent 0,
+    transparent 1em,
+    rgba($bg-primary,0.4) 0,
+    rgba($bg-primary,0.1) 2em
+  ), #FFF;
+  // background-blend-mode: multiply;
+}
+.intro {
+  height: 100%;
+  @include intro-pattern(#c0ebfa, #7FD7F5);
+}

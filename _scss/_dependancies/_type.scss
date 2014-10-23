@@ -1,7 +1,12 @@
 //Specifying Font Families
 %font-copy {
 	font-family: 'Open Sans', sans-serif;
-	font-weight: 300; 
+	font-weight: 300;
+}
+
+%font-pull {
+	@extend %font-copy;
+	font-style: italic;
 }
 
 %font-title {

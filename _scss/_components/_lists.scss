@@ -2,6 +2,16 @@
 	max-width: 700px;
 	margin: 0 auto;
 
+	h2 {
+		color: darkturquoise;
+		margin-bottom: .2em;
+	}
+
+	.post-meta {
+		margin-bottom: .7em;
+		color: grey;
+	}
+
 	li {
 		list-style: none;
 		padding: 1em 1em 2em;
@@ -37,6 +47,7 @@
 	@extend %post-list;
 	
 	h2 {
-		@include fontsize(16);
+		@include fontsize(14);
+		font-weight: 500;
 	}
 }

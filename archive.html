@@ -5,14 +5,14 @@ title: Archive
 
 <div class="archive">
   <h1>Blog Archive</h1>
-  <ul class="post-list--archive">
-    {% for post in site.posts %}
-    <a href="{{ post.url }}">
+    <ul class="post-list--archive">
+      {% for post in site.posts %}
       <li>
-      	<h2>{{ post.title }}</h2>
-      	<span>{{ post.date | date_to_string }}</span>
-      </li>
-    </a>
-    {% endfor %}
+      <a href="{{ post.url }}">
+        	<h2>{{ post.title }}</h2>
+        	<span class="post-meta">{{ post.date | date_to_string }}</span>
+      </a>
+    </li>
+      {% endfor %}
   </ul>
 </div>
