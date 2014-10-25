@@ -6,19 +6,19 @@
 // small { font-size: 8px }
 
 h1 {
-	@include fontsize(47.5);
+	@include fontsize(32);
 	@extend %font-title;
 	@extend %blue;
 }
 
 h2 {
-	@include fontsize(32);
+	@include fontsize(23.75);
 	@extend %font-title;
 }
 
 h3 {
 	@extend %font-title-sm;
-	@include fontsize(23.75);
+	@include fontsize(18);
 	font-weight: 800;
 }
 

@@ -75,11 +75,11 @@ footer {
 				color: $color--gold;
 			}
 
-			// @include breakpoint($small-tab) {
-			// 	@include fontsize(20);
-			// 	display: block;
-			// 	margin: 0.5em; 
-			// }
+			@include breakpoint($small-tab) {
+				@include fontsize(20);
+				display: block;
+				margin: 0.5em; 
+			}
 
 			.tooltip {
 				width: 120px;

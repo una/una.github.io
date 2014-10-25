@@ -2,7 +2,6 @@ header {
 	@extend %transition;
 	position: absolute;
 	width: 100%;
-	
 	z-index: 10;
 	top: 0;
 	opacity: 1;
@@ -22,9 +21,11 @@ header {
 		position: fixed;
 		top: 0;
 		background: white;
+		border-bottom: 1px solid $color--lightgrey;
 	}
 
 	&.headroom--top {
 		background: none;
+		border-bottom: none;
 	}
 }

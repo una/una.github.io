@@ -1,20 +1,3 @@
-.intro {
-	@include fontsize(18);
-	background: lavender;
-	padding: 4em 2em;
-
-	p {
-		max-width: 700px;
-		@extend %center;
-		font-weight: 400;
-	}
-
-	a {
-		text-decoration: underline;
-	}
-}
-
-
 // pattern mixin
 @mixin intro-pattern($bg-primary,$bg-secondary) {
   background:
@@ -50,7 +33,38 @@
   ), #FFF;
   // background-blend-mode: multiply;
 }
+
 .intro {
+  @include fontsize(18);
+  background: lavender;
+  padding: 2em;
   height: 100%;
-  @include intro-pattern(#c0ebfa, #7FD7F5);
+  // @include intro-pattern(#c0ebfa, #7FD7F5);
+
+  p {
+    max-width: 700px;
+    @extend %center;
+    font-weight: 400;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+
+.self-portrait {
+  // width: 150px;
+  // height: 150px;
+  // border-radius: 50%;
+  // background-image: url('../images/una-kravets.jpg');
+  // background-position: 50%;
+  // background-size: cover;
+  width: 330px;
+  height: 360px;
+  background-image: url('../images/me-sketchtransp.gif');
+  margin: 1em auto;
+  background-size: 100%;
+  background-repeat: no-repeat;
+
 }
