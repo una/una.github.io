@@ -2,6 +2,7 @@
 layout: post
 title: How to Become a Keyboard Ninja &colon; The Sticky Note Method
 permalink: /keyboard-ninja
+header-bg: http://unakravets.com/temp/keyboard-ninja-ex.jpg
 date: '2014-10-21'
 tags:
 - workflow
@@ -11,33 +12,31 @@ tags:
 subtitle: The keyboard, where our hands are placed most of the time (as developers), is the fastest navigation method by default. Knowing how to navigate yours system via keyboard will really optimize your workflow.
 ---
 
-The keyboard, where our hands are placed most of the time (as developers), is the fastest navigation method by default. I always think devs look so slick and badass when navigating their systems without touching their trackpad/mouse. They're like little ninjas -- slick, fast and know how to move with ease. 
-
+The keyboard, where our hands are placed most of the time (as developers), is the fastest navigation method by default. I always think devs look so slick and badass when navigating their systems without touching their trackpad/mouse. They're like little ninjas -- slick, fast and know how to move with ease.
 
 If you're not convinced yet, let's break it down:
 
 1. Performance optimization &mdash; you care about it on your projects. Why not care about it in your workflow?
-2. Switching between a keyboard and mouse is clunky and error-prone and fumbly. Like runon sentances.
-3. You'll look like you know what you're doing. (And thats what really matters anyway :P)
+2. Switching between tabs and windows and a keyboard and mouse is clunky and error-prone and fumbly. Like runon sentances.
+3. You'll look like you know what you're doing. (Isn't that reason enough? :P)
 
 ## The Sticky Note Method
 
-If you want to become a keyboard ninja try putting a sticky note (or two) on the top of your trackpad. Why? because a few things:
+If you want to become a keyboard ninja, try putting a sticky note (or two) on the top of your trackpad. Why? because a few things:
 
-1. It will remind you not to use it, causing you to Google alternative navigation flows (you'll learn a lot)
+1. It will remind you not to use it, causing you to Google alternative navigation flows (you'll learn a lot this way)
 2. You can still easily access the trackpad by simply lifting the sticky note from below or on the edge (where you'd be accessing it anyway)
 
-Make sure to write down new shortcuts you learn on that sticky note -- use a felt tip pen so you don't need to press too hard and accidently click on something. When you've covered your sticky with shortcut reminders, put it somewhere visible for a while. Soon, you'll have a great collection of shortcuts you find useful, and will quickly memorize them!
+Make sure to write down new shortcuts you learn on that sticky note &mdash; use a felt tip pen so you don't need press too hard and accidentally click on something.
 
-To use this method with a mouse &mdash; not a track pad &mdash; put the sticky underneath the mouse to disable the motion sensor. You'll need a seperate one to write new commands down on.
+When you've covered your sticky with shortcut reminders, put it somewhere visible for a while (i.e. next to your track pad on your laptop or on your desk). Soon, you'll have a great collection of shortcuts you find useful, and will quickly memorize them!
 
--- IMAGE HERE OF THE STICK NOTE SYSTEM --
-One sticky allows you to navigate from the side (beginner method)
+To use this method with a mouse &mdash; not a track pad &mdash; put the sticky underneath the mouse to disable the motion sensor. You'll need a separate sticky to write new commands down on.
 
--- IMAGE OF TWO STICKIES --
-Two stickies allow more room for shortcut notes and a more difficult keyboard access point
+![](http://unakravets.com/temp/keyboard-ninja-ex.jpg)
 
 ## A few Things I've learned:
+
 - `cmd + w` closes a tab (general rule)
 - `ctrl + tab` navigates my tabs (general rule)
 - Use the terminal to make and navigate files
@@ -48,15 +47,19 @@ Two stickies allow more room for shortcut notes and a more difficult keyboard ac
 
 ## Some Tools to Help!
 
- - Download [Alfred](http://alfredapp.com) to help your workflow out a TON. Alfred is a great tool for navigating not only your applications but also acts as an awesome quick Google search tool. **HIGHLY Recommend** for future keyboard ninjas!
- - There's a great [Sublime Text plugin](https://github.com/miguelgraz/FocusFileOnSidebar) that will help you focus on which file you have open. Type `cmd + k, cmd + f` to open the sdiebar right to the directory of the current file.
+- Download [Alfred](http://alfredapp.com) to help your workflow out a TON. Alfred is a great tool for navigating not only your applications but also acts as an awesome quick Google search tool. **HIGHLY Recommend** for future keyboard ninjas!
+- There's a great [Sublime Text plugin](https://github.com/miguelgraz/FocusFileOnSidebar) that will help you focus on which file you have open. Type `cmd + k, cmd + f` to open the sdiebar right to the directory of the current file.
 
- ## More Fun Resources
+*TIP: when first practicing moving files in terminal, have a text editor with a sidebar open (`cmd + k, cmd + b`) so you can visually see the changes. This is also a great way to illustrate how git works. *
+
+## More Fun Resources
 
 - [Chrome Shortcuts](https://support.google.com/chrome/answer/157179?hl=en&ref_topic=25799)
 - [Sublime Text Shortcuts](http://katiek2.github.io/most/)
 - [Getting Started with Terminal](http://ashleynolan.co.uk/blog/getting-started-with-terminal)
 - [How to Become an ST2 Power User w/@wesbos Slides](http://wesbos.github.io/Sublime-Text-Power-User-Talk)
 - [Become an Alfred Expert](http://mac.appstorm.net/how-to/utilities-how-to/become-an-alfred-expert-advanced-tips-tricks/)
+- [General Table of Keyboard Shortcuts](http://en.wikipedia.org/wiki/Table_of_keyboard_shortcuts)
+- [Keyboard Shortcuts for Bash](http://www.howtogeek.com/howto/ubuntu/keyboard-shortcuts-for-bash-command-shell-for-ubuntu-debian-suse-redhat-linux-etc/)
 
 This is a growing list. Feel free to contribute your thoughts and ideas on improving workflow!

@@ -11,7 +11,6 @@ tags:
 subtitle: The Media Queries 4 spec brings insight to technological capabilities that are coming up soon (this is based on the Editor’s Draft, October 10, 2014).
 ---
 
-<br>
 Media queries are infants. The first Media Query public working draft was published in 2001, and they became a W3C recommendation after [browser support](http://caniuse.com/#search=media%20queries) increased in 2012. 2012! **That's TWO years!** Hard to believe, considering how essential they've become in our web workflows today. Media queries are most often used to build flexible [web designs](http://mediaqueri.es/) which adapt to various browsers properties. Here are some [pointers](https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/use-media-queries?hl=en) from the smart people at Google.
 
 ### Media Query Capabilities

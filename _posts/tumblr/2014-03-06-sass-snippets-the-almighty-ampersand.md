@@ -9,11 +9,7 @@ tags:
 - '3.3'
 tumblr_url: http://unakravets.tumblr.com/post/78744593423/sass-snippets-the-almighty-ampersand
 ---
-<p><img src="https://31.media.tumblr.com/2adcb547462d0c1332af3030ccda9f2d/tumblr_inline_n3tqzrPLlI1rk3ey5.gif" alt=""/></p>
-
-<p><style>h4 {
-margin-bottom: -0.7em;
-}</style></p>
+<img src="https://31.media.tumblr.com/2adcb547462d0c1332af3030ccda9f2d/tumblr_inline_n3tqzrPLlI1rk3ey5.gif" alt=""/>
 
 <h3>The Basics</h3>
 

@@ -6,10 +6,14 @@
 		@extend %clearfix;
 		&:first-child {
 		  font-size: 115%;
+		  border-left: 1px solid hotpink;
+		  padding-left: 1em;
+		  margin-bottom: 1em;
 		}
 	}
 
-	ul {
+	ul,
+	ol {
 		margin: 1em 3em;
 		color: $color--copy;
 	}

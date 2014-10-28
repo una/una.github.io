@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="post-intro">
+<div class="post-intro" {% if page.header-bg %}style='background: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("{{ page.header-bg }}")' {% endif %}>
 	<h1>{{ page.title }}</h1>
 	<p class="meta">{{ page.date | date_to_string }}</p>
  </div>
