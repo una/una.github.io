@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Media Queries of the Future!</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!-- MOBILE SETTINGS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+
+  <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,900|Open+Sans:300italic,400,700,300|Oleo+Script+Swash+Caps:700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.min.css">
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-36758177-1']);
+      _gaq.push(['_setDomainName', 'unakravets.com']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+</head>
+<body>
+
+    <header class="headroom">
+  <h1 class="title"><a href="/">Almost Profound</a></h1>
+
+  <div class="menu-section">
+	<div class="menu-section__toggle">
+		<div class="toggle--1"></div>
+		<div class="toggle--2"></div>
+		<div class="toggle--3"></div>
+	</div>
+	<nav>
+		<ul role="navigation" class="hidden">
+			<li><a href="/">Home</a></li>
+			<li><a href="/archive.html">Archive</a></li>
+			<li><a href="http://unakravets.com/about">About</a></li>
+		</ul>
+	</nav>
+</div>
+
+</header>
+
+     <h1>Media Queries of the Future!</h1>
+<p class="meta">16 Oct 2014</p>
+
+<div class="post">
+<p><br>
+Media queries are infants. The first Media Query public working draft was published in 2001, and they became a W3C recommendation after <a href="http://caniuse.com/#search=media%20queries">browser support</a> increased in 2012. 2012! <strong>That&#39;s TWO years!</strong> Hard to believe, considering how essential they&#39;ve become in our web workflows today. Media queries are most often used to build flexible <a href="http://mediaqueri.es/">web designs</a> which adapt to various browsers properties. Here are some <a href="https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/use-media-queries?hl=en">pointers</a> from the smart people at Google.</p>
+
+<h3>Media Query Capabilities</h3>
+
+<p>If you&#39;re familiar with building responsive websites, you&#39;re probably familiar with something like: <code>@media screen and (max-width: 700px)</code>, but did you know that you can use media queries to specify how to handle <strong>paged braille printers</strong> or <strong>TVs</strong> or how to use <strong><a href="http://css-tricks.com/logic-in-media-queries/">logic</a></strong> in your media queries? Yeah, they&#39;re pretty rad.</p>
+
+<p>Here&#39;s a list of current media types you can target:</p>
+
+<ul>
+<li><code>all</code> — all the media types below</li>
+<li><code>braille</code>* — braille tactile feedback devices</li>
+<li><code>embossed</code>* — paged braille printers</li>
+<li><code>handheld</code>* — handheld devices like mobile phones</li>
+<li><code>print</code> — printed material</li>
+<li><code>projection</code>* — projected presentations</li>
+<li><code>screen</code> — color computer screens</li>
+<li><code>speech</code> — speech synthesizers</li>
+<li><code>tty</code>* — teletypes, terminals, and other devices with limited display capabilities</li>
+<li><code>tv</code>* — televisions and television like devices</li>
+</ul>
+
+<p><small>&ast; = deprecated as media <strong>types</strong>, but can be used similarly as media <strong>features</strong> -- read on)</small></p>
+
+<p>And this is what you can specify (expressions) for each of those media types:</p>
+
+<ul>
+<li><code>width</code> — width of the current window</li>
+<li><code>height</code> — height of the current window</li>
+<li><code>device-width</code> — width of the device</li>
+<li><code>device-height</code> — height of the device</li>
+<li><code>orientation</code> — either landscape or portrait</li>
+<li><code>aspect-ratio</code> — aspect ratio of the current window</li>
+<li><code>device-aspect-ratio</code> — aspect ratio of the device</li>
+<li><code>color</code> — number of color bits per color component</li>
+<li><code>color-index</code> — number of available colors on the device</li>
+<li><code>monochrome</code> — number of bits per pixel in a monochrome frame buffer</li>
+<li><code>resolution</code> — resolution of the device</li>
+<li><code>scan</code> — either progressive or interlace</li>
+<li><code>grid</code> — is the device grid-based?</li>
+</ul>
+
+<p>This list was stolen from <a href="http://cssmediaqueries.com/what-are-css-media-queries.html">here</a>, by the way.</p>
+
+<h3>Responsive Beyond the Browser Size</h3>
+
+<p>Media queries are most often used for their screen size properties to allow for <strong>&quot;Responsive Web Design&quot;</strong>, or <strong>RWD</strong>. But viewing &quot;responsive design&quot; as just a means for detecting screen sizes and browsers is narrow-minded. Responsive principles go far past the browser and stretch into the real world — how can the products we design respond to a users location, or the weather, or the lighting? How can we really personalize experiences for our users?</p>
+
+<p>Well media queries are helping us get one step closer! As devices are able to detect more, browsers are keeping up to date with these capabilities.</p>
+
+<h2>The Future of Media Queries</h2>
+
+<p>The <a href="http://dev.w3.org/csswg/mediaqueries-4/">Media Queries 4</a> spec brings insight to technological capabilities that are coming up soon (this is based on the Editor’s Draft, October 10, 2014).</p>
+
+<h3>Media Features vs Types</h3>
+
+<p><em>One important distinction to note is that all of the **media types</em>* listed above will eventually become deprecated and replaced with more specific <strong><a href="http://dev.w3.org/csswg/mediaqueries-4/#mq-features">media features</a></strong> *</p>
+
+<p>Media features are always wrapped in parentheses and combined with the <code>and</code> keyword rather than being separated with semicolons.</p>
+
+<p>Here&#39;s an example from the spec:
+<pre><code>(color) and (min-width: 600px)
+</code></pre></p>
+
+<h3>@media (light-level) : dim | normal | washed</h3>
+
+<p>The <code>light-level</code> media feature is for detection <strong>ambient lighting</strong>. <em>(Ambient is such a fun word)</em>.</p>
+
+<p>Values:</p>
+
+<ul>
+<li><code>dim</code> — lighting in a dim environment (i.e. nighttime)</li>
+<li><code>normal</code> — lighting in the &quot;ideal screen range&quot;</li>
+<li><code>washed</code> — lighting in an overly bright environment (i.e. broad daylight)</li>
+</ul>
+
+<p>Here&#39;s an example:
+<pre><code>// change text coloring due to lighting for better legibility</p>
+
+<p>@media (light-level: dim) {
+  body { background: dimgrey;
+         color: white;
+    }
+}</p>
+
+<p>@media (light-level: washed) {
+  body { background: white;
+         color: black;
+         font-size: 2em;
+    }
+}
+</code></pre></p>
+
+<h3>@media (pointer) : none | course | fine</h3>
+
+<p>The <code>pointer</code> media feature detects the <strong>presence and accuracy of a pointing device</strong>.</p>
+
+<p>Values:</p>
+
+<ul>
+<li><code>none</code> — there is no pointing device present (i.e. TV, printer)</li>
+<li><code>course</code> — the primary input mechanism is of limited accuracy (i.e. Nintendo Wii, Kinect, Google Glass)</li>
+<li><code>fine</code> — the primary input mechanism is an accurate pointing device (i.e. stylus, mouse, touchpad)</li>
+</ul>
+
+<p>Here&#39;s an example:
+<pre><code>// Make input larger for inaccurate pointing devices</p>
+
+<p>@media (pointer:coarse) {
+  input[type=&quot;text&quot;] {
+    font-size: 3em;
+    padding: .5em;
+  }
+}
+</code></pre></p>
+
+<h3>@media (hover) : none | on-demand | hover</h3>
+
+<p>The <code>hover</code> media feature detects the ability of the primary pointing mechanism to hover over elements.</p>
+
+<p>Values:</p>
+
+<ul>
+<li><code>none</code> — there primary pointing mechanism can&#39;t hover</li>
+<li><code>on-demand</code> — the user can hover but it requires significant action (i.e. touch screens)</li>
+<li><code>fine</code> — the primary pointing system can easily hover</li>
+</ul>
+
+<p><small> &ast; If different input devices have different characteristics, there are also <code>any-pointer</code> and <code>any-hover</code> media features </small></p>
+
+<p>Here&#39;s an example:
+<pre><code>//If hover is difficult, display the menu differently</p>
+
+<p>@media (hover:none) and (hover:on-demand) {
+  .menu {
+    display: block;
+    position absolute;
+    ...
+  }
+}
+</code></pre></p>
+
+<h3>@media (update-frequency) : none | slow | normal</h3>
+
+<p>The <code>update-frequency</code> media feature is used to query the ability of the output device to modify the appearance of content once it has been rendered.</p>
+
+<p>Values:</p>
+
+<ul>
+<li><code>none</code> — once rendered, the layout will not update (i.e. printed materials)</li>
+<li><code>slow</code> — the layout may change dynamically but not smoothly (i.e. e-ink displays)</li>
+<li><code>normal</code> — the output device is not constrained</li>
+</ul>
+
+<p>Here&#39;s an example (stolen right from the spec):
+<pre><code>//If a page styles its links to only add underlines on hover, 
+// it may want to always display underlines when printed:</p>
+
+<p>a {
+  text-decoration: none;
+}</p>
+
+<p>a:hover, a:focus {
+  text-decoration: underline;
+}</p>
+
+<p>@media (update-frequency: none) {
+  a {
+    text-decoration: underline;
+    }
+}
+</code></pre></p>
+
+<h3>@media (scripting) : none | initial-only | enabled</h3>
+
+<p>The <code>scripting</code> media feature detects <strong>whether or not Javascript is enabled</strong> in the browser.</p>
+
+<p>Values:</p>
+
+<ul>
+<li><code>none</code> — scripting is not supported by the user agent, or innactive</li>
+<li><code>enabled</code> — scripting is supported and active</li>
+<li><code>initial-only</code> — scripting is supported on initial page load, but not afterwards</li>
+</ul>
+
+<p>This section also borrowed heavily from the these <a href="http://www.slideshare.net/yiibu/the-future-of-mediaqueries">slides</a>, which break down the information from the spec really well.</p>
+
+<p>Remember, it has only been 2 years since the general adoption of media queries and responsive web design. If this is just the beginning, then where are they heading next?</p>
+
+</div>
+
+<!-- syntax highlighting -->
+<script src="/js/vendor/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+<script src="/js/vendor/highlight.pack.js"></script>
+
+<script>
+	$(document).ready(function() {
+		$('pre code, code').each(function(i, e) {hljs.highlightBlock(e)});
+	});
+</script>
+
+
+
+    <footer role="contentinfo">
+	<ul class="social-icons">
+		<li><a href="http://twitter.com/una" target="_blank" class="has-tooltip icon-twitter"><span class="tooltip">Twitter</span></a></li>
+		<li><a href="http://dribbble.com/una" target="_blank" class="has-tooltip icon-dribbble"><span class="tooltip">Dribbble</span></a></li>
+		<li><a href="http://github.com/una" target="_blank" class="has-tooltip icon-github2"><span class="tooltip">Github</span></a></li>
+		<li><a href="http://vimeo.com/unakravets" target="_blank" class="has-tooltip icon-vimeo"><span class="tooltip">Vimeo</span></a></li>
+		<li><a href="http://blog.unakravets.com" target="_blank" class="has-tooltip icon-paragraph-left"><span class="tooltip">Blog</span></a></li>
+		<li><a href="http://sketchbook.unakravets.com" target="_blank" class="has-tooltip icon-pencil"><span class="tooltip">Sketchbook</span></a></li>
+		<li><a href="http://codepen.io/unax3" target="_blank" class="has-tooltip icon-codepen"><span class="tooltip">Codepen</span></a></li>
+		<li><a href="http://www.linkedin.com/pub/una-kravets/30/827/a35/" target="_blank" class="has-tooltip icon-linkedin"><span class="tooltip">LinkedIn</span></a></li>
+		<li><a href="mailto:una@ukrave.us?subject=Hello There!&amp;body=Hi Una, so I was looking at your portfolio and..." class="has-tooltip icon-mail2"><span class="tooltip">Email</span></a></li>
+	</ul>
+	<p>&copy; <a href="http://github.com/una/portfolio-2014" target="_blank">Una Kravets</a> 2014. Made with lots of &hearts;. View the <a href="http://github.com/una/una.github.io" target="_blank">source code</a>.
+	</p>
+</footer>
+
+<script src="../js/vendor/jquery-1.11.0.min.js"></script>
+<script src="//cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
+<script src="../js/scripts.js"></script>
+
+  </body>
+</html>
