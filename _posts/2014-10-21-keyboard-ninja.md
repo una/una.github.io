@@ -13,6 +13,7 @@ subtitle: The keyboard, where our hands are placed most of the time (as develope
 
 The keyboard, where our hands are placed most of the time (as developers), is the fastest navigation method by default. I always think devs look so slick and badass when navigating their systems without touching their trackpad/mouse. They're like little ninjas -- slick, fast and know how to move with ease. 
 
+
 If you're not convinced yet, let's break it down:
 
 1. Performance optimization &mdash; you care about it on your projects. Why not care about it in your workflow?

@@ -25,9 +25,25 @@
 	h3 {
 		color: $color--lighterpink;
 	}
+
+	img {
+		margin: 1em auto;
+	}
 }
 
-.post-meta {
-	@extend %font-pull;
-	@include fontsize(10);
+.post-intro {
+	background: lightslategrey;
+	padding: 2em;
+
+	h1 {
+		@extend %container;
+		color: white;
+	}
+
+	.meta {
+		@extend %container;
+		@extend %font-pull;
+		color: lightgrey;
+	}
 }
+
