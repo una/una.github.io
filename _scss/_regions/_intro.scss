@@ -1,50 +1,20 @@
-// pattern mixin
-@mixin intro-pattern($bg-primary,$bg-secondary) {
-  background:
-    repeating-linear-gradient(
-    -45deg,
-    transparent,
-    transparent 1em,
-    rgba($bg-secondary,0.4) 0,
-    rgba($bg-secondary,0.1) 2em,
-    transparent 0,
-    transparent 1em,
-    rgba($bg-secondary,0.3) 0,
-    rgba($bg-secondary,0.2) 4em,
-    transparent 0,
-    transparent 1em,
-    rgba($bg-primary,0.6) 0,
-    rgba($bg-primary,0.2) 2em
-  ),
-  repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 1em,
-    rgba($bg-secondary,0.4) 0,
-    rgba($bg-secondary,0.1) 2em,
-    transparent 0,
-    transparent 1em,
-    rgba($bg-secondary,0.3) 0,
-    rgba($bg-secondary,0.2) 4em,
-    transparent 0,
-    transparent 1em,
-    rgba($bg-primary,0.4) 0,
-    rgba($bg-primary,0.1) 2em
-  ), #FFF;
-  // background-blend-mode: multiply;
-}
-
 .intro {
   @include fontsize(18);
-  // background: lavender;
-  padding: 2em;
+  @extend %container;
+  @extend %center;
   height: 100%;
-  // @include intro-pattern(#c0ebfa, #7FD7F5);
 
   p {
-    max-width: 700px;
     @extend %center;
+    @extend %pink-aside;
     font-weight: 400;
+    border-right: none;
+    border-left: 1px solid #ff69b4;
+    margin: 16em 0 0;
+    max-width: 330px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 1rem;
   }
 
   a {
@@ -60,8 +30,8 @@
   // background-image: url('../images/una-kravets.jpg');
   // background-position: 50%;
   // background-size: cover;
-  width: 330px;
-  height: 360px;
+  width: 300px;
+  height: 325px;
   background-image: url('../images/me-sketchtransp.gif');
   margin: 1em auto;
   background-size: 100%;

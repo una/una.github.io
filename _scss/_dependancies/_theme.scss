@@ -1,5 +1,6 @@
 // COLOR THEME
-$color--links: $color--hotpink;
+$color--main: $color--hotpink;
+$color--links: $color--main;
 $color--bg: white;
 $color--copy: $color--darkgrey;
 $color--copy--dark: darken($color--darkgrey, 15);

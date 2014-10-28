@@ -3,9 +3,16 @@ $color--orange: #ff6347; //tomato rgb(255,99,71)
 $color--blue: #6495ed; //cornflowerblue rgb(100,149,237)
 $color--gold: #ffd700; //gold rgb(255,215,0)
 $color--darkgrey: #696969; // dimgray rgb(105,105,105)
-$color--lightgrey: #eee; // light grey
+$color--lightgrey: #f2f2f2; // light grey
+$color--subtlegrey: #f2f2f2; //for backgrounds and such
 $color--offwhite: #fffacd; // lemonchiffon rgb(255,250,205)
 $color--hotpink: #ff69b4; // hotpink
+$color--lighterpink: rgb(242, 146, 194);
+$color--darkerpink: rgb(213, 64, 138);
+
+//SIZES
+$list-width: 700px;
+$post-width: 780px;
 
 // BREAKPOINTS
 $phone-vert: max-width 20em; // 20em (320px)

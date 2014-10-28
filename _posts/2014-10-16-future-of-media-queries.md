@@ -158,7 +158,8 @@ Values:
 - <code>normal</code> — the output device is not constrained
 
 Here's an example (stolen right from the spec):
-<pre><code>//If a page styles its links to only add underlines on hover, it may want to always display underlines when printed:
+<pre><code>//If a page styles its links to only add underlines on hover, 
+// it may want to always display underlines when printed:
 
 a {
   text-decoration: none;

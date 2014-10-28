@@ -42,12 +42,25 @@ a {
   a {
     color: $color--links;
     padding: 0 .2em;
+    border-bottom: 1px solid $color--main;
 
     &:hover {
-      background: $color--hotpink;
+      background: $color--main;
       color: white;
     }
   }
+}
+
+%pink-aside {
+  background-color: $color--subtlegrey;
+  border-right: 1px solid $color--main;
+  color: $color--main;
+  display: block;
+  float: right;
+  font-style: italic;
+  margin: 1em;
+  overflow: hidden;
+  padding: .5em 1em;
 }
 
 @font-face {

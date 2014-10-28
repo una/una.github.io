@@ -1,7 +1,9 @@
 .post {
 	@extend %pink-links;
+	@extend %container;
 
 	p {
+		@extend %clearfix;
 		&:first-child {
 		  font-size: 115%;
 		}
@@ -9,7 +11,19 @@
 
 	ul {
 		margin: 1em 3em;
-		color: $color-copy;
+		color: $color--copy;
+	}
+
+	small, aside {
+	  @extend %pink-aside;
+	}
+
+	h2 {
+		color: $color--darkerpink;
+	}
+
+	h3 {
+		color: $color--lighterpink;
 	}
 }
 

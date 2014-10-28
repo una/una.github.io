@@ -11,7 +11,7 @@ body {
 
 ::selection {
 	color: white;
-	background: $color--hotpink;
+	background: $color--main;
 }
 
 .row {
@@ -20,9 +20,10 @@ body {
 	width: 100%;
 }
 
-.container {
-	max-width: 780px;
-	margin: 4em auto 0;
+.container,
+%container {
+	max-width: $post-width;
+	margin: 2em auto 0;
 }
 
 img {
