@@ -31,7 +31,7 @@ h3 {
 
 p {
 	color: $color--copy;
-	line-height: 2;
+	line-height: $page-line-height;
 }
 
 a {
@@ -269,3 +269,55 @@ a {
 .icon-arrow-right:before {
   content: "\e628";
 }
+
+// $icons: (
+//   dribbble: "\e601",
+//   twitter: "\e602",
+//   github: "\e603",
+//   paragraph-left: "\e604",
+//   github2: "\66",
+//   github3: "\e605",
+//   facebook: "\e607",
+//   facebook2: "\e608",
+//   facebook3: "\e609",
+//   mail: "\e60a",
+//   console: "\e60b",
+//   instagram: "\e60c",
+//   twitter2: "\e60d",
+//   pen: "\e60e",
+//   quotes-left: "\e60f",
+//   vimeo: "\e610",
+//   dribbble2: "\e611",
+//   tumblr: "\e612",
+//   trophy: "\e613",
+//   mug: "\e614",
+//   settings: "\e615",
+//   pencil: "\e616",
+//   mobile: "\e617",
+//   mobile2: "\e618",
+//   tablet: "\e619",
+//   tv: "\e61a",
+//   stats: "\e61b",
+//   crop: "\e61c",
+//   pilcrow: "\e61d",
+//   code: "\e61e",
+//   file-xml: "\e61f",
+//   linkedin: "\e620",
+//   checkmark: "\e621",
+//   close: "\e622",
+//   phone: "\e623",
+//   profile: "\e624",
+//   bubbles: "\e600",
+//   book: "\e626",
+//   codepen: "\e606",
+//   mail2: "\e625",
+//   arrow-left: "\e627",
+//   arrow-right: "\e628",
+// );
+
+// @each $name in map-keys($icons) {
+//   $visual: map-get($icons, $name);
+//     .icon-#{$name}:before {
+//         content: $visual;
+//     }
+// }

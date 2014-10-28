@@ -5,6 +5,11 @@ $color--bg: white;
 $color--copy: $color--darkgrey;
 $color--copy--dark: darken($color--darkgrey, 15);
 
+//SIZES
+$list-width: 700px;
+$post-width: 780px;
+$page-line-height: 1.8;
+
 @mixin theme-me($color) {
 	color: $color;
 }

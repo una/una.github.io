@@ -15,8 +15,26 @@
 	ul,
 	ol {
 		margin: 1em 3em;
+		padding-right: 2em;
 		color: $color--copy;
+		
+		li {
+			margin-bottom: .8em;
+		}
 	}
+
+	ul {
+		//pretty bullets
+		list-style: none;
+
+		li:before {
+				content: "⁞"; //✦ <-- also a nice one :P
+				color: $color--main;
+				display: inline-block;
+				width: 1em;
+				margin-left: -1em;
+			}
+		}
 
 	small, aside {
 	  @extend %pink-aside;
@@ -38,16 +56,19 @@
 .post-intro {
 	background: lightslategrey;
 	padding: 2em;
+	color: white;
 
 	h1 {
 		@extend %container;
-		color: white;
+		color: currentColor;
 	}
 
 	.meta {
 		@extend %container;
 		@extend %font-pull;
-		color: lightgrey;
+		@include fontsize(20);
+		color: currentColor;
+		margin: 0 auto 2em;
 	}
 }
 

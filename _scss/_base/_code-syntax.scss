@@ -1,11 +1,11 @@
+// inline code blocks
 pre, code {
-	background:#3f3f3f;
-	display:block;
-	color:#dcdcdc;
+	background: $color--subtlegrey;
+	display: block;
+	color: $color--darkerpink;
 	padding: .2em .5em;
-	margin-bottom: .2em;
-	margin-top: .2em;
 	border-radius: .2em;
+	line-height: 1.2;
 }
 
 code {
@@ -20,7 +20,7 @@ p .hljs {
 	{color:#e3ceab}
 
 .django .hljs-template_tag,.django .hljs-variable,.django .hljs-filter .hljs-argument 
-	{color:#dcdcdc}
+	{color: $color--darkgrey}
 
 .hljs-number,.hljs-date 
 	{color:#8cd0d3}
@@ -50,7 +50,12 @@ p .hljs {
 	{opacity:.5}
 
 .scss { .hljs-value, .hljs-attribute, .hljs-at_rule, p {
-	color: #dcdcdc;
+	color: $color--darkgrey;
+	}
+}
+
+.css { .hljs-value, .hljs-attribute, .hljs-at_rule, p {
+	color: $color--darkgrey;
 	}
 }
 
