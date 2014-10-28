@@ -1,5 +1,16 @@
 .post {
 	@extend %pink-links;
+
+	p {
+		&:first-child {
+		  font-size: 115%;
+		}
+	}
+
+	ul {
+		margin: 1em 3em;
+		color: $color-copy;
+	}
 }
 
 .post-meta {

@@ -31,7 +31,7 @@ Here's a list of current media types you can target:
 - <code>tty</code>* — teletypes, terminals, and other devices with limited display capabilities
 - <code>tv</code>* — televisions and television like devices
 
-<small>NOTE: *(asterisk = they are deprecated as media **types**, but can be used similarly as media **features** -- read on)*</small>
+<small>&ast; = deprecated as media **types**, but can be used similarly as media **features** -- read on)</small>
 
 And this is what you can specify (expressions) for each of those media types:
 
@@ -57,9 +57,7 @@ Media queries are most often used for their screen size properties to allow for 
 
 Well media queries are helping us get one step closer! As devices are able to detect more, browsers are keeping up to date with these capabilities.
 
-<br><br>
 ## The Future of Media Queries
-<br>
 
 The [Media Queries 4](http://dev.w3.org/csswg/mediaqueries-4/) spec brings insight to technological capabilities that are coming up soon (this is based on the Editor’s Draft, October 10, 2014).
 
@@ -72,11 +70,8 @@ Here's an example from the spec:
 <pre><code>(color) and (min-width: 600px)
 </code></pre>
 
-<br><br>
----
 
 ### @media (light-level) : dim | normal | washed
-
 
 The <code>light-level</code> media feature is for detection **ambient lighting**. *(Ambient is such a fun word)*.
 
@@ -103,11 +98,8 @@ Here's an example:
 }
 </code></pre>
 
-<br><br>
----
 
 ### @media (pointer) : none | course | fine
-
 
 The <code>pointer</code> media feature detects the **presence and accuracy of a pointing device**.
 
@@ -128,11 +120,8 @@ Here's an example:
 }
 </code></pre>
 
-<br><br>
----
 
 ### @media (hover) : none | on-demand | hover
-
 
 The <code>hover</code> media feature detects the ability of the primary pointing mechanism to hover over elements.
 
@@ -156,8 +145,6 @@ Here's an example:
 }
 </code></pre>
 
-<br><br>
----
 
 ### @media (update-frequency) : none | slow | normal
 
@@ -188,8 +175,6 @@ a:hover, a:focus {
 }
 </code></pre>
 
-<br><br>
----
 
 ### @media (scripting) : none | initial-only | enabled
 
@@ -205,5 +190,4 @@ Values:
 
 This section also borrowed heavily from the these [slides](http://www.slideshare.net/yiibu/the-future-of-mediaqueries), which break down the information from the spec really well.
 
-<br><br>
 Remember, it has only been 2 years since the general adoption of media queries and responsive web design. If this is just the beginning, then where are they heading next?

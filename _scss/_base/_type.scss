@@ -5,20 +5,27 @@
 // p { font-size: 16px }
 // small { font-size: 8px }
 
+%vert-rythm {
+  margin: 1.5em auto 0;
+}
+
 h1 {
 	@include fontsize(32);
+  @extend %vert-rythm;
 	@extend %font-title;
 	@extend %blue;
 }
 
 h2 {
 	@include fontsize(23.75);
+  @extend %vert-rythm;
 	@extend %font-title;
 }
 
 h3 {
 	@extend %font-title-sm;
 	@include fontsize(18);
+  @extend %vert-rythm;
 	font-weight: 800;
 }
 
