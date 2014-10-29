@@ -17,9 +17,12 @@ header {
 
 	.title {
 		@include fontsize(16);
-		@extend %blue;
 		float: left;
 		margin: 1rem;
+	}
+
+	a {
+		@extend %blue;
 	}
 
 

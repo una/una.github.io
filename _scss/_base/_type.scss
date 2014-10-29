@@ -13,12 +13,24 @@ h1 {
 	@include fontsize(32);
   @extend %vert-rythm;
 	@extend %font-title;
+
+  @include breakpoint(md) {
+    @include fontsize(28)
+  }
+
+  @include breakpoint(sm) {
+    @include fontsize(20)
+  }
 }
 
 h2 {
 	@include fontsize(23.75);
   @extend %vert-rythm;
 	@extend %font-title;
+
+  @include breakpoint(sm) {
+    @include fontsize(18)
+  }
 }
 
 h3 {
@@ -26,6 +38,10 @@ h3 {
 	@include fontsize(18);
   @extend %vert-rythm;
 	font-weight: 800;
+
+  @include breakpoint(sm) {
+    @include fontsize(16)
+  }
 }
 
 p {
@@ -52,7 +68,7 @@ a {
 
 %pink-aside {
   background-color: $color--subtlegrey;
-  border-right: 1px solid $color--main;
+  border-right: 2px solid $color--main;
   color: $color--main;
   display: block;
   float: right;

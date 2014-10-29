@@ -3,6 +3,14 @@ body {
 	@include fontsize(12);
 	margin: 0;
 	padding: 0;
+
+	@include breakpoint(md) {
+		@include fontsize(11);
+	}
+
+	@include breakpoint(sm) {
+		@include fontsize(10);
+	}
 }
 
 * {
@@ -29,4 +37,8 @@ body {
 img {
 	max-width: 100%;
 	margin: 0 auto;
+}
+
+%transition-duration {
+	transition-duration: .5s;
 }

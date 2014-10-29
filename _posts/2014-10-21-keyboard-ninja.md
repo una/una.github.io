@@ -27,30 +27,33 @@ If you want to become a keyboard ninja, try putting a sticky note (or two) on th
 1. It will remind you not to use it, causing you to Google alternative navigation flows (you'll learn a lot this way)
 2. You can still easily access the trackpad by simply lifting the sticky note from below or on the edge (where you'd be accessing it anyway)
 
-Make sure to write down new shortcuts you learn on that sticky note &mdash; use a felt tip pen so you don't need press too hard and accidentally click on something.
-
-When you've covered your sticky with shortcut reminders, put it somewhere visible for a while (i.e. next to your track pad on your laptop or on your desk). Soon, you'll have a great collection of shortcuts you find useful, and will quickly memorize them!
-
+Make sure to write down new shortcuts you learn on that sticky note &mdash; use a felt tip pen so you don't need press too hard and accidentally click on something.  
+<br>
+When you've covered your sticky with shortcut reminders, put it somewhere visible for a while (i.e. next to your track pad on your laptop or on your desk). Soon, you'll have a great collection of shortcuts you find useful, and will quickly memorize them!  
+<br>
 To use this method with a mouse &mdash; not a track pad &mdash; put the sticky underneath the mouse to disable the motion sensor. You'll need a separate sticky to write new commands down on.
 
-![](http://unakravets.com/temp/keyboard-ninja-ex.jpg)
+<figure>
+<img class="wide" src="http://unakravets.com/temp/keyboard-ninja-ex.jpg"></img>
+<figcaption>An example of the keyboard method</figcaption>
+</figure>
 
 ## A few Things I've learned:
 
-- `cmd + w` closes a tab (general rule)
+- `⌘ cmd` + `w` closes a tab (general rule)
 - `ctrl + tab` navigates my tabs (general rule)
 - Use the terminal to make and navigate files
-- `cmd + shift + p` in Sublime Text (and Atom Editor) and you can probably do anything you need from there
-- just `cmd` + `p` in Sublime Text (and Atom Editor) and you can fuzzy search for any file in your project
+- `⌘ cmd` + `⇧ shift + p` in Sublime Text (and Atom Editor) and you can probably do anything you need from there
+- just `⌘ cmd` + `p` in Sublime Text (and Atom Editor) and you can fuzzy search for any file in your project
 - Fuzzy search is your friend
-- Navigate the Sublime Text (and Atom) sidebar with `cmd + 0` to focus on the sidebar, and your arrow keys. `Enter` will open the file. (see plugin below for more fun)
+- Navigate the Sublime Text (and Atom) sidebar with `⌘ cmd` + `0` to focus on the sidebar, and your arrow keys. `Enter` will open the file. (see plugin below for more fun)
 
 ## Some Tools to Help!
 
 - Download [Alfred](http://alfredapp.com) to help your workflow out a TON. Alfred is a great tool for navigating not only your applications but also acts as an awesome quick Google search tool. **HIGHLY Recommend** for future keyboard ninjas!
-- There's a great [Sublime Text plugin](https://github.com/miguelgraz/FocusFileOnSidebar) that will help you focus on which file you have open. Type `cmd + k, cmd + f` to open the sdiebar right to the directory of the current file.
+- There's a great [Sublime Text plugin](https://github.com/miguelgraz/FocusFileOnSidebar) that will help you focus on which file you have open. Type `⌘ cmd` + `k`, `⌘ cmd` + `f` to open the sidebar right to the directory of the current file.
 
-*TIP: when first practicing moving files in terminal, have a text editor with a sidebar open (`cmd + k, cmd + b`) so you can visually see the changes. This is also a great way to illustrate how git works. *
+*TIP: when first practicing moving files in terminal, have a text editor with a sidebar open (`⌘ cmd` + `k`, `⌘ cmd` + `b`) so you can visually see the changes. This is also a great way to illustrate how git works. *
 
 ## More Fun Resources
 

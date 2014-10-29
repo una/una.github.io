@@ -1,127 +1,3 @@
-// .menu-section {
-// 	@extend transition;
-// 	width: 100%;
-	
-// 	&.on {
-// 	z-index: 100;
-// 	width: 100%;
-// 	height: 100%;
-// 	display: block;
-// 	background-color: rgba(105,105,105,0.95);
-// 	position: absolute;
-// 	top:0;
-// 	bottom:0;
-// 	}
-// }
-
-// .menu-section__toggle {
-// 	width: 40px;
-// 	height: 30px;
-// 	position: absolute;
-// 	top: 1rem;
-// 	right: 1rem;
-// 	cursor: pointer;
-// 	z-index: 100;
-	
-// 	&.on {
-// 		height: 100%;
-
-// 		.toggle--1 {
-// 			transform: rotate(45deg) translate(7px, 7px);
-// 		}
-
-// 		.toggle--2 {
-// 			opacity: 0;
-// 		}
-
-// 		.toggle--3 {
-// 			transform: rotate(-45deg) translate(8px, -10px);
-// 		}
-// 	}
-
-// 	// @include breakpoint($phone-horiz) {
-// 	// 	position: absolute;
-// 	// }
-// }
-
-// .toggle--1,
-// .toggle--2,
-// .toggle--3 {
-// 	@extend transition;
-// 	width: 100%;
-// 	height: 5px;
-// 	background: lighten($color--darkgrey, 20%);
-// 	margin: 6px auto;
-// 	backface-visibility: hidden;
-// }
-
-// nav ul{
-// 	margin: 0;
-// 	padding: 0;
-// 	font-family: Open Sans;
-// 	list-style: none;
-// 	margin: 4em auto;
-// 	text-align: center;
-	
-// 	&.hidden {
-// 		display: none;
-// 	}
-		
-// 		a {
-// 		@extend transition;
-// 		@include fontsize(40);
-// 		text-decoration: none;
-// 		// color: white;
-// 		font-weight: 800;
-// 		line-height: 1.5;
-// 		width: 100%;
-// 		display: block;
-// 			&:hover,
-// 			&:focus {
-// 				background-color: rgba(255,255,255,0.8);
-// 				color: $color--darkgrey;
-// 				outline: none;
-// 				-webkit-appearance: none;
-// 			}
-
-// 		@include breakpoint($small-tab) {
-// 			@include fontsize(35);
-// 		}
-// 		@include breakpoint($phone-horiz) {
-// 			@include fontsize(25);
-// 		}
-// 	}
-// }
-
-// .headroom--unpinned {
-// 	top: -75px;
-// }
-
-// .headroom--pinned {
-// 	position: fixed;
-// 	top: 0;
-// 	z-index: 100;
-	
-// 	&.homepage {
-// 		.toggle--1,
-// 		.toggle--2,
-// 		.toggle--3 {
-// 			background: white;
-// 		}
-// 	}
-	
-// 	.toggle--1,
-// 	.toggle--2,
-// 	.toggle--3 {
-// 		background: $color--darkgrey;
-// 	}
-// }
-
-// .logo {
-// 	color: white;
-// 	padding: 1em;
-// }
-
 nav {
 	position: absolute;
 	top: 1rem;
@@ -130,5 +6,21 @@ nav {
 	li {
 		display: inline-block;
 		margin-left: 1em;
+	}
+
+	a {
+		&:after {
+			@extend %transition-duration;
+			content: "";
+			background: currentColor;
+			width: 0%;
+			height: 2px;
+			display: block;
+		}
+
+		&.active:after,
+		&:hover:after {
+			width: 105%;
+		}
 	}
 }

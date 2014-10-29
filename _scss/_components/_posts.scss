@@ -6,7 +6,7 @@
 		@extend %clearfix;
 		&:first-child {
 		  font-size: 115%;
-		  border-left: 1px solid $color--hotpink;
+		  border-left: 2px solid $color--main;
 		  padding-left: 1em;
 		  margin-bottom: 1em;
 		}
@@ -21,6 +21,10 @@
 		li {
 			margin-bottom: .8em;
 		}
+
+		@include breakpoint(sm) {
+			padding-right: 0;
+		}
 	}
 
 	ul {
@@ -28,7 +32,7 @@
 		list-style: none;
 
 		li:before {
-				content: "⁞"; //✦ <-- also a nice one :P
+				content: "⁞";
 				color: $color--main;
 				display: inline-block;
 				width: 1em;
@@ -48,13 +52,41 @@
 		color: $color--purple;
 	}
 
+	figure,
 	img {
 		margin: 1em auto;
+
+		&.left {
+			float: left;
+			margin: 1em 3em 1em -20em;
+		}
+
+		&.right {
+			float: right;
+			margin: 1em -20em 1em 3em;
+		}
+
+		&.wide {
+			margin-left: -10%;
+			max-width: 120%;
+		}
+	}
+
+	figcaption {
+		font-size: 70%;
+		margin-top: -5em;
+		position: absolute;
+		z-index: 2;
+		right: 0;
+		display: inline-block;
+		background: white;
+		max-width: 300px;
+		padding: .5em 1em;
 	}
 }
 
 .post-intro {
-	background: lightslategrey;
+	background: $color--secondary;
 	padding: 2em;
 	color: white;
 

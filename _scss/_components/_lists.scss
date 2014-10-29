@@ -19,10 +19,10 @@ ol {
 	}
 
 	li {
+		@extend %transition-duration;
 		list-style: none;
 		padding: 1em 1em 2em;
 		border-bottom: 1px solid $color--lightgrey;
-		@extend %transition;
 
 		&:hover {
 			background-color: $color--lightgrey;
