@@ -6,8 +6,19 @@ header {
 	top: 0;
 	opacity: 1;
 
+	.lil-fish {
+		background-image: url("http://38.media.tumblr.com/avatar_79b8b35f65b8_128.png");
+		height: 2.2em;
+		width: 47px;
+		display: inline-block;
+		background-size: 100%;
+		
+	}
+
 	.title {
 		@include fontsize(16);
+		@extend %blue;
+		float: left;
 		margin: 1rem;
 	}
 

@@ -13,7 +13,6 @@ h1 {
 	@include fontsize(32);
   @extend %vert-rythm;
 	@extend %font-title;
-	@extend %blue;
 }
 
 h2 {
@@ -42,7 +41,7 @@ a {
   a {
     color: $color--links;
     padding: 0 .2em;
-    border-bottom: 1px solid $color--main;
+    border-bottom: 1px dashed $color--main;
 
     &:hover {
       background: $color--main;

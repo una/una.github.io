@@ -6,7 +6,7 @@
 		@extend %clearfix;
 		&:first-child {
 		  font-size: 115%;
-		  border-left: 1px solid hotpink;
+		  border-left: 1px solid $color--hotpink;
 		  padding-left: 1em;
 		  margin-bottom: 1em;
 		}
@@ -41,11 +41,11 @@
 	}
 
 	h2 {
-		color: $color--darkerpink;
+		color: $color--darkerpurple;
 	}
 
 	h3 {
-		color: $color--lighterpink;
+		color: $color--purple;
 	}
 
 	img {

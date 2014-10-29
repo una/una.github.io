@@ -59,7 +59,7 @@ tumblr_url: http://unakravets.tumblr.com/post/78744593423/sass-snippets-the-almi
 
 
 
-<p>See how it just combines whatever phrase you insert after the <code style="color:hotpink; font-weight:800">&amp;</code> directly onto the end of its parent. This is great for element states such as hovers, and for focusing on specific elements. It works with pretty much anything now (as of the 3rd release candidate of Sass 3.3) (i.e. <code>.unicorn { &amp;wat { ... } }</code> became  <code>.unicornwat { ... }</code>. It&#8217;s a great too for BEM syntax (see &#8216;A Much Simpler @at-root&#8217;)!</p>
+<p>See how it just combines whatever phrase you insert after the <code style="color:$color--hotpink; font-weight:800">&amp;</code> directly onto the end of its parent. This is great for element states such as hovers, and for focusing on specific elements. It works with pretty much anything now (as of the 3rd release candidate of Sass 3.3) (i.e. <code>.unicorn { &amp;wat { ... } }</code> became  <code>.unicornwat { ... }</code>. It&#8217;s a great too for BEM syntax (see &#8216;A Much Simpler @at-root&#8217;)!</p>
 
 <h3>The Trailing Ampersand</h3>
 
@@ -131,7 +131,7 @@ li a {
 
 <h3>A Much Simpler @at-Root</h3>
 
-<p>As mentioned earlier, the Sass Ampersand just got even cooler. With the recent release of Sass 3.3.0rc3, basically everything from <a href="http://blog.unakravets.com/post/64113156740/" target="_blank">this post on BEM &amp; at-root</a> outdated (**however, @at-root <a href="http://nex3.roughdraft.io/8050187" target="_blank"> will still be usable</a> in the release of Sass 3.3). The concepts are the same, but now, instead of prepending with <code style="color:hotpink; font-weight:800">@at-root #{&amp;}</code>, one simply needs to use a <code style="color:hotpink; font-weight:800">&amp;-</code> or <code style="color:hotpink; font-weight:800">&amp;_</code>. <strong>Previously, <code>&amp;-</code> or <code>&amp;_</code> or even <code>&amp;words</code> would cause error,</strong>  but this fix is really awesome :)</p>
+<p>As mentioned earlier, the Sass Ampersand just got even cooler. With the recent release of Sass 3.3.0rc3, basically everything from <a href="http://blog.unakravets.com/post/64113156740/" target="_blank">this post on BEM &amp; at-root</a> outdated (**however, @at-root <a href="http://nex3.roughdraft.io/8050187" target="_blank"> will still be usable</a> in the release of Sass 3.3). The concepts are the same, but now, instead of prepending with <code style="color:$color--hotpink; font-weight:800">@at-root #{&amp;}</code>, one simply needs to use a <code style="color:$color--hotpink; font-weight:800">&amp;-</code> or <code style="color:$color--hotpink; font-weight:800">&amp;_</code>. <strong>Previously, <code>&amp;-</code> or <code>&amp;_</code> or even <code>&amp;words</code> would cause error,</strong>  but this fix is really awesome :)</p>
 
 <h4> Previous Markup (Sass 3.3rc1) </h4>
 
@@ -189,7 +189,7 @@ li a {
 
 <h3>The Double Ampersand</h3>
 
-<p>This fun trick by <a href="http://blog.teamtreehouse.com/sass-tip-double-ampersand-selector" target="_blank">Guil Hernandez</a> of Treehouse, is also pretty cool. He combines ampersands with the CSS adjacent sibling combinator &#8212; aka the <span style="color:hotpink; font-weight:800">+</span>. The <span style="color:hotpink; font-weight:800">+</span> is used to target an element’s immediate sibling (i.e. an image or subtitle immediately following an h1). For instance, you can use this in styling blog posts &#8212; where that first image could always be the author, and may need its own unique style.</p>
+<p>This fun trick by <a href="http://blog.teamtreehouse.com/sass-tip-double-ampersand-selector" target="_blank">Guil Hernandez</a> of Treehouse, is also pretty cool. He combines ampersands with the CSS adjacent sibling combinator &#8212; aka the <span style="color:$color--hotpink; font-weight:800">+</span>. The <span style="color:$color--hotpink; font-weight:800">+</span> is used to target an element’s immediate sibling (i.e. an image or subtitle immediately following an h1). For instance, you can use this in styling blog posts &#8212; where that first image could always be the author, and may need its own unique style.</p>
 
 <p>My favorite example of his is for columns. If you have two, using the double ampersand can really come handy.</p>
 
