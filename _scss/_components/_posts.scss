@@ -85,6 +85,52 @@
 	}
 }
 
+.twitter-share {
+	&:after {
+		font-family: "icomoon";
+		content: "\e602";
+		font-style: initial;
+	}
+
+	&.quote {
+		font-size: 130%;
+		margin: 1em auto;
+		padding: .5em 1em;
+		background: $color--subtlegrey;
+		display: block;
+		border-bottom: none;
+		border-left: 2px solid $color--blue;
+		color: $color--blue;
+		font-style: italic;
+		position: relative;
+
+		&:after {
+			@extend %transition-duration;
+			position: absolute;
+			right: -2em;
+		}
+
+		&:hover {
+			background: $color--blue;
+
+			&:after {
+				color: $color--blue;
+			}
+		}
+
+		@include breakpoint(sm) {
+			&:after {
+				position: relative;
+				right: 0;
+			}
+
+			&:hover:after {
+				color: white;
+			}
+		}
+	}
+}
+
 .post-intro {
 	background: $color--secondary;
 	padding: 2em;

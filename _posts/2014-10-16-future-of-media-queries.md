@@ -196,6 +196,6 @@ This section also borrowed heavily from the these [slides](http://www.slideshare
 
 Remember, it has only been 2 years since the general adoption of media queries and responsive web design. If this is just the beginning, then where are they heading next?
 
-<a class="twitter-share" >
+<a class="twitter-share quote" >
 This would be all of the text. Make data-text read this and insert it in there. 
 </a>
