@@ -1,11 +1,10 @@
 footer {
-	
 	padding: 4rem 1rem;
 	position: relative;
 	z-index: 10;
-	border-top: 1px solid $color--subtlegrey;
 	margin-top: 4em;
-	
+	background-color: $color--subtlegrey;
+
 	// @include breakpoint($small-tab) {
 	// 	padding: 3rem 1rem;
 	// }

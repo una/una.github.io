@@ -1,5 +1,6 @@
 .intro {
   @include fontsize(18);
+  @extend %pink-links;
   @extend %container;
   @extend %center;
   height: 100%;
@@ -15,10 +16,6 @@
     overflow: hidden;
     text-align: left;
     font-size: 1rem;
-  }
-
-  a {
-    text-decoration: underline;
   }
 }
 

@@ -46,6 +46,11 @@ ol {
 	}
 }
 
+.archive {
+	@extend %container;
+	color: $color--darkerpurple;
+}
+
 .post-list--home {
 	@extend %post-list;
 }

@@ -78,12 +78,10 @@
 	}
 
 	figcaption {
-		font-size: 70%;
-		margin-top: -5em;
-		position: absolute;
-		z-index: 2;
-		right: 0;
-		display: inline-block;
+		@extend %italic;
+		font-size: 80%;
+		color: $color--blue;
+		margin-top: -1em;
 		background: white;
 		max-width: 300px;
 		padding: .5em 1em;
@@ -91,7 +89,6 @@
 
 	blockquote {
 		@extend %blockquote;
-		color: $color--blue;
 
 		p:first-child {
 			border-left: none;

@@ -35,7 +35,7 @@ To use this method with a mouse &mdash; not a track pad &mdash; put the sticky u
 
 <figure>
 <img class="wide" src="http://unakravets.com/temp/keyboard-ninja-ex.jpg"></img>
-<figcaption>An example of the keyboard method</figcaption>
+<figcaption>I found this method really helpful for learning terminal and <a href="http://www.linux.com/learn/tutorials/228600-vim-101-a-beginners-guide-to-vim">vim</a> commands.</figcaption>
 </figure>
 
 ## A few Things I've learned:

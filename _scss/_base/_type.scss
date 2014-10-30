@@ -11,6 +11,7 @@
 
 h1 {
 	@include fontsize(32);
+  @extend %clearfix;
   @extend %vert-rythm;
 	@extend %font-title;
 
@@ -25,6 +26,7 @@ h1 {
 
 h2 {
 	@include fontsize(23.75);
+  @extend %clearfix;
   @extend %vert-rythm;
 	@extend %font-title;
 
@@ -35,6 +37,7 @@ h2 {
 
 h3 {
 	@extend %font-title-sm;
+  @extend %clearfix;
 	@include fontsize(18);
   @extend %vert-rythm;
 	font-weight: 800;
@@ -42,6 +45,10 @@ h3 {
   @include breakpoint(sm) {
     @include fontsize(16)
   }
+}
+
+h4 {
+  margin-top: 2em;
 }
 
 p {
@@ -95,13 +102,13 @@ a {
     &.left {
       max-width: 50%;
       float: left;
-      margin: 0 2em 0 0;
+      margin: 0 1em 0 0;
     }
 
     &.right {
       max-width: 50%;
       float: right;
-      margin: 0 0 0 2em;
+      margin: 0 0 0 1em;
     }
 
     @include breakpoint(sm) {
