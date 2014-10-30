@@ -3,12 +3,11 @@
 	@extend %container;
 
 	p {
-		@extend %clearfix;
+		// @extend %clearfix;
 		&:first-child {
 		  font-size: 115%;
 		  border-left: 2px solid $color--main;
 		  padding-left: 1em;
-		  margin-bottom: 1em;
 		}
 	}
 
@@ -32,16 +31,22 @@
 		list-style: none;
 
 		li:before {
-				content: "⁞";
-				color: $color--main;
-				display: inline-block;
-				width: 1em;
-				margin-left: -1em;
+			content: "⁞";
+			color: $color--main;
+			display: inline-block;
+			width: 1em;
+			margin-left: -1em;
 			}
 		}
 
 	small, aside {
 	  @extend %pink-aside;
+
+	  @include breakpoint(sm) {
+	      margin: 1em auto;
+	      text-align: right;
+	  }
+
 	}
 
 	h2 {
@@ -83,6 +88,21 @@
 		max-width: 300px;
 		padding: .5em 1em;
 	}
+
+	blockquote {
+		@extend %blockquote;
+		color: $color--blue;
+
+		p:first-child {
+			border-left: none;
+			font-size: inherit;
+		}
+
+		@include breakpoint(sm) {
+		  max-width: 100%;
+		  margin: 1em auto;
+		}
+	}
 }
 
 .twitter-share {
@@ -90,24 +110,24 @@
 		font-family: "icomoon";
 		content: "\e602";
 		font-style: initial;
+		color: $color--blue;
 	}
 
 	&.quote {
-		font-size: 130%;
-		margin: 1em auto;
-		padding: .5em 1em;
-		background: $color--subtlegrey;
-		display: block;
-		border-bottom: none;
-		border-left: 2px solid $color--blue;
-		color: $color--blue;
-		font-style: italic;
-		position: relative;
+		@extend %blockquote;
 
 		&:after {
 			@extend %transition-duration;
 			position: absolute;
 			right: -2em;
+		}
+
+		&.left:after {
+			left: -2em;
+
+			@include breakpoint(sm) {
+				left: 1em;
+			}
 		}
 
 		&:hover {
@@ -126,6 +146,14 @@
 
 			&:hover:after {
 				color: white;
+			}
+		}
+
+		@include breakpoint(xs) {
+			&.left,
+			&.right {
+			max-width: 100%;
+			margin: 1em auto;
 			}
 		}
 	}

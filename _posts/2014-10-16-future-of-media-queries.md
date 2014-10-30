@@ -3,6 +3,7 @@ layout: post
 title: Media Queries of the Future!
 permalink: /media-queries-of-the-future
 date: '2014-10-16'
+comments: true
 tags:
 - media queries
 - programming
@@ -53,6 +54,10 @@ This list was stolen from [here](http://cssmediaqueries.com/what-are-css-media-q
 ### Responsive Beyond the Browser Size
 
 Media queries are most often used for their screen size properties to allow for **"Responsive Web Design"**, or **RWD**. But viewing "responsive design" as just a means for detecting screen sizes and browsers is narrow-minded. Responsive principles go far past the browser and stretch into the real world — how can the products we design respond to a users location, or the weather, or the lighting? How can we really personalize experiences for our users?
+
+<a class="twitter-share quote left" >
+viewing "responsive design" as just a means for detecting screen sizes and browsers is narrow-minded
+</a>
 
 Well media queries are helping us get one step closer! As devices are able to detect more, browsers are keeping up to date with these capabilities.
 
@@ -195,7 +200,3 @@ Values:
 This section also borrowed heavily from the these [slides](http://www.slideshare.net/yiibu/the-future-of-mediaqueries), which break down the information from the spec really well.
 
 Remember, it has only been 2 years since the general adoption of media queries and responsive web design. If this is just the beginning, then where are they heading next?
-
-<a class="twitter-share quote" >
-This would be all of the text. Make data-text read this and insert it in there. 
-</a>
