@@ -13,12 +13,17 @@ layout: default
 <!-- syntax highlighting -->
 <script src="{{site.baseurl}}/js/vendor/jquery-1.11.0.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-
 <script src="{{site.baseurl}}/js/vendor/highlight.pack.js"></script>
 
 <script>
-	$(document).ready(function() {
-		$('pre code, code').each(function(i, e) {hljs.highlightBlock(e)});
+//hljs
+$(document).ready(function() {
+	$('pre code, code').each(function(i, e) {hljs.highlightBlock(e)});
+
+	//every time you click on the twitter link button, it takes the text inside of the blockquote and tweets :)
+	$('.twitter-share').each(function() {
+		$(this).attr('href', "https://twitter.com/share?url=http://www.google.com&via=Una&text=" + $(this).text());
 	});
+});
 </script>
 

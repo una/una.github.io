@@ -66,8 +66,7 @@ The [Media Queries 4](http://dev.w3.org/csswg/mediaqueries-4/) spec brings insig
 Media features are always wrapped in parentheses and combined with the <code>and</code> keyword rather than being separated with semicolons.
 
 Here's an example from the spec:
-<pre><code>(color) and (min-width: 600px)
-</code></pre>
+{% highlight sass %}(color) and (min-width: 600px) {% endhighlight %}
 
 
 ### @media (light-level) : dim | normal | washed
@@ -81,7 +80,8 @@ Values:
 - <code>washed</code> — lighting in an overly bright environment (i.e. broad daylight)
 
 Here's an example:
-<pre><code>// change text coloring due to lighting for better legibility
+{% highlight sass %}
+// change text coloring due to lighting for better legibility
 
 @media (light-level: dim) {
   body { background: dimgrey;
@@ -95,7 +95,7 @@ Here's an example:
          font-size: 2em;
     }
 }
-</code></pre>
+{% endhighlight %}
 
 
 ### @media (pointer) : none | course | fine
@@ -109,7 +109,8 @@ Values:
 - <code>fine</code> — the primary input mechanism is an accurate pointing device (i.e. stylus, mouse, touchpad)
 
 Here's an example:
-<pre><code>// Make input larger for inaccurate pointing devices
+{% highlight sass %}
+// Make input larger for inaccurate pointing devices
 
 @media (pointer:coarse) {
   input[type="text"] {
@@ -117,7 +118,7 @@ Here's an example:
     padding: .5em;
   }
 }
-</code></pre>
+{% endhighlight %}
 
 
 ### @media (hover) : none | on-demand | hover
@@ -133,7 +134,8 @@ Values:
 <small> &ast; If different input devices have different characteristics, there are also <code>any-pointer</code> and <code>any-hover</code> media features </small>
 
 Here's an example:
-<pre><code>//If hover is difficult, display the menu differently
+{% highlight sass %}
+//If hover is difficult, display the menu differently
 
 @media (hover:none) and (hover:on-demand) {
   .menu {
@@ -142,7 +144,7 @@ Here's an example:
     ...
   }
 }
-</code></pre>
+{% endhighlight %}
 
 
 ### @media (update-frequency) : none | slow | normal
@@ -157,7 +159,9 @@ Values:
 - <code>normal</code> — the output device is not constrained
 
 Here's an example (stolen right from the spec):
-<pre><code>//If a page styles its links to only add underlines on hover, 
+
+{% highlight sass %}
+//If a page styles its links to only add underlines on hover, 
 // it may want to always display underlines when printed:
 
 a {
@@ -173,7 +177,7 @@ a:hover, a:focus {
     text-decoration: underline;
     }
 }
-</code></pre>
+{% endhighlight %}
 
 
 ### @media (scripting) : none | initial-only | enabled
@@ -191,3 +195,7 @@ Values:
 This section also borrowed heavily from the these [slides](http://www.slideshare.net/yiibu/the-future-of-mediaqueries), which break down the information from the spec really well.
 
 Remember, it has only been 2 years since the general adoption of media queries and responsive web design. If this is just the beginning, then where are they heading next?
+
+<a class="twitter-share" >
+This would be all of the text. Make data-text read this and insert it in there. 
+</a>
