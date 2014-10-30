@@ -12,11 +12,20 @@ pre, code {
 	padding: .2em .5em;
 	border-radius: .2em;
 	line-height: 1.2;
+}
+
+pre {
+	border: 1px solid lightgrey;
 	margin-bottom: 1em;
+	
+	code {
+		border: none;
+	}
 }
 
 code {
 	display: inline-block;
+	border: 1px solid lightgrey;
 }
 
 p .hljs,

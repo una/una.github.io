@@ -49,6 +49,11 @@
 
 	}
 
+	em,
+	strong {
+		color: $color--blue;
+	}
+
 	h2 {
 		color: $color--darkerpurple;
 	}
@@ -60,6 +65,7 @@
 	figure,
 	img {
 		margin: 1em auto;
+		display: block;
 
 		&.left {
 			float: left;
@@ -92,6 +98,7 @@
 
 		p:first-child {
 			border-left: none;
+			padding-left: 0;
 			font-size: inherit;
 		}
 
@@ -158,6 +165,7 @@
 
 .post-intro {
 	background: $color--secondary;
+	background-size: cover;
 	padding: 2em;
 	color: white;
 

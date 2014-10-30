@@ -19,26 +19,26 @@
 		border-radius: 3px;
 
 		&:before {
-		bottom: -0.5em;
-		content: "";
-		display: block;
-		height: 0.5em;
-		left: 0;
-		position: absolute;
-		width: 100%;
+			bottom: -0.5em;
+			content: "";
+			display: block;
+			height: 0.5em;
+			left: 0;
+			position: absolute;
+			width: 100%;
 		}
 
 		&:after {
-		border-left: solid transparent 10px;
-		border-right: solid transparent 10px;
-		border-top: solid $color--hotpink 10px;
-		bottom: -10px;
-		content: " ";
-		height: 0;
-		left: 50%;
-		margin-left: -13px;
-		position: absolute;
-		width: 0;
+			border-left: solid transparent 10px;
+			border-right: solid transparent 10px;
+			border-top: solid $color--hotpink 10px;
+			bottom: -10px;
+			content: " ";
+			height: 0;
+			left: 50%;
+			margin-left: -13px;
+			position: absolute;
+			width: 0;
 		}
 	}
 }
