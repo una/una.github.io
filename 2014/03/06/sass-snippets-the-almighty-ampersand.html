@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Sass Snippets: The Almighty Ampersand</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!-- MOBILE SETTINGS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+
+  <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,900|Open+Sans:300italic,400,700,300|Oleo+Script+Swash+Caps:700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.min.css">
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-36758177-1']);
+      _gaq.push(['_setDomainName', 'unakravets.com']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+</head>
+<body>
+
+    <header class="headroom">
+  <h1 class="title"><a href="/">Almost Profound</a></h1>
+  <div class="lil-fish"></div>
+
+  <div class="menu-section">
+	<nav>
+		<ul role="navigation" class="hidden">
+			<li><a  href="/">Home</a></li>
+			<li><a  href="/archive.html">Archive</a></li>
+			<li><a href="http://unakravets.com/about">About</a></li>
+		</ul>
+	</nav>
+</div>
+
+</header>
+
+     <div class="post-intro" >
+	<h1>Sass Snippets: The Almighty Ampersand</h1>
+	<p class="meta">March 06, 2014</p>
+ </div>
+
+<div class="post">
+<p><img src="https://31.media.tumblr.com/2adcb547462d0c1332af3030ccda9f2d/tumblr_inline_n3tqzrPLlI1rk3ey5.gif" alt=""/></p>
+
+<p><style>h4 {
+margin-bottom: -0.7em;
+}</style></p>
+
+<h3>The Basics</h3>
+
+<p>So, what is the Sass <code style="color:hotpink; font-weight:800">&amp;</code>? Well, it&#8217;s a lot of things &#8212; but it&#8217;s basically is a way to merge selectors. <strong>The parent element takes the place of the ampersand.</strong> The best way to understand it is to see some examples:</p>
+
+<h4>SCSS</h4>
+
+<p><code></code></p>
+
+<pre>.unicorn {
+  background-color: blue;
+  &amp;:hover {
+    outline: 2px solid yellow;
+  }
+  &amp;.pink {
+    background-color: pink;
+    &amp;wat {
+      color: red;
+    }
+    &amp;:hover {
+      outine: 2px solid green;
+    }
+  }
+}
+</pre>
+
+
+
+<h4>CSS Output</h4>
+
+<p><code></code></p>
+
+<pre>.unicorn {
+  background-color: blue;
+}
+.unicorn:hover {
+  outline: 2px solid yellow;
+}
+.unicorn.pink {
+  background-color: pink;
+}
+.unicorn.pinkwat {
+  color: red;
+}
+.unicorn.pink:hover {
+  outine: 2px solid green;
+}</pre>
+
+
+
+<p>See how it just combines whatever phrase you insert after the <code style="color:hotpink; font-weight:800">&amp;</code> directly onto the end of its parent. This is great for element states such as hovers, and for focusing on specific elements. It works with pretty much anything now (as of the 3rd release candidate of Sass 3.3) (i.e. <code>.unicorn { &amp;wat { ... } }</code> became  <code>.unicornwat { ... }</code>. It&#8217;s a great too for BEM syntax (see &#8216;A Much Simpler @at-root&#8217;)!</p>
+
+<h3>The Trailing Ampersand</h3>
+
+<p>The trailing ampersand does the same thing as the prepended one &#8212; it switches out with the parent element when outputted. Why would you use one? Well its a great organizational tool, and its awesome to use in mixins. Here are a few examples:</p>
+
+<h4>SCSS</h4>
+
+<p><code></code></p>
+
+<pre>.unicorn {
+  .set-one &amp; {
+    display: none;
+  }
+}
+
+.button--large {
+  .sidebar &amp; {
+    font-size: 80%;
+  }
+}</pre>
+
+
+
+<h4>CSS Output</h4>
+
+<p><code></code></p>
+
+<pre>.set-one .unicorn {
+  display: none;
+}
+
+.sidebar .button--large {
+  font-size: 80%;
+}</pre>
+
+
+
+<p>Another use for the trailing ampersand is in mixins. It would take the parent element (aka whatever you use the mixin on) in place of the ampersand. <a href="http://www.joeloliveira.com/2011/06/28/the-ampersand-a-killer-sass-feature/" target="_blank">Joel Oliveira</a> wrote an awesome example. Here&#8217;s another one:</p>
+
+<h4>SCSS</h4>
+
+<p><code></code></p>
+
+<pre>@mixin highlight() {
+  color: coral;
+  .sub-nav &amp;, 
+  .active &amp;, 
+  .sidebar &amp;  {
+    background-color: gold; 
+  }
+}
+li a { @include highlight; }</pre>
+
+
+
+<h4>CSS Output</h4>
+
+<p><code></code></p>
+
+<pre>li a {
+  color: coral;
+}
+.sub-nav li a, .active li a, .sidebar li a {
+  background-color: gold;
+}
+</pre>
+
+
+
+<p>In this example, all of your list links are coral with no background color except for ones within your &#8216;sub-nav&#8217; class, &#8216;active&#8217; class, or &#8216;sidebar&#8217; &#8212; they get a gold background.</p>
+
+<h3>A Much Simpler @at-Root</h3>
+
+<p>As mentioned earlier, the Sass Ampersand just got even cooler. With the recent release of Sass 3.3.0rc3, basically everything from <a href="http://blog.unakravets.com/post/64113156740/" target="_blank">this post on BEM &amp; at-root</a> outdated (**however, @at-root <a href="http://nex3.roughdraft.io/8050187" target="_blank"> will still be usable</a> in the release of Sass 3.3). The concepts are the same, but now, instead of prepending with <code style="color:hotpink; font-weight:800">@at-root #{&amp;}</code>, one simply needs to use a <code style="color:hotpink; font-weight:800">&amp;-</code> or <code style="color:hotpink; font-weight:800">&amp;_</code>. <strong>Previously, <code>&amp;-</code> or <code>&amp;_</code> or even <code>&amp;words</code> would cause error,</strong>  but this fix is really awesome :)</p>
+
+<h4> Previous Markup (Sass 3.3rc1) </h4>
+
+<p><code></code></p>
+
+<pre>.speech-bubble{
+  color: purple;
+   @at-root #{&amp;}__header{
+    color: orange;
+  }
+   @at-root #{&amp;}__text{
+    color: black;
+     @at-root #{&amp;}--link{
+      color: green;
+    }
+  }
+}
+</pre>
+
+<h4> New Markup (Sass 3.3rc3) </h4>
+
+<p><code></code></p>
+
+<pre>.speech-bubble{
+  color: purple;
+   &amp;__header{
+    color: orange;
+  }
+   &amp;__text{
+    color: black;
+     &amp;--link{
+      color: green;
+    }
+  }
+}
+</pre>
+
+<h3> The result (CSS Output) </h3>
+
+<p><code></code></p>
+
+<pre>.speech-bubble{
+  color: purple; 
+}
+.speech-bubble__header{
+    color: orange; 
+}
+.speech-bubble__text{
+    color: black; 
+}
+.speech-bubble__text--link{
+      color: green; 
+}
+</pre>
+
+<p><a href="http://www.alwaystwisted.com/post.php?s=2014-02-27-even-easier-bem-ing-with-sass-33" target="_blank">Scott&#8217;s Post</a> is another great read on this topic.
+<br/><br/></p>
+
+<h3>The Double Ampersand</h3>
+
+<p>This fun trick by <a href="http://blog.teamtreehouse.com/sass-tip-double-ampersand-selector" target="_blank">Guil Hernandez</a> of Treehouse, is also pretty cool. He combines ampersands with the CSS adjacent sibling combinator &#8212; aka the <span style="color:hotpink; font-weight:800">+</span>. The <span style="color:hotpink; font-weight:800">+</span> is used to target an element’s immediate sibling (i.e. an image or subtitle immediately following an h1). For instance, you can use this in styling blog posts &#8212; where that first image could always be the author, and may need its own unique style.</p>
+
+<p>My favorite example of his is for columns. If you have two, using the double ampersand can really come handy.</p>
+
+<h4>SCSS</h4>
+
+<p><code></code></p>
+
+<pre>.column--half {
+  color: dimgrey;
+  &amp; + &amp; {
+    margin-left: 30px;
+  }
+}</pre>
+
+
+
+<h4>CSS Output </h4>
+
+<p><code></code></p>
+
+<pre>.column--half {
+  color: dimgrey;
+}
+.column--half + .column--half {
+  margin-left: 30px;
+}</pre>
+
+
+
+<p>This gives both of the &#8216;column&#8212;half&#8217; class elements the same color (dimgrey), but only the second &#8216;column&#8212;half&#8217; element will get the left margin. The first one will flush left of the page.</p>
+
+<h3>So much ampersand love &lt;3</h3>
+
+
+	<div id="disqus_thread"></div>
+
+</div>
+
+<!-- syntax highlighting -->
+<script src="/js/vendor/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/js/vendor/highlight.pack.js"></script>
+
+<script>
+//hljs
+$(document).ready(function() {
+	$('pre code, code').each(function(i, e) {hljs.highlightBlock(e)});
+
+	//every time you click on the twitter link button, it takes the text inside of the blockquote and tweets :)
+	$('.twitter-share').each(function() {
+		$(this).attr('href', "https://twitter.com/share?url=http://www.google.com&via=Una&text=" + $(this).text());
+	});
+});
+
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'unakravets'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+
+
+    <footer role="contentinfo">
+	<ul class="social-icons">
+		<li><a href="http://twitter.com/una" target="_blank" class="has-tooltip icon-twitter"><span class="tooltip">Twitter</span></a></li>
+		<li><a href="http://dribbble.com/una" target="_blank" class="has-tooltip icon-dribbble"><span class="tooltip">Dribbble</span></a></li>
+		<li><a href="http://github.com/una" target="_blank" class="has-tooltip icon-github2"><span class="tooltip">Github</span></a></li>
+		<li><a href="http://vimeo.com/unakravets" target="_blank" class="has-tooltip icon-vimeo"><span class="tooltip">Vimeo</span></a></li>
+		<li><a href="http://blog.unakravets.com" target="_blank" class="has-tooltip icon-paragraph-left"><span class="tooltip">Blog</span></a></li>
+		<li><a href="http://sketchbook.unakravets.com" target="_blank" class="has-tooltip icon-pencil"><span class="tooltip">Sketchbook</span></a></li>
+		<li><a href="http://codepen.io/unax3" target="_blank" class="has-tooltip icon-codepen"><span class="tooltip">Codepen</span></a></li>
+		<li><a href="http://www.linkedin.com/pub/una-kravets/30/827/a35/" target="_blank" class="has-tooltip icon-linkedin"><span class="tooltip">LinkedIn</span></a></li>
+		<li><a href="mailto:una@ukrave.us?subject=Hello There!&amp;body=Hi Una, so I was looking at your blog and..." class="has-tooltip icon-mail2"><span class="tooltip">Email</span></a></li>
+	</ul>
+	<p>&copy; <a href="http://github.com/una/portfolio-2014" target="_blank">Una Kravets</a> 2014. Made with love and coffee. View the <a href="http://github.com/una/una.github.io" target="_blank">source code</a>.
+	</p>
+</footer>
+
+<script src="/js/vendor/jquery-1.11.0.min.js"></script>
+<script src="//cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
+<script src="/js/scripts.js"></script>
+
+  </body>
+</html>
