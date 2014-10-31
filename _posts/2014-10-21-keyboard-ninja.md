@@ -1,15 +1,21 @@
 ---
 layout: post
-title: How to Become a Keyboard Ninja &colon; The Sticky Note Method
+title: 'How to Become a Keyboard Ninja&colon; The Sticky Note Method'
 permalink: /keyboard-ninja
-header-bg: http://unakravets.com/temp/keyboard-ninja-ex.jpg
-date: '2014-10-21'
+date: '2014-10-27T10:21:36-05:00'
 tags:
-- workflow
-- programming
 - keyboard
-- shortcuts
+- ninja
+- computer
+- programming
+- web
+- web development
+- bash
+- terminal
+- workflow
+tumblr_url: http://unakravets.tumblr.com/post/101084419705/how-to-become-a-keyboard-ninja-the-sticky-note-method
 subtitle: The keyboard, where our hands are placed most of the time (as developers), is the fastest navigation method by default. Knowing how to navigate yours system via keyboard will really optimize your workflow.
+header-bg: http://unakravets.com/temp/keyboard-ninja-ex.jpg
 ---
 
 The keyboard, where our hands are placed most of the time (as developers), is the fastest navigation method by default. I always think devs look so slick and badass when navigating their systems without touching their trackpad/mouse. They're like little ninjas -- slick, fast and know how to move with ease.

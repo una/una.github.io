@@ -6,9 +6,13 @@ date: '2014-10-16'
 comments: true
 tags:
 - media queries
-- programming
-- web development
-- future
+- front end development
+- coding
+- responsive
+- web
+- design
+- rwd
+tumblr_url: http://unakravets.tumblr.com/post/100236669522/media-queries-of-the-future
 subtitle: The Media Queries 4 spec brings insight to technological capabilities that are coming up soon (this is based on the Editor’s Draft, October 10, 2014).
 ---
 
