@@ -38,17 +38,13 @@
 
     <header class="headroom">
   <h1 class="title"><a href="/">Almost Profound</a></h1>
+  <div class="lil-fish"></div>
 
   <div class="menu-section">
-	<div class="menu-section__toggle">
-		<div class="toggle--1"></div>
-		<div class="toggle--2"></div>
-		<div class="toggle--3"></div>
-	</div>
 	<nav>
 		<ul role="navigation" class="hidden">
-			<li><a href="/">Home</a></li>
-			<li><a href="/archive.html">Archive</a></li>
+			<li><a  href="/">Home</a></li>
+			<li><a  href="/archive.html">Archive</a></li>
 			<li><a href="http://unakravets.com/about">About</a></li>
 		</ul>
 	</nav>
@@ -56,9 +52,9 @@
 
 </header>
 
-     <div class="post-intro">
+     <div class="post-intro" >
 	<h1>Media Queries of the Future!</h1>
-	<p class="meta">16 Oct 2014</p>
+	<p class="meta">October 16, 2014</p>
  </div>
 
 <div class="post">
@@ -109,6 +105,10 @@
 
 <p>Media queries are most often used for their screen size properties to allow for <strong>&quot;Responsive Web Design&quot;</strong>, or <strong>RWD</strong>. But viewing &quot;responsive design&quot; as just a means for detecting screen sizes and browsers is narrow-minded. Responsive principles go far past the browser and stretch into the real world — how can the products we design respond to a users location, or the weather, or the lighting? How can we really personalize experiences for our users?</p>
 
+<p><a class="twitter-share quote left" >
+viewing &quot;responsive design&quot; as just a means for detecting screen sizes and browsers is narrow-minded
+</a></p>
+
 <p>Well media queries are helping us get one step closer! As devices are able to detect more, browsers are keeping up to date with these capabilities.</p>
 
 <h2>The Future of Media Queries</h2>
@@ -121,9 +121,9 @@
 
 <p>Media features are always wrapped in parentheses and combined with the <code>and</code> keyword rather than being separated with semicolons.</p>
 
-<p>Here&#39;s an example from the spec:
-<pre><code>(color) and (min-width: 600px)
-</code></pre></p>
+<p>Here&#39;s an example from the spec:</p>
+
+<div class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="na">(color)</span><span class="err"> </span><span class="na">and</span><span class="err"> </span><span class="na">(min-width</span><span class="o">:</span> <span class="mi">600</span><span class="kt">px</span><span class="p">)</span></code></pre></div>
 
 <h3>@media (light-level) : dim | normal | washed</h3>
 
@@ -137,22 +137,22 @@
 <li><code>washed</code> — lighting in an overly bright environment (i.e. broad daylight)</li>
 </ul>
 
-<p>Here&#39;s an example:
-<pre><code>// change text coloring due to lighting for better legibility</p>
+<p>Here&#39;s an example:</p>
 
-<p>@media (light-level: dim) {
-  body { background: dimgrey;
-         color: white;
-    }
-}</p>
+<div class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="c1">// change text coloring due to lighting for better legibility</span>
 
-<p>@media (light-level: washed) {
-  body { background: white;
-         color: black;
-         font-size: 2em;
-    }
-}
-</code></pre></p>
+<span class="k">@media</span> <span class="o">(</span><span class="nt">light-level</span><span class="nd">:</span> <span class="nt">dim</span><span class="o">)</span> <span class="err">{</span>
+  <span class="na">body</span><span class="err"> </span><span class="na">{</span><span class="err"> </span><span class="na">background</span><span class="o">:</span> <span class="n">dimgrey</span><span class="err">;</span>
+         <span class="na">color</span><span class="o">:</span> <span class="nb">white</span><span class="err">;</span>
+    <span class="err">}</span>
+<span class="err">}</span>
+
+<span class="k">@media</span> <span class="o">(</span><span class="nt">light-level</span><span class="nd">:</span> <span class="nt">washed</span><span class="o">)</span> <span class="err">{</span>
+  <span class="na">body</span><span class="err"> </span><span class="na">{</span><span class="err"> </span><span class="na">background</span><span class="o">:</span> <span class="nb">white</span><span class="err">;</span>
+         <span class="na">color</span><span class="o">:</span> <span class="nb">black</span><span class="err">;</span>
+         <span class="na">font-size</span><span class="o">:</span> <span class="mi">2</span><span class="kt">em</span><span class="err">;</span>
+    <span class="err">}</span>
+<span class="err">}</span></code></pre></div>
 
 <h3>@media (pointer) : none | course | fine</h3>
 
@@ -166,16 +166,16 @@
 <li><code>fine</code> — the primary input mechanism is an accurate pointing device (i.e. stylus, mouse, touchpad)</li>
 </ul>
 
-<p>Here&#39;s an example:
-<pre><code>// Make input larger for inaccurate pointing devices</p>
+<p>Here&#39;s an example:</p>
 
-<p>@media (pointer:coarse) {
-  input[type=&quot;text&quot;] {
-    font-size: 3em;
-    padding: .5em;
-  }
-}
-</code></pre></p>
+<div class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="c1">// Make input larger for inaccurate pointing devices</span>
+
+<span class="k">@media</span> <span class="o">(</span><span class="nt">pointer</span><span class="nd">:coarse</span><span class="o">)</span> <span class="err">{</span>
+  <span class="na">input</span><span class="err">[</span><span class="na">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span><span class="p">]</span> <span class="err">{</span>
+    <span class="na">font-size</span><span class="o">:</span> <span class="mi">3</span><span class="kt">em</span><span class="err">;</span>
+    <span class="na">padding</span><span class="o">:</span> <span class="mf">.5</span><span class="kt">em</span><span class="err">;</span>
+  <span class="err">}</span>
+<span class="err">}</span></code></pre></div>
 
 <h3>@media (hover) : none | on-demand | hover</h3>
 
@@ -191,17 +191,17 @@
 
 <p><small> &ast; If different input devices have different characteristics, there are also <code>any-pointer</code> and <code>any-hover</code> media features </small></p>
 
-<p>Here&#39;s an example:
-<pre><code>//If hover is difficult, display the menu differently</p>
+<p>Here&#39;s an example:</p>
 
-<p>@media (hover:none) and (hover:on-demand) {
-  .menu {
-    display: block;
-    position absolute;
-    ...
-  }
-}
-</code></pre></p>
+<div class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="c1">//If hover is difficult, display the menu differently</span>
+
+<span class="k">@media</span> <span class="o">(</span><span class="nt">hover</span><span class="nd">:none</span><span class="o">)</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">hover</span><span class="nd">:on-demand</span><span class="o">)</span> <span class="err">{</span>
+  <span class="nc">.menu</span> <span class="err">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="no">block</span><span class="err">;</span>
+    <span class="nt">position</span> <span class="nt">absolute</span><span class="o">;</span>
+    <span class="nc">...</span>
+  <span class="err">}</span>
+<span class="err">}</span></code></pre></div>
 
 <h3>@media (update-frequency) : none | slow | normal</h3>
 
@@ -215,24 +215,24 @@
 <li><code>normal</code> — the output device is not constrained</li>
 </ul>
 
-<p>Here&#39;s an example (stolen right from the spec):
-<pre><code>//If a page styles its links to only add underlines on hover, 
-// it may want to always display underlines when printed:</p>
+<p>Here&#39;s an example (stolen right from the spec):</p>
 
-<p>a {
-  text-decoration: none;
-}</p>
+<div class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="c1">//If a page styles its links to only add underlines on hover, </span>
+<span class="c1">// it may want to always display underlines when printed:</span>
 
-<p>a:hover, a:focus {
-  text-decoration: underline;
-}</p>
+<span class="nt">a</span> <span class="err">{</span>
+  <span class="na">text-decoration</span><span class="o">:</span> <span class="no">none</span><span class="err">;</span>
+<span class="err">}</span>
 
-<p>@media (update-frequency: none) {
-  a {
-    text-decoration: underline;
-    }
-}
-</code></pre></p>
+<span class="nt">a</span><span class="nd">:hover</span><span class="o">,</span> <span class="nt">a</span><span class="nd">:focus</span> <span class="err">{</span>
+  <span class="na">text-decoration</span><span class="o">:</span> <span class="no">underline</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="k">@media</span> <span class="o">(</span><span class="nt">update-frequency</span><span class="nd">:</span> <span class="nt">none</span><span class="o">)</span> <span class="err">{</span>
+  <span class="nt">a</span> <span class="err">{</span>
+    <span class="na">text-decoration</span><span class="o">:</span> <span class="no">underline</span><span class="err">;</span>
+    <span class="err">}</span>
+<span class="err">}</span></code></pre></div>
 
 <h3>@media (scripting) : none | initial-only | enabled</h3>
 
@@ -250,18 +250,36 @@
 
 <p>Remember, it has only been 2 years since the general adoption of media queries and responsive web design. If this is just the beginning, then where are they heading next?</p>
 
+
+	<div id="disqus_thread"></div>
+
 </div>
 
 <!-- syntax highlighting -->
 <script src="/js/vendor/jquery-1.11.0.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-
 <script src="/js/vendor/highlight.pack.js"></script>
 
 <script>
-	$(document).ready(function() {
-		$('pre code, code').each(function(i, e) {hljs.highlightBlock(e)});
+//hljs
+$(document).ready(function() {
+	$('pre code, code').each(function(i, e) {hljs.highlightBlock(e)});
+
+	//every time you click on the twitter link button, it takes the text inside of the blockquote and tweets :)
+	$('.twitter-share').each(function() {
+		$(this).attr('href', "https://twitter.com/share?url=http://www.google.com&via=Una&text=" + $(this).text());
 	});
+});
+
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'unakravets'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
 </script>
 
 
@@ -276,15 +294,15 @@
 		<li><a href="http://sketchbook.unakravets.com" target="_blank" class="has-tooltip icon-pencil"><span class="tooltip">Sketchbook</span></a></li>
 		<li><a href="http://codepen.io/unax3" target="_blank" class="has-tooltip icon-codepen"><span class="tooltip">Codepen</span></a></li>
 		<li><a href="http://www.linkedin.com/pub/una-kravets/30/827/a35/" target="_blank" class="has-tooltip icon-linkedin"><span class="tooltip">LinkedIn</span></a></li>
-		<li><a href="mailto:una@ukrave.us?subject=Hello There!&amp;body=Hi Una, so I was looking at your portfolio and..." class="has-tooltip icon-mail2"><span class="tooltip">Email</span></a></li>
+		<li><a href="mailto:una@ukrave.us?subject=Hello There!&amp;body=Hi Una, so I was looking at your blog and..." class="has-tooltip icon-mail2"><span class="tooltip">Email</span></a></li>
 	</ul>
-	<p>&copy; <a href="http://github.com/una/portfolio-2014" target="_blank">Una Kravets</a> 2014. Made with lots of &hearts;. View the <a href="http://github.com/una/una.github.io" target="_blank">source code</a>.
+	<p>&copy; <a href="http://github.com/una/portfolio-2014" target="_blank">Una Kravets</a> 2014. Made with love and coffee. View the <a href="http://github.com/una/una.github.io" target="_blank">source code</a>.
 	</p>
 </footer>
 
-<script src="../js/vendor/jquery-1.11.0.min.js"></script>
+<script src="/js/vendor/jquery-1.11.0.min.js"></script>
 <script src="//cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
-<script src="../js/scripts.js"></script>
+<script src="/js/scripts.js"></script>
 
   </body>
 </html>
