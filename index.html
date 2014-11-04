@@ -27,21 +27,18 @@ title: Home
  {% endfor %}
 </ul>
 
- <!-- Pager -->
  {% if paginator.total_pages > 1 %}
  <ul class="pager">
      {% if paginator.previous_page %}
      <li class="previous">
-         <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+         <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa icon-arrow-left"></i> Newer Posts</a>
      </li>
      {% endif %}
      {% if paginator.next_page %}
      <li class="next">
-         <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+         <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts <i class="fa icon-arrow-right"></i></a>
      </li>
      {% endif %}
  </ul>
  {% endif %}
 </div>
-
-<button><a href="/archive.html" class="view-all"> View All Posts</a></button>

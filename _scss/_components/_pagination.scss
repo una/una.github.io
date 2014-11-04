@@ -1,0 +1,18 @@
+.pager {
+	@extend %container;
+	@extend %pink-links;
+	list-style: none;
+	height: 1em;
+
+	.fa {
+		font-size: 80%;
+	}
+	
+	.next {
+		float: right;
+	}
+
+	.previous {
+		float: left;
+	}
+}

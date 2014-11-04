@@ -2,6 +2,10 @@
 	@extend %pink-links;
 	@extend %container;
 
+	@include breakpoint(sm) {
+		padding: 1em;
+	}
+
 	p {
 		// @extend %clearfix;
 		&:first-child {
@@ -16,6 +20,11 @@
 		margin: 1em 3em;
 		padding-right: 2em;
 		color: $color--copy;
+
+
+		@include breakpoint(xs) {
+			margin: 1em;
+		}
 		
 		li {
 			margin-bottom: .8em;
@@ -36,6 +45,10 @@
 			display: inline-block;
 			width: 1em;
 			margin-left: -1em;
+			
+				@include breakpoint(xs) {
+					content: "-"; // The "⁞" was breaking on mobile
+				}
 			}
 		}
 

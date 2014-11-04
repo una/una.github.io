@@ -3,6 +3,13 @@ nav {
 	top: 1rem;
 	right: 1rem;
 
+	ul {
+		@include breakpoint(sm){
+			color: red !important;height:50px;
+			// testing here
+		}
+	}
+
 	li {
 		display: inline-block;
 		margin-left: 1em;
@@ -21,6 +28,11 @@ nav {
 		&.active:after,
 		&:hover:after {
 			width: 105%;
+		}
+
+		@include breakpoint(sm){
+			color: red !important;
+			top:-3em;
 		}
 	}
 }
