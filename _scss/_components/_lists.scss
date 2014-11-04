@@ -49,6 +49,10 @@ ol {
 .archive {
 	@extend %container;
 	color: $color--darkerpurple;
+
+	@include breakpoint(sm) {
+		margin: 7em 1em;
+	}
 }
 
 .post-list--home {

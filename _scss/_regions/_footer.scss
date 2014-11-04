@@ -15,9 +15,9 @@ footer {
 		margin: 2em auto 0;
 		text-align: center;
 
-		// @include breakpoint($phone-horiz) {
-		// 	@include fontsize(10)
-		// }
+		@include breakpoint(md) {
+			@include fontsize(10)
+		}
 	}
 
 
@@ -38,6 +38,10 @@ footer {
 			@include fontsize(24);
 			border-bottom: none;
 			color: $color--copy;
+
+			@include breakpoint(md) {
+				@include fontsize(20)
+			}
 
 			// these hovers are all brand-color specific
 			&.icon-twitter:hover {

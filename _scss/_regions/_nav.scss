@@ -3,9 +3,17 @@ nav {
 	top: 1rem;
 	right: 1rem;
 
+	@include breakpoint(sm){
+		position: relative;
+		top: -1em;
+		right: 0;
+	}
+
 	ul {
 		@include breakpoint(sm){
-			color: red !important;height:50px;
+			clear: both;
+			display: block;
+			margin: 0 auto;
 			// testing here
 		}
 	}
@@ -31,8 +39,7 @@ nav {
 		}
 
 		@include breakpoint(sm){
-			color: red !important;
-			top:-3em;
+			color: $color--main;
 		}
 	}
 }
