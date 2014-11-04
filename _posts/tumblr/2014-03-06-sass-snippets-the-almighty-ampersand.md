@@ -2,7 +2,6 @@
 layout: post
 title: 'Sass Snippets: The Almighty Ampersand'
 date: '2014-03-06T08:02:00-06:00'
-permalink: /the-almighty-ampersand
 tags:
 - Sass
 - Ampersand
