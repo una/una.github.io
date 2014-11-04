@@ -52,7 +52,7 @@ tumblr_url: http://unakravets.tumblr.com/post/64113156740/sass-3-3-at-root-bem
 
 <h3>SCSS:</h3>
 
-<pre>// Nesting: (this aint cute. never do this)
+<pre><code>// Nesting: (this aint cute. never do this)
 .speech-bubble{
  color: purple;
   .speech-bubble__header{
@@ -64,24 +64,24 @@ tumblr_url: http://unakravets.tumblr.com/post/64113156740/sass-3-3-at-root-bem
        color: green;
     }
   }
-} </pre>
+} </pre></code>
 
 <h3>CSS Output:</h3>
 
-<pre>.speech-bubble {
+<pre><code>.speech-bubble {
   color: purple; }
   .speech-bubble .speech-bubble__header {
     color: orange; }
   .speech-bubble .speech-bubble__text {
     color: black; }
     .speech-bubble .speech-bubble__text .speech-bubble__text--link {
-      color: green; }</pre>
+      color: green; }</pre></code>
 
 <p><strong>Yikes!! </strong>But let&#8217;s see what @at-root will do for us!</p>
 
 <h3>SCSS:</h3>
 
-<pre>// Nesting, but using @at-root
+<pre><code>// Nesting, but using @at-root
 .speech-bubble{
   color: purple;
    @at-root #{&amp;}__header{
@@ -93,18 +93,18 @@ tumblr_url: http://unakravets.tumblr.com/post/64113156740/sass-3-3-at-root-bem
       color: green;
     }
   }
-}</pre>
+}</pre></code>
 
 <h3>CSS Output:</h3>
 
-<pre>.speech-bubble {
+<pre><code>.speech-bubble {
   color: purple; }
   .speech-bubble__header {
     color: orange; }
   .speech-bubble__text {
     color: black; }
     .speech-bubble__text--link {
-      color: green; }</pre>
+      color: green; }</pre></code>
 
 
 
@@ -114,23 +114,23 @@ tumblr_url: http://unakravets.tumblr.com/post/64113156740/sass-3-3-at-root-bem
 
 <h3>SCSS:</h3>
 
-<pre>@media screen and (max-width: 320px){
+<pre><code>@media screen and (max-width: 320px){
   .sidebar {
     width: 40%;
     @at-root (without: media screen) {
       width: 100%;
     }
   }
-}</pre>
+}</pre></code>
 
 <h3>CSS Output:</h3>
 
-<pre>@media screen and (max-width: 320px) {
+<pre><code>@media screen and (max-width: 320px) {
   .sidebar {
     width: 40%; } 
 }
   .sidebar {
-    width: 100%; }</pre>
+    width: 100%; }</pre></code>
 
 
 
@@ -144,7 +144,7 @@ tumblr_url: http://unakravets.tumblr.com/post/64113156740/sass-3-3-at-root-bem
 
 <h3>Scott&#8217;s Rad Mixins:</h3>
 
-<pre>//elements get appended with "__" and the $name
+<pre><code>//elements get appended with "__" and the $name
 @mixin e($name) {
   @at-root   #{&amp;}__#{$name} {
     @content;
@@ -156,11 +156,11 @@ tumblr_url: http://unakravets.tumblr.com/post/64113156740/sass-3-3-at-root-bem
   @at-root   #{&amp;}--#{$name} {
     @content;
   }
-}</pre>
+}</pre></code>
 
 <h3>SCSS</h3>
 
-<pre>.speech-bubble{
+<pre><code>.speech-bubble{
   color: purple;
    @include e(header){ //header element
     color: orange;
@@ -171,19 +171,19 @@ tumblr_url: http://unakravets.tumblr.com/post/64113156740/sass-3-3-at-root-bem
       color: green;
     }
   }
-}</pre>
+}</pre></code>
 
 <p>And we get the same CSS output!</p>
 
 <h3>CSS Output:</h3>
 
-<pre>.speech-bubble {
+<pre><code>.speech-bubble {
   color: purple; }
   .speech-bubble__header {
     color: orange; }
   .speech-bubble__text {
     color: black; }
     .speech-bubble__text--link {
-      color: green; }</pre>
+      color: green; }</pre></code>
 
 <p>Thank&#8217;s Scott!</p>

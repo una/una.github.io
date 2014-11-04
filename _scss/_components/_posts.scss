@@ -82,12 +82,20 @@
 
 		&.left {
 			float: left;
-			margin: 1em 3em 1em -20em;
+			margin: 1em 2em 1em -6em;
+
+			@include breakpoint(md) {
+			  margin: 1em 2em 1em 0;
+			}
 		}
 
 		&.right {
 			float: right;
-			margin: 1em -20em 1em 3em;
+			margin: 1em -6em 1em 2em;
+
+			@include breakpoint(md) {
+			  margin: 1em 0 1em 2em;
+			}
 		}
 
 		&.wide {

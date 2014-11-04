@@ -11,7 +11,7 @@ tumblr_url: http://unakravets.tumblr.com/post/78744593423/sass-snippets-the-almi
 ---
 
 
-<img src="http://una.github.io/images/posts/ampersand.gif" alt="Animated sass ampersand"/>
+<img style="max-width: 500px;" src="http://una.github.io/images/posts/ampersand.gif" alt="Animated sass ampersand"/>
 
 <h3>The Basics</h3>
 
@@ -19,8 +19,7 @@ tumblr_url: http://unakravets.tumblr.com/post/78744593423/sass-snippets-the-almi
 
 <h4>SCSS</h4>
 
-```
-.unicorn {
+<pre><code>.unicorn {
   background-color: blue;
   &amp;:hover {
     outline: 2px solid yellow;
@@ -35,14 +34,13 @@ tumblr_url: http://unakravets.tumblr.com/post/78744593423/sass-snippets-the-almi
     }
   }
 }
-```
+</code></pre>
 
 
 
 <h4>CSS Output</h4>
 
-```
-.unicorn {
+<pre><code>.unicorn {
   background-color: blue;
 }
 .unicorn:hover {
@@ -57,7 +55,7 @@ tumblr_url: http://unakravets.tumblr.com/post/78744593423/sass-snippets-the-almi
 .unicorn.pink:hover {
   outine: 2px solid green;
 }
-```
+</code></pre>
 
 
 
@@ -69,8 +67,7 @@ tumblr_url: http://unakravets.tumblr.com/post/78744593423/sass-snippets-the-almi
 
 <h4>SCSS</h4>
 
-```
-.unicorn {
+<pre><code>.unicorn {
   .set-one &amp; {
     display: none;
   }
@@ -81,21 +78,20 @@ tumblr_url: http://unakravets.tumblr.com/post/78744593423/sass-snippets-the-almi
     font-size: 80%;
   }
 }
-```
+</code></pre>
 
 
 
 <h4>CSS Output</h4>
 
-```
-.set-one .unicorn {
+<pre><code>.set-one .unicorn {
   display: none;
 }
 
 .sidebar .button--large {
   font-size: 80%;
 }
-```
+</code></pre>
 
 
 
@@ -103,8 +99,7 @@ tumblr_url: http://unakravets.tumblr.com/post/78744593423/sass-snippets-the-almi
 
 <h4>SCSS</h4>
 
-```
-@mixin highlight() {
+<pre><code>@mixin highlight() {
   color: coral;
   .sub-nav &amp;, 
   .active &amp;, 
@@ -113,19 +108,18 @@ tumblr_url: http://unakravets.tumblr.com/post/78744593423/sass-snippets-the-almi
   }
 }
 li a { @include highlight; }
-```
+</code></pre>
 
 
 <h4>CSS Output</h4>
 
-```
-li a {
+<pre><code>li a {
   color: coral;
 }
 .sub-nav li a, .active li a, .sidebar li a {
   background-color: gold;
 }
-```
+</code></pre>
 
 
 
@@ -137,8 +131,7 @@ li a {
 
 <h4> Previous Markup (Sass 3.3rc1) </h4>
 
-```
-.speech-bubble{
+<pre><code>.speech-bubble{
   color: purple;
    @at-root #{&amp;}__header{
     color: orange;
@@ -150,12 +143,11 @@ li a {
     }
   }
 }
-```
+</code></pre>
 
 <h4> New Markup (Sass 3.3rc3) </h4>
 
-```
-.speech-bubble{
+<pre><code>.speech-bubble{
   color: purple;
    &amp;__header{
     color: orange;
@@ -167,11 +159,11 @@ li a {
     }
   }
 }
-```
+</code></pre>
 
 <h3> The result (CSS Output) </h3>
 
-```
+<code></pre>
 .speech-bubble{
   color: purple; 
 }
@@ -184,7 +176,7 @@ li a {
 .speech-bubble__text--link{
       color: green; 
 }
-```
+</code></pre>
 
 <p><a href="http://www.alwaystwisted.com/post.php?s=2014-02-27-even-easier-bem-ing-with-sass-33" target="_blank">Scott&#8217;s Post</a> is another great read on this topic.
 <br/><br/></p>
@@ -197,26 +189,24 @@ li a {
 
 <h4>SCSS</h4>
 
-```
-.column--half {
+<pre><code>.column--half {
   color: dimgrey;
   &amp; + &amp; {
     margin-left: 30px;
   }
 }
-```
+</code></pre>
 
 
 <h4>CSS Output </h4>
 
-```
-.column--half {
+<pre><code>.column--half {
   color: dimgrey;
 }
 .column--half + .column--half {
   margin-left: 30px;
 }
-```
+</code></pre>
 
 
 <p>This gives both of the &#8216;column&#8212;half&#8217; class elements the same color (dimgrey), but only the second &#8216;column&#8212;half&#8217; element will get the left margin. The first one will flush left of the page.</p>
