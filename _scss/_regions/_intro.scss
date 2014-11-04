@@ -8,25 +8,14 @@
   p {
     @extend %center;
     @extend %pink-aside;
-    font-weight: 400;
-    border-right: none;
-    border-left: 2px solid $color--main;
     margin: 16em 0 0;
     max-width: 330px;
-    overflow: hidden;
-    text-align: left;
     font-size: 1rem;
   }
 }
 
 
 .self-portrait {
-  // width: 150px;
-  // height: 150px;
-  // border-radius: 50%;
-  // background-image: url('../images/una-kravets.jpg');
-  // background-position: 50%;
-  // background-size: cover;
   width: 300px;
   height: 325px;
   background-image: url('../images/me-sketchtransp.gif');
