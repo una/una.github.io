@@ -1,3 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Sass 3.3 @at-root & BEM!</title>
+    <meta name="viewport" content="width=device-width">
+    <head profile="http://www.w3.org/2005/10/profile">
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+
+    <!-- MOBILE SETTINGS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+
+  <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,900|Open+Sans:300italic,400,700,300|Oleo+Script+Swash+Caps:700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.min.css">
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-36758177-1']);
+      _gaq.push(['_setDomainName', 'unakravets.com']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+</head>
+<body>
+
+    <header class="headroom">
+  <h1 class="title"><a href="/">Almost Profound</a></h1>
+  <div class="lil-fish"></div>
+
+  <div class="menu-section">
+	<nav>
+		<ul role="navigation" class="hidden">
+			<li><a  href="/">Home</a></li>
+			<li><a  href="/archive.html">Archive</a></li>
+			<li><a href="http://unakravets.com/about">About</a></li>
+		</ul>
+	</nav>
+</div>
+
+</header>
+
+     <div class="post-intro" >
+	<h1>Sass 3.3 @at-root & BEM!</h1>
+	<p class="meta">October 15, 2013</p>
+ </div>
+
+<div class="post">
 <p><strong>NOTE: THIS ARTICLE IS OUT OF DATE AS OF MARCH 2014. SEE <a href="http://unakravets.tumblr.com/2014/03/06/sass-snippets-the-almighty-ampersand.html" target="_blank">THIS ONE</a> ABOUT USING AMPERSANDS FOR BEM INSTEAD</strong></p>
 
 <p>A few months ago, when I was interning at <a href="http://viget.com" title="viget" target="_blank">Viget</a>, I found myself engaged in a conversation about naming conventions. Tommy had read <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/" title="BEM" target="_blank">an article</a> about BEM (Block, Element, Modifier) syntax and was explaining the practicality of its use to me. Sure, it seemed like a good idea, but being a little stubborn, I thought of it as a passing trend, and never actually used it.</p>
@@ -178,3 +240,60 @@
       color: green; }</pre>
 
 <p>Thank&#8217;s Scott!</p>
+
+
+	<div id="disqus_thread"></div>
+
+</div>
+
+<!-- syntax highlighting -->
+<script src="/js/vendor/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/js/vendor/highlight.pack.js"></script>
+
+<script>
+//hljs
+$(document).ready(function() {
+	$('pre code, code').each(function(i, e) {hljs.highlightBlock(e)});
+
+	//every time you click on the twitter link button, it takes the text inside of the blockquote and tweets :)
+	$('.twitter-share').each(function() {
+		$(this).attr('href', "https://twitter.com/share?url=http://www.google.com&via=Una&text=" + $(this).text());
+	});
+});
+
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'unakravets'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+
+
+    <footer role="contentinfo">
+	<ul class="social-icons">
+		<li><a href="http://twitter.com/una" target="_blank" class="has-tooltip icon-twitter"><span class="tooltip">Twitter</span></a></li>
+		<li><a href="http://dribbble.com/una" target="_blank" class="has-tooltip icon-dribbble"><span class="tooltip">Dribbble</span></a></li>
+		<li><a href="http://github.com/una" target="_blank" class="has-tooltip icon-github2"><span class="tooltip">Github</span></a></li>
+		<li><a href="http://vimeo.com/unakravets" target="_blank" class="has-tooltip icon-vimeo"><span class="tooltip">Vimeo</span></a></li>
+		<li><a href="http://blog.unakravets.com" target="_blank" class="has-tooltip icon-paragraph-left"><span class="tooltip">Blog</span></a></li>
+		<li><a href="http://sketchbook.unakravets.com" target="_blank" class="has-tooltip icon-pencil"><span class="tooltip">Sketchbook</span></a></li>
+		<li><a href="http://codepen.io/unax3" target="_blank" class="has-tooltip icon-codepen"><span class="tooltip">Codepen</span></a></li>
+		<li><a href="http://www.linkedin.com/pub/una-kravets/30/827/a35/" target="_blank" class="has-tooltip icon-linkedin"><span class="tooltip">LinkedIn</span></a></li>
+		<li><a href="mailto:una@ukrave.us?subject=Hello There!&amp;body=Hi Una, so I was looking at your blog and..." class="has-tooltip icon-mail2"><span class="tooltip">Email</span></a></li>
+	</ul>
+	<p>&copy; <a href="http://github.com/una/portfolio-2014" target="_blank">Una Kravets</a> 2014. Made with love and coffee. View the <a href="http://github.com/una/una.github.io" target="_blank">source code</a>.
+	</p>
+</footer>
+
+<script src="/js/vendor/jquery-1.11.0.min.js"></script>
+<script src="//cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
+<script src="/js/scripts.js"></script>
+
+  </body>
+</html>
