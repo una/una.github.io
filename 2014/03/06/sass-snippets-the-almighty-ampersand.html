@@ -10,6 +10,9 @@
     <head profile="http://www.w3.org/2005/10/profile">
     <link rel="icon" type="image/png" href="images/favicon.ico">
 
+    <!-- RSS Y'all -->
+    <link rel="alternate" type="application/rss+xml" title="Almost Profound" href="http://una.github.io/feed.xml">
+
     <!-- MOBILE SETTINGS -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -22,17 +25,15 @@
     <link rel="stylesheet" href="/css/main.min.css">
 
     <!-- Google Analytics -->
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-36758177-1']);
-      _gaq.push(['_setDomainName', 'unakravets.com']);
-      _gaq.push(['_trackPageview']);
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+      ga('create', 'UA-36758177-2', 'auto');
+      ga('send', 'pageview');
+
     </script>
 
 </head>
@@ -60,7 +61,7 @@
  </div>
 
 <div class="post">
-<img src="http://una.github.io/images/posts/ampersand.gif" alt="Animated sass ampersand"/>
+<img style="max-width: 500px;" src="http://una.github.io/images/posts/ampersand.gif" alt="Animated sass ampersand"/>
 
 <h3>The Basics</h3>
 
@@ -68,8 +69,7 @@
 
 <h4>SCSS</h4>
 
-```
-.unicorn {
+<pre><code>.unicorn {
   background-color: blue;
   &amp;:hover {
     outline: 2px solid yellow;
@@ -84,14 +84,13 @@
     }
   }
 }
-```
+</code></pre>
 
 
 
 <h4>CSS Output</h4>
 
-```
-.unicorn {
+<pre><code>.unicorn {
   background-color: blue;
 }
 .unicorn:hover {
@@ -106,7 +105,7 @@
 .unicorn.pink:hover {
   outine: 2px solid green;
 }
-```
+</code></pre>
 
 
 
@@ -118,8 +117,7 @@
 
 <h4>SCSS</h4>
 
-```
-.unicorn {
+<pre><code>.unicorn {
   .set-one &amp; {
     display: none;
   }
@@ -130,21 +128,20 @@
     font-size: 80%;
   }
 }
-```
+</code></pre>
 
 
 
 <h4>CSS Output</h4>
 
-```
-.set-one .unicorn {
+<pre><code>.set-one .unicorn {
   display: none;
 }
 
 .sidebar .button--large {
   font-size: 80%;
 }
-```
+</code></pre>
 
 
 
@@ -152,8 +149,7 @@
 
 <h4>SCSS</h4>
 
-```
-@mixin highlight() {
+<pre><code>@mixin highlight() {
   color: coral;
   .sub-nav &amp;, 
   .active &amp;, 
@@ -162,19 +158,18 @@
   }
 }
 li a { @include highlight; }
-```
+</code></pre>
 
 
 <h4>CSS Output</h4>
 
-```
-li a {
+<pre><code>li a {
   color: coral;
 }
 .sub-nav li a, .active li a, .sidebar li a {
   background-color: gold;
 }
-```
+</code></pre>
 
 
 
@@ -186,8 +181,7 @@ li a {
 
 <h4> Previous Markup (Sass 3.3rc1) </h4>
 
-```
-.speech-bubble{
+<pre><code>.speech-bubble{
   color: purple;
    @at-root #{&amp;}__header{
     color: orange;
@@ -199,12 +193,11 @@ li a {
     }
   }
 }
-```
+</code></pre>
 
 <h4> New Markup (Sass 3.3rc3) </h4>
 
-```
-.speech-bubble{
+<pre><code>.speech-bubble{
   color: purple;
    &amp;__header{
     color: orange;
@@ -216,11 +209,11 @@ li a {
     }
   }
 }
-```
+</code></pre>
 
 <h3> The result (CSS Output) </h3>
 
-```
+<code></pre>
 .speech-bubble{
   color: purple; 
 }
@@ -233,10 +226,10 @@ li a {
 .speech-bubble__text--link{
       color: green; 
 }
-```
+</code></pre>
 
-<p><a href="http://www.alwaystwisted.com/post.php?s=2014-02-27-even-easier-bem-ing-with-sass-33" target="_blank">Scott&#8217;s Post</a> is another great read on this topic.
-<br/><br/></p>
+<aside><a href="http://www.alwaystwisted.com/post.php?s=2014-02-27-even-easier-bem-ing-with-sass-33" target="_blank">Scott&#8217;s Post</a> is another great read on this topic.
+<br/><br/></aside>
 
 <h3>The Double Ampersand</h3>
 
@@ -246,26 +239,24 @@ li a {
 
 <h4>SCSS</h4>
 
-```
-.column--half {
+<pre><code>.column--half {
   color: dimgrey;
   &amp; + &amp; {
     margin-left: 30px;
   }
 }
-```
+</code></pre>
 
 
 <h4>CSS Output </h4>
 
-```
-.column--half {
+<pre><code>.column--half {
   color: dimgrey;
 }
 .column--half + .column--half {
   margin-left: 30px;
 }
-```
+</code></pre>
 
 
 <p>This gives both of the &#8216;column&#8212;half&#8217; class elements the same color (dimgrey), but only the second &#8216;column&#8212;half&#8217; element will get the left margin. The first one will flush left of the page.</p>
@@ -318,13 +309,13 @@ var disqus_shortname = 'unakravets'; // required: replace example with your foru
 		<li><a href="http://www.linkedin.com/pub/una-kravets/30/827/a35/" target="_blank" class="has-tooltip icon-linkedin"><span class="tooltip">LinkedIn</span></a></li>
 		<li><a href="mailto:una@ukrave.us?subject=Hello There!&amp;body=Hi Una, so I was looking at your blog and..." class="has-tooltip icon-mail2"><span class="tooltip">Email</span></a></li>
 	</ul>
-	<p>&copy; <a href="http://github.com/una/portfolio-2014" target="_blank">Una Kravets</a> 2014. Made with love and coffee. View the <a href="http://github.com/una/una.github.io" target="_blank">source code</a>.
+	<p>&copy; <a href="http://unakravets.com" target="_blank">Una Kravets</a> 2014. Made with love and coffee. View the <a href="http://github.com/una/una.github.io" target="_blank">source code</a>.
 	</p>
 </footer>
 
-<script src="/js/vendor/jquery-1.11.0.min.js"></script>
+<script src="http://una.github.io/js/vendor/jquery-1.11.0.min.js"></script>
 <script src="//cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
-<script src="/js/scripts.js"></script>
+<script src="http://una.github.io/js/scripts.js"></script>
 
   </body>
 </html>

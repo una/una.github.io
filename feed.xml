@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <description>Front end development and design musings</description>
+    <link>http://una.github.io/</link>
+    <atom:link href="http://una.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>How to Become a Keyboard Ninja&amp;colon; The Sticky Note Method</title>
+        <description>&lt;p&gt;The keyboard, where our hands are placed most of the time (as developers), is the fastest navigation method by default. I always think devs look so slick and badass when navigating their systems without touching their trackpad/mouse. They&amp;#39;re like little ninjas -- slick, fast and know how to move with ease.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;#39;re not convinced yet, let&amp;#39;s break it down:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Performance optimization &amp;mdash; you care about it on your projects. Why not care about it in your workflow?&lt;/li&gt;
+&lt;li&gt;Switching between tabs and windows and a keyboard and mouse is clunky and error-prone and fumbly. Like runon sentances.&lt;/li&gt;
+&lt;li&gt;You&amp;#39;ll look like you know what you&amp;#39;re doing. (Isn&amp;#39;t that reason enough? :P)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;The Sticky Note Method&lt;/h2&gt;
+
+&lt;p&gt;If you want to become a keyboard ninja, try putting a sticky note (or two) on the top of your trackpad. Why? because a few things:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;It will remind you not to use it, causing you to Google alternative navigation flows (you&amp;#39;ll learn a lot this way)&lt;/li&gt;
+&lt;li&gt;You can still easily access the trackpad by simply lifting the sticky note from below or on the edge (where you&amp;#39;d be accessing it anyway)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Make sure to write down new shortcuts you learn on that sticky note &amp;mdash; use a felt tip pen so you don&amp;#39;t need press too hard and accidentally click on something.&lt;br&gt;
+&lt;br&gt;
+When you&amp;#39;ve covered your sticky with shortcut reminders, put it somewhere visible for a while (i.e. next to your track pad on your laptop or on your desk). Soon, you&amp;#39;ll have a great collection of shortcuts you find useful, and will quickly memorize them!&lt;br&gt;
+&lt;br&gt;
+To use this method with a mouse &amp;mdash; not a track pad &amp;mdash; put the sticky underneath the mouse to disable the motion sensor. You&amp;#39;ll need a separate sticky to write new commands down on.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img class=&quot;wide&quot; src=&quot;http://unakravets.com/temp/keyboard-ninja-ex.jpg&quot;&gt;&lt;/img&gt;
+&lt;figcaption&gt;I found this method really helpful for learning terminal and &lt;a href=&quot;http://www.linux.com/learn/tutorials/228600-vim-101-a-beginners-guide-to-vim&quot;&gt;vim&lt;/a&gt; commands.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2&gt;A few Things I&amp;#39;ve learned:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;⌘ cmd&lt;/code&gt; + &lt;code&gt;w&lt;/code&gt; closes a tab (general rule)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ctrl + tab&lt;/code&gt; navigates my tabs (general rule)&lt;/li&gt;
+&lt;li&gt;Use the terminal to make and navigate files&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;⌘ cmd&lt;/code&gt; + &lt;code&gt;⇧ shift + p&lt;/code&gt; in Sublime Text (and Atom Editor) and you can probably do anything you need from there&lt;/li&gt;
+&lt;li&gt;just &lt;code&gt;⌘ cmd&lt;/code&gt; + &lt;code&gt;p&lt;/code&gt; in Sublime Text (and Atom Editor) and you can fuzzy search for any file in your project&lt;/li&gt;
+&lt;li&gt;Fuzzy search is your friend&lt;/li&gt;
+&lt;li&gt;Navigate the Sublime Text (and Atom) sidebar with &lt;code&gt;⌘ cmd&lt;/code&gt; + &lt;code&gt;0&lt;/code&gt; to focus on the sidebar, and your arrow keys. &lt;code&gt;Enter&lt;/code&gt; will open the file. (see plugin below for more fun)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Some Tools to Help!&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Download &lt;a href=&quot;http://alfredapp.com&quot;&gt;Alfred&lt;/a&gt; to help your workflow out a TON. Alfred is a great tool for navigating not only your applications but also acts as an awesome quick Google search tool. &lt;strong&gt;HIGHLY Recommend&lt;/strong&gt; for future keyboard ninjas!&lt;/li&gt;
+&lt;li&gt;There&amp;#39;s a great &lt;a href=&quot;https://github.com/miguelgraz/FocusFileOnSidebar&quot;&gt;Sublime Text plugin&lt;/a&gt; that will help you focus on which file you have open. Type &lt;code&gt;⌘ cmd&lt;/code&gt; + &lt;code&gt;k&lt;/code&gt;, &lt;code&gt;⌘ cmd&lt;/code&gt; + &lt;code&gt;f&lt;/code&gt; to open the sidebar right to the directory of the current file.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;*TIP: when first practicing moving files in terminal, have a text editor with a sidebar open (&lt;code&gt;⌘ cmd&lt;/code&gt; + &lt;code&gt;k&lt;/code&gt;, &lt;code&gt;⌘ cmd&lt;/code&gt; + &lt;code&gt;b&lt;/code&gt;) so you can visually see the changes. This is also a great way to illustrate how git works. *&lt;/p&gt;
+
+&lt;h2&gt;More Fun Resources&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://support.google.com/chrome/answer/157179?hl=en&amp;amp;ref_topic=25799&quot;&gt;Chrome Shortcuts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://katiek2.github.io/most/&quot;&gt;Sublime Text Shortcuts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://ashleynolan.co.uk/blog/getting-started-with-terminal&quot;&gt;Getting Started with Terminal&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://wesbos.github.io/Sublime-Text-Power-User-Talk&quot;&gt;How to Become an ST2 Power User w/@wesbos Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://mac.appstorm.net/how-to/utilities-how-to/become-an-alfred-expert-advanced-tips-tricks/&quot;&gt;Become an Alfred Expert&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Table_of_keyboard_shortcuts&quot;&gt;General Table of Keyboard Shortcuts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.howtogeek.com/howto/ubuntu/keyboard-shortcuts-for-bash-command-shell-for-ubuntu-debian-suse-redhat-linux-etc/&quot;&gt;Keyboard Shortcuts for Bash&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is a growing list. Feel free to contribute your thoughts and ideas on improving workflow!&lt;/p&gt;
+</description>
+        <pubDate>Mon, 27 Oct 2014 10:21:36 -0500</pubDate>
+        <link>http://una.github.io/keyboard-ninja</link>
+        <guid isPermaLink="true">http://una.github.io/keyboard-ninja</guid>
+      </item>
+    
+      <item>
+        <title>Media Queries of the Future!</title>
+        <description>&lt;p&gt;Media queries are infants. The first Media Query public working draft was published in 2001, and they became a W3C recommendation after &lt;a href=&quot;http://caniuse.com/#search=media%20queries&quot;&gt;browser support&lt;/a&gt; increased in 2012. 2012! &lt;strong&gt;That&amp;#39;s TWO years!&lt;/strong&gt; Hard to believe, considering how essential they&amp;#39;ve become in our web workflows today. Media queries are most often used to build flexible &lt;a href=&quot;http://mediaqueri.es/&quot;&gt;web designs&lt;/a&gt; which adapt to various browsers properties. Here are some &lt;a href=&quot;https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/use-media-queries?hl=en&quot;&gt;pointers&lt;/a&gt; from the smart people at Google.&lt;/p&gt;
+
+&lt;h3&gt;Media Query Capabilities&lt;/h3&gt;
+
+&lt;p&gt;If you&amp;#39;re familiar with building responsive websites, you&amp;#39;re probably familiar with something like: &lt;code&gt;@media screen and (max-width: 700px)&lt;/code&gt;, but did you know that you can use media queries to specify how to handle &lt;strong&gt;paged braille printers&lt;/strong&gt; or &lt;strong&gt;TVs&lt;/strong&gt; or how to use &lt;strong&gt;&lt;a href=&quot;http://css-tricks.com/logic-in-media-queries/&quot;&gt;logic&lt;/a&gt;&lt;/strong&gt; in your media queries? Yeah, they&amp;#39;re pretty rad.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#39;s a list of current media types you can target:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;all&lt;/code&gt; — all the media types below&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;braille&lt;/code&gt;* — braille tactile feedback devices&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;embossed&lt;/code&gt;* — paged braille printers&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;handheld&lt;/code&gt;* — handheld devices like mobile phones&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;print&lt;/code&gt; — printed material&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;projection&lt;/code&gt;* — projected presentations&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;screen&lt;/code&gt; — color computer screens&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;speech&lt;/code&gt; — speech synthesizers&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tty&lt;/code&gt;* — teletypes, terminals, and other devices with limited display capabilities&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tv&lt;/code&gt;* — televisions and television like devices&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;small&gt;&amp;ast; = deprecated as media &lt;strong&gt;types&lt;/strong&gt;, but can be used similarly as media &lt;strong&gt;features&lt;/strong&gt; -- read on)&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;And this is what you can specify (expressions) for each of those media types:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;width&lt;/code&gt; — width of the current window&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;height&lt;/code&gt; — height of the current window&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;device-width&lt;/code&gt; — width of the device&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;device-height&lt;/code&gt; — height of the device&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;orientation&lt;/code&gt; — either landscape or portrait&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aspect-ratio&lt;/code&gt; — aspect ratio of the current window&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;device-aspect-ratio&lt;/code&gt; — aspect ratio of the device&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;color&lt;/code&gt; — number of color bits per color component&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;color-index&lt;/code&gt; — number of available colors on the device&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;monochrome&lt;/code&gt; — number of bits per pixel in a monochrome frame buffer&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;resolution&lt;/code&gt; — resolution of the device&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scan&lt;/code&gt; — either progressive or interlace&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;grid&lt;/code&gt; — is the device grid-based?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This list was stolen from &lt;a href=&quot;http://cssmediaqueries.com/what-are-css-media-queries.html&quot;&gt;here&lt;/a&gt;, by the way.&lt;/p&gt;
+
+&lt;h3&gt;Responsive Beyond the Browser Size&lt;/h3&gt;
+
+&lt;p&gt;Media queries are most often used for their screen size properties to allow for &lt;strong&gt;&amp;quot;Responsive Web Design&amp;quot;&lt;/strong&gt;, or &lt;strong&gt;RWD&lt;/strong&gt;. But viewing &amp;quot;responsive design&amp;quot; as just a means for detecting screen sizes and browsers is narrow-minded. Responsive principles go far past the browser and stretch into the real world — how can the products we design respond to a users location, or the weather, or the lighting? How can we really personalize experiences for our users?&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;twitter-share quote left&quot; &gt;
+viewing &amp;quot;responsive design&amp;quot; as just a means for detecting screen sizes and browsers is narrow-minded
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Well media queries are helping us get one step closer! As devices are able to detect more, browsers are keeping up to date with these capabilities.&lt;/p&gt;
+
+&lt;h2&gt;The Future of Media Queries&lt;/h2&gt;
+
+&lt;p&gt;The &lt;a href=&quot;http://dev.w3.org/csswg/mediaqueries-4/&quot;&gt;Media Queries 4&lt;/a&gt; spec brings insight to technological capabilities that are coming up soon (this is based on the Editor’s Draft, October 10, 2014).&lt;/p&gt;
+
+&lt;h3&gt;Media Features vs Types&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;One important distinction to note is that all of the **media types&lt;/em&gt;* listed above will eventually become deprecated and replaced with more specific &lt;strong&gt;&lt;a href=&quot;http://dev.w3.org/csswg/mediaqueries-4/#mq-features&quot;&gt;media features&lt;/a&gt;&lt;/strong&gt; *&lt;/p&gt;
+
+&lt;p&gt;Media features are always wrapped in parentheses and combined with the &lt;code&gt;and&lt;/code&gt; keyword rather than being separated with semicolons.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#39;s an example from the spec:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sass&quot; data-lang=&quot;sass&quot;&gt;&lt;span class=&quot;na&quot;&gt;(color)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;and&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;(min-width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;600&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;@media (light-level) : dim | normal | washed&lt;/h3&gt;
+
+&lt;p&gt;The &lt;code&gt;light-level&lt;/code&gt; media feature is for detection &lt;strong&gt;ambient lighting&lt;/strong&gt;. &lt;em&gt;(Ambient is such a fun word)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Values:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;dim&lt;/code&gt; — lighting in a dim environment (i.e. nighttime)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;normal&lt;/code&gt; — lighting in the &amp;quot;ideal screen range&amp;quot;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;washed&lt;/code&gt; — lighting in an overly bright environment (i.e. broad daylight)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here&amp;#39;s an example:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sass&quot; data-lang=&quot;sass&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// change text coloring due to lighting for better legibility&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;light-level&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;dim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dimgrey&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;&lt;/span&gt;
+         &lt;span class=&quot;na&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;white&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;light-level&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;washed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;white&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;&lt;/span&gt;
+         &lt;span class=&quot;na&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;black&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;&lt;/span&gt;
+         &lt;span class=&quot;na&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;em&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;@media (pointer) : none | course | fine&lt;/h3&gt;
+
+&lt;p&gt;The &lt;code&gt;pointer&lt;/code&gt; media feature detects the &lt;strong&gt;presence and accuracy of a pointing device&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Values:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;none&lt;/code&gt; — there is no pointing device present (i.e. TV, printer)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;course&lt;/code&gt; — the primary input mechanism is of limited accuracy (i.e. Nintendo Wii, Kinect, Google Glass)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fine&lt;/code&gt; — the primary input mechanism is an accurate pointing device (i.e. stylus, mouse, touchpad)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here&amp;#39;s an example:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sass&quot; data-lang=&quot;sass&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Make input larger for inaccurate pointing devices&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;pointer&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:coarse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;em&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.5&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;em&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;@media (hover) : none | on-demand | hover&lt;/h3&gt;
+
+&lt;p&gt;The &lt;code&gt;hover&lt;/code&gt; media feature detects the ability of the primary pointing mechanism to hover over elements.&lt;/p&gt;
+
+&lt;p&gt;Values:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;none&lt;/code&gt; — there primary pointing mechanism can&amp;#39;t hover&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;on-demand&lt;/code&gt; — the user can hover but it requires significant action (i.e. touch screens)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fine&lt;/code&gt; — the primary pointing system can easily hover&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;small&gt; &amp;ast; If different input devices have different characteristics, there are also &lt;code&gt;any-pointer&lt;/code&gt; and &lt;code&gt;any-hover&lt;/code&gt; media features &lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#39;s an example:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sass&quot; data-lang=&quot;sass&quot;&gt;&lt;span class=&quot;c1&quot;&gt;//If hover is difficult, display the menu differently&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;hover&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:none&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;hover&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:on-demand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;.menu&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;position&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;...&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;@media (update-frequency) : none | slow | normal&lt;/h3&gt;
+
+&lt;p&gt;The &lt;code&gt;update-frequency&lt;/code&gt; media feature is used to query the ability of the output device to modify the appearance of content once it has been rendered.&lt;/p&gt;
+
+&lt;p&gt;Values:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;none&lt;/code&gt; — once rendered, the layout will not update (i.e. printed materials)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;slow&lt;/code&gt; — the layout may change dynamically but not smoothly (i.e. e-ink displays)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;normal&lt;/code&gt; — the output device is not constrained&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here&amp;#39;s an example (stolen right from the spec):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sass&quot; data-lang=&quot;sass&quot;&gt;&lt;span class=&quot;c1&quot;&gt;//If a page styles its links to only add underlines on hover, &lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// it may want to always display underlines when printed:&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;text-decoration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:hover&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:focus&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;text-decoration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;underline&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;update-frequency&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;text-decoration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;underline&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;@media (scripting) : none | initial-only | enabled&lt;/h3&gt;
+
+&lt;p&gt;The &lt;code&gt;scripting&lt;/code&gt; media feature detects &lt;strong&gt;whether or not Javascript is enabled&lt;/strong&gt; in the browser.&lt;/p&gt;
+
+&lt;p&gt;Values:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;none&lt;/code&gt; — scripting is not supported by the user agent, or innactive&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;enabled&lt;/code&gt; — scripting is supported and active&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;initial-only&lt;/code&gt; — scripting is supported on initial page load, but not afterwards&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This section also borrowed heavily from the these &lt;a href=&quot;http://www.slideshare.net/yiibu/the-future-of-mediaqueries&quot;&gt;slides&lt;/a&gt;, which break down the information from the spec really well.&lt;/p&gt;
+
+&lt;p&gt;Remember, it has only been 2 years since the general adoption of media queries and responsive web design. If this is just the beginning, then where are they heading next?&lt;/p&gt;
+</description>
+        <pubDate>Thu, 16 Oct 2014 00:00:00 -0500</pubDate>
+        <link>http://una.github.io/media-queries-of-the-future</link>
+        <guid isPermaLink="true">http://una.github.io/media-queries-of-the-future</guid>
+      </item>
+    
+      <item>
+        <title>sketchnotes from refresh atx panel on wearables</title>
+        <description>&lt;figure&gt;
+	&lt;img src=&quot;/tumblr_files/tumblr_ndhpxvoI0x1so6u2uo1_1280.jpg&quot;/&gt;
+	&lt;figcaption&gt;Sketchnotes from Refresh ATX panel on wearables&lt;/figcaption&gt;
+&lt;/figure&gt;</description>
+        <pubDate>Wed, 15 Oct 2014 10:37:07 -0500</pubDate>
+        <link>http://una.github.io/2014/10/15/sketchnotes-from-refresh-atx-panel-on-wearables.html</link>
+        <guid isPermaLink="true">http://una.github.io/2014/10/15/sketchnotes-from-refresh-atx-panel-on-wearables.html</guid>
+      </item>
+    
+      <item>
+        <title>sketchnotes from a talk sam richard gave at ibm</title>
+        <description>&lt;figure&gt;
+	&lt;img src=&quot;/tumblr_files/tumblr_nde0p9qR2x1so6u2uo1_1280.jpg&quot;/&gt;&lt;br/&gt;
+	&lt;img src=&quot;/tumblr_files/tumblr_nde0p9qR2x1so6u2uo2_1280.jpg&quot;/&gt;&lt;br/&gt;
+	&lt;img src=&quot;/tumblr_files/tumblr_nde0p9qR2x1so6u2uo3_1280.jpg&quot;/&gt;&lt;br/&gt;&lt;br/&gt;&lt;figcaption&gt;Sketchnotes from a talk &lt;a href=&quot;https://twitter.com/Snugug&quot; target=&quot;_blank&quot;&gt;Sam Richard&lt;/a&gt; gave at IBM Design on the Modern Web&lt;/figcaption&gt;
+&lt;/figure&gt;</description>
+        <pubDate>Mon, 13 Oct 2014 10:39:00 -0500</pubDate>
+        <link>http://una.github.io/2014/10/13/sketchnotes-from-a-talk-sam-richard-gave-at-ibm.html</link>
+        <guid isPermaLink="true">http://una.github.io/2014/10/13/sketchnotes-from-a-talk-sam-richard-gave-at-ibm.html</guid>
+      </item>
+    
+      <item>
+        <title>SassConf 2014 Resource RoundUp</title>
+        <description>&lt;h3&gt;Keeping Your Sass Squeeky Clean with Adam Onishi (@onishiweb)&lt;/h3&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://csswizardry.com/csswizardry-grids/&quot; target=&quot;_blank&quot;&gt;CSS Grids&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jakearchibald.github.io/sass-ie&quot; target=&quot;_blank&quot;&gt;Sass for IE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://github.com/BPScott/breakup&quot; target=&quot;_blank&quot;&gt;Breakup Sass Components&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://csswizardry.com/2014/01/extending-silent-classes-in-sass/&quot; target=&quot;_blank&quot;&gt;Extends&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://github.com/wearearchitect/Frontend-Boilerplate&quot; target=&quot;_blank&quot;&gt;We Are Architecht Front End BoilerPlate&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/necolas/idiomatic-css&quot; target=&quot;_blank&quot;&gt;Idiomatic CSS Guidelines&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://github.com/anthonyshort/idiomatic-sass&quot; target=&quot;_blank&quot;&gt;Idiomatic Sass Guidelines&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://github.com/wearearchitect/guides&quot; target=&quot;_blank&quot;&gt;We Are Architecht Guideline&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://github.com/causes/scss-lint/blob/master/lib/scss_lint/linter/README.md&quot; target=&quot;_blank&quot;&gt;Causes Linters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://github.com/giakki/uncss&quot; target=&quot;_blank&quot;&gt;unCSS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://github.com/ullmark/grunt-ucss&quot; target=&quot;_blank&quot;&gt;Grunt ucss&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://csswizardry.com/2013/04/shame-css/&quot; target=&quot;_blank&quot;&gt;Shame.css&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://github.com/postcss/autoprefixer&quot; target=&quot;_blank&quot;&gt;Autoprefixer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://css-tricks.com/one-two-three/&quot; target=&quot;_blank&quot;&gt;Multiple Stylesheets&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://speakerdeck.com/onishiweb/keeping-your-sass-squeaky-clean-sassconf-2014&quot; target=&quot;_blank&quot;&gt;Talk Slides&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;Building an Artful Web with Smith Schwartz (@smithschwartz)&lt;/h3&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://www.urchinmovement.com/2011/12/14/andy-goldsworthy-environmental-sculpture-and-art/&quot; target=&quot;_blank&quot;&gt;Andy Goldsworthy Rain Shadows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.wolfkahn.com/&quot; target=&quot;_blank&quot;&gt;Wolf Kahn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.amazon.com/Art-Fear-Observations-Rewards-Artmaking/dp/0961454733&quot; target=&quot;_blank&quot;&gt;Art &amp;amp; Fear Book&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://owlrat.com/&quot; target=&quot;_blank&quot;&gt;Owl Rat&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://speakerdeck.com/smithschwartz/building-an-artful-web-1&quot; target=&quot;_blank&quot;&gt;Talk Slides&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;Tab Atkins Keynote on the Future of CSS (@tabatkins)&lt;/h3&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://dev.w3.org/csswg/selectors4/&quot; target=&quot;_blank&quot;&gt;:matches pseudoclass&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://dev.w3.org/csswg/css-extensions/&quot; target=&quot;_blank&quot;&gt;CSS Extensions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://dev.w3.org/csswg/selectors4/&quot; target=&quot;_blank&quot;&gt;Selectors Level 4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://responsiveimages.org/&quot; target=&quot;_blank&quot;&gt;Responsive Images Community Group&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.xanthir.com/talks/2014-10-02/&quot; target=&quot;_blank&quot;&gt;Talk Slides&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;Spreading the Sass Love with Una Kravets (@una)&lt;/h3&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://plus.google.com/+SassBitesPodcast/posts&quot; target=&quot;_blank&quot;&gt;Sass Bites Podcast&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://sassnews.com&quot; target=&quot;_blank&quot;&gt;Sass News Sign Up&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://nvite.com&quot; target=&quot;_blank&quot;&gt;nvite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://meetup.com&quot; target=&quot;_blank&quot;&gt;Meetup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://github.com/una/sassconf-2014&quot; target=&quot;_blank&quot;&gt;Talk Slides&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;Sassy Colors with Katie Kurkoski (@KatieK2)&lt;/h3&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://mudcu.be/labs/&quot; target=&quot;_blank&quot;&gt;Lab Index&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://codepen.io/KatieK2/pen/xeAbp&quot; target=&quot;_blank&quot;&gt;Mountains Example&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://codepen.io/KatieK2/pen/cvjHs&quot; target=&quot;_blank&quot;&gt;Boat Example&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://codepen.io/KatieK2/pen/tejhz&quot; target=&quot;_blank&quot;&gt;Why Use Mix instead of Lighten/Darken&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/KatieK2/2014-sassconf&quot; target=&quot;_blank&quot;&gt;Talk Slides&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;Style as a Service: Maintaining Style Across Multiple Websites with Shay Howe (@shayhowe)&lt;/h3&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://github.com/bellycard/rolodex&quot; target=&quot;_blank&quot;&gt;Belly Rolodex&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://speakerdeck.com/shayhowe/style-as-a-service-maintaining-style-across-multiple-websites&quot; target=&quot;_blank&quot;&gt;Talk Slides&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;Future Tools: Beyond Live Style Guides with Adam Detrick (@akdetrick)&lt;/h3&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/meetup/sassquatch&quot; target=&quot;_blank&quot;&gt;Sassquatch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/trulia/hologram&quot; target=&quot;_blank&quot;&gt;Hologram&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/meetup/meetup-swatches&quot; target=&quot;_blank&quot;&gt;Meetup Swatches&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://bower.io/&quot; target=&quot;_blank&quot;&gt;Bower&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://making.meetup.com&quot; target=&quot;_blank&quot;&gt;Making Meetup&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;Thinking (Inside the Box)x3 with Mason Wendell (@codingdesigner)&lt;/h3&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://typecast.com/&quot; target=&quot;_blank&quot;&gt;Typecast&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/at-import/modular-scale&quot; target=&quot;_blank&quot;&gt;Sassy Modular Scale&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://modularscale.com/&quot; target=&quot;_blank&quot;&gt;Modular Scale&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://github.com/at-import/color-schemer&quot; target=&quot;_blank&quot;&gt;Color Schemer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://patternlab.io/&quot; target=&quot;_blank&quot;&gt;Pattern Lab&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://github.com/Snugug/eq.js&quot; target=&quot;_blank&quot;&gt;Singularity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://github.com/at-import/breakpoint&quot; target=&quot;_blank&quot;&gt;Breakpoint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://codingdesigner.github.io/box/&quot; target=&quot;_blank&quot;&gt;Talk Slides&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;Refactoring Workshop (@elyseholladay and @gina)&lt;/h3&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://github.com/jina/refactoring&quot; target=&quot;_blank&quot;&gt;Workshop Files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/&quot; target=&quot;_blank&quot;&gt;Pragmatic Font Sizing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://github.com/minamarkham/sassy-starter&quot; target=&quot;_blank&quot;&gt;Sassy Starter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/csscomb/grunt-csscomb&quot; target=&quot;_blank&quot;&gt;Grunt CSS Comb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/koistya/gulp-csscomb&quot; target=&quot;_blank&quot;&gt;Gulp CSS Comb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jina.github.io/refactoring/#/&quot; target=&quot;_blank&quot;&gt;Workshop Slides&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;UI Regression Workshop (@klamping)&lt;/h3&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://github.com/klamping/UIRegression&quot; target=&quot;_blank&quot;&gt;Workshop Files&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;Optimising the Critical Rendering Path with Patrick Hamann (@patrickhamann)&lt;/h3&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://patrickhamann.com/workshops/performance/&quot; target=&quot;_blank&quot;&gt;Workshop Page&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;Expanding Your Sass Arsenal with Anthony DiSpezio (@adispezio)&lt;/h3&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://anthonydispezio.com/sassconf2014/&quot; target=&quot;_blank&quot;&gt;Workshop Slides&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;Around the Web&lt;/h3&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://codepen.io/flipstewart/pen/IofeD?editors=110&quot; target=&quot;_blank&quot;&gt;Lighten &amp;amp; Darken vs. Mix from @flipstewart&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://sassmeister.com/gist/d1b14280c6160f91f295&quot; target=&quot;_blank&quot;&gt;Tinting &amp;amp; Shading by @scottkellum&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/sass/libsass&quot; target=&quot;_blank&quot;&gt;LibSass&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.stylestats.org/&quot; target=&quot;_blank&quot;&gt;Style Stats&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://learn.shayhowe.com/&quot; target=&quot;_blank&quot;&gt;Learn to Code HTML &amp;amp; CSS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://colororacle.org/&quot; target=&quot;_blank&quot;&gt;Color Oracle&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;Unconference Sessions&lt;/h3&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://ericsuzanne.com/pres/map-magic/&quot; target=&quot;_blank&quot;&gt;Eric Suzanne &amp;#8212; Map Magic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://codepen.io/ericmsuzanne/pen/hsAFg&quot; target=&quot;_blank&quot;&gt;Eric Suzanne &amp;#8212; Map Magic Demo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://sassmeister.com/gist/ab88fba5e967f19707cd&quot; target=&quot;_blank&quot;&gt;Scott Kellum &amp;#8212; Grid Demo #1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://sassmeister.com/gist/cf2bb9765d3e2cf033ae&quot; target=&quot;_blank&quot;&gt;Scott Kellum &amp;#8212; Grid Demo #2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://sassmeister.com/gist/bc08e2d0065218a96490&quot; target=&quot;_blank&quot;&gt;Scott Kellum &amp;#8212; Grid Demo #3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://beautifulopen.com/&quot; target=&quot;_blank&quot;&gt;Beautiful Open&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/hagenburger/livingstyleguide-workshop&quot; target=&quot;_blank&quot;&gt;Nico Hagenburger &amp;#8212; Living Styleguide Workshop&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 02 Oct 2014 09:54:00 -0500</pubDate>
+        <link>http://una.github.io/2014/10/02/sass-conf-resources.html</link>
+        <guid isPermaLink="true">http://una.github.io/2014/10/02/sass-conf-resources.html</guid>
+      </item>
+    
+      <item>
+        <title>Animated Gifs Are So Hot Right Now</title>
+        <description>&lt;p&gt;Now, more than ever, I&amp;#8217;m seeing animated gifs pop up more and more. I think it&amp;#8217;s fantastic. They&amp;#8217;re all over Dribbble (now featuring a little gif badge!), in conference talks, on social media, and in case studies on agency websites. The animated gif is a great way to display interactivity.&lt;/p&gt;
+
+&lt;a href=&quot;https://www.behance.net/gallery/VICE-VERSA-diagonal-UI-optimized-for-a-single-hand-IX/12419409&quot; target=&quot;_blank&quot;&gt;THIS&lt;/a&gt; site is my favorite recent gif-using creation, and I&amp;#8217;m so excited to see them taking off for uses other than rainbow unicorns (RIP Geocities) and funny memes.
+
+&lt;p&gt;&lt;img src=&quot;https://31.media.tumblr.com/be26262bfb5699d88c4e5c25efe060fa/tumblr_inline_mz1zfvNY3B1rk3ey5.gif&quot; alt=&quot;&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h2&gt;A Professional Use&lt;/h2&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h3&gt;Demonstrations / Instructionals&lt;/h3&gt;
+
+&lt;p&gt;Gifs can be used in a very silly manner, or as a simple means of demonstration. For instance, they can be used to mimic the effect on the &lt;a href=&quot;http://www.sublimetext.com/&quot; target=&quot;_blank&quot;&gt;Sublime Text&lt;/a&gt; homepage. Demonstration goes beyond just technical means you would see online. A physical product is much better understood when animated, such as in this example:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://31.media.tumblr.com/6d0b9c1bb03119355cb185e6d011055d/tumblr_inline_mz1zawb44H1rk3ey5.gif&quot; alt=&quot;&quot;/&gt;&lt;/p&gt;
+
+&lt;h3&gt;Case Studies&lt;/h3&gt;
+
+&lt;p&gt;I&amp;#8217;ve used gifs in a lot of the case studies I included on my new portfolio website. They&amp;#8217;re a great way of demonstrating prototypes and interactive elements. Here&amp;#8217;s a great example from Viget, from their &lt;a href=&quot;http://viget.com/work/bill-of-rights-institute&quot; target=&quot;_blank&quot;&gt;Bill of Rights&lt;/a&gt; case study.
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h3&gt;Email Marketing&lt;/h3&gt;
+
+&lt;p&gt;Look! It&amp;#8217;s an animated email by &lt;a href=&quot;http://cps8.00b.net/506/content_load/2007-10-08/index.htm&quot; target=&quot;_blank&quot;&gt;Tiffany&amp;#8217;s&lt;/a&gt;. It&amp;#8217;s a subtle effect, just text moving around, but it does make an impact. I&amp;#8217;d like to stress subtlety when using gifs in emails. Gif Brewery even wrote a  handy &lt;a href=&quot;https://litmus.com/blog/a-guide-to-animated-gifs-in-email&quot; target=&quot;_blank&quot;&gt;Guide to Animated Gifs in Email&lt;/a&gt;.
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h3&gt;Detail Work&lt;/h3&gt;
+
+&lt;p&gt;Animated gifs and flow smoothly and quietly into the background of your webpage. On this &lt;a href=&quot;http://www.tasarimgezegeni.com/2014/en/&quot; target=&quot;_blank&quot;&gt;really awesome New Years site&lt;/a&gt;, there&amp;#8217;s a little fireplace that burns in the background. It&amp;#8217;s a nice little touch which goes a long way. 
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h3&gt;Fine Art&lt;/h3&gt;
+
+&lt;p&gt;Artists like &lt;a href=&quot;http://patakk.tumblr.com/about&quot; target=&quot;_blank&quot;&gt;Paolo Ceric&lt;/a&gt; use gifs as an art medium, and look an &lt;a href=&quot;http://animatedsketchblog.tumblr.com/&quot; target=&quot;_blank&quot;&gt;entire animated sketchblog!&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://31.media.tumblr.com/5d3fc4e1f53a5ae13641dd96b44c6ce4/tumblr_inline_mz20k1BrPX1rk3ey5.gif&quot; alt=&quot;&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h2&gt;Tools of the Trade&lt;/h2&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h3&gt;Photoshop&lt;/h3&gt;
+
+&lt;p&gt;This program has been used for making animated gifs since CS2. (Does anyone remember Jasc Animation Shop?!). The good thing about Photoshop is that you have the power to edit each frame (go to Window &amp;gt; Timeline to open the edit screen), and control the playback timing of your gif upon saving. Make sure to &amp;#8220;Save for Web&amp;#8221; as a gif and pay attention to the bottom right part of the save screen. This is where you&amp;#8217;ll specify looping options.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://31.media.tumblr.com/6d7f73073e6b39655455a2767ca74c27/tumblr_inline_mz20777xMm1rk3ey5.jpg&quot; alt=&quot;&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;Creating gifs in Photoshop is a great tool if you want to illustrate a point, or animate your project directly. It&amp;#8217;s also a good place to post-edit your gifs created by other means (see tools below). &lt;a href=&quot;http://boagworld.com/design/practicalities-of-using-animated-gifs/&quot; target=&quot;_blank&quot;&gt;This&lt;/a&gt; is great article on how to optimize your gifs in Photoshop. 
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h3&gt;LiceCap&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cockos.com/licecap/&quot; target=&quot;_blank&quot;&gt;LiceCap&lt;/a&gt; is a wonderful free software tool for Windows or Mac which allows you to simply screen capture and save as a gif. You can control the size ( viewing area when &amp;#8220;filming&amp;#8221;) and the frames per second. Then you simple hit record, and the program acts as a frame, capturing whatever is behind it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://screenshots.en.sftcdn.net/en/scrn/69666000/69666813/image-02-700x475.png&quot; alt=&quot;&quot;/&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h3&gt;GIFBrewey&lt;/h3&gt;
+
+&lt;p&gt;There are a few free services online which convert files to gifs, but they take FOREVER and return a poor quality. Well, &lt;a href=&quot;http://&quot; https: target=&quot;_blank&quot;&gt;GIFBrewery&lt;/a&gt; is the solution to that on a Mac. It costs $4.99 from the App Store, but got great reviews, and is a simple-to-use tool for converting movie clips into high quality gifs.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cdn.appstorm.net/mac.appstorm.net/authors/jordanmerrick/gifbrewery.jpg&quot; alt=&quot;&quot;/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h2&gt;A Tradeoff&lt;/h2&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;I recently had to work with animated gifs for a prototype project &amp;#8212; I was using video on an iPhone&amp;#8217;s mobile web browser (web app) to simulate the camera function but with my own overlay. So what I needed to do was, film a scene on the iPhone, and re-inact it in real life. The thing is, however, iPhone&amp;#8217;s film mov movies. And since iOS 6, auto play of movies is disabled on the iPhone. This is great from a user&amp;#8217;s standpoint, and avoids downloading large movie files to stream, taking up data without permission. But, for my needs it became an issue. I ended up converting the mov files to gifs and using them behind my other elements as faux backgrounds. (It was quite the process, and you can read more about it &lt;a href=&quot;http://unakravets.com/fruit-story/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;div style=&quot;overflow: hidden&quot;&gt;
+&lt;div style=&quot;text-align: center; float: left;  margin-right:2%; width: 46%&quot;&gt;
+&lt;video style=&quot;width: 100%; display: block; &quot; muted=&quot;&quot; src=&quot;http://unakravets.com/images/fruit-story/giffix.mov&quot; autoplay=&quot;&quot; loop=&quot;&quot;&gt;&lt;/video&gt;&lt;small&gt;move (563&amp;#160;kb)&lt;/small&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot; text-align: center; display:block; width: 46%; margin-left:2%; float: right&quot;&gt;
+&lt;img src=&quot;http://unakravets.com/images/fruit-story/giffix-r.gif&quot;/&gt;&lt;small&gt;gif (5.8 mb)&lt;/small&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;There is a distinct loss in quality of the gif file. Not only that, but the gif file size is actually about 4x LARGER than the mov. (563&amp;#160;kb vs 5.8mb). There are definitely tradeoffs when it comes to using animated gifs, so be sure to consider your audience.&lt;/p&gt;
+
+&lt;p&gt;This post was written and remained a draft in my blog cue for 3 months (since February 2014), but it&amp;#8217;s still relevant. I&amp;#8217;ve been having quiet a bit of fun re-visiting the medium of the gif again for a new personal project, animating in After Effects, and then Gif-izing. Be on the look out for &lt;b&gt;SassGifs&lt;/b&gt;, an animated library of little bites of Sass for the visual learner :) Coming out in the next few weeks!&lt;/p&gt;
+</description>
+        <pubDate>Tue, 29 Apr 2014 09:30:59 -0500</pubDate>
+        <link>http://una.github.io/2014/04/29/animated-gifs-are-so-hot-right-now.html</link>
+        <guid isPermaLink="true">http://una.github.io/2014/04/29/animated-gifs-are-so-hot-right-now.html</guid>
+      </item>
+    
+      <item>
+        <title>Sass Snippets: The Almighty Ampersand</title>
+        <description>&lt;img style=&quot;max-width: 500px;&quot; src=&quot;http://una.github.io/images/posts/ampersand.gif&quot; alt=&quot;Animated sass ampersand&quot;/&gt;
+
+&lt;h3&gt;The Basics&lt;/h3&gt;
+
+&lt;p&gt;So, what is the Sass &lt;code style=&quot;color:hotpink; font-weight:800&quot;&gt;&amp;amp;&lt;/code&gt;? Well, it&amp;#8217;s a lot of things &amp;#8212; but it&amp;#8217;s basically is a way to merge selectors. &lt;strong&gt;The parent element takes the place of the ampersand.&lt;/strong&gt; The best way to understand it is to see some examples:&lt;/p&gt;
+
+&lt;h4&gt;SCSS&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;.unicorn {
+  background-color: blue;
+  &amp;amp;:hover {
+    outline: 2px solid yellow;
+  }
+  &amp;amp;.pink {
+    background-color: pink;
+    &amp;amp;wat {
+      color: red;
+    }
+    &amp;amp;:hover {
+      outine: 2px solid green;
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+&lt;h4&gt;CSS Output&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;.unicorn {
+  background-color: blue;
+}
+.unicorn:hover {
+  outline: 2px solid yellow;
+}
+.unicorn.pink {
+  background-color: pink;
+}
+.unicorn.pinkwat {
+  color: red;
+}
+.unicorn.pink:hover {
+  outine: 2px solid green;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+&lt;p&gt;See how it just combines whatever phrase you insert after the &lt;code style=&quot;color:$color--hotpink; font-weight:800&quot;&gt;&amp;amp;&lt;/code&gt; directly onto the end of its parent. This is great for element states such as hovers, and for focusing on specific elements. It works with pretty much anything now (as of the 3rd release candidate of Sass 3.3) (i.e. &lt;code&gt;.unicorn { &amp;amp;wat { ... } }&lt;/code&gt; became  &lt;code&gt;.unicornwat { ... }&lt;/code&gt;. It&amp;#8217;s a great too for BEM syntax (see &amp;#8216;A Much Simpler @at-root&amp;#8217;)!&lt;/p&gt;
+
+&lt;h3&gt;The Trailing Ampersand&lt;/h3&gt;
+
+&lt;p&gt;The trailing ampersand does the same thing as the prepended one &amp;#8212; it switches out with the parent element when outputted. Why would you use one? Well its a great organizational tool, and its awesome to use in mixins. Here are a few examples:&lt;/p&gt;
+
+&lt;h4&gt;SCSS&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;.unicorn {
+  .set-one &amp;amp; {
+    display: none;
+  }
+}
+
+.button--large {
+  .sidebar &amp;amp; {
+    font-size: 80%;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+&lt;h4&gt;CSS Output&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;.set-one .unicorn {
+  display: none;
+}
+
+.sidebar .button--large {
+  font-size: 80%;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+&lt;p&gt;Another use for the trailing ampersand is in mixins. It would take the parent element (aka whatever you use the mixin on) in place of the ampersand. &lt;a href=&quot;http://www.joeloliveira.com/2011/06/28/the-ampersand-a-killer-sass-feature/&quot; target=&quot;_blank&quot;&gt;Joel Oliveira&lt;/a&gt; wrote an awesome example. Here&amp;#8217;s another one:&lt;/p&gt;
+
+&lt;h4&gt;SCSS&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;@mixin highlight() {
+  color: coral;
+  .sub-nav &amp;amp;, 
+  .active &amp;amp;, 
+  .sidebar &amp;amp;  {
+    background-color: gold; 
+  }
+}
+li a { @include highlight; }
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;h4&gt;CSS Output&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;li a {
+  color: coral;
+}
+.sub-nav li a, .active li a, .sidebar li a {
+  background-color: gold;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+&lt;p&gt;In this example, all of your list links are coral with no background color except for ones within your &amp;#8216;sub-nav&amp;#8217; class, &amp;#8216;active&amp;#8217; class, or &amp;#8216;sidebar&amp;#8217; &amp;#8212; they get a gold background.&lt;/p&gt;
+
+&lt;h3&gt;A Much Simpler @at-Root&lt;/h3&gt;
+
+&lt;p&gt;As mentioned earlier, the Sass Ampersand just got even cooler. With the recent release of Sass 3.3.0rc3, basically everything from &lt;a href=&quot;http://blog.unakravets.com/post/64113156740/&quot; target=&quot;_blank&quot;&gt;this post on BEM &amp;amp; at-root&lt;/a&gt; outdated (**however, @at-root &lt;a href=&quot;http://nex3.roughdraft.io/8050187&quot; target=&quot;_blank&quot;&gt; will still be usable&lt;/a&gt; in the release of Sass 3.3). The concepts are the same, but now, instead of prepending with &lt;code style=&quot;color:$color--hotpink; font-weight:800&quot;&gt;@at-root #{&amp;amp;}&lt;/code&gt;, one simply needs to use a &lt;code style=&quot;color:$color--hotpink; font-weight:800&quot;&gt;&amp;amp;-&lt;/code&gt; or &lt;code style=&quot;color:$color--hotpink; font-weight:800&quot;&gt;&amp;amp;_&lt;/code&gt;. &lt;strong&gt;Previously, &lt;code&gt;&amp;amp;-&lt;/code&gt; or &lt;code&gt;&amp;amp;_&lt;/code&gt; or even &lt;code&gt;&amp;amp;words&lt;/code&gt; would cause error,&lt;/strong&gt;  but this fix is really awesome :)&lt;/p&gt;
+
+&lt;h4&gt; Previous Markup (Sass 3.3rc1) &lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;.speech-bubble{
+  color: purple;
+   @at-root #{&amp;amp;}__header{
+    color: orange;
+  }
+   @at-root #{&amp;amp;}__text{
+    color: black;
+     @at-root #{&amp;amp;}--link{
+      color: green;
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4&gt; New Markup (Sass 3.3rc3) &lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;.speech-bubble{
+  color: purple;
+   &amp;amp;__header{
+    color: orange;
+  }
+   &amp;amp;__text{
+    color: black;
+     &amp;amp;--link{
+      color: green;
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt; The result (CSS Output) &lt;/h3&gt;
+
+&lt;code&gt;&lt;/pre&gt;
+.speech-bubble{
+  color: purple; 
+}
+.speech-bubble__header{
+    color: orange; 
+}
+.speech-bubble__text{
+    color: black; 
+}
+.speech-bubble__text--link{
+      color: green; 
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;aside&gt;&lt;a href=&quot;http://www.alwaystwisted.com/post.php?s=2014-02-27-even-easier-bem-ing-with-sass-33&quot; target=&quot;_blank&quot;&gt;Scott&amp;#8217;s Post&lt;/a&gt; is another great read on this topic.
+&lt;br/&gt;&lt;br/&gt;&lt;/aside&gt;
+
+&lt;h3&gt;The Double Ampersand&lt;/h3&gt;
+
+&lt;p&gt;This fun trick by &lt;a href=&quot;http://blog.teamtreehouse.com/sass-tip-double-ampersand-selector&quot; target=&quot;_blank&quot;&gt;Guil Hernandez&lt;/a&gt; of Treehouse, is also pretty cool. He combines ampersands with the CSS adjacent sibling combinator &amp;#8212; aka the &lt;span style=&quot;color:$color--hotpink; font-weight:800&quot;&gt;+&lt;/span&gt;. The &lt;span style=&quot;color:$color--hotpink; font-weight:800&quot;&gt;+&lt;/span&gt; is used to target an element’s immediate sibling (i.e. an image or subtitle immediately following an h1). For instance, you can use this in styling blog posts &amp;#8212; where that first image could always be the author, and may need its own unique style.&lt;/p&gt;
+
+&lt;p&gt;My favorite example of his is for columns. If you have two, using the double ampersand can really come handy.&lt;/p&gt;
+
+&lt;h4&gt;SCSS&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;.column--half {
+  color: dimgrey;
+  &amp;amp; + &amp;amp; {
+    margin-left: 30px;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;h4&gt;CSS Output &lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;.column--half {
+  color: dimgrey;
+}
+.column--half + .column--half {
+  margin-left: 30px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;This gives both of the &amp;#8216;column&amp;#8212;half&amp;#8217; class elements the same color (dimgrey), but only the second &amp;#8216;column&amp;#8212;half&amp;#8217; element will get the left margin. The first one will flush left of the page.&lt;/p&gt;
+
+&lt;h3&gt;So much ampersand love &amp;lt;3&lt;/h3&gt;
+</description>
+        <pubDate>Thu, 06 Mar 2014 08:02:00 -0600</pubDate>
+        <link>http://una.github.io/2014/03/06/sass-snippets-the-almighty-ampersand.html</link>
+        <guid isPermaLink="true">http://una.github.io/2014/03/06/sass-snippets-the-almighty-ampersand.html</guid>
+      </item>
+    
+      <item>
+        <title>Merry Gitmas: A Holiday Analogy About How Git Works</title>
+        <description>&lt;p&gt;Analogies always help me with comprehension. And this one, explaining git, is Holiday Flavored :)&lt;/p&gt;
+
+&lt;img src=&quot;http://unakravets.com/MerryGitmas/girlbaking.jpg&quot; alt=&quot;&quot;/&gt;
+
+&lt;p&gt;So, lets say you are making holiday gifts. You and your sibling want to make baskets for your friends and family, filled with homemade cookies, candy, and trinkets.&lt;/p&gt;
+
+&lt;img src=&quot;http://unakravets.com/MerryGitmas/work.jpg&quot; alt=&quot;&quot;/&gt;
+
+&lt;p&gt;Baking the cookies is you doing your work. When you&amp;#8217;re finished baking them, you can add them to your basket (&lt;strong&gt;git add&lt;/strong&gt;).&lt;/p&gt;
+
+&lt;img src=&quot;http://unakravets.com/MerryGitmas/add.jpg&quot; alt=&quot;&quot;/&gt;
+
+&lt;p&gt;You can also remove(&lt;strong&gt;git rm&lt;/strong&gt;) cookies or rearrange them. The basket is your &lt;strong&gt;staging area&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;img src=&quot;http://unakravets.com/MerryGitmas/staging.jpg&quot; alt=&quot;&quot;/&gt;
+
+&lt;p&gt;A git merge occurs when you add the brownies that your brother has been baking to the basket.&lt;/p&gt;
+
+&lt;img src=&quot;http://unakravets.com/MerryGitmas/bowbrownies.jpg&quot; alt=&quot;&quot;/&gt;
+
+&lt;p&gt;When you commit (&lt;strong&gt;git commit&lt;/strong&gt;), you are wrapping up the basket with a pretty bow and a nice holiday card (your &lt;strong&gt;commit message&lt;/strong&gt;).&lt;/p&gt;
+
+&lt;img src=&quot;http://unakravets.com/MerryGitmas/commit.jpg&quot; alt=&quot;&quot;/&gt;
+
+&lt;p&gt;You can do a &lt;strong&gt;git rebase&lt;/strong&gt; to correct any errors. Say you forgot to add the candy canes! A rebase is when you unwrap the gift, change something in it, and rewrap it with a new bow and message.&lt;/p&gt;
+
+&lt;img src=&quot;http://unakravets.com/MerryGitmas/rebase.jpg&quot; alt=&quot;&quot;/&gt;
+
+&lt;p&gt;A &lt;strong&gt;git push&lt;/strong&gt; is when you are giving the basket away to your Mom or other recipient, and &lt;strong&gt;git clone&lt;/strong&gt; is a whole other story. It is taking a finished set of baskets and making a perfect copy of it.
+&lt;br&gt;&lt;br&gt;
+We&amp;#8217;ll leave that kind of magic to Santa. &lt;strong&gt;Happy Holidays!!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;small&gt;This post is dedicated to &lt;a href=&quot;http://jesse.sh/awl/&quot; target=&quot;_blank&quot;&gt;Jesse Shawl&lt;/a&gt; :)&lt;/small&gt;
+</description>
+        <pubDate>Thu, 19 Dec 2013 09:30:25 -0600</pubDate>
+        <link>http://una.github.io/2013/12/19/merry-gitmas-a-holiday-analogy-about-how-git-works.html</link>
+        <guid isPermaLink="true">http://una.github.io/2013/12/19/merry-gitmas-a-holiday-analogy-about-how-git-works.html</guid>
+      </item>
+    
+      <item>
+        <title>Use Sass 3.3 Maps to Make On-the-Fly Color Guides!</title>
+        <description>&lt;p&gt;Last month, I wrote a little article about the &lt;a href=&quot;http://blog.unakravets.com/2013/10/15/sass-3-3-at-root-bem.html&quot; target=&quot;_blank&quot;&gt;new Sass 3.3 feature @root&lt;/a&gt;. That was a lot of fun to explore &amp;#8212; and now I want to focus on another sweet feature in Sass 3.3 &amp;#8212; MAPS!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://sassmeister.com/gist/7479693&quot; target=&quot;_blank&quot;&gt;HERE&amp;#8217;S A LIVE DEMO OF WHAT I&amp;#8217;M ABOUT TO WALK YOU THROUGH&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;To do this, we must first install Sass 3.3:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; gem install sass --pre &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then, we mark up our &lt;strong&gt;HTML:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;ul class=&quot;color-list&quot;&amp;gt;
+    &amp;lt;li class=&quot;color-box brick-red&quot;&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li class=&quot;color-box strawberry&quot;&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li class=&quot;color-box deep-orange&quot;&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li class=&quot;color-box tangerine&quot;&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li class=&quot;color-box gold&quot;&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li class=&quot;color-box sunshine&quot;&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li class=&quot;color-box grass-green&quot;&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li class=&quot;color-box lime&quot;&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li class=&quot;color-box funky-purple&quot;&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li class=&quot;color-box clay&quot;&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I&amp;#8217;m using the class &amp;#8220;color-box&amp;#8221; as a uniform style for each of the colors in my Styleguide, and then classing them with the actual name of the color. We&amp;#8217;ll get to the &lt;em&gt;why&lt;/em&gt; of it later, but it&amp;#8217;s important to keep some consistency in this step.&lt;/p&gt;
+
+&lt;p&gt;Now, I style the &amp;#8220;color-box&amp;#8221; however I want (in this case, I give it a defined size and display: inline-block) etc. etc.. I also give color-box:before and color-box:after a display: block to increase their legibility (in a moment, we&amp;#8217;ll get to the good stuff and you&amp;#8217;ll see why).&lt;/p&gt;
+
+&lt;h3&gt;This is where the magic happens (.scss)!&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;$colors: (
+    brick-red: #89231a,
+    strawberry: #be1e2d,
+    deep-orange: #b94126,
+    tangerine: #f16521,
+    gold: #eeaf21,
+    sunshine: #ffdd17,
+    grass-green: #4a893f,
+    lime: #8cc63e,
+    grape-juice: #452e8b,
+    funky-purple: #7e3f98,
+    clay: #3b2314,
+);&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Woah! Look at that &lt;strong&gt;Sass Map action!&lt;/strong&gt; $colors is my map, and it contains a comma-separated list of keys and values ($color: $bgcolor) which I can reference in the each loop. I&amp;#8217;m basically going through each key ($color), which is the name of the color (i.e. brick-red), and grabbing it&amp;#8217;s $bgcolor hex code (i.e. #89231a). I have access to both elements!&lt;/p&gt;
+
+&lt;h3&gt;Now, let&amp;#8217;s make that baby loop (.scss):&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;@each $color, $bgcolor in $colors {
+    .color-box.#{$color} {
+        @include contrasted($bgcolor);
+        &amp;amp;:before {
+            content: &#39;$#{$color}&#39;;
+        }
+        &amp;amp;:after {
+            content: &#39;#{$bgcolor}&#39;;
+        }
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here&amp;#8217;s where markup is important: I&amp;#8217;m using $color to create the class. You can see this int he 2nd line of the each loop:  &lt;code&gt;.color-box.#{$color}&lt;/code&gt;. In each of these divs, I then use the Compass contrasted feature, which you can &lt;a href=&quot;http://blog.unakravets.com/2013/11/06/buttons-a-look-at-module-mixins-compass.html&quot; target=&quot;_blank&quot;&gt;read more about here&lt;/a&gt; to set the background color &amp;#8212; AND FONT COLOR AT THE SAME TIME! (sorry, I think it&amp;#8217;s just such a cool Compass feature)&lt;/p&gt;
+
+&lt;p&gt;Then, I use pseudo elements (:before and :after) to read the $color (name) and $bgcolor (hex code) associated with it. So, &lt;code&gt;.color-box:before&lt;/code&gt; will have the color&amp;#8217;s name inserted into the content (prepended by a &amp;#8216;$&amp;#8217; to optionally display it like a variable), and &lt;code&gt;.color-box:after&lt;/code&gt; contains the hex value ($bgcolor). This is what you get:&lt;/p&gt;
+
+&lt;h3&gt;CSS Output for one iteration of the loop (one color):&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;.color-box.strawberry {
+  background-color: #be1e2d;
+  color: white;
+}
+.color-box.strawberry:before {
+  content: &quot;$strawberry&quot;;
+}
+.color-box.strawberry:after {
+  content: &quot;#be1e2d&quot;;
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For further reading, there&amp;#8217;s a great example with nesting maps on the &lt;a href=&quot;https://github.com/nex3/sass/blob/master/doc-src/SASS_CHANGELOG.md#sassscript-maps&quot; target=&quot;_blank&quot;&gt;Sass 3.3 Changelog&lt;/a&gt; and another example of how you can use them in &lt;a href=&quot;http://viget.com/extend/sass-maps-are-awesome&quot; target=&quot;_blank&quot;&gt;this great article by Jason Garber&lt;/a&gt;. Mehdi Kabab also created &lt;a href=&quot;http://codepen.io/piouPiouM/pen/lJBCD&quot; target=&quot;_blank&quot;&gt;this pen&lt;/a&gt; showing how you can alternatively do all of the above with nested Sass lists instead of maps! Pretty cool :)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;TL;DR: &lt;a href=&quot;http://sassmeister.com/gist/7479693&quot; target=&quot;_blank&quot;&gt;Live Demo in Sassmeister&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 15 Nov 2013 09:15:00 -0600</pubDate>
+        <link>http://una.github.io/2013/11/15/use-sass-3-3-maps-to-make-on-the-fly-color-guides.html</link>
+        <guid isPermaLink="true">http://una.github.io/2013/11/15/use-sass-3-3-maps-to-make-on-the-fly-color-guides.html</guid>
+      </item>
+    
+      <item>
+        <title>My Online Sketchbook!</title>
+        <description> &lt;script type=&quot;text/javascript&quot;&gt;
+	window.location.href = &quot;http://sketchbook.unakravets.com&quot;
+&lt;/script&gt;
+
+If you are not redirected, please visit &lt;a href=&quot;http:///sketchbook.unakravets.com&quot;&gt;this&lt;/a&gt; think!</description>
+        <pubDate>Thu, 07 Nov 2013 10:23:15 -0600</pubDate>
+        <link>http://una.github.io/2013/11/07/my-online-sketchbook.html</link>
+        <guid isPermaLink="true">http://una.github.io/2013/11/07/my-online-sketchbook.html</guid>
+      </item>
+    
+  </channel>
+</rss>
