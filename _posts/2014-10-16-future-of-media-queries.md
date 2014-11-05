@@ -14,6 +14,7 @@ tags:
 - rwd
 tumblr_url: http://unakravets.tumblr.com/post/100236669522/media-queries-of-the-future
 subtitle: The Media Queries 4 spec brings insight to technological capabilities that are coming up soon (this is based on the Editor’s Draft, October 10, 2014).
+header-bg: http://una.github.io/images/the-future.jpg
 ---
 
 Media queries are infants. The first Media Query public working draft was published in 2001, and they became a W3C recommendation after [browser support](http://caniuse.com/#search=media%20queries) increased in 2012. 2012! **That's TWO years!** Hard to believe, considering how essential they've become in our web workflows today. Media queries are most often used to build flexible [web designs](http://mediaqueri.es/) which adapt to various browsers properties. Here are some [pointers](https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/use-media-queries?hl=en) from the smart people at Google.
@@ -64,13 +65,14 @@ viewing "responsive design" as just a means for detecting screen sizes and brows
 </a>
 
 Well media queries are helping us get one step closer! As devices are able to detect more, browsers are keeping up to date with these capabilities.
+<br><br>
 
 ## The Future of Media Queries
 
 The [Media Queries 4](http://dev.w3.org/csswg/mediaqueries-4/) spec brings insight to technological capabilities that are coming up soon (this is based on the Editor’s Draft, October 10, 2014).
 
 ### Media Features vs Types
-*One important distinction to note is that all of the **media types** listed above will eventually become deprecated and replaced with more specific **[media features](http://dev.w3.org/csswg/mediaqueries-4/#mq-features)** *
+One important distinction to note is that all of the **media types*** listed above will eventually become deprecated and replaced with more specific **[media features](http://dev.w3.org/csswg/mediaqueries-4/#mq-features)**
 
 Media features are always wrapped in parentheses and combined with the <code>and</code> keyword rather than being separated with semicolons.
 

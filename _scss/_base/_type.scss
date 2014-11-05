@@ -1,4 +1,4 @@
-// h1 { font-size: 64px }
+ h1 { font-size: 64px }
 // h2 { font-size: 47.5px }
 // h3 { font-size: 32px }
 // h4 { font-size: 23.75px }
@@ -61,6 +61,10 @@ a {
 	@extend %transition;
 }
 
+i {
+  @extend %italic;
+}
+
 %pink-links {
   a {
     color: $color--links;
@@ -69,6 +73,15 @@ a {
 
     &:hover {
       background: $color--main;
+      color: white;
+    }
+  }
+
+  a.twitter-share {
+    color: $color--blue;
+
+    &:hover {
+      background: $color--blue;
       color: white;
     }
   }

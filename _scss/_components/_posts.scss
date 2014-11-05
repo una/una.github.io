@@ -27,7 +27,7 @@
 		}
 		
 		li {
-			margin-bottom: .8em;
+			margin-bottom: .6em;
 		}
 
 		@include breakpoint(sm) {
@@ -131,11 +131,17 @@
 }
 
 .twitter-share {
+	@extend transition-duration;
 	&:after {
 		font-family: "icomoon";
-		content: "\e602";
+		content: " \e602";
 		font-style: initial;
 		color: $color--blue;
+	}
+
+	&:hover:after {
+		@extend transition-duration;
+		color: white;
 	}
 
 	&.quote {
@@ -203,4 +209,3 @@
 		margin: 0 auto 2em;
 	}
 }
-

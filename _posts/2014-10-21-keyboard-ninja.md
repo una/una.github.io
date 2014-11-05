@@ -28,9 +28,7 @@ If you're not convinced yet, let's break it down:
 
 ## The Sticky Note Method
 
-<a class="twitter-share">If you want to become a keyboard ninja, try putting a sticky note (or two) on the top of your trackpad.</a>
-
-Why? because a few things:
+<a class="twitter-share">If you want to become a keyboard ninja, try putting a sticky note (or two) on the top of your trackpad.</a> Why? because a few things:
 
 1. It will remind you not to use it, causing you to Google alternative navigation flows (you'll learn a lot this way)
 2. You can still easily access the trackpad by simply lifting the sticky note from below or on the edge (where you'd be accessing it anyway)
