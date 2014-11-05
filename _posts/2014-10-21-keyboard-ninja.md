@@ -70,5 +70,6 @@ To use this method with a mouse &mdash; not a track pad &mdash; put the sticky u
 - [Become an Alfred Expert](http://mac.appstorm.net/how-to/utilities-how-to/become-an-alfred-expert-advanced-tips-tricks/)
 - [General Table of Keyboard Shortcuts](http://en.wikipedia.org/wiki/Table_of_keyboard_shortcuts)
 - [Keyboard Shortcuts for Bash](http://www.howtogeek.com/howto/ubuntu/keyboard-shortcuts-for-bash-command-shell-for-ubuntu-debian-suse-redhat-linux-etc/)
+- [Shortcut Foo (Gamified Training), Not Free](https://www.shortcutfoo.com/app/pricing)
 
 This is a growing list. Feel free to contribute your thoughts and ideas on improving workflow!
