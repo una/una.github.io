@@ -9,18 +9,19 @@ window.BLOG || (BLOG = {});
     },
 
     setVars: function () {
-      // headroom stuff
-      var myElement = document.querySelector("header"),
-          headroom  = new Headroom(myElement);
 
     },
 
     bindEvents: function () {
-      // headroom stuff
-        headroom.init();
+
 
     },
   };
+
+  //headroom
+  var myElement = document.querySelector("header");
+  var headroom  = new Headroom(myElement);
+  headroom.init();
 
   $('.menu-section__toggle').click(function(){
     $('.menu-section ul').toggleClass('hidden');
