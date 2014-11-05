@@ -18,7 +18,7 @@ subtitle: The keyboard, where our hands are placed most of the time (as develope
 header-bg: http://unakravets.com/temp/keyboard-ninja-ex.jpg
 ---
 
-The keyboard, where our hands are placed most of the time (as developers), is the fastest navigation method by default. I always think devs look so slick and badass when navigating their systems without touching their trackpad/mouse. They're like little ninjas -- slick, fast and know how to move with ease.
+The keyboard, where our hands are placed most of the time (as developers), is the fastest navigation method by default. I always think devs look so slick and badass when navigating their systems without touching their trackpad/mouse. They're like little ninjas &mdash; slick, fast and know how to move with ease.
 
 If you're not convinced yet, let's break it down:
 
@@ -28,7 +28,9 @@ If you're not convinced yet, let's break it down:
 
 ## The Sticky Note Method
 
-If you want to become a keyboard ninja, try putting a sticky note (or two) on the top of your trackpad. Why? because a few things:
+<a class="twitter-share">If you want to become a keyboard ninja, try putting a sticky note (or two) on the top of your trackpad.</a>
+
+Why? because a few things:
 
 1. It will remind you not to use it, causing you to Google alternative navigation flows (you'll learn a lot this way)
 2. You can still easily access the trackpad by simply lifting the sticky note from below or on the edge (where you'd be accessing it anyway)
