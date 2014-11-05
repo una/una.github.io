@@ -21,7 +21,7 @@ ol {
 	li {
 		@extend %transition-duration;
 		list-style: none;
-		padding: 1em 1em 2em;
+		padding: 1em 1em 3em;
 		border-bottom: 1px solid $color--lightgrey;
 
 		&:hover {
@@ -62,6 +62,14 @@ ol {
 
 .post-list--archive {
 	@extend %post-list;
+
+	li {
+		padding: 1em;
+	}
+
+	h2 {
+		margin: 0 auto;
+	}
 	
 	h2 {
 		@include fontsize(14);
