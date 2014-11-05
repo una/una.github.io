@@ -8,7 +8,7 @@
     
       <item>
         <title>How to Become a Keyboard Ninja&amp;colon; The Sticky Note Method</title>
-        <description>&lt;p&gt;The keyboard, where our hands are placed most of the time (as developers), is the fastest navigation method by default. I always think devs look so slick and badass when navigating their systems without touching their trackpad/mouse. They&amp;#39;re like little ninjas -- slick, fast and know how to move with ease.&lt;/p&gt;
+        <description>&lt;p&gt;The keyboard, where our hands are placed most of the time (as developers), is the fastest navigation method by default. I always think devs look so slick and badass when navigating their systems without touching their trackpad/mouse. They&amp;#39;re like little ninjas &amp;mdash; slick, fast and know how to move with ease.&lt;/p&gt;
 
 &lt;p&gt;If you&amp;#39;re not convinced yet, let&amp;#39;s break it down:&lt;/p&gt;
 
@@ -20,7 +20,7 @@
 
 &lt;h2&gt;The Sticky Note Method&lt;/h2&gt;
 
-&lt;p&gt;If you want to become a keyboard ninja, try putting a sticky note (or two) on the top of your trackpad. Why? because a few things:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;twitter-share&quot;&gt;If you want to become a keyboard ninja, try putting a sticky note (or two) on the top of your trackpad.&lt;/a&gt; Why? because a few things:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;It will remind you not to use it, causing you to Google alternative navigation flows (you&amp;#39;ll learn a lot this way)&lt;/li&gt;
@@ -131,7 +131,8 @@ To use this method with a mouse &amp;mdash; not a track pad &amp;mdash; put the 
 viewing &amp;quot;responsive design&amp;quot; as just a means for detecting screen sizes and browsers is narrow-minded
 &lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Well media queries are helping us get one step closer! As devices are able to detect more, browsers are keeping up to date with these capabilities.&lt;/p&gt;
+&lt;p&gt;Well media queries are helping us get one step closer! As devices are able to detect more, browsers are keeping up to date with these capabilities.
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 
 &lt;h2&gt;The Future of Media Queries&lt;/h2&gt;
 
@@ -139,7 +140,7 @@ viewing &amp;quot;responsive design&amp;quot; as just a means for detecting scre
 
 &lt;h3&gt;Media Features vs Types&lt;/h3&gt;
 
-&lt;p&gt;&lt;em&gt;One important distinction to note is that all of the **media types&lt;/em&gt;* listed above will eventually become deprecated and replaced with more specific &lt;strong&gt;&lt;a href=&quot;http://dev.w3.org/csswg/mediaqueries-4/#mq-features&quot;&gt;media features&lt;/a&gt;&lt;/strong&gt; *&lt;/p&gt;
+&lt;p&gt;One important distinction to note is that all of the &lt;strong&gt;media types&lt;/strong&gt;* listed above will eventually become deprecated and replaced with more specific &lt;strong&gt;&lt;a href=&quot;http://dev.w3.org/csswg/mediaqueries-4/#mq-features&quot;&gt;media features&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Media features are always wrapped in parentheses and combined with the &lt;code&gt;and&lt;/code&gt; keyword rather than being separated with semicolons.&lt;/p&gt;
 
@@ -411,7 +412,7 @@ viewing &amp;quot;responsive design&amp;quot; as just a means for detecting scre
     
       <item>
         <title>Animated Gifs Are So Hot Right Now</title>
-        <description>&lt;p&gt;Now, more than ever, I&amp;#8217;m seeing animated gifs pop up more and more. I think it&amp;#8217;s fantastic. They&amp;#8217;re all over Dribbble (now featuring a little gif badge!), in conference talks, on social media, and in case studies on agency websites. The animated gif is a great way to display interactivity.&lt;/p&gt;
+        <description>&lt;p&gt;Now, more than ever, I&amp;#8217;m seeing animated gifs pop up everywhere. I think it&amp;#8217;s fantastic. They&amp;#8217;re all over Dribbble (now featuring a little gif badge!), in conference talks, on social media, and in case studies on agency websites. The animated gif is a great way to display interactivity.&lt;/p&gt;
 
 &lt;a href=&quot;https://www.behance.net/gallery/VICE-VERSA-diagonal-UI-optimized-for-a-single-hand-IX/12419409&quot; target=&quot;_blank&quot;&gt;THIS&lt;/a&gt; site is my favorite recent gif-using creation, and I&amp;#8217;m so excited to see them taking off for uses other than rainbow unicorns (RIP Geocities) and funny memes.
 

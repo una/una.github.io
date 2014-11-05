@@ -2,6 +2,7 @@
 <html>
   <body>
 
+
     <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -39,7 +40,7 @@
 </head>
 <body>
 
-    <header class="headroom">
+    <header role="banner" class="headroom">
   <h1 class="title"><a href="/">Almost Profound</a></h1>
   <div class="lil-fish"></div>
 
@@ -54,13 +55,13 @@
 </div>
 
 </header>
-
-     <div class="post-intro" >
+		<main role="main">
+			<div class="post-intro" >
 	<h1>Colourify! The Plugin!</h1>
 	<p class="meta">July 25, 2013</p>
  </div>
 
-<div class="post">
+<article class="post">
 <p>Last week, I learned how to write jQuery plugins. So this week, I wrote one for y&#8217;all to enjoy! Remember that article about <a href="http://playgroundinc.com/" target="_blank">Playground</a> &amp; selecting/using a random color from a given <a href="http://blog.unakravets.com/2013/05/20/dynamic-page-styling-with-selective-colors.html" target="_blank">list of options</a>? Well I&#8217;ve now made it easier for you to use and input options. YAY.</p>
 <p>The plugin defaults to using the colors on my website and changing the &#8220;color&#8221; property of the element you&#8217;re calling it on, but you can insert your own color choices and change any element that takes a color value in its argument (i.e. fill, background, border-color, etc.)</p>
 <p>Basically, its just a fun, simple plugin for indecisive people who want to have a little bit of control. <strong>All you have to do is:</strong></p>
@@ -85,25 +86,12 @@
 
 	<div id="disqus_thread"></div>
 
-</div>
+</article>
 
 <!-- syntax highlighting -->
-<script src="/js/vendor/jquery-1.11.0.min.js"></script>
-<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="/js/vendor/highlight.pack.js"></script>
 
 <script>
-//hljs
-$(document).ready(function() {
-	$('pre code, code').each(function(i, e) {hljs.highlightBlock(e)});
-
-	//every time you click on the twitter link button, it takes the text inside of the blockquote and tweets :)
-	$('.twitter-share').each(function() {
-		$(this).attr('href', "https://twitter.com/share?url=http://www.google.com&via=Una&text=" + $(this).text());
-	});
-});
-
-/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 var disqus_shortname = 'unakravets'; // required: replace example with your forum shortname
 
 /* * * DON'T EDIT BELOW THIS LINE * * */
@@ -113,9 +101,8 @@ var disqus_shortname = 'unakravets'; // required: replace example with your foru
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 })();
 </script>
-
-
-
+		</main>
+		
     <footer role="contentinfo">
 	<ul class="social-icons">
 		<li><a href="http://twitter.com/una" target="_blank" class="has-tooltip icon-twitter"><span class="tooltip">Twitter</span></a></li>
@@ -132,9 +119,9 @@ var disqus_shortname = 'unakravets'; // required: replace example with your foru
 	</p>
 </footer>
 
-<script src="http://una.github.io/js/vendor/jquery-1.11.0.min.js"></script>
+<script src="/js/vendor/jquery-1.11.0.min.js"></script>
 <script src="//cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
-<script src="http://una.github.io/js/scripts.js"></script>
+<script src="/js/scripts.js"></script>
 
   </body>
 </html>
