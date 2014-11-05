@@ -58,6 +58,7 @@ To use this method with a mouse &mdash; not a track pad &mdash; put the sticky u
 
 - Download [Alfred](http://alfredapp.com) to help your workflow out a TON. Alfred is a great tool for navigating not only your applications but also acts as an awesome quick Google search tool. **HIGHLY Recommend** for future keyboard ninjas!
 - There's a great [Sublime Text plugin](https://github.com/miguelgraz/FocusFileOnSidebar) that will help you focus on which file you have open. Type `⌘ cmd` + `k`, `⌘ cmd` + `f` to open the sidebar right to the directory of the current file.
+- [Spectacle App](http://spectacleapp.com/) allows you to move your windows around via keyboard shortcuts. What does that mean? No more clicking and dragging for a split screen! Thanks for the link, Ally.
 
 *TIP: when first practicing moving files in terminal, have a text editor with a sidebar open (`⌘ cmd` + `k`, `⌘ cmd` + `b`) so you can visually see the changes. This is also a great way to illustrate how git works. *
 
