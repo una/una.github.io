@@ -113,7 +113,7 @@ So with either of those methods, the aliases I've provided are as follows:
 
 ## A Few Words of Advice
 
-As a budding developer, I often struggle with the fact that there is so much out there to learn, and <a href="" class="twitter-share">the more I learn, the more I realize I don't know</a>. With this system, I was *continuously enumerating all of the things I didn't know*. No matter how well-intentioned this was, it quickly became overwhelming and somewhat discouraging. Often, especially at first, my goals would be all over the place, making me constantly add things to my weekly to-do list as I learned about them, which in turn created an ever-growing cycle of to-dos and an ever-growing list of things I didn't know. **Curation** is key.
+As a budding developer, I often struggle with the fact that there is so much out there to learn, and <a href="" class="twitter-share">the more I learn, the more I realize I don't know</a>. With this system, I was **continuously enumerating all of the things I didn't know**. No matter how well-intentioned this was, it quickly became overwhelming and somewhat discouraging. Often, especially at first, my goals would be all over the place, making me constantly add things to my weekly to-do list as I learned about them, which in turn created an ever-growing cycle of to-dos and an ever-growing list of things I didn't know. **Curation** is key.
 
 <a class="quote twitter-share left">Open sourcing my personal goals has by far been one of the best things I've done for my productivity.</a>
 
@@ -130,6 +130,8 @@ Once you've set your weekly goals, resist the temptation to add more! Instead, i
 When you have a reference list of things to do in your spare time, it's great for being productive &mdash; but don't let that list take over your life. Admitedly, I'm a little bad at this, filling mine with mostly code and work-related items. [Chris Eppstein](https://twitter.com/chriseppstein) had to remind me of this point via a pull request telling me to "enjoy the sun before it's winter". He was absolutely right. Remember to make time to make yourself and the people around you happy. After all, <a class="twitter-share">happiness should be one of your overall goals.</a>
 
 ### Take the Time to Reflect Positively
-I mentioned this at the beginning of the post, where I talk about the structure for **/accomplishments** <-- named this to get you in the positive mindset :). It's really important to focus on what you've achieved and not what you didn't get to. Reflect on what you did, what you didn't do, and what you'll do in the future.
+I mentioned this at the beginning of the post, where I talk about the structure for **/accomplishments**. It's really important to focus on what you've achieved and not what you didn't get to. Think of the things you didn't get to as opportunities for future.
 
 <blockquote> To get started with your own system, fork <a href="https://github.com/una/personal-goals-starter">this repo</a> and fill it up! Also, feel free to reference and contribute to <a href="https://github.com/una/personal-goals">my own repo</a> :)</blockquote>
+
+I'd love to hear about how this goes for y'all!
