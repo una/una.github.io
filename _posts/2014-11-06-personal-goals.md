@@ -7,7 +7,7 @@ comments: true
 tags:
 - productivity
 - personal goals
-header-bg: 
+header-bg: http://una.github.io/images/posts/table-things.jpg
 subtitle: For the past four weeks, I've been keeping a very public and open version of my personal goals on Github. It has really made me a lot more productive, and you should give it a try.
 ---
 

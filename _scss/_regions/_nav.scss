@@ -5,9 +5,9 @@ nav {
 
 	@include breakpoint(sm){
 		position: relative;
-		top: -1em;
 		right: 0;
-		margin: .5em 1em;
+		top: -0.5em;
+		margin: initial;
 	}
 
 	ul {
