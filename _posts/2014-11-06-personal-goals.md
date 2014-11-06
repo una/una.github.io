@@ -121,13 +121,13 @@ Don't get me wrong, open sourcing my personal goals has by far been one of the b
 <br>
 
 ### Choose One Goal for the Week
-I added this later to the process (even after the first draft of this blog was written). I found that my goals were sort-of scattered, and I like continuing a pursuit from the day before. For this reason, I began creating an overall goal for the week before defining specific tasks. It helped greatly to streamline my tasks for the week.
+I added this later to the process (even after the first draft of this blog was written). I found that my goals were sort-of scattered, and I like continuing a pursuit from the day before. For this reason, I began creating an overall goal for the week before defining specific tasks. It really helped to streamline my tasks for the week.
 
 ### Once Set, Don't Add More Goals for the Week
-Once you've set your weekly goals, resist the temptation to add more! Instead, if you do extra, or your plans change, write a bout it in your weekly review. I.e. the list of "Additional Things I Did This Week" or get a head start on planning "Things I Plan To Do Next Week". You'll feel like you did more than you planned this way, instead of feel bogged down by an ever-growing list of things you'll never get to accomplish in a week.
+Once you've set your weekly goals, resist the temptation to add more! Instead, if you do things that are different than you had planned, write a bout it in your weekly review. I.e. the list of **"Additional Things I Did This Week"** or get a head start on planning **"Things I Plan To Do Next Week"**. You'll feel like you did more than you planned this way, instead of feel bogged down by an ever-growing list of things you'll never get to accomplish in a week.
 
 ### Don't Just Focus on Code
-When you have a reference list of things to do in your spare time, it's great for being productive &mdash; but don't let that list take over your life. Admitedly, I'm a little bad at this, filling my list with mostly code and work-related items. Chris Eppstein had to remind me of this point via a pull request telling me to "enjoy the sun before it's winter". He was absolutely right. Remember to make time to make yourself and the people around you happy. After all, <a href="" class="twitter-share">happiness should be one of your overall goals.</a>
+When you have a reference list of things to do in your spare time, it's great for being productive &mdash; but don't let that list take over your life. Admitedly, I'm a little bad at this, filling mine with mostly code and work-related items. [Chris Eppstein](https://twitter.com/chriseppstein) had to remind me of this point via a pull request telling me to "enjoy the sun before it's winter". He was absolutely right. Remember to make time to make yourself and the people around you happy. After all, <a class="twitter-share">happiness should be one of your overall goals.</a>
 
 ### Take the Time to Reflect Positively
 I mentioned this at the beginning of the post, where I talk about the structure for **/accomplishments** <-- named this to get you in the positive mindset :). It's really important to focus on what you've achieved and not what you didn't get to. Reflect on what you did, what you didn't do, and what you'll do in the future.
