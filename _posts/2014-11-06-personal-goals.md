@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How Open Sourcing My Personal Goals Increased My Productivity
+title: How Open Sourcing My Personal Goals Made Me Really Productive
 permalink: /personal-goals-guide
 date: '2014-11-06'
 comments: true
