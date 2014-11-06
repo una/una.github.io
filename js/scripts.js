@@ -33,7 +33,7 @@ window.BLOG || (BLOG = {});
 
     //every time you click on the twitter link button, it takes the text inside of the blockquote and tweets :)
     $('.twitter-share').each(function() {
-      $(this).attr('href', "https://twitter.com/share?url=http://www.google.com&via=Una&text=" + $(this).text());
+      $(this).attr('data-text', $(this).text()).attr('data-via','@una');
     });
   });
 

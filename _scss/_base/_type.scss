@@ -25,7 +25,7 @@ h1 {
 }
 
 h2 {
-	@include fontsize(23.75);
+	@include fontsize(26);
   @extend %clearfix;
   @extend %vert-rythm;
 	@extend %font-title;
@@ -111,6 +111,8 @@ i {
     font-style: italic;
     position: relative;
     max-width: 70%;
+    line-height: 1.8;
+    color: $color--purple;
 
     &.left {
       max-width: 50%;

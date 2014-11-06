@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'How to Become a Keyboard Ninja&colon; The Sticky Note Method'
+title: Becoming a Keyboard Ninja&colon; The Sticky Note Method
 permalink: /keyboard-ninja
 date: '2014-10-27T10:21:36-05:00'
 tags:
