@@ -8,14 +8,14 @@ tags:
 - productivity
 - personal goals
 header-bg: http://una.github.io/images/posts/table-things.jpg
-subtitle: For the past four weeks, I've been keeping a very public and open version of my personal goals on Github. It has really made me a lot more productive, and you should give it a try.
+subtitle: For the past four weeks, I've been keeping a very public and open version of my personal goals on Github. Its definitely made me a lot more productive, and you should give it a try.
 ---
 
-For the past four weeks, I've been keeping a public, open-sourced version of my [personal goals](https://github.com/una/personal-goals) on Github. Overall, it's been a pretty great experience that has bolstered my productivity. I think you should give it a try.
+For the past four weeks, I've been keeping a public, open-sourced version of my [personal goals](https://github.com/una/personal-goals) on Github. Overall, its been a pretty great experience thats bolstered my productivity tremendously. Since then, I've been working on making this system better and better, with some terminal aliases for ease-of-use, and some advice to help you out with your own personal goals.
 
 ## The Structure
 
-If you take a look, you can see that I organized my file with a few sections:
+If you take a look at [my repo](https://github.com/una/personal-goals), or the [starter template](https://github.com/una/personal-goals-starter), you can see that I organized my file with a few sections:
 
 ### README.MD
 This is where I store a couple of things: my overall goals, things I plan to do that week, month, and a backlog. I also include links to some of my sub-folders and an overall goal for the week (added later to the process). To break it down by sub-section:
@@ -26,10 +26,10 @@ This is where I store a couple of things: my overall goals, things I plan to do 
 - **Things I'll Do This Month:** A list of tasks looking further into the future &mdash; things which may take longer to accomplish
 - **Backlog:** I have two backlog sections: one for *side projects* I need to remind myself about and one for *code things I want to do/play with*
 
-### /Content List
+### /content-list
 This is where I include resources such as books, reference guides, blog posts, slides, and videos that I want to watch, categorized by subject matter.
 
-### /Accomplishments
+### /accomplishments
 This is where I go over my week in review. I think it's a pretty important part of the process &mdash; if not the most important. I take a look at what I did, what I didn't get to, additional things I did that I didn't originally plan on, and then write about how the week went in relation to meeting my goals in general. This is where you can review and edit your plan.
 
 ### /etc
@@ -81,7 +81,7 @@ function pg-add() {
 }
 
 # push my changes to my github master branch and open the page
-# The commit message will always be "push from terminal" since i'll probably just be adding more resources or checking things off when using this
+# The commit message will always be "push from terminal" since I'll probably just be adding more resources or checking things off when using this
 function pg-gh() {
   cd ~{PATH-TO-FOLDER};
   git checkout master;
@@ -113,7 +113,7 @@ So with either of those methods, the aliases I've provided are as follows:
 
 ## A Few Words of Advice
 
-As a budding developer, I often struggle with the fact that there is so much out there to learn, and <a href="" class="twitter-share">the more I learn, the more I realize I don't know</a>. With this system, I was **continuously enumerating all of the things I didn't know**. No matter how well-intentioned this was, it quickly became overwhelming and somewhat discouraging. Often, especially at first, my goals would be all over the place, making me constantly add things to my weekly to-do list as I learned about them, which in turn created an ever-growing cycle of to-dos and an ever-growing list of things I didn't know. **Curation** is key.
+As a budding developer, I often struggle with the fact that there is so much out there to learn, and <a href="" class="twitter-share">the more I learn, the more I realize I don't know</a>. With this system, I was **continuously enumerating all of the things I didn't know**. No matter how well-intentioned this was, it quickly became overwhelming and somewhat discouraging. Often, especially at first, my goals would be all over the place, making me constantly add things to my weekly to-do list as I learned about them, which in turn created an ever-growing cycle of to-dos and an ever-growing list of things I didn't know. **Curation is key.**
 
 <a class="quote twitter-share left">Open sourcing my personal goals has by far been one of the best things I've done for my productivity.</a>
 
@@ -127,7 +127,7 @@ I added this later to the process (even after the first draft of this blog was w
 Once you've set your weekly goals, resist the temptation to add more! Instead, if you do things that are different than you had planned, write a bout it in your weekly review. I.e. the list of **"Additional Things I Did This Week"** or get a head start on planning **"Things I Plan To Do Next Week"**. You'll feel like you did more than you planned this way, instead of feel bogged down by an ever-growing list of things you'll never get to accomplish in a week.
 
 ### Don't Just Focus on Code
-When you have a reference list of things to do in your spare time, it's great for being productive &mdash; but don't let that list take over your life. Admitedly, I'm a little bad at this, filling mine with mostly code and work-related items. [Chris Eppstein](https://twitter.com/chriseppstein) had to remind me of this point via a pull request telling me to "enjoy the sun before it's winter". He was absolutely right. Remember to make time to make yourself and the people around you happy. After all, <a class="twitter-share">happiness should be one of your overall goals.</a>
+When you have a reference list of things to do in your spare time, it's great for being productive &mdash; but don't let that list take over your life. Admittedly, I'm a little bad at this, filling mine with mostly code and work-related items. Chris Eppstein had to remind me of this point via a [pull request](https://github.com/una/personal-goals/pull/3) telling me to "enjoy the sun before it's winter". He was absolutely right. Remember to make time to make yourself and the people around you happy. After all, <a class="twitter-share">happiness should be one of your overall goals.</a>
 
 ### Take the Time to Reflect Positively
 I mentioned this at the beginning of the post, where I talk about the structure for **/accomplishments**. It's really important to focus on what you've achieved and not what you didn't get to. Think of the things you didn't get to as opportunities for future.
