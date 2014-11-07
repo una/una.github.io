@@ -82,14 +82,12 @@ function pg-add() {
 
 # push my changes to my github master branch and open the page
 # The commit message will always be "push from terminal" since I'll probably just be adding more resources or checking things off when using this
-function pg-gh() {
-  cd ~{PATH-TO-FOLDER};
-  git checkout master;
-  git add -A;
-  git commit -m "push from terminal";
-  git push origin master;
-  open http://github.com/{GITHUB-USERNAME}/personal-goals
-}
+alias pg-gh="cd ~{PATH-TO-FOLDER} &&
+  git checkout master &&
+  git add -A &&
+  git commit -m "push from terminal" &&
+  git push origin master &&
+  open http://github.com/{GITHUB-USERNAME}/personal-goals"
 ```
 
 <br>
