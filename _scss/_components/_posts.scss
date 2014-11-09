@@ -104,7 +104,9 @@
 		}
 	}
 
-	figcaption {
+	figcaption,
+	.caption,
+	%caption {
 		@extend %italic;
 		font-size: 80%;
 		color: $color--blue;
