@@ -67,6 +67,7 @@ To use this method with a mouse &mdash; not a track pad &mdash; put the sticky u
 - [Chrome Shortcuts](https://support.google.com/chrome/answer/157179?hl=en&ref_topic=25799)
 - [Sublime Text Shortcuts](http://katiek2.github.io/most/)
 - [Getting Started with Terminal](http://ashleynolan.co.uk/blog/getting-started-with-terminal)
+- [Faster Sublime Text 3 Workflow](http://code.tutsplus.com/tutorials/useful-shortcuts-for-a-faster-workflow-in-sublime-text-3--cms-22185)
 - [How to Become an ST2 Power User w/@wesbos Slides](http://wesbos.github.io/Sublime-Text-Power-User-Talk)
 - [Become an Alfred Expert](http://mac.appstorm.net/how-to/utilities-how-to/become-an-alfred-expert-advanced-tips-tricks/)
 - [General Table of Keyboard Shortcuts](http://en.wikipedia.org/wiki/Table_of_keyboard_shortcuts)

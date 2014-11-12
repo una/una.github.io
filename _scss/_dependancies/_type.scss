@@ -44,6 +44,15 @@
 	font-style: italic;
 }
 
+%caption {
+  @extend %italic;
+  font-size: 80%;
+  color: $color--blue;
+  background: white;
+  max-width: 300px;
+  padding: .5em 1em;
+}
+
 em {
   @extend %italic;
 }

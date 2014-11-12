@@ -104,16 +104,13 @@
 		}
 	}
 
-	figcaption,
-	.caption,
-	%caption {
-		@extend %italic;
-		font-size: 80%;
-		color: $color--blue;
+	figcaption {
+		@extend %caption;
 		margin-top: -1em;
-		background: white;
-		max-width: 300px;
-		padding: .5em 1em;
+	}
+
+	.caption {
+		@extend %caption;
 	}
 
 	blockquote {

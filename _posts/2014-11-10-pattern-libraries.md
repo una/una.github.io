@@ -5,15 +5,22 @@ permalink: /pattern-libraries
 date: '2014-11-11'
 comments: true
 tags:
-- productivity
-- personal goals
+- pattern 
+- library
+- libraries
+- style
+- guide
+- guides
+- resources
 header-bg:
-subtitle: An alphabetized list of styleguides and pattern libraries and a look into what makes the two terms different.
+subtitle: An alphabetized list of styleguides and pattern libraries and a look into the differences between those two terms.
 ---
 
 A lot of time, the terms "style guide" and "pattern library" are used interchangebly, but there are distinct differences between the two. Although many examples of these "guides" include features of both, defining the distinctions is important for team communication and understanding.
 
-A **style guide** is a representation of brand properties and values for consistency. These include typography, copy, color values and variations, etc. Style guides are the next generation of traditional **branding guides,** &mdash; functional derivatives of print. Where branding guides are useful for print design continuity, style guides are useful for web designers. They should be in the format which they are expereinced (i.e. online for websites) and include details in a useful format (i.e. hex codes or rgba values for colors, variable names for the build system, examples of styling and layout). 
+A **style guide** is a representation of brand properties and values for consistency. These include typography, copy, color values and variations, etc. These can also be guides for [coding](https://github.com/alphagov/styleguides) consistency. A company could, for instance, have a "Python Styleguide" for their developers. 
+
+Visual style guides are the next generation of traditional **branding guides,** &mdash; functional derivatives of print. Where branding guides are useful for print design continuity, style guides are useful for web designers. They should be in the format which they are expereinced (i.e. online for websites) and include details in a useful format (i.e. hex codes or rgba values for colors, variable names for the build system, examples of styling and layout). 
 
 <a class="quote twitter-share right">Styleguide (Visual) +<br> Pattern Library (Functional) =<br>Awesomesauce</a>
 
@@ -74,6 +81,7 @@ a Pattern Library is a collection of the combined atomic elements that make up a
 - [Lonely Planet](http://rizzo.lonelyplanet.com/styleguide/ui-components/cards)
 - [MailChimp](http://ux.mailchimp.com/patterns)
 - [Mapbox](https://www.mapbox.com/base/)
+- [Material UI](http://material-ui.com/#/components/buttons)
 - [Max Quattromani](http://maxquattromani.com/styleguide)
 - [Patternry](http://patternry.com/p=progress-bar/)
 - [Pears](http://pea.rs/)
