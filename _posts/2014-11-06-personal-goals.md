@@ -85,7 +85,7 @@ function pg-add() {
 alias pg-gh="cd ~{PATH-TO-FOLDER} &&
   git checkout master &&
   git add -A &&
-  git commit -m "push from terminal" &&
+  git commit -m ‘push from terminal’ &&
   git push origin master &&
   open http://github.com/{GITHUB-USERNAME}/personal-goals"
 ```
