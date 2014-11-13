@@ -6,8 +6,9 @@ Because:
 ![Performance on Tumblr](http://una.github.io/images/perf-tumblr.gif)
 ![Performance on Github Pages](http://una.github.io/images/perf-gh.gif)
 
-And (Interior pages):
+And it went from this (interior page on Tumblr):
 ![Performance on Tumblr](http://una.github.io/images/interior-tumblr.gif)
+to this (interior page on Github pages):
 ![Performance on Tumblr](http://una.github.io/images/interior-gh.gif)
 
 ## To-Do:
