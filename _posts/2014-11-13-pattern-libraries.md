@@ -60,6 +60,7 @@ The following lists include a wide variety of examples from personal websites, b
 - [A List Apart](http://patterns.alistapart.com/)
 - [Android](https://developer.android.com/design/patterns/index.html)
 - [Bancomail](http://elrumordelaluz.github.io/newbancomail/)
+- [Bare Bones](http://barebones.paulrobertlloyd.com/_patterns.php)
 - [BBC](http://www.bbc.co.uk/gel)
 - [Bootstrap](http://getbootstrap.com/components/)
 - [Brad Frost](http://bradfrost.github.io/this-is-responsive/patterns.html)
@@ -74,6 +75,7 @@ The following lists include a wide variety of examples from personal websites, b
 - [Mapbox](https://www.mapbox.com/base/)
 - [Material UI](http://material-ui.com/#/components/buttons)
 - [Max Quattromani](http://maxquattromani.com/styleguide)
+- [Onsen Components](http://components.onsen.io/)
 - [Patternry](http://patternry.com/p=progress-bar/)
 - [Pears](http://pea.rs/)
 - [Yahoo](http://developer.yahoo.com/ypatterns/)
@@ -89,5 +91,8 @@ The following lists include a wide variety of examples from personal websites, b
 - [StyleDocco](http://jacobrask.github.io/styledocco/)
 - [Knyle Style Sheets](http://warpspire.com/kss/)
 - [Hologram](http://trulia.github.io/hologram/)
+- [Style Guide Links from Kevin Suttle](https://kippt.com/kevinSuttle/style-guides)
+- [Styleguide Generators](https://github.com/davidhund/styleguide-generators)
+- [Stylify.me](http://stylifyme.com/)
 
 <small>If you have more resources to submit, please message me or leave a comment here. Big thank you to <a href="https://twitter.com/imnotsquinting">Jeri</a> for compiling a lot of these resources!</small>
