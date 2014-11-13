@@ -15,7 +15,7 @@ to this (interior page on Github pages):
 
 - [ ] Eliminate render-blocking JavaScript and CSS in above-the-fold content
 - [ ] Add image optimization to gulpfile
-- [ ] Review Mobile nav --> add more space around Archive & About links
+- [x] Review Mobile nav --> add more space around Archive & About links
 
 ## This was set up using:
  - [jekyll-gulp-sass-browser-sync starter](https://github.com/shakyShane/jekyll-gulp-sass-browser-sync)
