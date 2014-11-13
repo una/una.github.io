@@ -87,12 +87,13 @@ The following lists include a wide variety of examples from personal websites, b
 - [Kalei](http://kaleistyleguide.com/)
 - [Style Guide Boilerplate](http://bjankord.github.io/Style-Guide-Boilerplate/)
 - [Style Prototype](https://github.com/north/generator-style-prototype)
-- [Style Guide Generator Roundup by Welch Canvan](http://welchcanavan.com/styleguide-roundup/)
+- [Style Guide Gen. Roundup - Welch Canvan](http://welchcanavan.com/styleguide-roundup/)
 - [StyleDocco](http://jacobrask.github.io/styledocco/)
 - [Knyle Style Sheets](http://warpspire.com/kss/)
 - [Hologram](http://trulia.github.io/hologram/)
-- [Style Guide Links from Kevin Suttle](https://kippt.com/kevinSuttle/style-guides)
+- [Style Guide Links - Kevin Suttle](https://kippt.com/kevinSuttle/style-guides)
 - [Styleguide Generators](https://github.com/davidhund/styleguide-generators)
 - [Stylify.me](http://stylifyme.com/)
+- [Creating Style Guides - ALA](http://alistapart.com/article/creating-style-guides)
 
 <small>If you have more resources to submit, please message me or leave a comment here. Big thank you to <a href="https://twitter.com/imnotsquinting">Jeri</a> for compiling a lot of these resources!</small>
