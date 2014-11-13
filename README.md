@@ -2,8 +2,13 @@
 
 This is a migration of unakravets.tumblr.com
 
+Because:
 ![Performance on Tumblr](http://una.github.io/images/perf-tumblr.gif)
 ![Performance on Github Pages](http://una.github.io/images/perf-gh.gif)
+
+And (Interior pages):
+![Performance on Tumblr](http://una.github.io/images/interior-tumblr.gif)
+![Performance on Tumblr](http://una.github.io/images/interior-gh.gif)
 
 ## To-Do:
 
