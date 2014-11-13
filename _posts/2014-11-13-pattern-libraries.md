@@ -2,7 +2,7 @@
 layout: post
 title: A Pretty Long List of Style Guides and Pattern Libraries
 permalink: /pattern-libraries
-date: '2014-11-11'
+date: '2014-11-13'
 comments: true
 tags:
 - pattern 
@@ -18,25 +18,17 @@ subtitle: An alphabetized list of styleguides and pattern libraries and a look i
 
 A lot of time, the terms "style guide" and "pattern library" are used interchangebly, but there are distinct differences between the two. Although many examples of these "guides" include features of both, defining the distinctions is important for team communication and understanding.
 
-A **style guide** is a representation of brand properties and values for consistency. These include typography, copy, color values and variations, etc. These can also be guides for [coding](https://github.com/alphagov/styleguides) consistency. A company could, for instance, have a "Python Styleguide" for their developers. 
+A **style guide** is a representation of brand properties and values for consistency. These include typography, copy, color values and variations, etc. These can also be guides for [coding](https://github.com/alphagov/styleguides) consistency. A company could, for instance, have a *"Python Styleguide"* for their developers. 
 
-Visual style guides are the next generation of traditional **branding guides,** &mdash; functional derivatives of print. Where branding guides are useful for print design continuity, style guides are useful for web designers. They should be in the format which they are expereinced (i.e. online for websites) and include details in a useful format (i.e. hex codes or rgba values for colors, variable names for the build system, examples of styling and layout). 
+Visual style guides are the next generation of traditional **branding guides** &mdash; functional derivatives of print. In the same way that print designers use physical branding guides for testing color and size samples, style guides are being used for web designers on the web. They should be presented in the format on which their accompanying product is experienced (i.e. online with a basic Internet connection for websites) and include details in a useful format (i.e. hex codes or variable names and examples of typographic scale). 
 
 <a class="quote twitter-share right">Styleguide (Visual) +<br> Pattern Library (Functional) =<br>Awesomesauce</a>
 
-A **pattern library** is a functional collection of elements, or components, of a website. These include buttons, forms, input types, messaging, etc. more text here
-[Max Quattromani](http://maxquattromani.com/) does a great job in showing the differences
+**Pattern libraries**, like style guides, ensure consistency in a project. However, they focus on function. A pattern library is a functional collection of elements, or components, of a project. These include buttons, forms, input types, messaging, etc. [Max Quattromani](http://maxquattromani.com/) does a great job in demonstrating how style guides and pattern libraries relate but are distinct.
 
-
-## Modular Design
-
-Designing with style guides and pattern libraries is great because you can see how your elements will look together and interact with each other. This ensures a modular and unified system in a web design, creating consistency not only for the future of the project but for your 
-
-
-The following lists include examples from personal websites, blogs, event pages, companies, and toolkits of their styleguides/pattern libraries.
+The following lists include a wide variety of examples from personal websites, blogs, event pages, companies, and toolkits/resources. Like I said earlier, many have qualities of both style guides and pattern libraries, but they are grouped by whichever is most prevalent. Some (like Android) appear on here twice because they have both a style guide and pattern library individual of each other.
 
 ## Style Guides
-A style guide and code standards document is a way of ensuring brand and code consistency
 
 - [A List Apart](http://alistapart.com/about/style-guide)
 - [Android](https://developer.android.com/design/style/index.html)
@@ -44,7 +36,7 @@ A style guide and code standards document is a way of ensuring brand and code co
 - [Baseline CSS](http://baselinecss.com)
 - [Code for America](http://style.codeforamerica.org/)
 - [Drupal](http://styleguide.allgoo.de/)
-- [Edible Rebrand (unofficial project)](http://unakravets.com/edible-styleguide/)
+- [Edible (unofficial project)](http://unakravets.com/edible-styleguide/)
 - [Google](http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml)
 - [Google Material Design](http://www.google.com/design/spec/material-design/introduction.html)
 - [MailChimp](http://mailchimp.com/resources/email-design-guide/)
@@ -64,9 +56,6 @@ A style guide and code standards document is a way of ensuring brand and code co
 
 
 ## Pattern Libraries
-
-Functional
-a Pattern Library is a collection of the combined atomic elements that make up a site and become modules and components
 
 - [A List Apart](http://patterns.alistapart.com/)
 - [Android](https://developer.android.com/design/patterns/index.html)
@@ -98,4 +87,4 @@ a Pattern Library is a collection of the combined atomic elements that make up a
 - [Style Guide Generator Roundup by Welch Canvan](http://welchcanavan.com/styleguide-roundup/)
 - [Hologram](http://trulia.github.io/hologram/)
 
-<small>Thanks, <a href="https://twitter.com/imnotsquinting">Jeri</a> for compilinga= a lot of these resources</small>
+<small>If you have more resources to submit, please message me or leave a comment here. Big thank you to <a href="https://twitter.com/imnotsquinting">Jeri</a> for compiling a lot of these resources!</small>
