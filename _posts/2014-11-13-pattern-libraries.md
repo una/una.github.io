@@ -16,7 +16,7 @@ header-bg: ../images/posts/pattern-lib.jpg
 subtitle: An alphabetized list of styleguides and pattern libraries and a look into the differences between those two terms.
 ---
 
-A lot of time, the terms "style guide" and "pattern library" are used interchangebly, but there are distinct differences between the two. Although many examples of these "guides" include features of both, defining the distinctions is important for team communication and understanding.
+A lot of time, the terms "style guide" and "pattern library" are used interchangebly, but there are distinct differences between the two. Although many examples of these "guides" include features of both Lets look at the distinctions for a better understanding.
 
 A **style guide** is a representation of brand properties and values for consistency. These include typography, copy, color values and variations, etc. These can also be guides for [coding](https://github.com/alphagov/styleguides) consistency. A company could, for instance, have a *"Python Styleguide"* for their developers. 
 
@@ -59,10 +59,12 @@ The following lists include a wide variety of examples from personal websites, b
 
 - [A List Apart](http://patterns.alistapart.com/)
 - [Android](https://developer.android.com/design/patterns/index.html)
+- [Bancomail](http://elrumordelaluz.github.io/newbancomail/)
 - [BBC](http://www.bbc.co.uk/gel)
 - [Bootstrap](http://getbootstrap.com/components/)
 - [Brad Frost](http://bradfrost.github.io/this-is-responsive/patterns.html)
 - [Dan Eden](http://daneden.me/styleguide/)
+- [Do Something](http://dosomething.github.io/neue/)
 - [Ebay](http://uipatterns.ebay.com/pe)
 - [Fellowship Technologies](http://developer.fellowshipone.com/patterns/)
 - [Foundation](http://foundation.zurb.com/docs/components/block_grid.html)
@@ -81,10 +83,11 @@ The following lists include a wide variety of examples from personal websites, b
 
 - [Pattern Lab](http://patternlab.io/)
 - [Kalei](http://kaleistyleguide.com/)
+- [Style Guide Boilerplate](http://bjankord.github.io/Style-Guide-Boilerplate/)
 - [Style Prototype](https://github.com/north/generator-style-prototype)
-- [KSS](http://warpspire.com/kss/)
-- [StyleDocco](http://jacobrask.github.io/styledocco/)
 - [Style Guide Generator Roundup by Welch Canvan](http://welchcanavan.com/styleguide-roundup/)
+- [StyleDocco](http://jacobrask.github.io/styledocco/)
+- [Knyle Style Sheets](http://warpspire.com/kss/)
 - [Hologram](http://trulia.github.io/hologram/)
 
 <small>If you have more resources to submit, please message me or leave a comment here. Big thank you to <a href="https://twitter.com/imnotsquinting">Jeri</a> for compiling a lot of these resources!</small>
