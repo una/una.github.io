@@ -16,7 +16,7 @@ header-bg: ../images/posts/pattern-lib.jpg
 subtitle: An alphabetized list of styleguides and pattern libraries and a look into the differences between those two terms.
 ---
 
-A lot of time, the terms "style guide" and "pattern library" are used interchangebly, but there are distinct differences between the two. Although many examples of these "guides" include features of both Lets look at the distinctions for a better understanding.
+A lot of time, the terms "style guide" and "pattern library" are used interchangebly, but there are distinct differences between the two. Although many examples of these "guides" include features of both, lets look at what makes each unique for a better understanding.
 
 A **style guide** is a representation of brand properties and values for consistency. These include typography, copy, color values and variations, etc. These can also be guides for [coding](https://github.com/alphagov/styleguides) consistency. A company could, for instance, have a *"Python Styleguide"* for their developers. 
 
