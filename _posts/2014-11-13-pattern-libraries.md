@@ -12,7 +12,7 @@ tags:
 - guide
 - guides
 - resources
-header-bg:
+header-bg: ../images/posts/pattern-lib.jpg
 subtitle: An alphabetized list of styleguides and pattern libraries and a look into the differences between those two terms.
 ---
 
