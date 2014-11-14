@@ -1,25 +1,25 @@
-@import "_utils/reset";
+@import '_utils/reset';
 
-@import "_dependancies/vars";
-@import "_dependancies/mixins";
-@import "_dependancies/grid";
-@import "_dependancies/type";
-@import "_dependancies/theme";
+@import '_dependancies/vars';
+@import '_dependancies/mixins';
+@import '_dependancies/grid';
+@import '_dependancies/type';
+@import '_dependancies/theme';
 
-@import "_helpers/layout";
+@import '_helpers/layout';
 
-@import "_base/base";
-@import "_base/type";
-@import "_base/code-syntax";
+@import '_base/base';
+@import '_base/type';
+@import '_base/code-syntax';
 
-@import "_components/lists";
-@import "_components/posts";
-@import "_components/tooltips";
-@import "_components/pagination";
-@import "_components/tables";
-@import "_components/video";
+@import '_components/lists';
+@import '_components/posts';
+@import '_components/tooltips';
+@import '_components/pagination';
+@import '_components/tables';
+@import '_components/video';
 
-@import "_regions/footer.scss";
-@import "_regions/nav.scss";
-@import "_regions/header.scss";
-@import "_regions/intro.scss";
+@import '_regions/footer';
+@import '_regions/nav';
+@import '_regions/header';
+@import '_regions/intro';

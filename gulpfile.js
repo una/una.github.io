@@ -6,6 +6,7 @@ var minifycss   = require('gulp-minify-css');
 var rename      = require('gulp-rename');
 var cp          = require('child_process');
 var deploy      = require('gulp-gh-pages');
+var scsslint    = require('gulp-scss-lint');
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -70,6 +71,19 @@ gulp.task('watch', function () {
 gulp.task("deploy", ["jekyll-build"], function () {
     return gulp.src("./_site/**/*")
         .pipe(deploy());
+});
+
+
+/**
+ * Lint .scss
+ */
+gulp.task('scss-lint', function() {
+  gulp.src('_scss/**/*.scss')
+    .pipe(scsslint({
+        'bundleExec': true,
+        'config': 'lint-config.yml',
+        'maxBuffer': 307200
+    }));
 });
 
 /**

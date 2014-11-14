@@ -15,7 +15,8 @@
     "gulp-gh-pages": "^0.4.0",
     "gulp-minify-css": "^0.3.11",
     "gulp-rename": "^1.2.0",
-    "gulp-sass": "^0.7.3"
+    "gulp-sass": "^0.7.3",
+    "gulp-scss-lint": "^0.1.4"
   },
   "repository": {
     "type": "git",

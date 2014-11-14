@@ -53,12 +53,16 @@ GEM
     pygments.rb (0.6.0)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
+    rainbow (2.0.0)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     redcarpet (3.2.0)
     safe_yaml (1.0.4)
     sass (3.4.6)
+    scss-lint (0.30.0)
+      rainbow (~> 2.0)
+      sass (~> 3.4.0)
     timers (4.0.1)
       hitimes
     toml (0.1.2)
@@ -70,3 +74,4 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll-redirect-from
+  scss-lint
