@@ -7,6 +7,8 @@ var rename      = require('gulp-rename');
 var cp          = require('child_process');
 var deploy      = require('gulp-gh-pages');
 var scsslint    = require('gulp-scss-lint');
+var imagemin    = require('gulp-imagemin');
+var pngquant    = require('imagemin-pngquant');
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -57,15 +59,6 @@ gulp.task('sass', function () {
 });
 
 /**
- * Watch scss files for changes & recompile
- * Watch html/md files, run jekyll & reload BrowserSync
- */
-gulp.task('watch', function () {
-    gulp.watch('_scss/**/*.scss', ['sass']);
-    gulp.watch(['index.html', 'archive.html', '_layouts/*.html', '_includes/*.html', '_posts/*'], ['jekyll-rebuild']);
-});
-
-/**
  * Deploy to Gh-Pages
  */
 gulp.task("deploy", ["jekyll-build"], function () {
@@ -73,6 +66,18 @@ gulp.task("deploy", ["jekyll-build"], function () {
         .pipe(deploy());
 });
 
+/**
+ * Minify Images
+ */
+gulp.task('imagemin', function () {
+    return gulp.src('images/*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('_site/images'));
+});
 
 /**
  * Lint .scss
@@ -81,9 +86,20 @@ gulp.task('scss-lint', function() {
   gulp.src('_scss/**/*.scss')
     .pipe(scsslint({
         'bundleExec': true,
-        'config': 'lint-config.yml',
-        'maxBuffer': 307200
+        'config': 'lint-config.yml'
     }));
+});
+
+
+/**
+ * Watch scss files for changes & recompile AND lint :)
+ * Watch html/md files, run jekyll & reload BrowserSync
+ * Minify images too
+ */
+gulp.task('watch', function () {
+    gulp.watch('_scss/**/*.scss', ['sass', 'scss-lint']);
+    gulp.watch(['index.html', 'archive.html', '_layouts/*.html', '_includes/*.html', '_posts/*'], ['jekyll-rebuild']);
+    gulp.watch(['images/*'], ['imagemin'])
 });
 
 /**
