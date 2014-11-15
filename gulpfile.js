@@ -9,7 +9,9 @@ var deploy      = require('gulp-gh-pages');
 var scsslint    = require('gulp-scss-lint');
 var imagemin    = require('gulp-imagemin');
 var pngquant    = require('imagemin-pngquant');
-var concat = require('gulp-concat');
+var concat      = require('gulp-concat');
+var uglify      = require('gulp-uglify');
+
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -97,6 +99,7 @@ gulp.task('scss-lint', function() {
 gulp.task('concat-scripts', function() {
   gulp.src(['./js/vendor/jquery-1.11.1.min.js','./js/vendor/jquery.lazyload.min.js', './js/vendor/highlight.pack.js', './js/vendor/jekyll-search.js', './js/scripts.js'])
     .pipe(concat('all.js'))
+    .pipe(uglify())
     .pipe(gulp.dest('./js'))
 });
 
