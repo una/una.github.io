@@ -97,7 +97,7 @@ gulp.task('scss-lint', function() {
  * Minify images too
  */
 gulp.task('watch', function () {
-    gulp.watch('_scss/**/*.scss', ['sass', 'scss-lint']);
+    gulp.watch('_scss/**/*.scss', ['sass']);
     gulp.watch(['index.html', 'archive.html', '_layouts/*.html', '_includes/*.html', '_posts/*'], ['jekyll-rebuild']);
     gulp.watch(['images/*'], ['imagemin'])
 });
