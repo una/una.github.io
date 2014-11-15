@@ -42,7 +42,7 @@ window.BLOG || (BLOG = {});
   SimpleJekyllSearch.init({
     searchInput: document.getElementById('search-input'),
     resultsContainer: document.getElementById('results-container'),
-    dataSource: '{{ site.baseurl }}/search.json',
+    dataSource: 'search.json',
     searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
     noResultsText: 'No results found',
     limit: 10,
