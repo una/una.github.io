@@ -9,6 +9,7 @@ var deploy      = require('gulp-gh-pages');
 var scsslint    = require('gulp-scss-lint');
 var imagemin    = require('gulp-imagemin');
 var pngquant    = require('imagemin-pngquant');
+var concat = require('gulp-concat');
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -90,6 +91,14 @@ gulp.task('scss-lint', function() {
     }));
 });
 
+/**
+ * concat .js
+ */
+gulp.task('scripts', function() {
+  gulp.src(['./js/vendor/jquery-1.11.0.min.js','./js/vendor/jquery.lazyload.min.js', './js/vendor/highlight.pack.js', './js/vendor/search.js'])
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest('./js/all-scripts.js'))
+});
 
 /**
  * Watch scss files for changes & recompile AND lint :)
