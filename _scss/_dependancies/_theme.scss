@@ -2,7 +2,7 @@
 $color--main: $color--hotpink;
 $color--secondary: $color--darkerpurple;
 $color--links: $color--lightpurple;
-$color--bg: white;
+$color--bg: #fff;
 $color--copy: $color--darkgrey;
 $color--copy--dark: darken($color--darkgrey, 15);
 
@@ -12,40 +12,40 @@ $post-width: 780px;
 $page-line-height: 1.8;
 
 @mixin theme-me($color) {
-	color: $color;
+  color: $color;
 }
 
 %orange,
 .orange {
-	@include theme-me($color--orange);
+  @include theme-me($color--orange);
 }
 
 %gold,
 .gold {
-	@include theme-me($color--gold);
+  @include theme-me($color--gold);
 }
 
 %blue,
 .blue {
-	@include theme-me($color--blue);
+  @include theme-me($color--blue);
 }
 
 %hotpink,
 .hotpink {
-	@include theme-me($color--hotpink);
+  @include theme-me($color--hotpink);
 }
 
 %white,
 .white {
-	@include theme-me(white);
+  @include theme-me(#fff);
 }
 
 %darkgrey,
 .darkgrey {
-	@include theme-me($color--darkgrey);
+  @include theme-me($color--darkgrey);
 }
 
 %lightgrey,
 .lightgrey {
-	@include theme-me($color--lightgrey);
+  @include theme-me($color--lightgrey);
 }

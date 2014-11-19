@@ -10,10 +10,10 @@
 }
 
 h1 {
-	@include fontsize(32);
   @extend %clearfix;
   @extend %vert-rythm;
   @extend %font-title;
+  @include fontsize(32);
 
   @include breakpoint(md) {
     @include fontsize(28)
@@ -25,10 +25,10 @@ h1 {
 }
 
 h2 {
-  @include fontsize(26);
   @extend %clearfix;
   @extend %vert-rythm;
   @extend %font-title;
+  @include fontsize(26);
 
   @include breakpoint(sm) {
     @include fontsize(18)
@@ -38,8 +38,8 @@ h2 {
 h3 {
   @extend %font-title-sm;
   @extend %clearfix;
-  @include fontsize(18);
   @extend %vert-rythm;
+  @include fontsize(18);
   font-weight: 800;
 
   @include breakpoint(sm) {
@@ -73,7 +73,7 @@ i {
 
     &:hover {
       background: $color--main;
-      color: white;
+      color: #fff;
     }
   }
 
@@ -82,7 +82,7 @@ i {
 
     &:hover {
       background: $color--blue;
-      color: white;
+      color: #fff;
     }
   }
 }
