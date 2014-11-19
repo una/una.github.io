@@ -7,7 +7,7 @@ comments: true
 tags:
 - open source
 - design
-header-bg: 
+header-bg: ../images/posts/bg-sassconf.jpg
 subtitle: When designers and developers work together from the start, it produces better outcomes. But how can we get designers involved and wanting to participate in the open source community from the start?
 ---
 
