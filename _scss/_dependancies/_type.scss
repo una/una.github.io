@@ -12,6 +12,8 @@
 %font-title {
 	font-family: 'Alegreya Sans SC', sans-serif;
 	font-weight: 900; 
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
 }
 
 %font-title-sm {

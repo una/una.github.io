@@ -11,7 +11,7 @@ header-bg:
 subtitle: When designers and developers work together from the start, it produces better outcomes. But how can we get designers involved and wanting to participate in the open source community from the start?
 ---
 
-When designers and developers work together from the start, it produces better outcomes. But how can we get designers involved and wanting to participate in the open source community from the start? In order to figure out how to fix it, we need to take a look at the barriers for designers (why they don't participate in open source), and how we can work together to to influence change.
+When designers and developers work together from the start, it produces better outcomes. But how can we get designers involved and wanting to participate in the open source community from the start? In order to figure out how to fix it, we need to take a look at the barriers for designers (why they don't participate in open source), and how we can work together to influence change.
 
 <br>
 <div class="video-container">
@@ -22,7 +22,7 @@ When designers and developers work together from the start, it produces better o
 ## Defining "Open Source Design"
 For me, I see 3 distinct ways that the term “Open Source Design" can be interpreted:
 
-1. **"Designing in the Open"**: This means showing design progress in the open, or "designing out loud." A lot of designers operate in a very different way: hiding unfinished and rough sketches due to fear of premature criticism: the "but it's not ready yet" mentality. [Dribbble](http://dribbble.com), for instance, was originally intended as a platform for works-in-progress to get feedback and critique. Now, it has has become a showcase for finished pieces and a miniature portfolio [platform](http://cmdspace.com/).
+1. **"Designing in the Open"**: This means showing design progress in the open, or "designing out loud." A lot of designers operate in a very different way: hiding unfinished and rough sketches due to fear of premature criticism &mdash; the "but it's not ready yet" mentality. [Dribbble](http://dribbble.com), for instance, was originally intended as a platform for works-in-progress to get feedback and critique. Now, it has has become a showcase for finished pieces and a miniature portfolio [platform](http://cmdspace.com/).
 2. **Designing Free Resources**: Open sourcing your designs (i.e. icon sets, themes, layouts, stock photography, vector graphics, etc.) for others to use in their own work. This is all about making resources free for others. The [League of Moveable Type](https://www.theleagueofmoveabletype.com/), for instance provides some beautiful free fonts. [Open Designs](http://www.opendesigns.org/) is another example.
 3. **Designing for Open Source Projects** (like on Github). This definition is about designers working in conjunction with developers to participate in their open source projects. When the two work together, the results are [beautiful](http://beautifulopen.com/) and make the open source projects more usable (therefore more likely to be adapted, grown, expanded &mdash; and the cycle goes on and on).
 

@@ -1,4 +1,4 @@
- h1 { font-size: 64px }
+// h1 { font-size: 64px }
 // h2 { font-size: 47.5px }
 // h3 { font-size: 32px }
 // h4 { font-size: 23.75px }
@@ -13,7 +13,7 @@ h1 {
 	@include fontsize(32);
   @extend %clearfix;
   @extend %vert-rythm;
-	@extend %font-title;
+  @extend %font-title;
 
   @include breakpoint(md) {
     @include fontsize(28)
@@ -25,10 +25,10 @@ h1 {
 }
 
 h2 {
-	@include fontsize(26);
+  @include fontsize(26);
   @extend %clearfix;
   @extend %vert-rythm;
-	@extend %font-title;
+  @extend %font-title;
 
   @include breakpoint(sm) {
     @include fontsize(18)
@@ -36,11 +36,11 @@ h2 {
 }
 
 h3 {
-	@extend %font-title-sm;
+  @extend %font-title-sm;
   @extend %clearfix;
-	@include fontsize(18);
+  @include fontsize(18);
   @extend %vert-rythm;
-	font-weight: 800;
+  font-weight: 800;
 
   @include breakpoint(sm) {
     @include fontsize(16)
@@ -52,13 +52,13 @@ h4 {
 }
 
 p {
-	color: $color--copy;
-	line-height: $page-line-height;
+  color: $color--copy;
+  line-height: $page-line-height;
   margin-bottom: 1em;
 }
 
 a {
-	@extend %transition;
+  @extend %transition;
 }
 
 i {
@@ -67,9 +67,9 @@ i {
 
 %pink-links {
   a {
+    border-bottom: 1px dashed $color--main;
     color: $color--links;
     padding: 0 .2em;
-    border-bottom: 1px dashed $color--main;
 
     &:hover {
       background: $color--main;
@@ -101,33 +101,33 @@ i {
 }
 
 %blockquote {
-    font-size: 130%;
-    margin: 1em auto;
-    padding: .5em 1em;
-    background: $color--subtlegrey;
-    display: block;
-    border-bottom: none;
-    border-left: 2px solid $color--blue;
-    font-style: italic;
-    position: relative;
-    max-width: 70%;
-    line-height: 1.8;
-    color: $color--purple;
+  font-size: 130%;
+  margin: 1em auto;
+  padding: .5em 1em;
+  background: $color--subtlegrey;
+  display: block;
+  border-bottom: 0;
+  border-left: 2px solid $color--blue;
+  font-style: italic;
+  position: relative;
+  max-width: 70%;
+  line-height: 1.8;
+  color: $color--purple;
 
-    &.left {
-      max-width: 50%;
-      float: left;
-      margin: 0 1em 0 0;
-    }
-
-    &.right {
-      max-width: 50%;
-      float: right;
-      margin: 0 0 0 1em;
-    }
-
-    @include breakpoint(sm) {
-        max-width: 100%;
-        margin: 1em auto;
-    }
+  &.left {
+    float: left;
+    margin: 0 1em 0 0;
+    max-width: 50%;
   }
+
+  &.right {
+    float: right;
+    margin: 0 0 0 1em;
+    max-width: 50%;
+  }
+
+  @include breakpoint(sm) {
+    margin: 1em auto;
+    max-width: 100%;
+  }
+}
