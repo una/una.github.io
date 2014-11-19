@@ -2,7 +2,7 @@
 layout: post
 title: Open Source Design
 permalink: /open-source-design
-date: '2014-11-18'
+date: '2014-11-19'
 comments: true
 tags:
 - open source
