@@ -97,9 +97,9 @@ There can be a mix of static comps and design ideas submitted in the conversatio
 
 Once we've gotten designers and developers working on these projects together (yay!), lets make sure that feedback is constructive and positive. Initially, language might be awkward and clumsy, but as this becomes more widely adopted, it will become normalized and fluid. Education is key for this. I'd like to have more conversations in the community about a unified set of feedback guidelines that can be used globally.
 
-That being said, I want to set up a time or place where we can get together and chat about this, either on IRC or a big Google Hangout. So if you haven't already, send your email address to me: una.kravets@gmail.com and I'll add you to the list when a date and time are set to continue the conversation about open source design.
+**That being said, I want to set up a time or place where we can get together and chat about this, either on IRC or a big Google Hangout. So if you haven't already, send your email address to me: una.kravets@gmail.com and I'll add you to the list when a date and time are set to continue the conversation about open source design.**
 
 Finally, watch this really awesome [video](https://www.youtube.com/watch?v=djf8sLjtbzU) on Open Source Design by Garth Braithwaite.
 
-<blockquote>Now, that was a lot of things. Join the conversation on the #opensourcedesign IRC channel and add your email to the invite list for the virtual Hangout event</blockquote>
+<blockquote>Now, that was a lot of things. Join the conversation on the #opensourcedesign IRC channel and add your email to the invite list for the virtual Hangout event.</blockquote>
 
