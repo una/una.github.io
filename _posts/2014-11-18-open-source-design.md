@@ -30,9 +30,6 @@ The third definition *(Designing for the Open Source Community)* is what I'd lik
 
 ## So Why Don't Designers contribute to Open Source?
 
--- the talk at SassConf --
--- photo of the sassconf meeting --
-
 Often, designers and developers have the same user-centered goals. But why don't designers participate in open source communities in the way that developers do? Well, we talked about this a lot at [SassConf](http://sassconf.com) last month, and came to a few conclusions.
 
 ### The "Fuck You, Pay Me" Mentality
@@ -100,5 +97,5 @@ Once we've gotten designers and developers working on these projects together (y
 
 Finally, watch this really awesome [video](https://www.youtube.com/watch?v=djf8sLjtbzU) on Open Source Design by Garth Braithwaite.
 
-<blockquote>Now, that was a lot of things. Join the conversation on the #opensourcedesign IRC channel or on [DATE] [LOCATION] for a public open source chat forum</blockquote>
+<blockquote>Now, that was a lot of things. Join the conversation on the #opensourcedesign IRC channel and post about #opensourcedesign on the Twittersphere.</blockquote>
 
