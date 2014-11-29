@@ -26,7 +26,7 @@ For me, I see 3 distinct ways that the term “Open Source Design" can be interp
 2. **Designing Free Resources**: Open sourcing your designs (i.e. icon sets, themes, layouts, stock photography, vector graphics, etc.) for others to use in their own work. This is all about making resources free for others. The [League of Moveable Type](https://www.theleagueofmoveabletype.com/), for instance provides some beautiful free fonts. [Open Designs](http://www.opendesigns.org/) is another example.
 3. **Designing for Open Source Projects** (like on Github). This definition is about designers working in conjunction with developers to participate in their open source projects. When the two work together, the results are [beautiful](http://beautifulopen.com/) and make the open source projects more usable (therefore more likely to be adapted, grown, expanded &mdash; and the cycle goes on and on).
 
-The third definition *(Designing for the Open Source Community)* is what I'd like to focus on.
+The third definition &mdash; Designing for the Open Source Community &mdash; is what I'd like to focus on.
 
 ## So Why Don't Designers contribute to Open Source?
 
