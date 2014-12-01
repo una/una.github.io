@@ -43,7 +43,7 @@ The Sass @at-root directive pulls the styling rule out to the root of the docume
 
 @at-root is pretty great. While we all know that overnesting leads to terrifying CSS output, @at-root allows us to nest properties for order and visual clarity without any of the negative CSS output side effects. There are two ways to use @at-root; either inline, or containing a block of selectors.
 
-```
+<pre class="syntax--scss"><code>
 // Nesting using @at-root
 .speech-bubble{
   color: purple;
@@ -57,9 +57,9 @@ The Sass @at-root directive pulls the styling rule out to the root of the docume
     }
   }
 }
-```
+</code></pre>
 
-```
+<pre class="syntax--css"><code>
 // CSS Output
 .speech-bubble {
   color: purple;
@@ -73,7 +73,7 @@ The Sass @at-root directive pulls the styling rule out to the root of the docume
 .speech-bubble__text--link {
   color: green;
 }
-```
+</code></pre>
 
 ## Modernizr, Meet @at-root
 

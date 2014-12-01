@@ -17,6 +17,7 @@ pre, code {
 pre {
 	border: 1px solid lightgrey;
 	margin-bottom: 1em;
+	position: relative;
 	
 	code {
 		border: none;
@@ -26,6 +27,26 @@ pre {
 code {
 	display: inline-block;
 	border: 1px solid lightgrey;
+}
+
+// Styling if class set on pre, there will be a tag for the type of code
+%syntax-tag {
+	position: absolute;
+	right: 0;
+	background: lightgrey;
+	color: dimgray;
+	padding: .5em;
+	top: 0;
+	border-radius: 0 0 0 5px;
+}
+
+$syntax-list: scss html md css sass js;
+
+@each $ending in $syntax-list {
+	  .syntax--#{$ending}:after {
+	  	@extend %syntax-tag;
+		content: ".#{$ending}";
+	}
 }
 
 p .hljs,
@@ -75,50 +96,3 @@ p .hljs,
 	color: $color--navy;
 	}
 }
-
-// .hljs-keyword,.hljs-tag,.css .hljs-class,.css .hljs-id,.lisp .hljs-title,.nginx .hljs-title,.hljs-request,.hljs-status,.clojure .hljs-attribute 
-// 	{color:  $color--lightgrey}
-
-// .django .hljs-template_tag,.django .hljs-variable,.django .hljs-filter .hljs-argument 
-// 	{color: $color--blue}
-
-// .hljs-number,.hljs-date 
-// 	{color: $color--blue}
-
-// .dos .hljs-envvar,.dos .hljs-stream,.hljs-variable,.apache .hljs-sqbracket 
-// 	{color: $color--gold}
-
-// .dos .hljs-flow,.diff .hljs-change,.python .exception,.python .hljs-built_in,.hljs-literal,.tex .hljs-special 
-// 	{color: $color--gold}
-
-// .diff .hljs-chunk,.hljs-subst 
-// 	{color: $color--orange}
-
-// .dos .hljs-keyword,.python .hljs-decorator,.hljs-title,.haskell .hljs-type,.diff .hljs-header,.ruby .hljs-class .hljs-parent,.apache .hljs-tag,.nginx .hljs-built_in,.tex .hljs-command,.hljs-prompt 
-// 	{color:$color--orange}
-
-// .dos .hljs-winutils,.ruby .hljs-symbol,.ruby .hljs-symbol .hljs-string,.ruby .hljs-string 
-// 	{color: $color--orange}
-
-// .diff .hljs-deletion,.hljs-string,.hljs-tag .hljs-value,.hljs-preprocessor,.hljs-pragma,.hljs-built_in,.sql .hljs-aggregate,.hljs-javadoc,.smalltalk .hljs-class,.smalltalk .hljs-localvars,.smalltalk .hljs-array,.css .hljs-rules .hljs-value,.hljs-attr_selector,.hljs-pseudo,.apache .hljs-cbracket,.tex .hljs-formula,.coffeescript .hljs-attribute 
-// 	{color: $color--$color--hotpink}
-
-// .hljs-shebang,.diff .hljs-addition,.hljs-comment,.java .hljs-annotation,.hljs-template_comment,.hljs-pi,.hljs-doctype 
-// 	{color: $color--darkgrey}
-
-// .coffeescript .javascript,.javascript .xml,.tex .hljs-formula,.xml .javascript,.xml .vbscript,.xml .css,.xml .hljs-cdata 
-// 	{opacity:.5}
-
-// .scss { 
-// 	.hljs-value, p {
-// 	color: $color--orange;
-// 	}
-// 	.hljs-attribute, .hljs-pseudo {
-// 		color: $color--blue;
-// 	}
-// 	.hljs-at_rule {
-// 		color: $color--gold;
-// 	}
-// }
-
-
