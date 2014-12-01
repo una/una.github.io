@@ -17,23 +17,33 @@ Like peanut butter and jelly (or wine and cheese if that's more your style), Mod
 [Modernizr](http://modernizr.com/) is a JavaScript library that detects HTML5 and CSS3 features in the user’s browser (that was stolen directly off of the Modernizr website since the definition was so clear &mdash; nice job y'all). It allows you to responsibly design layouts using modern techniques while implementing fallback options for accesibility on browsers with lesser feature support. 
 
 The way it basically works is by running feature detection scripts and appending a class to the `<html>` element if the feature if available. You can customize which tests run for detection based on feautures relevant to your project. For example, in Chrome 39, it could generate:
-<br><br>
-```
-<html lang="en" class="js no-touch postmessage history multiplebgs boxshadow opacity cssanimations csscolumns cssgradients csstransforms csstransitions fontface localstorage sessionstorage svg inlinesvg no-blobbuilder blob bloburls download formdata wf-athelas1-n4-active wf-proximanova1-i4-active wf-proximanova1-i7-active wf-proximanova1-n4-active wf-proximanova1-n7-active wf-proximanovacondensed1-n6-active wf-active">
-<!-- modernizr.com -->
-```
+
+<pre class="syntax--html"><code>
+&lt;html lang="en" class="js no-touch postmessage history multiplebgs 
+boxshadow opacity cssanimations csscolumns cssgradients csstransforms 
+csstransitions fontface localstorage sessionstorage svg inlinesvg 
+no-blobbuilder blob bloburls download formdata wf-athelas1-n4-active 
+wf-proximanova1-i4-active wf-proximanova1-i7-active wf-proximanova1-n4-active 
+wf-proximanova1-n7-active wf-proximanovacondensed1-n6-active wf-active"&gt;
+&lt;!-- modernizr.com --&gt;
+</code></pre>
 
 On another website in the same browser, it could look like:
-```
-<html class=" js canvas canvastext geolocation crosswindowmessaging websqldatabase indexeddb hashchange historymanagement draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions  video audio localstorage sessionstorage webworkers applicationcache svg smil svgclippaths fontface">
-<!-- hongkiat.com -->
-```
+
+<pre class="syntax--html"><code>
+&lt;html class=" js canvas canvastext geolocation crosswindowmessaging 
+websqldatabase indexeddb hashchange historymanagement draganddrop 
+websockets rgba hsla multiplebgs backgroundsize borderimage borderradius 
+boxshadow opacity cssanimations csscolumns cssgradients cssreflections 
+csstransforms csstransforms3d csstransitions  video audio localstorage 
+sessionstorage webworkers applicationcache svg smil svgclippaths fontface"&gt;
+&lt;!-- hongkiat.com --&gt;
+</code></pre>
 
 And on another, it could be much more simplified:
-```
-<html class=" js no-touch localstorage">
-<!-- sassmeister.com -->
-```
+<pre class="syntax--html"><code>&lt;html class=" js no-touch localstorage"&gt;
+&lt;!-- sassmeister.com --&gt;
+</code></pre>
 
 <aside>For more information on how to implement Modernizer, check out <a href="http://html5doctor.com/using-modernizr-to-detect-html5-features-and-provide-fallbacks/">this</a>article on HTML5Doctor.</aside>
 
