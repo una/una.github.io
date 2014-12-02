@@ -12,7 +12,7 @@ tags:
 - snippets
 - snippet
 header-bg: ../images/posts/pbj.jpg
-subtitle: Like PB&amp;J, Modernizer and @at-root Were Made for Each Other.
+subtitle: Combined with a trailing ampersand, Modernizer and @at-root are a perfect pair.
 ---
 
 Like peanut butter and jelly (or wine and cheese if that's more your style), Modernizer and the Sass @at-root directive are a perfect pair.
@@ -121,7 +121,7 @@ And using it with blocks of code will yield the same result:
 
 ## Modernizr += @at-root
 
-So back to peanut butter and jelly (peanut butter and chocolate is better, IMO). Modernizr and @at-root are PERFECT for each other. Combine the two with a trailing ampersand, and you have a concise solution for handling feature-based styling.
+So back to peanut butter and jelly (peanut butter and chocolate is better, IMO). Modernizr and @at-root are PERFECT for each other. Combine the two with a **trailing ampersand**, and you have a concise solution for handling feature-based styling. Read all about the Sass ampersand **[here](http://una.github.io/2014/03/06/sass-snippets-the-almighty-ampersand.html)**.
 
 For instance if you had a feature using the CSS3 text-shadow property, and wanted to ensure a safe fallback solution for legibility, you could use the following solution. Configure modernizer to detect this property and append a class of `.text-shadow` to the `<html>`.
 
@@ -168,5 +168,5 @@ Conversely, you can detect missing features and append the `.no-text-shadow` cla
 }
 </code></pre>
 
-<aside>It's been a while since I did a "Sass Snippets" post (a short post about little Sass tips and tricks), but I really like the format so I'll try to post more frequently in the future!</aside>
+<aside>It's been a while since I did a "Sass Snippets" post (a short post about little Sass tips and tricks), but I really like the format so look out for more in the future!</aside>
 
