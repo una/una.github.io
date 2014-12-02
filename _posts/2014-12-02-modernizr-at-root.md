@@ -8,6 +8,10 @@ tags:
 - modernizr
 - at-root
 - sass
+- sass snippets
+- snippets
+- snippet
+header-bg: ../images/posts/pbj.jpg
 subtitle: Like PB&amp;J, Modernizer and @at-root Were Made for Each Other.
 ---
 
@@ -49,43 +53,120 @@ And on another, it could be much more simplified:
 
 ## @at-root
 
-The Sass @at-root directive pulls the styling rule out to the root of the document instead of being nested under its parent selector. I wrote a [post](http://una.github.io/2013/10/15/sass-3-3-at-root-bem.html) about using @at-root with [BEM](https://bem.info/) a while ago.
+The Sass @at-root directive pulls the styling rule out to the root of the document instead of being nested under its parent selector. I wrote a [post](http://una.github.io/2013/10/15/sass-3-3-at-root-bem.html)(it's a little outdated now as you don't have to use interpolation for the `&`) about using @at-root with [BEM](https://bem.info/) a while ago.
 
 @at-root is pretty great. While we all know that overnesting leads to terrifying CSS output, @at-root allows us to nest properties for order and visual clarity without any of the negative CSS output side effects. There are two ways to use @at-root; either inline, or containing a block of selectors.
 
-<pre class="code--half syntax--scss"><code>
-// Nesting using @at-root
+Here's the first way:
+<pre class="code--half syntax--scss"><code>// Nesting using @at-root
 .speech-bubble{
   color: purple;
-   @at-root #{&}__header{
+   @at-root &\_\_header{
     color: orange;
   }
-   @at-root #{&}__text{
+   @at-root &\_\_text{
     color: black;
-     @at-root #{&}--link{
+     @at-root &--link{
       color: green;
     }
   }
 }
 </code></pre>
-
-<pre class="code--half syntax--css"><code>
-// CSS Output
+<pre class="code--half syntax--css"><code>// CSS Output
 .speech-bubble {
   color: purple;
 }
-.speech-bubble__header {
+.speech-bubble\_\_header {
   color: orange;
 }
-.speech-bubble__text {
+.speech-bubble\_\_text {
   color: black;
 }
-.speech-bubble__text--link {
+.speech-bubble\_\_text--link {
   color: green;
 }
 </code></pre>
 
-## Modernizr, Meet @at-root
+And using it with blocks of code will yield the same result:
+<pre class="code--half syntax--scss"><code>// A block of @at-root
+.speech-bubble{
+  color: purple;
+   @at-root{
+    &\_\_header{
+      color: orange;
+    }
+    &\_\_text{
+      color: black;
+       &--link{
+        color: green;
+      }
+    }
+  }
+}
+</code></pre>
+<pre class="code--half syntax--css"><code>// CSS Output
+.speech-bubble {
+  color: purple;
+}
+.speech-bubble\_\_header {
+  color: orange;
+}
+.speech-bubble\_\_text {
+  color: black;
+}
+.speech-bubble\_\_text--link {
+  color: green;
+}
+</code></pre>
+
+## Modernizr += @at-root
+
+So back to peanut butter and jelly (peanut butter and chocolate is better, IMO). Modernizr and @at-root are PERFECT for each other. Combine the two with a trailing ampersand, and you have a concise solution for handling feature-based styling.
+
+For instance if you had a feature using the CSS3 text-shadow property, and wanted to ensure a safe fallback solution for legibility, you could use the following solution. Configure modernizer to detect this property and append a class of `.text-shadow` to the `<html>`.
+
+<pre class="syntax--scss"><code>.text-class {
+  //fallback
+  color: #000;
+
+  @at-root .text-shadow & {
+    color: #15b2ff;
+    text-shadow: .2em .2em rgba(0, 0, 0, .5);
+  }
+}
+</code></pre>
+<pre class="syntax--css"><code>
+//CSS Output
+.text-class {
+  color: #000;
+}
+.text-shadow .text-class {
+  color: #15b2ff;
+  text-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.5);
+}
+</code></pre>
+
+<br>
+Conversely, you can detect missing features and append the `.no-text-shadow` class to the `<html>` and then use something like this:
+<pre class="syntax--scss"><code>.text-class {
+  color: #15b2ff;
+  text-shadow: .2em .2em rgba(0, 0, 0, .5);<br>
+  @at-root .no-text-shadow & {
+    //fallback
+    color: #000;
+  }
+}
+</code></pre>
+<pre class="syntax--css"><code>
+//CSS Output
+.text-class {
+  color: #000;
+}
+.no-text-shadow .text-class {
+  color: #15b2ff;
+  text-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.5);
+}
+</code></pre>
 
 <aside>It's been a while since I did a "Sass Snippets" post (a short post about little Sass tips and tricks), but I really like the format so I'll try to post more frequently in the future!</aside>
 

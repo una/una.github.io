@@ -51,13 +51,15 @@ $syntax-list: scss html md css sass js;
   }
 }
 
-.code--half {
-  width: 48%;
-  display: inline-block;
+@include breakpoint(sm-rev) {
+  .code--half {
+    width: 48%;
+    display: inline-block;
 
-  + .code--half {
-    margin-left: 2%;
-    float: right;
+    + .code--half {
+      margin-left: 2%;
+      float: right;
+    }
   }
 }
 
