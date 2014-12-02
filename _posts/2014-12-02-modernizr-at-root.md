@@ -53,7 +53,7 @@ And on another, it could be much more simplified:
 
 ## @at-root
 
-The Sass @at-root directive pulls the styling rule out to the root of the document instead of being nested under its parent selector. I wrote a [post](http://una.github.io/2013/10/15/sass-3-3-at-root-bem.html)(it's a little outdated now as you don't have to use interpolation for the `&`) about using @at-root with [BEM](https://bem.info/) a while ago.
+The Sass @at-root directive pulls the styling rule out to the root of the document instead of being nested under its parent selector. I wrote a [post](http://una.github.io/2013/10/15/sass-3-3-at-root-bem.html) about using @at-root with [BEM](https://bem.info/) a while ago (it's a little outdated now as you don't have to use interpolation for the `&`).
 
 @at-root is pretty great. While we all know that overnesting leads to terrifying CSS output, @at-root allows us to nest properties for order and visual clarity without any of the negative CSS output side effects. There are two ways to use @at-root; either inline, or containing a block of selectors.
 
@@ -135,34 +135,11 @@ For instance if you had a feature using the CSS3 text-shadow property, and wante
   }
 }
 </code></pre>
-<pre class="syntax--css"><code>
-//CSS Output
+<pre class="syntax--css"><code>//CSS Output
 .text-class {
   color: #000;
 }
 .text-shadow .text-class {
-  color: #15b2ff;
-  text-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.5);
-}
-</code></pre>
-
-<br>
-Conversely, you can detect missing features and append the `.no-text-shadow` class to the `<html>` and then use something like this:
-<pre class="syntax--scss"><code>.text-class {
-  color: #15b2ff;
-  text-shadow: .2em .2em rgba(0, 0, 0, .5);<br>
-  @at-root .no-text-shadow & {
-    //fallback
-    color: #000;
-  }
-}
-</code></pre>
-<pre class="syntax--css"><code>
-//CSS Output
-.text-class {
-  color: #000;
-}
-.no-text-shadow .text-class {
   color: #15b2ff;
   text-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.5);
 }
