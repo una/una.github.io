@@ -22,8 +22,21 @@ __LAST WEEK?!__ I wrote a post about comprehension and learning, and referenced 
 
 Carolyn Sewell, an incredible typgraphy and ____ has a really unique approach to sketchnoting. She outlines her process in 3 steps:
 
-1. **Skeletal:** I take skeletal notes during the actual talk, listening for quotable phrases, writing them as quickly as possible, and making sure to leave plenty of wiggle room.
-2. **Bulking:** Once home, and usually during an NCIS marathon, I start bulking up the layout...adding structure to the words and symbols.
-3. **Filling:** Then I fill in everything (I go through a lot of ink at this point), scan it in and clean up.
+### Step 1: Skeletal
 
+I take skeletal notes during the actual talk, listening for quotable phrases, writing them as quickly as possible, and making sure to leave plenty of wiggle room.
+
+![Step one: skeletal](../images/posts/sketchnotes/2013_TypoSF_ArminVit1.jpg)
+
+### Step 2: Bulking
+
+Once home, and usually during an NCIS marathon, I start bulking up the layout...adding structure to the words and symbols.
+
+![Step two: bulking](../images/posts/sketchnotes/2013_TypoSF_ArminVit2.jpg)
+
+### Step 3: Filling
+
+ Then I fill in everything (I go through a lot of ink at this point), scan it in and clean up.
+
+![Step three: filling](../images/posts/sketchnotes/2013_TypoSF_ArminVit3.jpg)
 
