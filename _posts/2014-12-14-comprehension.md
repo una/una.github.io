@@ -13,6 +13,7 @@ tags:
 - research
 - life
 header-bg: ../images/posts/organize-list.jpg
+audio: audio-comprehension
 subtitle: I've been doing a lot of research and experimentation lately about how people learn. This post might give you some ideas to improve your own comprehension and think about your own learning style.
 ---
 
