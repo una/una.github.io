@@ -9,6 +9,11 @@ var deploy      = require('gulp-gh-pages');
 var scsslint    = require('gulp-scss-lint');
 var imagemin    = require('gulp-imagemin');
 var pngquant    = require('imagemin-pngquant');
+var ngrok       = require('ngrok');
+var psi         = require('psi');
+var sequence    = require('run-sequence');
+var site        = '';
+
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -88,6 +93,56 @@ gulp.task('scss-lint', function() {
         'bundleExec': true,
         'config': 'lint-config.yml'
     }));
+});
+
+/**
+ * ngrok
+ */
+// gulp.task('ngrok', function() {
+//     ngrok.once('connect', function(url) {
+//         site = url;
+//         console.log('we got a tunnel', url);
+//     });
+//   ngrok.connect(3000);
+// });
+
+/**
+ * psi
+ */
+
+gulp.task('psi-desktop', function (cb) {
+    psi({
+        nokey: 'true',
+        url: site,
+        strategy: 'desktop',
+    }, cb);
+});
+
+gulp.task('psi-mobile', function (cb) {
+    psi({
+        nokey: 'true',
+        url: site,
+        strategy: 'mobile',
+    }, cb);
+});
+
+
+gulp.task('ngrok-url', function(cb) {
+ return ngrok.connect(3000, function (err, url) {
+  site = url;
+  console.log('serving your tunnel from: ' + site);
+  cb();
+ });
+});
+
+gulp.task('psi', function (cb) {
+ return sequence(
+    'browser-sync',
+    'ngrok-url',
+    'psi-desktop',
+    'psi-mobile',
+  cb
+ );
 });
 
 
