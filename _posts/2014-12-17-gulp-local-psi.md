@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Setting up Page Speed Insights to test Performance Locally via Gulp
+title: Setting up PageSpeed Insights to test Performance Locally via Gulp
 permalink: /gulp-local-psi
 date: '2014-12-17'
 comments: true
@@ -13,14 +13,14 @@ tags:
 - development
 header-bg: ../images/posts/lexus.jpg
 audio: gulp-psi
-subtitle: This is a walk through of how to set up Page Speed Insights within your existing gulp project. This way, you can get your page speed score information within your terminal without first needing to push your site to a live server.
+subtitle: This is a walk through of how to set up Google PageSpeed Insights within your existing gulp project. This way, you can get your page speed score information within your terminal without first needing to push your site to a live server.
 ---
 
-Today, I'll be walking you through setting up Page Speed Insights within your existing gulp project. This way, each time you call the gulp command, `gulp psi` in your terminal, you can get your page speed insights scores right in your terminal without needing to push your site to a live server, navigate to the Page Speed Insights website, enter in your URL, etc. I'll be using ngrok to tunnel your locally hosted site and a few gulp tasks to bring it all together.
+Today, I'll be walking you through setting up PageSpeed Insights within your existing gulp project. This way, each time you call the gulp command, `gulp psi` in your terminal, you can get your page speed insights scores right in your terminal without needing to push your site to a live server, navigate to the PageSpeed Insights website, enter in your URL, etc. I'll be using ngrok to tunnel your locally hosted site and a few gulp tasks to bring it all together.
 
-## Page Speed Insights
+## PageSpeed Insights
 
-[Page Speed Insights](https://developers.google.com/speed/pagespeed/insights/) is a project by Google that analyzes the performance of your website, giving you a score index based on a variety of factors. [Addy Osmani](http://addyosmani.com/blog/) created a neat little node [module](https://www.npmjs.com/package/psi) so that we can run Page Speed insights right in the terminal and get a nicely formated table of scores.
+[PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) is a project by Google that analyzes the performance of your website, giving you a score index based on a variety of factors. [Addy Osmani](http://addyosmani.com/blog/) created a neat little node [module](https://www.npmjs.com/package/psi) so that we can run PageSpeed insights right in the terminal and get a nicely formated table of scores.
 
 To install this tool globally (which I recommend, because you can use it with any live website, any time), simply type `npm install -g psi` into your terminal.
 
@@ -53,14 +53,14 @@ Optimize Images                                  | 0
 Prioritize Visible Content                       | 0
 {% endhighlight %}
 
-Unfortunately, Page Speed Insights (psi) doesn't work on locally hosted websites. So, if you try running `psi http://localhost:3000` it won't work. But that's okay. There are brilliant people on the internet who have developed solutions for us. Enter ngrok!
+Unfortunately, PageSpeed Insights (psi) doesn't work on locally hosted websites. So, if you try running `psi http://localhost:3000` it won't work. But that's okay. There are brilliant people on the internet who have developed solutions for us. Enter ngrok!
 
 ## Testing Locally with Ngrok
 
 ![ngrok infographic](../images/posts/ngrok-infographic.png)
 <div class="caption">I shamelessly stole this infographic from ngrok's website.</div>
 
-[Ngrok](https://ngrok.com/) is a pay-what-you-want service that allows users to try out a web site they're developing without deploying it to the internet. There is a paid tier, but you don't need to sign up for an account in order to get Page Speed Insights working locally. You can download ngrok with a binary or via npm:
+[Ngrok](https://ngrok.com/) is a pay-what-you-want service that allows users to try out a web site they're developing without deploying it to the internet. There is a paid tier, but you don't need to sign up for an account in order to get PageSpeed Insights working locally. You can download ngrok with a binary or via npm:
 
 ```
 npm install -g ngrok
@@ -126,7 +126,7 @@ gulp.task('ngrok-url', function(cb) {
 
 If you're wondering what `cb` is, it stands for *callback*, and its what allows you to define the end to an asyncronous task. We'll see this again in the psi tasks below in a second.
 
-### Page Speed Insights
+### PageSpeed Insights
 
 Now we need to add a few tasks for page speed insights in the gulp file. We'll be referring to Page speed insights as psi. These tasks are pulling from an [example](https://github.com/addyosmani/psi-gulp-sample/blob/master/gulpfile.js) given by Addy Osmani.
 
@@ -212,7 +212,7 @@ gulp.task('psi-seq', function (cb) {
 
 BrowserSync is really cool in the sense that if a port is taken (i.e. if port:3000 is busy), it will use the next available one (i.e. port: 3001). This can cause issues if you aren't cognicant of it and may be running multiple development environments at once. Well, what will likely happen is  you'll just get a *false 100* in return for your page score value.
 
-Because we're specifying the port here, we have to make sure that it is available to avoid those faulty scores. To improve this a bit, I set up a separate BrowserSync function seperate from my development task, specifically Page Speed Insights. This got rid of some of the excess (watch tasks, etc), and I also gave it some more configs like not opening the page in the browser every time I just want to test performance.
+Because we're specifying the port here, we have to make sure that it is available to avoid those faulty scores. To improve this a bit, I set up a separate BrowserSync function seperate from my development task, specifically PageSpeed Insights. This got rid of some of the excess (watch tasks, etc), and I also gave it some more configs like not opening the page in the browser every time I just want to test performance.
 
 ```
 // set up a global port variable
