@@ -13,6 +13,8 @@ var ngrok       = require('ngrok');
 var psi         = require('psi');
 var sequence    = require('run-sequence');
 var site        = '';
+var portVal     = 3020;
+var exit = require('gulp-exit');
 
 
 var messages = {
@@ -96,20 +98,8 @@ gulp.task('scss-lint', function() {
 });
 
 /**
- * ngrok
+ * Page Speed Insights
  */
-// gulp.task('ngrok', function() {
-//     ngrok.once('connect', function(url) {
-//         site = url;
-//         console.log('we got a tunnel', url);
-//     });
-//   ngrok.connect(3000);
-// });
-
-/**
- * psi
- */
-
 gulp.task('psi-desktop', function (cb) {
     psi({
         nokey: 'true',
@@ -126,25 +116,45 @@ gulp.task('psi-mobile', function (cb) {
     }, cb);
 });
 
-
+/**
+ * ngrok for the url
+ */
 gulp.task('ngrok-url', function(cb) {
- return ngrok.connect(3000, function (err, url) {
+ return ngrok.connect(portVal, function (err, url) {
   site = url;
   console.log('serving your tunnel from: ' + site);
   cb();
  });
 });
 
-gulp.task('psi', function (cb) {
+/**
+ * Wait for jekyll-build, then launch the Server with port 3020
+ */
+
+gulp.task('browser-sync-psi', ['jekyll-build'], function() {
+    browserSync({
+        port: portVal,
+        open: false,
+        server: {
+            baseDir: '_site',
+        }
+    });
+});
+
+gulp.task('psi-seq', function (cb) {
  return sequence(
-    'browser-sync',
+    'browser-sync-psi',
     'ngrok-url',
     'psi-desktop',
     'psi-mobile',
-  cb
+    cb
  );
 });
 
+gulp.task('psi', ['psi-seq'], function() {
+    console.log('Woohoo! Check out your page speed scores!')
+    process.exit();
+})
 
 /**
  * Watch scss files for changes & recompile AND lint :)
