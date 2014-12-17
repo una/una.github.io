@@ -11,6 +11,7 @@ tags:
 - ports
 - front end
 - development
+header-bg: ../images/posts/lexus.jpg
 subtitle: This is a walk through of how to set up Page Speed Insights within your existing gulp project. This way, you can get your page speed score information within your terminal without first needing to push your site to a live server.
 ---
 
@@ -55,7 +56,7 @@ Unfortunately, Page Speed Insights (psi) doesn't work on locally hosted websites
 
 ## Testing Locally with Ngrok
 
-![](https://ngrok.com/static/img/overview.png)
+![ngrok infographic](../images/posts/ngrok-infographic.png)
 <div class="caption">I shamelessly stole this infographic from ngrok's website.</div>
 
 [Ngrok](https://ngrok.com/) is a pay-what-you-want service that allows users to try out a web site they're developing without deploying it to the internet. There is a paid tier, but you don't need to sign up for an account in order to get Page Speed Insights working locally. You can download ngrok with a binary or via npm:
