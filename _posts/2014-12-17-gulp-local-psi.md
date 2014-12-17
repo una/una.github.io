@@ -12,6 +12,7 @@ tags:
 - front end
 - development
 header-bg: ../images/posts/lexus.jpg
+audio: gulp-psi
 subtitle: This is a walk through of how to set up Page Speed Insights within your existing gulp project. This way, you can get your page speed score information within your terminal without first needing to push your site to a live server.
 ---
 
@@ -127,7 +128,7 @@ If you're wondering what `cb` is, it stands for *callback*, and its what allows 
 
 ### Page Speed Insights
 
-Now we need to add a few tasks for page speed insights in the gulp file. We'll be referring to Page speed insights as psi for the purposes of continuity. There are pulling from the [example](https://github.com/addyosmani/psi-gulp-sample/blob/master/gulpfile.js) given by Addy Osmani.
+Now we need to add a few tasks for page speed insights in the gulp file. We'll be referring to Page speed insights as psi. These tasks are pulling from an [example](https://github.com/addyosmani/psi-gulp-sample/blob/master/gulpfile.js) given by Addy Osmani.
 
 Create a psi variable
 
