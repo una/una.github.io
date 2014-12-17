@@ -6,7 +6,9 @@ date: '2014-12-17'
 comments: true
 tags:
 - gulp
-- page speed insights
+- page speed
+- pagespeed
+- insights
 - ngrok
 - ports
 - front end
@@ -16,7 +18,7 @@ audio: gulp-psi
 subtitle: This is a walk through of how to set up Google PageSpeed Insights within your existing gulp project. This way, you can get your page speed score information within your terminal without first needing to push your site to a live server.
 ---
 
-Today, I'll be walking you through setting up PageSpeed Insights within your existing gulp project. This way, each time you call the gulp command, `gulp psi` in your terminal, you can get your page speed insights scores right in your terminal without needing to push your site to a live server, navigate to the PageSpeed Insights website, enter in your URL, etc. I'll be using ngrok to tunnel your locally hosted site and a few gulp tasks to bring it all together.
+Today, I'll be walking you through setting up PageSpeed Insights within your existing gulp project. This way, each time you call `gulp psi` in your terminal, you can get your page speed insights scores right in your terminal without needing to push your site to a live server, navigate to the PageSpeed Insights website, enter in your URL, etc. I'll be using ngrok to tunnel your locally hosted site and a few gulp tasks to bring it all together.
 
 ## PageSpeed Insights
 
