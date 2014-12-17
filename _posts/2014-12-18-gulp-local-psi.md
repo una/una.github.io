@@ -216,9 +216,9 @@ Because we're specifying the port here, we have to make sure that it is availabl
 // set up a global port variable
 var portVal = 3020;
 
-// browser sync task for psi which only runs the build and serve
-// function, as well as uses the set port and prevents opening
-// the site in my browser
+// my browser sync task for psi which only runs the build and
+// serve function, as well as uses the set port and prevents
+// opening the site in my browser
 gulp.task('browser-sync-psi', ['jekyll-build'], function() {
     browserSync({
         port: portVal,
@@ -245,9 +245,7 @@ var sequence  = require('run-sequence');
 var site      = '';
 var portVal   = 3020;
 
-// browser sync task for psi which only runs the build and serve
-// function, as well as uses the set port and prevents opening
-// the site in my browser
+// this is where your server task goes. I'm using browser sync
 gulp.task('browser-sync-psi', ['jekyll-build'], function() {
     browserSync({
         port: portVal,
