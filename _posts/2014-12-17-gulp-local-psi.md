@@ -33,26 +33,26 @@ URL:       https://www.google.com/?gws_rd=ssl
 Score:     92
 Strategy:  desktop
 
-Number Resources                                 | 13
-Number Hosts                                     | 5
-Total Request                                    | 2.62 kB
-Number Static Resources                          | 9
-Html Response                                    | 116.9 kB
-Image Response                                   | 46.02 kB
-Javascript Response                              | 879.68 kB
-Other Response                                   | 1.76 kB
-Number Js Resources                              | 5
-                                                 |
-Avoid Landing Page Redirects                     | 7
-Enable Gzip Compression                          | 0
-Leverage Browser Caching                         | 0
-Main Resource Server Response Time               | 0
-Minify Css                                       | 0
-Minify HTML                                      | 0
-Minify Java Script                               | 0.27
-Minimize Render Blocking Resources               | 0
-Optimize Images                                  | 0
-Prioritize Visible Content                       | 0
+Number Resources                           | 13
+Number Hosts                               | 5
+Total Request                              | 2.62 kB
+Number Static Resources                    | 9
+Html Response                              | 116.9 kB
+Image Response                             | 46.02 kB
+Javascript Response                        | 879.68 kB
+Other Response                             | 1.76 kB
+Number Js Resources                        | 5
+                                           |
+Avoid Landing Page Redirects               | 7
+Enable Gzip Compression                    | 0
+Leverage Browser Caching                   | 0
+Main Resource Server Response Time         | 0
+Minify Css                                 | 0
+Minify HTML                                | 0
+Minify Java Script                         | 0.27
+Minimize Render Blocking Resources         | 0
+Optimize Images                            | 0
+Prioritize Visible Content                 | 0
 {% endhighlight %}
 
 Unfortunately, PageSpeed Insights (psi) doesn't work on locally hosted websites. So, if you try running `psi http://localhost:3000` it won't work. But that's okay. There are brilliant people on the internet who have developed solutions for us. Enter ngrok!
@@ -71,13 +71,13 @@ npm install -g ngrok
 Now, depending on what server you're running gulp on, type `ngrok <port>` into your terminal. Since I'm using port 3000, I'll use `ngrok 3000`. Then you should see something like this:
 
 ```
-Tunnel Status                 online
-Version                       1.7/1.6
-Forwarding                    http://3087cb.ngrok.com -> 127.0.0.1:3000
-Forwarding                    https://3087cb.ngrok.com -> 127.0.0.1:3000
-Web Interface                 127.0.0.1:4040
-# Conn                        37
-Avg Conn Time                 828.38ms
+Tunnel Status       online
+Version             1.7/1.6
+Forwarding          http://3087cb.ngrok.com -> 127.0.0.1:3000
+Forwarding          https://3087cb.ngrok.com -> 127.0.0.1:3000
+Web Interface       127.0.0.1:4040
+# Conn              37
+Avg Conn Time       828.38ms
 
 ```
 
