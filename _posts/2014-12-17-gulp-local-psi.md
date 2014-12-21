@@ -90,10 +90,10 @@ Pretty cool right?
 
 ### Install Dependancies
 
-In order to set this up in our development environment, we'll be using three modules: ngrok, psi, and run-sequence. You can install them all at once, while saving the dependancies to your package.json in one command:
+In order to set this up in our development environment, we'll be using three modules: ngrok, psi, and run-sequence. (and gulp-exit to close out of everything) You can install them all at once, while saving the dependancies to your package.json in one command:
 
 ```
-npm install psi ngrok run-sequence --save-dev
+npm install psi ngrok run-sequence gulp-exit --save-dev
 ```
 
 Alternatively, you can open up your package.json, and under 'devDependancies", add the following lines of code:
@@ -101,6 +101,7 @@ Alternatively, you can open up your package.json, and under 'devDependancies", a
 ```
 "ngrok": "^0.1.98",
 "psi": "^0.1.6",
+"gulp-exit": "0.0.2",
 "run-sequence": "^1.0.2"
 ```
 
@@ -237,7 +238,7 @@ gulp.task('browser-sync-psi', ['jekyll-build'], function() {
 ## tl;dr
 
 ### Step 1
-`npm install psi ngrok run-sequence --save-dev`
+`npm install psi ngrok run-sequence gulp-exit --save-dev`
 
 ### Step 2
 
