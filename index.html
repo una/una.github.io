@@ -11,7 +11,7 @@ title: Home
 <div class="home">
 <ul class="post-list--home">
 {% for post in paginator.posts %}
- <li class="post-preview">
+ <li class="post-preview {%if post.link-out%}link-out{%endif%}">
      <a href="{{ post.url | prepend: site.baseurl }}">
          <h2 class="post-title">
              {{ post.title }}
