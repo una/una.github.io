@@ -10,7 +10,7 @@ tags:
 - resolutions
 - goals
 header-bg: ../images/posts/trailoflights.jpg
-subtitle: This is a personal post about my 2014 in review and my goals for 2015.
+subtitle: This is a personal post about my 2014 in review (because a lot happened) and my goals for 2015. Happy New Year!
 ---
 
 A lot happened this year.
@@ -39,9 +39,9 @@ Just do it. Get up and go. Fuck it, ship it. That's my plan. <a class="left twit
 
 ## Professional
 
-Professionally, I want to get better at harnessing the power of JavaScript (sounds so epic, right?). This includes learning **node.js** and understanding **core concepts** better, as well as practicing more often with **MV\*** Frameworks and **testing**. I don't use these much at work, but I want to be as fluent in JavaScript (not just jQuery) as I am in Sass.
+Professionally, I want to get better at harnessing the power of JavaScript (sounds so epic, right?). This includes learning **node.js** and understanding **core concepts** better, as well as practicing more often with **MV*** Frameworks and **testing**. I don't use these much at work, but I want to be as fluent in JavaScript (not just jQuery) as I am in Sass.
 
-I also want to continue speaking and getting involved in community. This includes the **open source design** community and being a better advocate of **STEM for girls** (specifically in middle school, but really of all ages). I want to **speak at conferences** and continue to run **ATXSass** with a smile. This year I'll be more organized :)
+I also want to continue speaking and getting involved in community. This includes the **open source design** community, being a **Sassvocate**, making people care about **performance**, and being a better advocate of **STEM for girls** (specifically in middle school, but really of all ages). I want to **speak at conferences** and continue to run **ATXSass** with a smile. This year I'll be more organized :)
 
 ### Projects in the Pipeline
 
@@ -53,8 +53,6 @@ As of last week, I was sort-of Twitter challenged to start a podcast. And becaus
 
 All of my personal goals center around health and travel. I want to **get fit** again. A way that has worked for me before is to simply start counting my calories, no matter what, for every meal, every day. And since I'm a nerd, to make it more fun, I want to do something with this data. I haven't decided what that will be yet, but I'm trying to get access to the MyFitnessPal API to be able to extract my realtime info. I want to run another **half marathon**, so I'd better start running again too :P
 
-I also plan on traveling to Asia. I might go to **China** in February, but its pretty last minute, so I'm more looking to going to **Thailand** in April. We'll see what happens when I get there, but I'll definitely be traveling. Maybe some weekend trips to **Colorado** and **Marfa** could be fun, too.
+I also plan on traveling to Asia. I might go to **China** in February, but its pretty last minute, so I'm more looking to going to **Thailand** in April. We'll see what happens when I get there, but I'll definitely be traveling. A weekend trip to **Colorado** or a roadtrip to **Marfa** could be fun, too.
 
 So that's what my year is looking like right now. But I know that plans change, and I'm going to embrace whatever comes my way in 2015 :) See y'all on the flip side!
-
-
