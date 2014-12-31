@@ -9,6 +9,7 @@ tags:
 - productivity
 - resolutions
 - goals
+header-bg: ../images/posts/trailoflights.jpg
 subtitle: This is a personal post about my 2014 in review and my goals for 2015.
 ---
 
