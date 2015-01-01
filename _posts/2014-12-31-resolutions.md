@@ -51,7 +51,7 @@ As of last week, I was sort-of Twitter challenged to start a podcast. And becaus
 
 ## Personal
 
-All of my personal goals center around health and travel. I want to **get fit** again. A way that has worked for me before is to simply start counting my calories, no matter what, for every meal, every day. And since I'm a nerd, to make it more fun, I want to do something with this data. I haven't decided what that will be yet, but I'm trying to get access to the MyFitnessPal API to be able to extract my realtime info. I want to run another **half marathon**, so I'd better start running again too :P
+All of my personal goals center around health and travel. I want to **get fit** again. A way that has worked for me before is to simply start counting my calories, no matter what, for every meal, every day. And since I'm a nerd, to make it more fun, I want to do something with this data. I haven't decided what that will be yet, but I'm trying to get access to the MyFitnessPal API to be able to extract my realtime info. I want to run another **half marathon**, so I'd better start running again too :P Oh and I'm going to sign up for a **dance** class because I really miss dancing and it makes me happy.
 
 I also plan on traveling to Asia. I might go to **China** in February, but its pretty last minute, so I'm more looking to going to **Thailand** in April. We'll see what happens when I get there, but I'll definitely be traveling. A weekend trip to **Colorado** or a roadtrip to **Marfa** could be fun, too.
 
