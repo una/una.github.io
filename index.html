@@ -42,3 +42,13 @@ title: Home
  </ul>
  {% endif %}
 </div>
+
+<script>
+    function addEmoji() {
+      if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+        console.log('mac');
+        window.location.hash = "😜";
+      }
+    };
+    addEmoji();
+</script>
