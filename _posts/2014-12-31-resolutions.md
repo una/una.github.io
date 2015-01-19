@@ -10,6 +10,7 @@ tags:
 - resolutions
 - goals
 header-bg: ../images/posts/trailoflights.jpg
+audio: 2015-resolutions
 subtitle: This is a personal post about my 2014 in review (because a lot happened) and my goals for 2015. Happy New Year!
 ---
 
