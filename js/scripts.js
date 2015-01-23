@@ -13,8 +13,6 @@ window.BLOG || (BLOG = {});
     },
 
     bindEvents: function () {
-
-
     },
   };
 

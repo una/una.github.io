@@ -5,7 +5,7 @@ permalink: /pattern-libraries
 date: '2014-11-13'
 comments: true
 tags:
-- pattern 
+- pattern
 - library
 - libraries
 - style
@@ -18,9 +18,9 @@ subtitle: An alphabetized list of styleguides and pattern libraries and a look i
 
 A lot of time, the terms "style guide" and "pattern library" are used interchangebly, but there are distinct differences between the two. Although many examples of these "guides" include features of both, lets look at what makes each unique for a better understanding.
 
-A **style guide** is a representation of brand properties and values for consistency. These include typography, copy, color values and variations, etc. These can also be guides for [coding](https://github.com/alphagov/styleguides) consistency. A company could, for instance, have a *"Python Styleguide"* for their developers. 
+A **style guide** is a representation of brand properties and values for consistency. These include typography, copy, color values and variations, etc. These can also be guides for [coding](https://github.com/alphagov/styleguides) consistency. A company could, for instance, have a *"Python Styleguide"* for their developers.
 
-Visual style guides are the next generation of traditional **branding guides** &mdash; functional derivatives of print. In the same way that print designers use physical branding guides for testing color and size samples, style guides are being used for web designers on the web. They should be presented in the format on which their accompanying product is experienced (i.e. online with a basic Internet connection for websites) and include details in a useful format (i.e. hex codes or variable names and examples of typographic scale). 
+Visual style guides are the next generation of traditional **branding guides** &mdash; functional derivatives of print. In the same way that print designers use physical branding guides for testing color and size samples, style guides are being used for web designers on the web. They should be presented in the format on which their accompanying product is experienced (i.e. online with a basic Internet connection for websites) and include details in a useful format (i.e. hex codes or variable names and examples of typographic scale).
 
 <a class="quote twitter-share right">Styleguide (Visual) +<br> Pattern Library (Functional) =<br>Awesomesauce</a>
 
@@ -64,6 +64,7 @@ The following lists include a wide variety of examples from personal websites, b
 - [BBC](http://www.bbc.co.uk/gel)
 - [Bootstrap](http://getbootstrap.com/components/)
 - [Brad Frost](http://bradfrost.github.io/this-is-responsive/patterns.html)
+- [Concise](http://concisecss.com/documentation/)
 - [Dan Eden](http://daneden.me/styleguide/)
 - [Do Something](http://dosomething.github.io/neue/)
 - [Ebay](http://uipatterns.ebay.com/pe)

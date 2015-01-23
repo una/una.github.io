@@ -1,4 +1,4 @@
-ul, 
+ul,
 ol {
 	line-height: $page-line-height;
 }
@@ -70,9 +70,21 @@ ol {
 	h2 {
 		margin: 0 auto;
 	}
-	
+
 	h2 {
 		@include fontsize(14);
 		font-weight: 500;
+	}
+}
+
+.link-out .post-title{
+	&:after {
+		content: '';
+		display: inline-block;
+		background-image: url(../images/linkout-icon.svg);
+		background-size: 100%;
+		width: 0.7em;
+		height: 0.7em;
+		margin-left: 0.3em;
 	}
 }
