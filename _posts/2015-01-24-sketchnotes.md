@@ -11,7 +11,7 @@ tags:
 - notes
 - productivity
 - design
-subtitle:
+subtitle: Sketchnotes are a great way to document a talk or event. They allow you to doodle and get a little bit creative with your content recording.
 ---
 
 A few weeks ago, I wrote a post about [learning and comprehension](http://una.github.io/comprehension), and referenced some data, including this really great [TED Talk](http://www.ted.com/talks/sunni_brown#t-213976) on how studies show that doodling helps with creative thinking. As an extension of that, let's talk about sketchnotes. Sketchnotes are essentially a more creative form of note-taking, and can adopt a few different forms. I asked some pretty rad ladies about their sketch-noting techniques.
