@@ -2,7 +2,7 @@
 layout: post
 title: Sketchnotes, FTW
 permalink: /sketchnotes
-date: '2015-01-28'
+date: '2015-01-24'
 comments: true
 tags:
 - sketchnotes
@@ -68,9 +68,21 @@ Once [I get] home, and usually during an NCIS marathon, I start bulking up the l
 
 ## My Approach
 
-The approach that I trend toward is one similar to Jess' in the sense that I create the sketchnotes on the spot at the event. I like to include a few more visual drawings to my sketchnotes, mixing typography and little doodles to illustrate a point. These little doodles are great tools for filling up empty space.
+The approach that I trend toward is one similar to Jess' in the sense that I create the sketchnotes on the spot at the event. I like to include a few more visual drawings to my sketchnotes, mixing typography and little doodles to illustrate a point. These little doodles are great tools for filling up empty space and calling attention to a concept.
 
-![Step one: skeletal](../images/posts/sketchnotes/2013_TypoSF_ArminVit1.jpg)
+Here are a few examples of my more illustrative approach to sketchnotes:
+
+![Una's sketchnotes from a Talk by Sam Richard](../images/posts/sketchnotes/una_sketchnotes-sam-richards-1.jpg)
+<div class="caption">My sketchnotes from a 2014 talk by Sam Richard</div>
+
+![My sketchnotes from Weapons of Mass Creation 2013](../images/posts/sketchnotes/una-sketch-wmc1.jpg)
+<div class="caption">My sketchnotes from Weapons of Mass Creation 2013 (pg 1)</div>
+
+![My sketchnotes from Weapons of Mass Creation 2013](../images/posts/sketchnotes/una-sketch-wmc2.jpg)
+<div class="caption">My sketchnotes from Weapons of Mass Creation 2013 (pg 2)</div>
+
+![My Sketchnotes from Brooklyn Beta 2013](../images/posts/sketchnotes/una-sketch-bb.jpg)
+<div class="caption">My Sketchnotes from Brooklyn Beta 2013</div>
 
 The beauty of sketchnoting is that there are no limitations or rules. Just build up your notes the way you feel most comfortable. Post links to your sketchnotes in the comments!
 
