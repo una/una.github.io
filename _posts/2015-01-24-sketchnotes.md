@@ -11,6 +11,7 @@ tags:
 - notes
 - productivity
 - design
+header-bg: ../images/posts/sketchnotes/2013_TypoSF_ArminVit3.jpg
 subtitle: Sketchnotes are a great way to document a talk or event. They allow you to doodle and get a little bit creative with your content recording.
 ---
 
