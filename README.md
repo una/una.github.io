@@ -13,7 +13,7 @@ to this (interior page on Github pages):
 
 ## To-Do:
 
-- [ ] Eliminate render-blocking JavaScript and CSS in above-the-fold content
+- [x] Eliminate render-blocking JavaScript and CSS in above-the-fold content
 - [x] Add image optimization to gulpfile (maybe.. bc I optimize them manually now)
 - [x] Review Mobile nav --> add more space around Archive & About links
 - [x] Setup linter for my .scss (& lint it)
