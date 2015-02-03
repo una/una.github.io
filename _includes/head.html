@@ -9,16 +9,17 @@
     <!-- RSS Y'all -->
     <link rel="alternate" type="application/rss+xml" name="{{ site.name }}" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
 
-    <!-- MOBILE SETTINGS -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="white" />
 
-  <!-- Google Fonts -->
+    <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,900|Open+Sans:300italic,400,700,300|Oleo+Script+Swash+Caps:700' rel='stylesheet' type='text/css'>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/main.min.css">
+    <!-- Minified CSS, yo -->
+    <style>
+      {% include main.min.css %}
+    </style>
 
     <!-- Google Analytics -->
     <script>
