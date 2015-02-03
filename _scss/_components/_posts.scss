@@ -25,7 +25,7 @@
 		@include breakpoint(xs) {
 			margin: 1em;
 		}
-		
+
 		li {
 			margin-bottom: .6em;
 		}
@@ -45,7 +45,7 @@
 			display: inline-block;
 			width: 1em;
 			margin-left: -1em;
-			
+
 				@include breakpoint(xs) {
 					content: "-"; // The "⁞" was breaking on mobile
 				}
