@@ -4,7 +4,7 @@ title: Speaking
 ---
 
 <!-- TEMP -->
-<link rel="stylesheet" href="css/main.min.css">
+<link rel="stylesheet" href="../css/main.min.css">
 
 <div class="speaking center">
 <h1>Upcoming Events</h1>
@@ -19,20 +19,23 @@ title: Speaking
 </ul>
 
 <h1>Previous Talks</h1>
-<ul class="event-list--upcoming">
+<ul class="event-list--past">
 {% for post in site.posts %}
     {% if post.event %}
         {% unless post.upcoming %}
-         <li class="post-preview {%if post.link-out%}link-out{%endif%}">
-                 <h2 class="event-name">
-                     {{ post.event }}
-                 </h2>
-                 <p class="post-meta">Posted on {{ post.date | date: "%B %-d, %Y" }}</p>
-                 {% if post.subtitle %}
-                 <p class="post-subtitle">
-                     {{ post.subtitle }}
-                 </p>
-                 {% endif %}
+         <li>
+            <a href="{{event.slides}}">
+                <img src="{{ post.image }}" alt="{{ post.event }}">
+                <h2 class="event-name">
+                 {{ post.event }}
+                </h2>
+            </a>
+            <p class="post-meta">Posted on {{ post.date | date: "%B %-d, %Y" }}</p>
+            {% if post.subtitle %}
+            <p class="post-subtitle">
+             {{ post.subtitle }}
+            </p>
+            {% endif %}
          </li>
          {% endunless %}
     {% endif %}

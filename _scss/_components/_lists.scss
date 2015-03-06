@@ -88,3 +88,33 @@ ol {
 		margin-left: 0.3em;
 	}
 }
+
+.speaking {
+	color: $color--blue;
+}
+
+.event-list--past {
+	@extend %post-list;
+	max-width: 980px;
+	margin: 0 auto;
+
+	li {
+		width: 32%;
+		height: 260px;
+		padding: 1em;
+		display: inline-block;
+		vertical-align: top;
+		text-align: left;
+		border-bottom: none;
+
+		img {
+
+		}
+
+		h2 {
+			margin: .3em 0 0;
+			font-size: 1.2em;
+			font-weight: 100;
+		}
+	}
+}
