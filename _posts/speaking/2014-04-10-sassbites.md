@@ -1,8 +1,8 @@
 ---
 post-type: talk
+hidden: true
 location: remote
 event: Sass Bites
-timeline: past
 talk-type: meetup
 date: '2014-04-10'
 talk: SassBites: Women Of Sass Series

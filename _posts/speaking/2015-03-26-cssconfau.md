@@ -1,10 +1,11 @@
 ---
 post-type: talk
-timeline: upcoming
+hidden: true
 talk-type: conference
 location: Melbourne, Australia
 event: CSS Conf AU
 date: '2015-03-26'
+upcoming: true
 conf-link: http://2015.cssconf.au
 ---
 

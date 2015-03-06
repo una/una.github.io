@@ -1,8 +1,8 @@
 ---
 post-type: talk
+hidden: true
 location: Austin, TX
 event: All Girl Hack Night
-timeline: past
 talk-type: meetup
 date: '2015-01-14'
 talk: Sass for Developers

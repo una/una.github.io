@@ -7,12 +7,14 @@ title: Archive
   <h1>Blog Archive</h1>
     <ul class="post-list--archive">
       {% for post in site.posts %}
+        {% unless post.event %}
       <li>
       <a href="{{ post.url }}">
         	<h2>{{ post.title }}</h2>
         	<span class="post-meta">{{ post.date | date_to_string }}</span>
       </a>
     </li>
+        {% endunless %}
       {% endfor %}
   </ul>
 </div>

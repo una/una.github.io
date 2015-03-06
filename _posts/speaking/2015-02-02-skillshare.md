@@ -1,8 +1,8 @@
 ---
 post-type: talk
+hidden: true
 location: remote
 event: Skillshare Master Class
-timeline: past
 talk-type: workshop
 date: '2015-02-02'
 talk: Super Sass Sunday: Its A GameChanger

@@ -6,26 +6,44 @@ title: Speaking
 <!-- TEMP -->
 <link rel="stylesheet" href="css/main.min.css">
 
-<section class="intro">
-    <h1 style="margin-top:3em">Sometimes I talk to people.</h1>
-</section>
-
 <div class="speaking center">
 <h1>Upcoming Events</h1>
 <ul class="event-list--upcoming">
 {% for post in site.posts %}
- <li class="post-preview {%if post.link-out%}link-out{%endif%}">
-     <a href="{{ post.url | prepend: site.baseurl }}">
-         <h2 class="post-title">
-             {{ post.event }}
-         </h2>
-         <p class="post-meta">Posted on {{ post.date | date: "%B %-d, %Y" }}</p>
-         {% if post.subtitle %}
-         <p class="post-subtitle">
-             {{ post.subtitle }}
-         </p>
-         {% endif %}
-     </a>
- </li>
+    {% if post.upcoming %}
+        <li>
+             <h2 class="event-name">
+                 {{ post.event }}
+             </h2>
+             <p class="post-meta">Posted on {{ post.date | date: "%B %-d, %Y" }}</p>
+             {% if post.subtitle %}
+             <p class="post-subtitle">
+                 {{ post.subtitle }}
+             </p>
+             {% endif %}
+         </li>
+    {% endif %}
  {% endfor %}
 </ul>
+
+<h1>Previous Talks</h1>
+<ul class="event-list--upcoming">
+{% for post in site.posts %}
+    {% if post.event %}
+        {% unless post.upcoming %}
+         <li class="post-preview {%if post.link-out%}link-out{%endif%}">
+                 <h2 class="event-name">
+                     {{ post.event }}
+                 </h2>
+                 <p class="post-meta">Posted on {{ post.date | date: "%B %-d, %Y" }}</p>
+                 {% if post.subtitle %}
+                 <p class="post-subtitle">
+                     {{ post.subtitle }}
+                 </p>
+                 {% endif %}
+         </li>
+         {% endunless %}
+    {% endif %}
+ {% endfor %}
+</ul>
+
