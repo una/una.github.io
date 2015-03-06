@@ -11,19 +11,21 @@ title: Home
 <div class="home">
 <ul class="post-list--home">
 {% for post in paginator.posts %}
- <li class="post-preview {%if post.link-out%}link-out{%endif%}">
-     <a href="{{ post.url | prepend: site.baseurl }}">
-         <h2 class="post-title">
-             {{ post.title }}
-         </h2>
-         <p class="post-meta">Posted on {{ post.date | date: "%B %-d, %Y" }}</p>
-         {% if post.subtitle %}
-         <p class="post-subtitle">
-             {{ post.subtitle }}
-         </p>
-         {% endif %}
-     </a>
- </li>
+    {% unless post.event %}
+     <li class="post-preview {%if post.link-out%}link-out{%endif%}">
+         <a href="{{ post.url | prepend: site.baseurl }}">
+             <h2 class="post-title">
+                 {{ post.title }}
+             </h2>
+             <p class="post-meta">Posted on {{ post.date | date: "%B %-d, %Y" }}</p>
+             {% if post.subtitle %}
+             <p class="post-subtitle">
+                 {{ post.subtitle }}
+             </p>
+             {% endif %}
+         </a>
+     </li>
+     {% endunless %}
  {% endfor %}
 </ul>
 

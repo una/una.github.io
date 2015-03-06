@@ -1,5 +1,5 @@
 ---
-layout: talk
+post-type: talk
 location: remote
 event: Memphis Web Workers
 timeline: past

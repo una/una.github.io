@@ -1,5 +1,5 @@
 ---
-layout: talk
+post-type: talk
 location: Austin, TX
 event: All Girl Hack Night
 timeline: past

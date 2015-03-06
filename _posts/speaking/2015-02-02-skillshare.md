@@ -1,5 +1,5 @@
 ---
-layout: talk
+post-type: talk
 location: remote
 event: Skillshare Master Class
 timeline: past
