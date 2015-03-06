@@ -5,7 +5,8 @@ event: Sass Bites
 talk-type: meetup
 date: '2014-04-10'
 talk: Women Of Sass Interview Series
-event-link: http://sassbites.github.io
-image: ../images/posts/lexus.jpg
-video-link: https://www.youtube.com/watch?v=fHO17Tpnh3M
+event-link: http://sassbit.es
+image: ../images/speaking/sassbites.jpg
+main-link: https://www.youtube.com/watch?v=fHO17Tpnh3M
+link-type: video
 ---

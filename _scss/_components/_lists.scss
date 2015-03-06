@@ -93,6 +93,43 @@ ol {
 	color: $color--blue;
 }
 
+.speaking {
+	h1 {
+		color: $color--hotpink;
+		margin: 1.5em auto .5em;
+	}
+
+	.post-meta {
+		font-size: 90%;
+		color: $color--copy;
+		font-style: italic;
+	}
+}
+
+.event-list--upcoming {
+	@extend %pink-links;
+	text-align: left;
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 0 1em;
+	list-style: none;
+	position: relative;
+
+	.event--location {
+		@extend %font-title;
+		font-weight: 100;
+		color: $color--blue;
+		left: 8em;
+		position: absolute;
+	}
+
+	.post-meta {
+		font-size: 80%;
+		left: 25em;
+		position: absolute;
+	}
+}
+
 .event-list--past {
 	@extend %post-list;
 	max-width: 980px;
@@ -100,21 +137,29 @@ ol {
 
 	li {
 		width: 32%;
-		height: 260px;
+		height: 310px;
 		padding: 1em;
 		display: inline-block;
 		vertical-align: top;
 		text-align: left;
 		border-bottom: none;
 
-		img {
 
+		img {
+			height: 150px;
+			width: auto;
+			display: block;
+			margin: 0 auto;
 		}
 
 		h2 {
-			margin: .3em 0 0;
+			margin: .5em 0 0;
 			font-size: 1.2em;
 			font-weight: 100;
+		}
+
+		.title {
+			color: $color--purple;
 		}
 	}
 }

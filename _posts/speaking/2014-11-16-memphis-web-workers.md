@@ -6,6 +6,7 @@ talk-type: meetup
 date: '2014-11-16'
 talk: How to Become a Keyboard Ninja
 event-link: http://2014.sassconf.com
-image: ../images/posts/lexus.jpg
-slide-link: http://una.github.io/keyboard-ninja-slides/
+image: ../images/speaking/keyboardninja.png
+main-link: http://una.github.io/keyboard-ninja-slides/
+link-type: slides
 ---
