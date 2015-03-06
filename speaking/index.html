@@ -1,0 +1,54 @@
+---
+layout: default
+title: Speaking
+---
+
+<section class="intro">
+    <p>This is a blog about front end development, design, and other musings by <a href="http://unakravets.com">Una Kravets</a></p>
+    <div class="self-portrait"></div>
+</section>
+
+<div class="speaking">
+<ul class="post-list--upcoming">
+{% for post in paginator.posts %}
+ <li class="post-preview {%if post.link-out%}link-out{%endif%}">
+     <a href="{{ post.url | prepend: site.baseurl }}">
+         <h2 class="post-title">
+             {{ post.title }}
+         </h2>
+         <p class="post-meta">Posted on {{ post.date | date: "%B %-d, %Y" }}</p>
+         {% if post.subtitle %}
+         <p class="post-subtitle">
+             {{ post.subtitle }}
+         </p>
+         {% endif %}
+     </a>
+ </li>
+ {% endfor %}
+</ul>
+
+ {% if paginator.total_pages > 1 %}
+ <ul class="pager">
+     {% if paginator.previous_page %}
+     <li class="previous">
+         <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa icon-arrow-left"></i> Newer Posts</a>
+     </li>
+     {% endif %}
+     {% if paginator.next_page %}
+     <li class="next">
+         <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts <i class="fa icon-arrow-right"></i></a>
+     </li>
+     {% endif %}
+ </ul>
+ {% endif %}
+</div>
+
+<script>
+    function addEmoji() {
+      if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+        console.log('mac');
+        window.location.hash = "💁";
+      }
+    };
+    addEmoji();
+</script>
