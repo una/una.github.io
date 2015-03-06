@@ -109,7 +109,7 @@ ol {
 .event-list--upcoming {
 	@extend %pink-links;
 	text-align: left;
-	max-width: 500px;
+	max-width: 600px;
 	margin: 0 auto;
 	padding: 0 1em;
 	list-style: none;
@@ -119,13 +119,13 @@ ol {
 		@extend %font-title;
 		font-weight: 100;
 		color: $color--blue;
-		left: 8em;
+		left: 30%;
 		position: absolute;
 	}
 
 	.post-meta {
 		font-size: 80%;
-		left: 25em;
+		left: 80%;
 		position: absolute;
 	}
 }
