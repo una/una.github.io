@@ -9,18 +9,10 @@ title: Speaking
 <div class="speaking center">
 <h1>Upcoming Events</h1>
 <ul class="event-list--upcoming">
-{% for post in site.posts %}
+{% for post in site.posts reversed %}
     {% if post.upcoming %}
         <li>
-             <h2 class="event-name">
-                 {{ post.event }}
-             </h2>
-             <p class="post-meta">Posted on {{ post.date | date: "%B %-d, %Y" }}</p>
-             {% if post.subtitle %}
-             <p class="post-subtitle">
-                 {{ post.subtitle }}
-             </p>
-             {% endif %}
+             <p class="event--info"><a class="event--name" href="{{ post.event-link }}">{{ post.event }}</a>, <span class="event--location">{{ post.location }} </span> {{ post.date | date: "%B %-d, %Y" }}</p>
          </li>
     {% endif %}
  {% endfor %}
