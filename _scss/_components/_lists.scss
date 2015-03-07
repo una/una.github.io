@@ -65,19 +65,22 @@ ol {
 
 	li {
 		padding: 1em;
+
+		&.link-out h2{
+			@extend %link-out-icon;
+		}
 	}
 
 	h2 {
 		margin: 0 auto;
-	}
-
-	h2 {
 		@include fontsize(14);
 		font-weight: 500;
 	}
+
+
 }
 
-.link-out .post-title{
+%link-out-icon {
 	&:after {
 		content: '';
 		display: inline-block;
@@ -88,6 +91,12 @@ ol {
 		margin-left: 0.3em;
 	}
 }
+
+.link-out .post-title{
+	@extend %link-out-icon;
+}
+
+// Speaking:
 
 .speaking {
 	color: $color--blue;

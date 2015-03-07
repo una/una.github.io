@@ -3,12 +3,15 @@ layout: default
 title: Archive
 ---
 
+<!-- TEMP -->
+<link rel="stylesheet" href="../css/main.min.css">
+
 <div class="archive">
   <h1>Blog Archive</h1>
     <ul class="post-list--archive">
       {% for post in site.posts %}
         {% unless post.event %}
-      <li>
+      <li class="{%if post.link-out%}link-out{%endif%}">
       <a href="{{ post.url }}">
         	<h2>{{ post.title }}</h2>
         	<span class="post-meta">{{ post.date | date_to_string }}</span>
