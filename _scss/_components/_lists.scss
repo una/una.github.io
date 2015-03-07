@@ -104,12 +104,25 @@ ol {
 
 .speaking {
 	color: $color--blue;
+	@include breakpoint(sm) {
+		padding-top: 3em;
+	}
 }
 
 .speaking {
 	h1 {
 		color: $color--purple;
 		margin: 1.5em auto .5em;
+
+		@include breakpoint(sm) {
+			text-align: left;
+			padding: 0 .5em;
+		}
+
+		@include breakpoint(xs) {
+			text-align: center;
+			padding: 0 .5em;
+		}
 	}
 
 	.post-meta {
@@ -128,18 +141,34 @@ ol {
 	list-style: none;
 	position: relative;
 
+	@include breakpoint(xs) {
+		text-align: center;
+	}
+
 	.event--location {
 		@extend %font-title;
 		font-weight: 100;
 		color: $color--blue;
-		left: 30%;
+		left: 35%;
 		position: absolute;
+
+		@include breakpoint(xs) {
+			position: relative;
+			left: 0;
+		}
 	}
 
 	.post-meta {
 		font-size: 80%;
 		left: 80%;
 		position: absolute;
+
+		@include breakpoint(xs) {
+			position: relative;
+			width: 100%;
+			left: 0;
+			display: block;
+		}
 	}
 }
 
@@ -150,7 +179,7 @@ ol {
 
 	li {
 		width: 32%;
-		height: 310px;
+		height: 330px;
 		padding: 1em;
 		display: inline-block;
 		vertical-align: top;
