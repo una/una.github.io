@@ -25,10 +25,15 @@ title: Speaking
         {% unless post.upcoming %}
          <li>
             <a href="{{post.main-link}}">
-                <img src="{{ post.image }}" alt="{{ post.event }}">
-                <h2 class="event-name">{{ post.event }}:</h2> <span class="title">{{post.talk}}</span>
+                <div class="img-container">
+                    <img src="{{ post.image }}" alt="{{ post.event }}">
+                </div>
+                <div class="meta-container">
+                    <div class="flag"><p>{% if post.link-type %}{{ post.link-type }}{% endif %}</p></div>
+                    <h2 class="event-name">{{ post.event }}:</h2> <span class="title">{{post.talk}}</span>
+                    <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+                </div>
             </a>
-            <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
          </li>
          {% endunless %}
     {% endif %}

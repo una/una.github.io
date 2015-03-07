@@ -8,7 +8,7 @@ talk: Sass for Developers
 event-link: http://meetup.com/all-girl-hack-night
 image: ../images/speaking/sass-for-devs.png
 main-link: http://una.github.io/sass-for-devs
-type: slides
+link-type: slides
 ---
 
 fix url

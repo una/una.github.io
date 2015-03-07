@@ -61,6 +61,7 @@ ol {
 
 
 .post-list--archive {
+	color: $color--copy;
 	@extend %post-list;
 
 	li {
@@ -71,13 +72,14 @@ ol {
 		}
 	}
 
-	h2 {
-		margin: 0 auto;
-		@include fontsize(14);
-		font-weight: 500;
+	.post-meta {
+		font-size: 90%;
 	}
 
-
+	h2 {
+		@include fontsize(16);
+		color: $color--purple;
+	}
 }
 
 %link-out-icon {
@@ -96,7 +98,9 @@ ol {
 	@extend %link-out-icon;
 }
 
-// Speaking:
+//
+// Speaking
+//
 
 .speaking {
 	color: $color--blue;
@@ -104,7 +108,7 @@ ol {
 
 .speaking {
 	h1 {
-		color: $color--hotpink;
+		color: $color--purple;
 		margin: 1.5em auto .5em;
 	}
 
@@ -152,13 +156,59 @@ ol {
 		vertical-align: top;
 		text-align: left;
 		border-bottom: none;
+		position: relative;
 
+		@include breakpoint(sm) {
+			width: 100%;
+			height: auto;
+			max-height: 160px;
+		}
 
-		img {
-			height: 150px;
-			width: auto;
+		@include breakpoint(sm) {
+			width: 100%;
+			height: auto;
+			max-height: none;
+		}
+
+		.img-container {
+			max-height: 180px;
+			width: 100%;
 			display: block;
-			margin: 0 auto;
+			overflow: hidden;
+
+			@include breakpoint(sm) {
+				width: 50%;
+				display: inline-block;
+				float: left;
+				max-height: 140px;
+			}
+
+			@include breakpoint(xs) {
+				width: 100%;
+				display: inline-block;
+				float: none;
+				clear: both;
+				max-height: 260px;
+			}
+		}
+
+		.meta-container {
+			@include breakpoint(sm) {
+				width: 50%;
+				display: inline-block;
+				float: left;
+				padding-left: 1em;
+				max-height: 200px;
+			}
+
+			@include breakpoint(xs) {
+				width: 100%;
+				clear: both;
+				margin-top:1em;
+				padding-left: 0;
+				max-height: 230px;
+				text-align: center;
+			}
 		}
 
 		h2 {
@@ -169,6 +219,31 @@ ol {
 
 		.title {
 			color: $color--purple;
+		}
+	}
+
+	.flag {
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 1em;
+		font-size: 70%;
+		background: $color--purple;
+		padding: .5em 1em;
+		transform: skew(-20deg);
+
+		p {
+			color: white;
+			margin-bottom: 0;
+			transform: skew(20deg);
+		}
+
+		@include breakpoint(sm) {
+			right: 48%;
+		}
+
+		@include breakpoint(sm) {
+			right: 0;
 		}
 	}
 }
