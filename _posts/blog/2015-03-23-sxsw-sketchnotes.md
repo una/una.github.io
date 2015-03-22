@@ -17,7 +17,7 @@ header-bg: ../images/posts/sxsw-sketchnotes/sxsw-bg.jpg
 subtitle: Some selected sketchnotes from a few talks I went to at the SXSW Interactive 2015 Conference.
 ---
 
-Just a few sektchnotes from selected talks at SXSW Interactive 2015 :)
+Just a few sektchnotes from selected talks at SXSW Interactive 2015.
 
 <style>
   img {
