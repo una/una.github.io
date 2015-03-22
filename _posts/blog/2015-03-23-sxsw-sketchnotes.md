@@ -13,6 +13,7 @@ tags:
 - neuroscience
 - studies
 - psychology
+header-bg: ../images/posts/sxsw-sketchnotes/sxsw-bg.jpg
 subtitle: Some selected sketchnotes from a few talks I went to at the SXSW Interactive 2015 Conference.
 ---
 
@@ -24,7 +25,6 @@ Just a few sektchnotes from selected talks at SXSW Interactive 2015 :)
   }
 </style>
 
-![blurb](../images/posts/sxsw-sketchnotes/sxsw-1.jpg)
 ![blurb](../images/posts/sxsw-sketchnotes/02.jpg)
 <p class="caption">Designing for Trust with <a href="https://twitter.com/mvboeke">Michael Boeke</a>. Basically: be a human being, not a robot.</p>
 ![blurb](../images/posts/sxsw-sketchnotes/03.jpg)
