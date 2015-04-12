@@ -35,5 +35,14 @@ window.BLOG || (BLOG = {});
     });
   });
 
+  // emoji
+  function addEmoji() {
+    if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+      window.location.hash = "💁";
+    }
+  };
+  addEmoji();
+  console.log('Hello, beautiful :)');
+
   BLOG.common.init();
 })(jQuery, window, document);
