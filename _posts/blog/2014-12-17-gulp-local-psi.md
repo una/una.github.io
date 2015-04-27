@@ -281,3 +281,5 @@ gulp.task('psi', ['psi-seq'], function() {
 
 ### Step 3
 `gulp psi`
+
+<small>Thanks <a href="https://github.com/silenceisgolden">AJ</a> for pointing out the API syntax update and <a href="http://twitter.com/rupl">Chris</a> for updating the article!</small>
