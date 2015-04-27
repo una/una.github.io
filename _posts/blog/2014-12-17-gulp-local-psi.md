@@ -100,7 +100,7 @@ Alternatively, you can open up your package.json, and under 'devDependancies", a
 
 ```
 "ngrok": "^0.1.98",
-"psi": "^0.1.6",
+"psi": "^1.0.6",
 "gulp-exit": "0.0.2",
 "run-sequence": "^1.0.2"
 ```
@@ -119,11 +119,11 @@ create a task to run ngrok and grab the tunnel url it is creating. Again, I am u
 
 ```
 gulp.task('ngrok-url', function(cb) {
- return ngrok.connect(3000, function (err, url) {
-  site = url;
-  console.log('serving your tunnel from: ' + site);
-  cb();
- });
+  return ngrok.connect(3000, function (err, url) {
+    site = url;
+    console.log('serving your tunnel from: ' + site);
+    cb();
+  });
 });
 ```
 
@@ -143,19 +143,17 @@ And psi tasks. Here we're making seperate tasks for both mobile and desktop stra
 
 ```
 gulp.task('psi-desktop', function (cb) {
-    psi({
-        nokey: 'true',
-        url: site,
-        strategy: 'desktop'
-    }, cb);
+  psi(site, {
+    nokey: 'true',
+    strategy: 'desktop'
+  }, cb);
 });
 
 gulp.task('psi-mobile', function (cb) {
-    psi({
-        nokey: 'true',
-        url: site,
-        strategy: 'mobile'
-    }, cb);
+  psi(site, {
+    nokey: 'true',
+    strategy: 'mobile'
+  }, cb);
 });
 ```
 
@@ -176,12 +174,12 @@ Now, we can create a sequence to run the ngrok tunnel server, grab its url, and 
 
 ```
 gulp.task('psi-seq', function (cb) {
- return sequence(
-  'ngrok-url',
-  'psi-desktop',
-  'psi-mobile',
-  cb
- );
+  return sequence(
+    'ngrok-url',
+    'psi-desktop',
+    'psi-mobile',
+    cb
+  );
 });
 ```
 
@@ -189,8 +187,8 @@ Finally, I made a task to exit out of the sequence once it was complete:
 
 ```
 gulp.task('psi', ['psi-seq'], function() {
-    console.log('Woohoo! Check out your page speed scores!')
-    process.exit();
+  console.log('Woohoo! Check out your page speed scores!')
+  process.exit();
 })
 ```
 
@@ -202,13 +200,13 @@ To do that, we need to connect ngrok to our server. Now, I'm not going to dictat
 
 ```
 gulp.task('psi-seq', function (cb) {
- return sequence(
+  return sequence(
     'browser-sync', // name of your server task here
     'ngrok-url',
     'psi-desktop',
     'psi-mobile',
-  cb
- );
+    cb
+  );
 });
 
 ```
@@ -225,13 +223,13 @@ var portVal = 3020;
 // serve function, as well as uses the set port and prevents
 // opening the site in my browser
 gulp.task('browser-sync-psi', ['jekyll-build'], function() {
-    browserSync({
-        port: portVal,
-        open: false,
-        server: {
-            baseDir: '_site'
-        }
-    });
+  browserSync({
+    port: portVal,
+    open: false,
+    server: {
+      baseDir: '_site'
+    }
+  });
 });
 ```
 
@@ -252,30 +250,30 @@ var portVal   = 3020;
 
 // this is where your server task goes. I'm using browser sync
 gulp.task('browser-sync-psi', ['jekyll-build'], function() {
-    browserSync({
-        port: portVal,
-        open: false,
-        server: {
-            baseDir: '_site'
-        }
-    });
+  browserSync({
+    port: portVal,
+    open: false,
+    server: {
+      baseDir: '_site'
+    }
+  });
 });
 
 // psi sequence with 'browser-sync-psi' instead
 gulp.task('psi-seq', function (cb) {
- return sequence(
+  return sequence(
     'browser-sync-psi',
     'ngrok-url',
     'psi-desktop',
     'psi-mobile',
     cb
- );
+  );
 });
 
 // psi task runs and exits
 gulp.task('psi', ['psi-seq'], function() {
-    console.log('Woohoo! Check out your page speed scores!')
-    process.exit();
+  console.log('Woohoo! Check out your page speed scores!')
+  process.exit();
 })
 ```
 
