@@ -21,17 +21,194 @@ and it went right over my head. No shame in that. I get it now. And I was able t
 
 ## Box Shadow Pixels
 
-So let's get started. What exactly is making those little pixels? If the title didn't give it away, it is the CSS3 multiple box shadows property! Each pixel is it's own, individually placed box shadow.
+So let's get started. What exactly is making those little pixels? If the title didn't give it away, it's the CSS3 multiple box shadow property! Each pixel is it's own, individually placed box shadow. These are strung together via a comma-separated list. You can have as many box-shadows as you want on a div. Pretty cool.
 
--- show how it works here visually --
+Your box shadow will always be behind your element, so you'll need to start positioning it at ($pixel-size, $pixel-size) rather than (0,0). Here is a visual example:
+
+![](../images/posts/pixel-art/missing-pixel.png)
+
+We lose one of our pixels. We must mitigate this by starting the positioning at ($pixel-size, $pixel-size). As a bonus, we can fix the positioning of this element by making it absolutely positioned within a relatively positioned element and shifting it to the point (-$pixel-size, -$pixel-size):
+
+![](../images/posts/pixel-art/fixed-pos.png)
+
+## Sass Data Type Functions
+
+As an Almost-Turing-Complete-Programming-Language, the organizational structures and data types that Sass provides us with are pretty darn powerful. These include *maps*, which you can nest, and *lists*, which you can use within *maps*. Sass also inherently provides us with a really nice set of functions to access and manipulate items from such structures. Here are just a few, as sourced from the [SassScript docs](http://sass-lang.com/documentation/Sass/Script/Functions.html):
+
+### List Functions:
+
+- `length($list)` : Returns the length of a list.
+- `nth($list, $n)` : Returns a specific item in a list at the nth value.
+- `set-nth($list, $n, $value)` : Replaces the nth item in a list.
+- `join($list1, $list2)` : Joins together two lists into one.
+- `append($list1, $val)` : Appends a value onto the end of a list.
+- `zip($lists…)` : Combines lists into a single multidimensional list.
+- `index($list, $value)` : Returns the position of a value within a list. *(You can also use this to determine if a value exists within a list)*
+- `list-separator(#list)` : Returns the separator of a list.
+
+### Map Functions:
+
+All list functions also work for maps. Sass treats them as lists of pairs. It also comes with some additional map functions.
+
+- `map-get($map, $key)` : Returns the value in a map associated with a given key.
+- `map-merge($map1, $map2)` : Merges two maps together into a new map.
+- `map-remove($map, $keys…)` : Returns a new map with keys removed.
+- `map-keys($map)` : Returns a list of all keys in a map.
+- `map-values($map)` : Returns a list of all values in a map.
+- `map-has-key($map, $key)` : Returns whether a map has a value associated with a given key.
+- `keywords($args)` : Returns the keywords passed to a function that takes variable arguments.
+
 
 ## Reading a Matrix
 
--- sass has lists that can be either comma separated values or space separated values.
+Okay, so now that we have a baseline on the types of things we can do with Sass' data types, let's manipulate them. The **matrix** that we will be referring to looks a little bit like this:
+
+```scss
+// this is a diamond
+(o o x o o)
+(o x o x o)
+(x o o o x)
+(o x o x o)
+(o o x o o)
+```
+
+It's really just a glorified space-separated list of space-separated lists within parenthesis *(#meta)*. We can loop through this list and check the value of each item in the list to build a *new* list, essentially mapping each pixel value (item in the original list) with an output function (a box shadow will be generated). This sounds confusing, but let me try to break it down:
+
+1. Determine size/color of the pixels
+2. Create *empty list* for box shadows to be filled with incoming data
+- Itemize each *row* to set a *y-value* (vertical position in the matrix grid)
+- Read the *n-value* (horizontal position in the list) to determine it's *x-value*
+- Determine the *y-value* of that pixel based on its *row*
+- Read the actual letter (*content-value*) to determine the *color* of the pixel
+- Append determined values to *box-shadow list*, ending with `,`
+- Loop through steps 4-6 for the entire matrix grid
 
 ## Building the Pixel Grid
 
-## Magics
+We're setting some defaults here and starting with a binary color value option for our pixels (either on or off. If on, it will be the determined color in the function). Using `hotpink` as our default color and `10px` as our pixel-size, we can write a function to read the matrix:
+
+```scss
+@function read-matrix($matrix, $size: 10px, $color: hotpink) {
+  $l: length($matrix); // length of the entire
+  $shadows: ''; // shadows list section
+  $i: $l; // length of the line on a matrix
+
+// read through the all the rows of the list
+  @for $i from 1 through $l {
+    $row: nth($matrix, $i); // this is a single row
+
+    @for $j from 1 through length($row){
+        $item: nth($row, $j); //itemize each element in that row
+
+// if that item is an x, give it a drop shadow square w/background color (this is where we're building the shadows list)
+        @if $item == x{
+          $shadows:  $shadows + ($j*$size) + ' ' + ($i*$size) + ' ' + $color;
+        } @else{
+          $shadows:  $shadows + ($j*$size) + ' ' + ($i*$size) + ' ' + transparent;
+        }
+
+// when you get to the end of the row, add a comma before the next block of drpo shadows
+      @if not ($j == length($row) and $i == $l) {
+        $shadows: $shadows + ',';
+      }
+    }
+  }
+
+  // return the entire shadow list here
+  @return unquote($shadows);
+}
+```
+
+Our `$shadows` list ends up looking like this:
+
+```
+10px 10px transparent,20px 10px transparent,30px 10px hotpink,40px 10px transparent,50px 10px transparent,10px 20px transparent,20px 20px hotpink,30px 20px transparent,40px 20px hotpink,50px 20px transparent,10px 30px hotpink,20px 30px transparent,30px 30px transparent,40px 30px transparent,50px 30px hotpink,10px 40px transparent,20px 40px hotpink,30px 40px transparent,40px 40px hotpink,50px 40px transparent,10px 50px transparent,20px 50px transparent,30px 50px hotpink,40px 50px transparent,50px 50px transparent
+```
+
+If we break down that output, looks like this:
+
+```
+// top row
+10px 10px transparent,
+20px 10px transparent,
+30px 10px hotpink,
+40px 10px transparent,
+50px 10px transparent,
+
+//second row
+10px 20px transparent,
+20px 20px hotpink,
+30px 20px transparent,
+40px 20px hotpink,
+50px 20px transparent,
+
+// 3rd row
+10px 30px hotpink,
+20px 30px transparent,
+30px 30px transparent,
+40px 30px transparent,
+50px 30px hotpink,
+
+// 4th row
+10px 40px transparent,
+20px 40px hotpink,
+30px 40px transparent,
+40px 40px hotpink,
+50px 40px transparent,
+
+//bottom row
+10px 50px transparent,
+20px 50px transparent,
+30px 50px hotpink,
+40px 50px transparent,
+50px 50px transparent;
+```
+
+And these are exactly the values we want to create as our box-shadows. So to access the function, we'd use: `box-shadow: read-matrix($var-name)`. In our case, it would specifically be: `box-shadow: read-matrix($diamond);`.
+
+Since we're building a list and using these box shadows as `:after` content, the full usage may look something like this for placement:
+
+```
+// HTML:
+//  <ul class="icons">
+//    <li class="icons--diamond"></li>
+//  </ul>
+
+// icon matrix we're reading through
+$diamond: (o o x o o)
+          (o x o x o)
+          (x o o o x)
+          (o x o x o)
+          (o o x o o);
+
+// list we're styling
+.icons{
+  margin: 3em auto;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+  text-align: center;
+
+  li {
+    margin: 1em;
+    display: inline-block;
+    position: relative;
+
+  }
+
+  &--diamond {
+    &:after {
+      content: '';
+      position: absolute;
+      top: -$icon-size-var;
+      left: -$icon-size-var;
+      width: $icon-size-var;
+      height: $icon-size-var;
+      box-shadow: read-matrix($diamond);
+    }
+  }
+}
+```
 
 ## Colormapping Pixels
 
@@ -39,30 +216,30 @@ We can also use this same technique to get a bit more advanced. Let's make the m
 
 ![](../images/posts/pixel-art/mushroom-dude.png)
 
-Then, we can use these numbers and color values to make some colored pixel art. Let's use *w* for *white*, *r* for *red* and *b* for *black*. With that setup, we can turn the mario mushroom into a matrix of pixel values:
+Then, we can use these numbers and color values to make some colored pixel art. Let's use *w* for *white*, *r* for *red*, *b* for *black*, and *o* for *transparent* pixels. With that setup, we can turn the mario mushroom into a matrix of pixel values:
 
 ```
-(w w w w w b b b b b b w w w w w)
-(w w w b b r r r r w w b b w w w)
-(w w b w w r r r r w w w w b w w)
-(w b w w r r r r r r w w w w b w)
-(w b w r r w w w w r r w w w b w)
+(o o o o o b b b b b b o o o o o)
+(o o o b b r r r r w w b b o o o)
+(o o b w w r r r r w w w w b o o)
+(o b w w r r r r r r w w w w b o)
+(o b w r r w w w w r r w w w b o)
 (b r r r w w w w w w r r r r r b)
 (b r r r w w w w w w r r w w r b)
 (b w r r w w w w w w r w w w w b)
 (b w w r r w w w w r r w w w w b)
 (b w w r r r r r r r r r w w r b)
 (b w r r b b b b b b b b r r r b)
-(w b b b w w b w w b w w b b b w)
-(w w b w w w b w w b w w w b w w)
-(w w b w w w w w w w w w w b w w)
-(w w w b w w w w w w w w b w w w)
-(w w w w b b b b b b b b w w w w)
+(o b b b w w b w w b w w b b b o)
+(o o b w w w b w w b w w w b o o)
+(o o b w w w w w w w w w w b o o)
+(o o o b w w w w w w w w b o o o)
+(o o o o b b b b b b b b o o o o)
 ```
 
 Now, when we read the lines, we want to adjust for each of these colors:
 
-```
+```scss
 @if $item == w{
   $sh:  $sh + ($j*$size) + ' ' + ($i*$size) + ' ' + white;
 }
@@ -72,16 +249,20 @@ Now, when we read the lines, we want to adjust for each of these colors:
 @if $item == r {
   $sh:  $sh + ($j*$size) + ' ' + ($i*$size) + ' ' + red;
 }
+@if $item == o {
+  $sh:  $sh + ($j*$size) + ' ' + ($i*$size) + ' ' + transparent;
+}
 ```
 
 We can make this a little bit more modular by abstracting the pixel color variables into a property map and access that to make sure things remain modular and neatly organized:
 
-```
+```scss
 // map of pixel mapping color values to actual color
 $pixel-color-map: (
   'r' : #f00,
   'w': #fff,
-  'b': #000
+  'b': #000,
+  'o': transparent
 );
 
 // using the map in our mixin
@@ -94,26 +275,32 @@ $pixel-color-map: (
 @if $item == 'r' {
   $sh:  $sh + ($j*$size) + ' ' + ($i*$size) + ' ' + map-get($pixel-color-map, 'r');
 }
+@if $item == 'o' {
+  $sh:  $sh + ($j*$size) + ' ' + ($i*$size) + ' ' + map-get($pixel-color-map, 'o');
+}
 ```
 
-But we can surely clean that up a bit more, right? Let's check to see if our value exists in our map, and then sync it up with it's matching value:
+But we can surely clean that up to make a bit more DRY, right? Let's check to see if our value exists in our map, and then sync it up with it's matching value:
 
-```
+```scss
 @if map-has-key($pixel-color-map, $item) {
   $sh:  $sh + ($j*$size) + ' ' + ($i*$size) + ' ' + map-get($pixel-color-map, $item);
 }
 ```
 
-With this method, we can specify our color-mapped pixel variable for transparent colors like so:
+We'll also want to add a warning as a safeguard to explain why something may have gone wrong or to remind us to define a color variable mapped to a pixel letter. If we want an invisible pixel, we simply need to add a transparent value to the color map:
 
+```scss
+@if map-has-key($pixel-color-map, $item) {
+  $sh:  $sh + ($j*$size) + ' ' + ($i*$size) + ' ' + map-get($pixel-color-map, $item);
+} @else {
+  @warn 'there is no color specified in "$pixel-color-map" for: "#{$item}"';
+}
 ```
-$pixel-color-map: (
-  'r' : #f00,
-  'w': #fff,
-  'b': #000,
-  'x': transparent
-);
-```
+
+## Extending the Grid
+
+Let's do a few more pixelized arts! We can make this even more fun and DRY via a mixin to run through a map of pixel-mapped art.
 
 Voila! It's Sass magicery!
 
