@@ -80,6 +80,14 @@ i {
   }
 }
 
+img a {
+  padding: 0;
+  &:hover {
+    border-bottom: none;
+    background: none;
+  }
+}
+
 %pink-aside {
   background-color: $color--subtlegrey;
   border-right: 2px solid $color--main;

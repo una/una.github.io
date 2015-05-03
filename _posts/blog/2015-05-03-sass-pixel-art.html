@@ -1038,8 +1038,10 @@ and it went right over my head. No shame in that. I get it now. And I was able t
 <p><img alt="" src="../images/posts/pixel-art/missing-pixel.png" /></p>
 <p>We lose one of our pixels. We must mitigate this by starting the positioning at ($pixel-size, $pixel-size). As a bonus, we can fix the positioning of this element by making it absolutely positioned within a relatively positioned element and shifting it to the point (-$pixel-size, -$pixel-size):</p>
 <p><img alt="" src="../images/posts/pixel-art/fixed-pos.png" /></p>
+<div class="caption">You can play with the gist <a href="http://sassmeister.com/gist/0b58be44ea6d6b689c27">here</a></div>
+
 <h2 id="sass-data-type-functions"><a name="user-content-sass-data-type-functions" href="#sass-data-type-functions" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Sass Data Type Functions</h2>
-<p>As an Almost-Turing-Complete-Programming-Language, the organizational structures and data types that Sass provides us with are pretty darn powerful. These include <em>maps</em>, which you can nest, and <em>lists</em>, which you can use within <em>maps</em>. Sass also inherently provides us with a really nice set of functions to access and manipulate items from such structures. Here are just a few, as sourced from the <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html">SassScript docs</a>:</p>
+<p>As an Almost-Turing-Complete-Programming-Language, the organizational structures and data types that Sass provides us with are pretty darn powerful. These include <em>maps</em>, which you can nest, and <em>lists</em>, which you can use within <em>maps</em>. Sass also inherently provides us with a really nice set of functions to access and manipulate items from such structures. Let&rsquo;s start by looking at list functions, as sourced from the <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html">SassScript docs</a>:</p>
 <h3 id="list-functions"><a name="user-content-list-functions" href="#list-functions" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>List Functions:</h3>
 <ul>
 <li><code>length($list)</code> : Returns the length of a list.</li>
@@ -1051,20 +1053,12 @@ and it went right over my head. No shame in that. I get it now. And I was able t
 <li><code>index($list, $value)</code> : Returns the position of a value within a list. <em>(You can also use this to determine if a value exists within a list)</em></li>
 <li><code>list-separator(#list)</code> : Returns the separator of a list.</li>
 </ul>
-<h3 id="map-functions"><a name="user-content-map-functions" href="#map-functions" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Map Functions:</h3>
-<p>All list functions also work for maps. Sass treats them as lists of pairs. It also comes with some additional map functions.</p>
-<ul>
-<li><code>map-get($map, $key)</code> : Returns the value in a map associated with a given key.</li>
-<li><code>map-merge($map1, $map2)</code> : Merges two maps together into a new map.</li>
-<li><code>map-remove($map, $keys…)</code> : Returns a new map with keys removed.</li>
-<li><code>map-keys($map)</code> : Returns a list of all keys in a map.</li>
-<li><code>map-values($map)</code> : Returns a list of all values in a map.</li>
-<li><code>map-has-key($map, $key)</code> : Returns whether a map has a value associated with a given key.</li>
-<li><code>keywords($args)</code> : Returns the keywords passed to a function that takes variable arguments.</li>
-</ul>
 <h2 id="reading-a-matrix"><a name="user-content-reading-a-matrix" href="#reading-a-matrix" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Reading a Matrix</h2>
 <p>Okay, so now that we have a baseline on the types of things we can do with Sass&rsquo; data types, let&rsquo;s manipulate them. The <strong>matrix</strong> that we will be referring to looks a little bit like this:</p>
-<pre><code class="scss">// this is a diamond
+<!-- ```scss -->
+
+<pre style="width: 45%; float: left;"><code>
+// this is a diamond
 (o o x o o)
 (o x o x o)
 (x o o o x)
@@ -1072,7 +1066,11 @@ and it went right over my head. No shame in that. I get it now. And I was able t
 (o o x o o)
 </code></pre>
 
-<p>It&rsquo;s really just a glorified space-separated list of space-separated lists within parenthesis <em>(#meta)</em>. We can loop through this list and check the value of each item in the list to build a <em>new</em> list, essentially mapping each pixel value (item in the original list) with an output function (a box shadow will be generated). This sounds confusing, but let me try to break it down:</p>
+<!-- ``` -->
+
+<p><img src="../img/" alt=""><br />
+(../images/posts/pixel-art/mushroom-dude.png)<br />
+It&rsquo;s really just a glorified space-separated list of space-separated lists within parenthesis <em>(#meta)</em>. We can loop through this list and check the value of each item in the list to build a <em>new</em> list, essentially mapping each pixel value (item in the original list) with an output function (a box shadow will be generated). This sounds confusing, but let me try to break it down:</p>
 <ol>
 <li>Determine size/color of the pixels</li>
 <li>Create <em>empty list</em> for box shadows to be filled with incoming data<br />
@@ -1085,35 +1083,26 @@ and it went right over my head. No shame in that. I get it now. And I was able t
 </ol>
 <h2 id="building-the-pixel-grid"><a name="user-content-building-the-pixel-grid" href="#building-the-pixel-grid" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Building the Pixel Grid</h2>
 <p>We&rsquo;re setting some defaults here and starting with a binary color value option for our pixels (either on or off. If on, it will be the determined color in the function). Using <code>hotpink</code> as our default color and <code>10px</code> as our pixel-size, we can write a function to read the matrix:</p>
-<pre><code class="scss">// icon matrix we're reading through
-$diamond: (o o x o o)
-          (o x o x o)
-          (x o o o x)
-          (o x o x o)
-          (o o x o o);
-
-$icon-size-var: 10px;
-
-@function read-matrix($matrix, $size: $icon-size-var, $color: hotpink) {
+<pre><code class="scss">@function read-matrix($matrix, $size: 10px, $color: hotpink) {
   $l: length($matrix); // length of the entire
   $shadows: ''; // shadows list section
   $i: $l; // length of the line on a matrix
 
-  // read through the all the rows of the list
+// read through the all the rows of the list
   @for $i from 1 through $l {
     $row: nth($matrix, $i); // this is a single row
 
     @for $j from 1 through length($row){
         $item: nth($row, $j); //itemize each element in that row
 
-        // if that item is an x, give it a drop shadow square w/background color (this is where we're building the shadows list)
+// if that item is an x, give it a drop shadow square w/background color (this is where we're building the shadows list)
         @if $item == x{
           $shadows:  $shadows + ($j*$size) + ' ' + ($i*$size) + ' ' + $color;
         } @else{
           $shadows:  $shadows + ($j*$size) + ' ' + ($i*$size) + ' ' + transparent;
         }
 
-      // when you get to the end of the row, add a comma before the next block of drpo shadows
+// when you get to the end of the row, add a comma before the next block of drpo shadows
       @if not ($j == length($row) and $i == $l) {
         $shadows: $shadows + ',';
       }
@@ -1166,7 +1155,51 @@ $icon-size-var: 10px;
 50px 50px transparent;
 </code></pre>
 
-<p>And these are exactly the values we want to create as our box-shadows. So to access the function, we&rsquo;d use: `</p>
+<p>And these are exactly the values we want to create as our box-shadows. So to access the function, we&rsquo;d use: <code>box-shadow: read-matrix($var-name)</code>. In our case, it would specifically be: <code>box-shadow: read-matrix($diamond);</code>.</p>
+<p>Since we&rsquo;re building a list and using these box shadows as <code>:after</code> content, the full usage may look something like this for placement:</p>
+<pre><code>// HTML:
+//  &lt;ul class=&quot;icons&quot;&gt;
+//    &lt;li class=&quot;icons--diamond&quot;&gt;&lt;/li&gt;
+//  &lt;/ul&gt;
+
+// icon matrix we're reading through
+$diamond: (o o x o o)
+          (o x o x o)
+          (x o o o x)
+          (o x o x o)
+          (o o x o o);
+
+// list we're styling
+.icons{
+  margin: 3em auto;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+  text-align: center;
+
+  li {
+    margin: 1em;
+    display: inline-block;
+    position: relative;
+
+  }
+
+  &amp;--diamond {
+    &amp;:after {
+      content: '';
+      position: absolute;
+      top: -$icon-size-var;
+      left: -$icon-size-var;
+      width: $icon-size-var;
+      height: $icon-size-var;
+      box-shadow: read-matrix($diamond);
+    }
+  }
+}
+</code></pre>
+
+<p><img alt="pixel diamond" src="../images/posts/pixel-art/pixel-diamond.png" /><br />
+<div class="caption">This is our result.</div></p>
 <h2 id="colormapping-pixels"><a name="user-content-colormapping-pixels" href="#colormapping-pixels" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Colormapping Pixels</h2>
 <p>We can also use this same technique to get a bit more advanced. Let&rsquo;s make the mushroom from Mario! First step is to figure out the grid:</p>
 <p><img alt="" src="../images/posts/pixel-art/mushroom-dude.png" /></p>
@@ -1242,7 +1275,17 @@ $pixel-color-map: (
 }
 </code></pre>
 
-<h2 id="extending-the-grid"><a name="user-content-extending-the-grid" href="#extending-the-grid" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Extending the Grid</h2>
-<p>Let&rsquo;s do a few more pixelized arts! We can make this even more fun and DRY via a mixin to run through a map of pixel-mapped art.</p>
+<h2 id="maps-and-mixins"><a name="user-content-maps-and-mixins" href="#maps-and-mixins" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Maps and Mixins</h2>
+<p>Let&rsquo;s do a few more pixelized arts! We can make this even more fun and DRY via a mixin to run through a map of pixel-mapped art. All list functions also work for maps. Sass treats them as lists of pairs. It also comes with some additional map functions.</p>
+<h3 id="map-functions"><a name="user-content-map-functions" href="#map-functions" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Map Functions:</h3>
+<ul>
+<li><code>map-get($map, $key)</code> : Returns the value in a map associated with a given key.</li>
+<li><code>map-merge($map1, $map2)</code> : Merges two maps together into a new map.</li>
+<li><code>map-remove($map, $keys…)</code> : Returns a new map with keys removed.</li>
+<li><code>map-keys($map)</code> : Returns a list of all keys in a map.</li>
+<li><code>map-values($map)</code> : Returns a list of all values in a map.</li>
+<li><code>map-has-key($map, $key)</code> : Returns whether a map has a value associated with a given key.</li>
+<li><code>keywords($args)</code> : Returns the keywords passed to a function that takes variable arguments.</li>
+</ul>
 <p>Voila! It&rsquo;s Sass magicery!</p>
 <p>P.s. please never actually use this. It&rsquo;s terrible for performance, but perfect for just playing with code for fun :)</p></article></body></html>

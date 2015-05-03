@@ -31,9 +31,11 @@ We lose one of our pixels. We must mitigate this by starting the positioning at 
 
 ![](../images/posts/pixel-art/fixed-pos.png)
 
+<div class="caption">You can play with the gist <a href="http://sassmeister.com/gist/0b58be44ea6d6b689c27">here</a></div>
+
 ## Sass Data Type Functions
 
-As an Almost-Turing-Complete-Programming-Language, the organizational structures and data types that Sass provides us with are pretty darn powerful. These include *maps*, which you can nest, and *lists*, which you can use within *maps*. Sass also inherently provides us with a really nice set of functions to access and manipulate items from such structures. Here are just a few, as sourced from the [SassScript docs](http://sass-lang.com/documentation/Sass/Script/Functions.html):
+As an Almost-Turing-Complete-Programming-Language, the organizational structures and data types that Sass provides us with are pretty darn powerful. These include *maps*, which you can nest, and *lists*, which you can use within *maps*. Sass also inherently provides us with a really nice set of functions to access and manipulate items from such structures. Let's start by looking at list functions, as sourced from the [SassScript docs](http://sass-lang.com/documentation/Sass/Script/Functions.html):
 
 ### List Functions:
 
@@ -46,31 +48,23 @@ As an Almost-Turing-Complete-Programming-Language, the organizational structures
 - `index($list, $value)` : Returns the position of a value within a list. *(You can also use this to determine if a value exists within a list)*
 - `list-separator(#list)` : Returns the separator of a list.
 
-### Map Functions:
-
-All list functions also work for maps. Sass treats them as lists of pairs. It also comes with some additional map functions.
-
-- `map-get($map, $key)` : Returns the value in a map associated with a given key.
-- `map-merge($map1, $map2)` : Merges two maps together into a new map.
-- `map-remove($map, $keys…)` : Returns a new map with keys removed.
-- `map-keys($map)` : Returns a list of all keys in a map.
-- `map-values($map)` : Returns a list of all values in a map.
-- `map-has-key($map, $key)` : Returns whether a map has a value associated with a given key.
-- `keywords($args)` : Returns the keywords passed to a function that takes variable arguments.
-
-
 ## Reading a Matrix
 
 Okay, so now that we have a baseline on the types of things we can do with Sass' data types, let's manipulate them. The **matrix** that we will be referring to looks a little bit like this:
 
-```scss
-// this is a diamond
+<img style="width: 180px; float:left; margin: 0 2em" src="../images/posts/pixel-art/pixel-diamond.png" alt="pixel diamond">
+
+<!-- ```scss -->
+<pre style="width: 50%"><code>// this is a diamond:
 (o o x o o)
 (o x o x o)
 (x o o o x)
 (o x o x o)
 (o o x o o)
-```
+</code></pre>
+<!-- ``` -->
+
+<div style="clear:both"></div>
 
 It's really just a glorified space-separated list of space-separated lists within parenthesis *(#meta)*. We can loop through this list and check the value of each item in the list to build a *new* list, essentially mapping each pixel value (item in the original list) with an output function (a box shadow will be generated). This sounds confusing, but let me try to break it down:
 
@@ -210,6 +204,10 @@ $diamond: (o o x o o)
 }
 ```
 
+And our result:
+
+![pixel diamond](../images/posts/pixel-art/pixel-diamond.png)
+
 ## Colormapping Pixels
 
 We can also use this same technique to get a bit more advanced. Let's make the mushroom from Mario! First step is to figure out the grid:
@@ -298,9 +296,20 @@ We'll also want to add a warning as a safeguard to explain why something may hav
 }
 ```
 
-## Extending the Grid
+## Maps and Mixins
 
-Let's do a few more pixelized arts! We can make this even more fun and DRY via a mixin to run through a map of pixel-mapped art.
+Let's do a few more pixelized arts! We can make this even more fun and DRY via a mixin to run through a map of pixel-mapped art. All list functions also work for maps. Sass treats them as lists of pairs. It also comes with some additional map functions.
+
+### Map Functions:
+
+- `map-get($map, $key)` : Returns the value in a map associated with a given key.
+- `map-merge($map1, $map2)` : Merges two maps together into a new map.
+- `map-remove($map, $keys…)` : Returns a new map with keys removed.
+- `map-keys($map)` : Returns a list of all keys in a map.
+- `map-values($map)` : Returns a list of all values in a map.
+- `map-has-key($map, $key)` : Returns whether a map has a value associated with a given key.
+- `keywords($args)` : Returns the keywords passed to a function that takes variable arguments.
+
 
 Voila! It's Sass magicery!
 
