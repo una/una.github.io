@@ -2,7 +2,7 @@
 layout: post
 title: Sass Pixel Art
 permalink: /sass-pixel-art
-date: '2015-05-03'
+date: '2015-05-04'
 comments: true
 tags:
 - drop-shadow
@@ -10,7 +10,7 @@ tags:
 - art
 - sass
 - scss
-header-bg: ../images/posts/terminal.jpg
+header-bg: ../images/posts/pixel-art/cross-stitch-icons.png
 subtitle: Understanding drop-shadow pixel art.
 ---
 
@@ -310,7 +310,12 @@ Let's do a few more pixelized arts! We can make this even more fun and DRY via a
 - `map-has-key($map, $key)` : Returns whether a map has a value associated with a given key.
 - `keywords($args)` : Returns the keywords passed to a function that takes variable arguments.
 
+I'm going to make a few more mario pixel art items, so I'm expanding my color pallet and I'm going to put them all in a map. Then I'll just write a mixin to read the map and create the pixel art! Because we're dynamically determining size via length of the `$row`, we can mix and match matrix grid sizes.
+
+You can also use anything to denote colors (letters, numbers, words) but I recommend sticking to single character strings because it helps you see the pixels visually by keeping them all mono-spaced.
+
+** create pixel mapper?
 
 Voila! It's Sass magicery!
 
-P.s. please never actually use this. It's terrible for performance, but perfect for just playing with code for fun :)
+**P.S. oh my gosh, please never actually use this in production. It's terrible for performance, but perfect for just playing with code for fun :)**
