@@ -11,7 +11,7 @@ tags:
 - sass
 - scss
 header-bg: ../images/posts/pixel-art/cross-stitch-icons.png
-subtitle: Understanding drop-shadow pixel art.
+subtitle: Pixel art is so much fun! This blog post walks through how to read a matrix-like list with Sass and generate Mario pixel art from box shadows.
 ---
 
 It is 6:37 AM and I am at an airport. This is where to best ideas happen right? I've been perusing the Internet to find some practical examples of Sass lists using list functions in production (somewhat unsuccessfully) and stumbled upon [this](http://codepen.io/jackarmley/pen/LohqG) really awesome CodePen by [@shadowmint](https://twitter.com/shadowmint) and [@jackarmley](https://twitter.com/jackarmley). Hmm. Just the thing I needed for in-flight entertainment for the duration of the trip. I wanted to get down to nitty gritty and understand what was happening here.
@@ -215,25 +215,25 @@ We can also use this same technique to get a bit more advanced. Let's make the m
 
 ![](../images/posts/pixel-art/mushroom-dude.png)
 
-Then, we can use these numbers and color values to make some colored pixel art. Let's use **w** for **white**, **r** for **red**, **b** for **black**, and **o** for **transparent** pixels. With that setup, we can turn the mario mushroom into a matrix of pixel values:
+Then, we can use these numbers and color values to make some colored pixel art. Let's use **w** for **white**, **r** for **red**, **k** for **black**, and **o** for **transparent** pixels. With that setup, we can turn the mario mushroom into a matrix of pixel values:
 
 ```
-(o o o o o b b b b b b o o o o o)
-(o o o b b r r r r w w b b o o o)
-(o o b w w r r r r w w w w b o o)
-(o b w w r r r r r r w w w w b o)
-(o b w r r w w w w r r w w w b o)
-(b r r r w w w w w w r r r r r b)
-(b r r r w w w w w w r r w w r b)
-(b w r r w w w w w w r w w w w b)
-(b w w r r w w w w r r w w w w b)
-(b w w r r r r r r r r r w w r b)
-(b w r r b b b b b b b b r r r b)
-(o b b b w w b w w b w w b b b o)
-(o o b w w w b w w b w w w b o o)
-(o o b w w w w w w w w w w b o o)
-(o o o b w w w w w w w w b o o o)
-(o o o o b b b b b b b b o o o o)
+(o o o o o k k k k k k o o o o o)
+(o o o k k r r r r w w k k o o o)
+(o o k w w r r r r w w w w k o o)
+(o k w w r r r r r r w w w w k o)
+(o k w r r w w w w r r w w w k o)
+(k r r r w w w w w w r r r r r k)
+(k r r r w w w w w w r r w w r k)
+(k w r r w w w w w w r w w w w k)
+(k w w r r w w w w r r w w w w k)
+(k w w r r r r r r r r r w w r k)
+(k w r r k k k k k k k k r r r k)
+(o k k k w w k w w k w w k k k o)
+(o o k w w w k w w k w w w k o o)
+(o o k w w w w w w w w w w k o o)
+(o o o k w w w w w w w w k o o o)
+(o o o o k k k k k k k k o o o o)
 ```
 
 Now, when we read the lines, we want to adjust for each of these colors:
@@ -242,7 +242,7 @@ Now, when we read the lines, we want to adjust for each of these colors:
 @if $item == w{
   $sh:  $sh + ($j*$size) + ' ' + ($i*$size) + ' ' + white;
 }
-@if $item == b {
+@if $item == k {
   $sh:  $sh + ($j*$size) + ' ' + ($i*$size) + ' ' + black;
 }
 @if $item == r {
@@ -260,7 +260,7 @@ We can make this a little bit more modular by abstracting the pixel color variab
 $pixel-color-map: (
   'r' : #f00,
   'w': #fff,
-  'b': #000,
+  'k': #000,
   'o': transparent
 );
 
@@ -268,8 +268,8 @@ $pixel-color-map: (
 @if $item == 'w' {
   $sh:  $sh + ($j*$size) + ' ' + ($i*$size) + ' ' + map-get($pixel-color-map, 'w');
 }
-@if $item == 'b' {
-  $sh:  $sh + ($j*$size) + ' ' + ($i*$size) + ' ' + map-get($pixel-color-map, 'b');
+@if $item == 'k' {
+  $sh:  $sh + ($j*$size) + ' ' + ($i*$size) + ' ' + map-get($pixel-color-map, 'k');
 }
 @if $item == 'r' {
   $sh:  $sh + ($j*$size) + ' ' + ($i*$size) + ' ' + map-get($pixel-color-map, 'r');
@@ -402,7 +402,7 @@ So now, let's write a *mixin* that will read that map and generate the styling f
 }
 ```
 
-So now that we have that mixin, we can loop through our map of Mario `$pixel-art` and apply it:
+So now that we have that mixin, we can loop through our map of Mario `$pixel-art` and generate some styled classes:
 
 ```scss
 // HTML:
@@ -431,8 +431,9 @@ There are lots of fun things you can do with this. For example, you can add a bo
 
 ![](../images/posts/pixel-art/mario-dudes-round.png)
 
-Voila! It's Sass magicery!
+Bam! It's Sass magicery! Make sure to check out the live demo in CodePen:
 
--- EMBED THE CODEPEN HERE --
+<p data-height="554" data-theme-id="5255" data-slug-hash="oXXRgg" data-default-tab="result" data-user="unax3" class='codepen'>See the Pen <a href='http://codepen.io/unax3/pen/oXXRgg/'>Sass-Generated Box Shadow Pixel Art!</a> by Una Kravets (<a href='http://codepen.io/unax3'>@unax3</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 **P.S. oh my gosh, please never actually use this in production. It's terrible for performance, but it's great to just play around with :)**
