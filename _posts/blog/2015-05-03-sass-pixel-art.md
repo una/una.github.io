@@ -10,6 +10,7 @@ tags:
 - art
 - sass
 - scss
+audio: pixel-art
 header-bg: ../images/posts/pixel-art/cross-stitch-icons.png
 subtitle: Pixel art is so much fun! This blog post walks through how to read a matrix-like list with Sass and generate Mario pixel art from box shadows.
 ---
