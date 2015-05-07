@@ -216,7 +216,7 @@ We can also use this same technique to get a bit more advanced. Let's make the m
 
 ![](../images/posts/pixel-art/mushroom-dude.png)
 
-Then, we can use these numbers and color values to make some colored pixel art. Let's use **w** for **white**, **r** for **red**, **k** for **black**, and **o** for **transparent** pixels. With that setup, we can turn the mario mushroom into a matrix of pixel values:
+Then, we can use these numbers and color values to make some colored pixel art. Let's use **w** for **white**, **r** for **red**, **k** for **black**, and **o** for **transparent** pixels. With that setup, we can turn the Mario mushroom into a matrix of pixel values:
 
 ```
 (o o o o o k k k k k k o o o o o)
@@ -288,7 +288,7 @@ But *we can surely clean that up to make a bit more DRY*, right? Let's check to 
 }
 ```
 
-We'll also want to add a warning with `@warn` as a *safeguard* to explain why something may have gone wrong or to remind us to define a color variable mapped to a pixel letter. If we want an invisible pixel, we simply need to add a transparent value to the color map:
+We'll also want to add a warning with `@warn` as a *safeguard* to explain why something may have gone wrong or to remind us to define a color variable mapped to a pixel letter:
 
 ```scss
 @if map-has-key($pixel-color-map, $item) {
@@ -297,6 +297,18 @@ We'll also want to add a warning with `@warn` as a *safeguard* to explain why so
   @warn 'there is no color specified in "$pixel-color-map" for: "#{$item}"';
 }
 ```
+
+To improve this further, [Ana Tudor](http://twitter.com/thebabydino) suggested making `$sh` into a real list by instantiating it with `$sh: ();` instead of  string `$sh: ""`, and using the following to skip over pixels mapped to `o` or *transparent*:
+
+```scss
+@if map-has-key($pixel-color-map, $item) and $item !='o' {
+  $sh:  $sh, ($j*$size) ($i*$size) map-get($pixel-color-map, $item);
+} @else {
+  @warn 'there is no color specified in "$pixel-color-map" for: "#{$item}"';
+}
+```
+
+This eliminates transparent box shadows and makes the file size of our output smaller.
 
 ## Maps and Mixins
 
@@ -375,13 +387,13 @@ I'm going to make a few more Mario pixel art elements, so I'm expanding my color
 
 <div class="caption">Note: you can technically do this without nested maps (as a single-level map of key-value pairs that are comma separated), but making a nested map feels cleaner to me.</div>
 
-You can also use anything to denote colors (letters, numbers, words) but I recommend sticking to single character strings because it helps you see the pixels visually by keeping them all mono-spaced.
+You can use anything to denote colors (letters, numbers, words) but I recommend sticking to single character strings because it helps to visually represent pixels by keeping them all mono-spaced.
 
 So now, let's write a *mixin* that will read that map and generate the styling for our elements by running the function. We won't be setting the color as being the same for each pixel this time, so we only need to provide the name of the pixel-art we're styling (`$matrix`) and the size of each pixel (`$size`), which we can set a default for if we want.
 
 ```scss
 @mixin style-item($matrix, $size){
-  position: relative; // pixels stack next to each other
+  position: relative;
 
   // set width & height of icon based on size of pixels
   width:($size * length(nth($matrix,1)));
@@ -397,7 +409,6 @@ So now, let's write a *mixin* that will read that map and generate the styling f
     width: $size;
     height: $size;
 
-    // this is where we make the stitch
     box-shadow: pixelize($matrix,$size);
   }
 }
