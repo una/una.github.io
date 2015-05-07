@@ -298,7 +298,7 @@ We'll also want to add a warning with `@warn` as a *safeguard* to explain why so
 }
 ```
 
-To improve this further, [Ana Tudor](http://twitter.com/thebabydino) suggested making `$sh` into a real list by instantiating it with `$sh: ();` instead of  string `$sh: ""`, and using the following to skip over pixels mapped to `o` or *transparent*:
+To improve this further, [Ana Tudor](http://twitter.com/anatudor) suggested using the following to skip over pixels mapped to `o` or *transparent*: We would need to instantiate *$sh* as a real list with `$sh: ();` instead of string `$sh: " "`:
 
 ```scss
 @if map-has-key($pixel-color-map, $item) and $item !='o' {
