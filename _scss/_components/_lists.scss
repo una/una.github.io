@@ -149,7 +149,7 @@ ol {
 		@extend %font-title;
 		font-weight: 100;
 		color: $color--blue;
-		left: 35%;
+		left: 40%;
 		position: absolute;
 
 		@include breakpoint(xs) {
@@ -160,7 +160,7 @@ ol {
 
 	.post-meta {
 		font-size: 80%;
-		left: 80%;
+		left: 75%;
 		position: absolute;
 
 		@include breakpoint(xs) {
