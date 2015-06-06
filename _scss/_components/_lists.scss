@@ -43,6 +43,16 @@ ol {
 		margin: 0 auto;
 		max-width: $list-width;
 		text-decoration: none;
+
+		&:visited h2 {
+			&:before {
+				content: '';
+				display: block;
+				width: 1em;
+				height: 1em;
+				border: 1px solid red;
+			}
+		}
 	}
 }
 
