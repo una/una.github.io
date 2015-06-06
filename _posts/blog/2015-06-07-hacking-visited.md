@@ -20,14 +20,14 @@ It's been on my to-do list for two weeks now &mdash; adding a `:visited` state t
 
 ## What is :visited?
 
-`:visited` is a pseudo-class that is used to style links which have already been accessed in the browser of a user. Basically when you can tell if you have already been to a link or haven't yet (Joel's post goes over this pretty well). <img src="../images/posts/visited/home.png" alt="example image" style="max-width: 480px; width: 100%;" class="right"> In the early days of the Internet, stylig visited links was extremely prevalant, and a great way to understand context of place in a digital space. We seem to have lost that practice, and I rarely see it in action these days.
+`:visited` is a pseudo-class that is used to style links which have already been accessed in the browser of a user. Basically when you can tell if you have already been to a link or haven't yet (Joel's post goes over this really nicely -- I'd highly recommend checking it out). <img src="../images/posts/visited/home.png" alt="example image" style="max-width: 480px; width: 100%;" class="right"> In the early days of the Internet, stylig visited links was extremely prevalant, and a great way to understand context of place in a digital space. We seem to have lost that practice, and I rarely see it in action these days.
 
 
 ## Limitations
 
 It all started fine and dandy. I applied `:visited` to the links on the home page and then accessed the child `h2` within them to change it's text color. This was a test. To avoid annoying my audience, what I really wanted was `:unvisited`, or to display a strikeout, or checkbox, or an *"Unread!"* badge. I could do any of those with the `:after` psuedo element. Well upon trying it, everything broke. So I did some [research](https://developer.mozilla.org/en-US/docs/Web/CSS/:visited) and discovered a few fun facts from reading the fine print:
 
-> "For privacy reasons, browsers strictly limit the styles you can apply using an element selected by this pseudo-class: only color, background-color, border-color, border-bottom-color, border-left-color, border-right-color, border-top-color, outline-color, column-rule-color, fill and stroke."
+> "For privacy reasons, browsers strictly limit the styles you can apply using an element selected by this pseudo-class: only color, background-color, border-color (and its sub-properties), outline-color, column-rule-color, and the color parts of fill and stroke."
 
 So you can only change color? Well, being the stubborn girl I am, I knew I could work around this. I first tried to inject style with Javascript. That was fine -- but it didn't overpower the style logic embedded in browsers. The method `getComputedStyle()` is disabled for this pseudo class. According to the official Mozilla developer documentation: **"the method getComputedStyle will lie."** Nice.
 
@@ -35,7 +35,7 @@ Then, I thought: maybe I can use the `color: transparent` to essentially hide th
 
 ## Why the Limitations?
 
-So what's up with this strict limitation anyway?
+So what's up with this strict limitation anyway? Well, the way that `:visited` works is by walking through the user's history to figure out what sites the they've visited. This means that a lot of information can be accessed about that user, and their identity could be inferred. In 2010, a lot of changes were made to limit access to this type of information. Under certain circumstances, the browser is more likely to [lie](https://developer.mozilla.org/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector) and mark a link as unvisited.
 
 ## It's Not Over Till I Win
 
@@ -106,9 +106,9 @@ h2 {
 
 ## What About Accessibility?
 
-You're right. Since some screen readers do read pseudo elements, we'll want to avoid hearing "unread" after every Blog post title. That would be inaccurate. Also, **fun fact:** screen readers typically do this work for us. They note if a link has been visited or not right away.
+You're right. Since some screen readers do read pseudo elements, we'll want to avoid hearing "unread" after every Blog post title. That would be inaccurate. Also, **fun fact:** screen readers typically do this work for us. They note if a link has been visited or not right away before reading the link text.
 
-To mitigate this, we can create a blank element as a placeholder next to the title with attribute `aria-hidden="true"` so that the screen reader doesn't try to read it. I'm using a `span` tag next to within the `h2`. The content of the header will still be read normally, but anything inside of `span` is ignored. In (a simplified example in broken [Liquid](https://docs.shopify.com/themes/liquid-documentation/basics)):
+To mitigate this, we can create a blank element as a placeholder next to the title with attribute `aria-hidden="true"` so that the screen reader doesn't try to read it. I'm using a `span` tag next to the `h2`. The content of the header will still be read normally, but anything inside of `span` is ignored. A simplified example in broken [Liquid](https://docs.shopify.com/themes/liquid-documentation/basics):
 
 ```html
 { % for post in posts % }
@@ -123,14 +123,13 @@ To mitigate this, we can create a blank element as a placeholder next to the tit
 { % endfor % }
 ```
 
-This will cause a need to make minor changes things in the CSS now. But a quick way to make that change would simply be to swap out `h2` with `span`. Because we're introducing a new element here, you don't have to reply on pseudo-elements, and can even write the content or apply the visuals directly inside of the span tag: `<span aria-hidden="true">(Unread!)</span>`.
-
+This will cause a need to make minor changes things in the CSS now. But a quick way to make that change would simply be to swap out `h2` with `span`. Because we're introducing a new element here, you don't have to rely on pseudo-elements, and can even write the content or apply the visuals directly inside of the span tag: `<span aria-hidden="true">(Unread!)</span>`.
 
 <img src="../images/posts/visited/list.png" alt="archive list" style="max-width: 460px; width: 100%;" class="left">
 
 The downside is that none of the posts will be denoted as "unread," but since it's an enhancement anyway, ignoring the tag seems to be a better option than falsely reading it with every single header (which, as pointed out earlier, is redundant anyway).
 
-So what have you [missed](http://una.im/archive/)?
+So check out the [archive](http://una.im/archive/) and you can see what you've missed out on!
 
 <div style="clear: both;"></div>
 
