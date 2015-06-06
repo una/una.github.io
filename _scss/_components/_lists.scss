@@ -13,7 +13,7 @@ ol {
 		position: relative;
 
 		span:after {
-			transition-duration: .5s;
+			@extend %transition-duration;
 			content: '(unread!)';
 			font-size: .6em;
 			vertical-align: middle;
@@ -38,7 +38,7 @@ ol {
 		&:hover {
 			background-color: $color--lightgrey;
 
-			a:visited h2 span:after {
+			a:visited span:after {
 				color: $color--lightgrey;
 			}
 		}
@@ -59,7 +59,7 @@ ol {
 		max-width: $list-width;
 		text-decoration: none;
 
-		&:visited h2 span:after {
+		&:visited span:after {
 			color: white;
 		}
 	}
@@ -102,7 +102,7 @@ ol {
 }
 
 %link-out-icon {
-	&:after {
+	span:before {
 		content: '';
 		display: inline-block;
 		background-image: url(../images/linkout-icon.svg);
