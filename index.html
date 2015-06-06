@@ -16,6 +16,7 @@ title: Home
          <a href="{{ post.url | prepend: site.baseurl }}">
              <h2 class="post-title">
                  {{ post.title }}
+                 <span aria-hidden="true" class="post-status"></span>
              </h2>
              <p class="post-meta">Posted on {{ post.date | date: "%B %-d, %Y" }}</p>
              {% if post.subtitle %}
