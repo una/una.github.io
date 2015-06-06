@@ -10,6 +10,16 @@ ol {
 		color: $color--blue;
 		margin-bottom: .2em;
 		line-height: 1;
+		position: relative;
+
+		&:after {
+			transition-duration: .5s;
+			content: '(unread!)';
+			font-size: .5em;
+			vertical-align: middle;
+			display: inline-block;
+			color: white;
+		}
 	}
 
 	.post-meta {
@@ -26,6 +36,10 @@ ol {
 
 		&:hover {
 			background-color: $color--lightgrey;
+
+			h2:after {
+				color: $color--lightgrey;
+			}
 		}
 	}
 
@@ -45,12 +59,9 @@ ol {
 		text-decoration: none;
 
 		&:visited h2 {
-			&:before {
-				content: '';
-				display: block;
-				width: 1em;
-				height: 1em;
-				border: 1px solid red;
+
+			&:after {
+				color: $color--purple;
 			}
 		}
 	}
