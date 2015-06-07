@@ -56,7 +56,7 @@ h2 {
 }
 ```
 
-Then I had to apply the `:visited` pseudo class to all of the links in the list and target a child element `h2:after` to effectively *"hide"* it. I'm "hiding" it here by giving it the same color as the background (white). If you're not familiar with the power of the Sass ampersand, I'd recommend checking out [this post](http://localhost:3000/2014/03/06/sass-snippets-the-almighty-ampersand.html).
+Then I had to apply the `:visited` pseudo class to all of the links in the list and target a child element `h2:after` to effectively *"hide"* it. I'm "hiding" it here by giving it the same color as the background (white). If you're not familiar with the power of the Sass ampersand, I'd recommend checking out [this post](http://una.im//2014/03/06/sass-snippets-the-almighty-ampersand.html).
 
 ```scss
 a {
