@@ -10,8 +10,11 @@ title: Archive
         {% unless post.event %}
       <li class="{%if post.link-out%}link-out{%endif%}">
       <a href="{{ post.url }}">
-        	<h2>{{ post.title }}</h2>
-        	<span class="post-meta">{{ post.date | date_to_string }}</span>
+      	<h2 class="post-title">
+            {{ post.title }}
+            <span aria-hidden="true" class="post-status"></span>
+        </h2>
+      	<span class="post-meta">{{ post.date | date_to_string }}</span>
       </a>
     </li>
         {% endunless %}
