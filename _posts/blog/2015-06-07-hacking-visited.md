@@ -16,7 +16,7 @@ header-bg: ../images/posts/visited/bg.jpg
 subtitle: Hacking the :visited selector to show unread posts. We'll look at the limitations and my little work-around.
 ---
 
-It's been on my to-do list for two weeks now &mdash; adding a `:visited` state to my blog posts. I was inspired after reading [this](http://joelcalifa.com/blog/revisiting-visited/) blog post by [Joel Califa](http://twitter.com/joelcalifa), and thought "Heck yeah. That's a great idea. I can use it on my blog to represent links that haven't been read yet." But like most things on the Internet, it looked a lot cleaner from a distance.
+It's been on my to-do list for two weeks now &mdash; adding a `:visited` state to my blog posts. I was inspired after reading [this](http://joelcalifa.com/blog/revisiting-visited/) blog post by [Joel Califa](http://twitter.com/notdetails), and thought "Heck yeah. That's a great idea. I can use it on my blog to represent links that haven't been read yet." But like most things on the Internet, it looked a lot cleaner from a distance.
 
 ## What is :visited?
 
