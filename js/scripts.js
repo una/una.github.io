@@ -44,5 +44,19 @@ window.BLOG || (BLOG = {});
   addEmoji();
   console.log('Hello, beautiful :)');
 
+  //Google Fonts
+  WebFontConfig = {
+    google: { families: [ 'Alegreya+Sans+SC:400,900:latin', 'Open+Sans:300italic,400,300,700:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+
   BLOG.common.init();
 })(jQuery, window, document);
