@@ -13,6 +13,7 @@ tags:
 - sass
 - scss
 header-bg: ../images/posts/visited/bg.jpg
+audio: audio-visited
 subtitle: Hacking the :visited selector to show unread posts. We'll look at the limitations and my little work-around.
 ---
 
@@ -29,7 +30,7 @@ It all started fine and dandy. I applied `:visited` to the links on the home pag
 
 > "For privacy reasons, browsers strictly limit the styles you can apply using an element selected by this pseudo-class: only color, background-color, border-color (and its sub-properties), outline-color, column-rule-color, and the color parts of fill and stroke."
 
-So you can only change color? Well, being the stubborn girl I am, I knew I could work around this. I first tried to inject style with Javascript. That was fine -- but it didn't overpower the style logic embedded in browsers. The method `getComputedStyle()` is disabled for this pseudo class. According to the official Mozilla developer documentation: **"the method getComputedStyle will lie."** Nice.
+So you can only change color? Well, being the stubborn girl I am, I knew I could work around this. I first tried to inject style with JavaScript. That was fine -- but it didn't overpower the style logic embedded in browsers. The method `getComputedStyle()` is disabled for this pseudo class. According to the official Mozilla developer documentation: **"the method getComputedStyle will lie."** Nice.
 
 Then, I thought: maybe I can use the `color: transparent` to essentially hide the pseudo element content and only show the color when I want to apply them! I'm changing only the color, right? But when I did this, *all* of the pseudo elements (not just the visited ones) disappeared... *Wat?* ... It turns out that the `:visited` tag will always pull its parent's alpha channel. So, even trying `rgba(0,0,0,0)` will make everything disappear.
 
@@ -69,7 +70,7 @@ a {
 }
 ```
 
-Awesome! So we're almost there. `:visited` is working. I've gotten relatively "hidden" badges. But then there's this hover... I'm applying a lighgrey background to each list-item when hovering over them, and I need to make sure I don't give away my pseudo-element secrets when hovering. So I simply just need to compensate:
+Awesome! So we're almost there. `:visited` is working. I've gotten relatively "hidden" badges. But then there's this hover... I'm applying a lightgrey background to each list-item when hovering over them, and I need to make sure I don't give away my pseudo-element secrets when hovering. So I simply just need to compensate:
 
 ```scss
 // set global transition:
@@ -106,7 +107,7 @@ h2 {
 
 ## What About Accessibility?
 
-You're right. Since some screen readers do read pseudo elements, we'll want to avoid hearing "unread" after every Blog post title. That would be inaccurate. Also, **fun fact:** screen readers typically do this work for us. They note if a link has been visited or not right away before reading the link text.
+You're right. Since some screen readers do read pseudo elements, we'll want to avoid hearing "unread" after every blog post title. That would be inaccurate. Also, **fun fact:** screen readers typically do this work for us. They note if a link has been visited or not right away before reading the link text.
 
 To mitigate this, we can create a blank element as a placeholder next to the title with attribute `aria-hidden="true"` so that the screen reader doesn't try to read it. I'm using a `span` tag next to the `h2`. The content of the header will still be read normally, but anything inside of `span` is ignored. A simplified example in broken [Liquid](https://docs.shopify.com/themes/liquid-documentation/basics):
 
