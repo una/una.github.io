@@ -13,17 +13,17 @@
   font-family: 'Alegreya Sans SC', sans-serif;
   -moz-font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
-  font-weight: 900; 
+  font-weight: 900;
 }
 
 %font-title-sm {
   font-family: 'Alegreya Sans SC', sans-serif;
-  font-weight: 800; 
+  font-weight: 800;
 }
 
 %font-blockquote {
   font-family: 'Alegreya Sans SC', sans-serif;
-  font-weight: 400; 
+  font-weight: 400;
 }
 
 %font-icon {
@@ -53,6 +53,12 @@
   font-size: 80%;
   max-width: 300px;
   padding: .5em 1em;
+}
+
+%intro-p {
+  font-size: 115%;
+  border-left: 2px solid $color--main;
+  padding-left: 1em;
 }
 
 em {

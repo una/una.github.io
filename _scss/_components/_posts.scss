@@ -7,12 +7,13 @@
 	}
 
 	p {
-		// @extend %clearfix;
 		&:first-child {
-		  font-size: 115%;
-		  border-left: 2px solid $color--main;
-		  padding-left: 1em;
+		  @extend %intro-p;
 		}
+	}
+
+	.intro-p {
+		@extend %intro-p;
 	}
 
 	ul,
@@ -20,7 +21,6 @@
 		margin: 1em 3em;
 		padding-right: 2em;
 		color: $color--copy;
-
 
 		@include breakpoint(xs) {
 			margin: 1em;
