@@ -7,8 +7,9 @@ comments: true
 tags:
 - conference
 - travel
-header-bg: ../images/posts/travel-guide/conf-travel-guide.png
-subtitle: With the fall conference season coming up, here are some travel tips to help make your life a little bit easier.
+- tips
+header-bg: ../images/posts/travel-guide/bg.jpg
+subtitle: With preparations for the fall conference season coming up, here are some travel tips to help make your life a little bit easier.
 ---
 
 <style>
