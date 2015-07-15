@@ -9,6 +9,7 @@ tags:
 - travel
 - tips
 header-bg: ../images/posts/travel-guide/bg.jpg
+audio: techconftravelguide
 subtitle: With preparations for the fall conference season coming up, here are some travel tips to help make your life a little bit easier.
 ---
 
