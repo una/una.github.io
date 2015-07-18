@@ -3,6 +3,7 @@ body {
   @include fontsize(12);
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 
   @include breakpoint(md) {
     @include fontsize(11);
