@@ -44,5 +44,16 @@ window.BLOG || (BLOG = {});
   addEmoji();
   console.log('Hello, beautiful :)');
 
+  // defer CSS loading
+  var cb = function() {
+  var l = document.createElement('link'); l.rel = 'stylesheet';
+  l.href = 'css/main.min.css';
+  var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+  };
+  var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+  webkitRequestAnimationFrame || msRequestAnimationFrame;
+  if (raf) raf(cb);
+  else window.addEventListener('load', cb);
+
   BLOG.common.init();
 })(jQuery, window, document);
