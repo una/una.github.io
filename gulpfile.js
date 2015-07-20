@@ -49,19 +49,18 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
 });
 
 /**
- * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
+ * Compile files from _scss into both css and _includes
  */
 gulp.task('sass', function () {
+    console.log('Running Sass');
     return gulp.src('_scss/main.scss')
-        .pipe(sass({
-            includePaths: ['scss'],
-            onError: browserSync.notify
-        }))
+        .pipe(sass())
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(minifycss())
         .pipe(rename('main.min.css'))
+        .pipe(gulp.dest('css'))
         .pipe(gulp.dest('_includes'))
-        .pipe(browserSync.reload({stream:true}))
+        .pipe(browserSync.reload({stream:true}));
 });
 
 /**
@@ -161,7 +160,7 @@ gulp.task('psi', ['psi-seq'], function() {
  * Minify images too
  */
 gulp.task('watch', function () {
-    gulp.watch('_scss/**/*.scss', ['sass', 'jekyll-rebuild']);
+    gulp.watch('_scss/**/*.scss', ['sass', 'jekyll-build']);
     gulp.watch(['index.html', 'archive.html', '_layouts/*.html', '_includes/*.html', '_posts/**/*', 'archive/*', 'speaking/*'], ['jekyll-rebuild']);
     gulp.watch(['images/*'], ['imagemin'])
 });
