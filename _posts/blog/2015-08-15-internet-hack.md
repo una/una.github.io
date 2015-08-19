@@ -10,7 +10,7 @@ tags:
 - web
 - internet
 - history
-subtitle: subtitle
+subtitle: From HTTP2, Flexbox, CSS Filters, and ES6, the Internet we know today is built on hacks. Lets explore some of those hacks and solutions.
 header-bg: ../images/posts/web-hack/opte-project.png
 ---
 
