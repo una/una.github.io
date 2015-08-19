@@ -100,7 +100,7 @@ body {
 }
 ```
 
-Not the cleanest solution. But now with `backdrop-filter` which just *dropped* a few days [ago](https://www.webkit.org/blog/3632/introducing-backdrop-filters/) (sorry i'm not sorry about that pun), this hack will become reality! It looks a little bit like this:
+Not the cleanest solution. But now with `backdrop-filter` which just *dropped* a few days [ago](https://www.webkit.org/blog/3632/introducing-backdrop-filters/) (sorry i'm not sorry about that pun), this hack will become reality! It looks a little bit like this and the code is only one line of CSS:
 
 <video controls style="width:100%" src="../images/posts/web-hack/backdrop-filter.mov"></video>
 <div class="caption"> We're still a long way to go to <a href="http://caniuse.com/#feat=css-backdrop-filter">adoption</a>, but it's step one!
@@ -110,16 +110,12 @@ Not the cleanest solution. But now with `backdrop-filter` which just *dropped* a
 
 All of Javascript is a hack. Patterns, things like classes now being available in ES6
 
-I don't even want to get into all of the ways that we [hack]() [Javascript]() to make it work. One of the classic ways is by creating fake [classes](http://www.phpied.com/3-ways-to-define-a-javascript-class/) and implementing conventions like <strong style="text-transform:uppercase">capitalizing constants</strong>. [ES6](https://github.com/lukehoban/es6features) will save us from these hacks.
+I don't even want to get into all of the ways that we hack Javascript to make it work because I can smell a "well actually" from here. One of the classic ways is by creating fake [classes](http://www.phpied.com/3-ways-to-define-a-javascript-class/) and implementing conventions like <strong style="text-transform:uppercase">capitalizing constants</strong>. [ES6](https://github.com/lukehoban/es6features) will save us from these hacks.
 
 ## Conclusion
 
 The internet is a hack. It is built on hacks and it will continue to be built on hacks as long as people are building for it.
 
-And all we can really do is keep building. Complain on Twitter, figure out a hack to fix it, then submit a proposal to the W3C and make change. Everything we build is a hack. But those hacks have become the cornerstones of what the internet is (or is becoming). It's a **great** thing. We, as a collective and user base of the web are paving the cowpaths of this thing we are building together instead of leaving it to a committee forging a plan in stone. The web is a democracy! And this is evident for anybody who has ever worked in product design.
+And all we can really do is keep building. Complain on Twitter, go to conferences, have intellegent discussion, figure out a hack to fix it, then submit a proposal to instigate change. Everything we build is a hack. But those hacks have become the cornerstones of what the internet is (and is becoming). It's a **great** thing. <a class="twitter-share">We, as a collective and user base of the web are paving the cowpaths of this thing we are building together.</a>
 
-People will start doing things you don't expect them to, and using your product in unintended ways (I use Snapchat to check the weather). Instead of fighting users and re-directing them, embrace it! This is how innovations are created and then standards are built from those innovations. Right now, there is begining to be talk a
-
-
-
-The web is getting better because we are hacking it more. So, what's next? Taking the web offline?
+The web is getting better because we are hacking it to make it fit our needs. So, what's next?
