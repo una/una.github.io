@@ -114,8 +114,8 @@ Look at some of its most highlighted features: classes, generators, constant var
 
 ## Conclusion
 
-The internet is a hack. It is built on hacks and it will continue to be built on hacks as long as people are building for it.
+The internet is a hack. It is built on hacks and it will continue to be built on hacks as long as people are building for it. But hack is not a dirty word! Messing with the way things are "supposed to be" is important to the ecosystem of the internet.
 
-And all we can really do is keep building. Complain on Twitter, go to conferences, have intellegent discussion, figure out a hack to fix it, then submit a proposal to instigate change. Everything we build is a hack. But those hacks have become the cornerstones of what the internet is (and is becoming). It's a **great** thing. <a class="twitter-share">We, as a collective and user base of the web are paving the cowpaths of this thing we are building together.</a>
+Basically, all we can really do is keep building. Complain on Twitter, go to conferences, have intellegent discussion, figure out a hack to fix it, then submit a proposal to instigate change. Everything we build is a hack. But those hacks have become the cornerstones of what the internet is (and is becoming). It's a **great** thing. <a class="twitter-share">We, as a collective and user base of the web are paving the cowpaths of this thing we are building together.</a>
 
 The web is getting better because we are hacking it to make it fit our needs. So, what's next?
