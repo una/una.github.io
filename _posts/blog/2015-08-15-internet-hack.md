@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Internet We Know is Built on Hacks
-permalink: /internet-is-hacks
+permalink: /Internet-is-hacks
 date: '2015-08-15'
 comments: true
 tags:
@@ -18,21 +18,21 @@ The Internet we know today is built on hacks, and that's a great thing. All of t
 
 ## HTML
 
-The World Wide Web was born in 1989, based on one single, simple, yet extremely powerful building block of the internet: the link. Tim Berners Lee wrote a paper at CERN called "Information Management: A Proposal," in which he outlined an ever-evolving pool of information &mdash; "a universal linked information system" where "generality and portability are more important than fancy graphics techniques and complex extra facilities. <sup>[1](http://www.independent.co.uk/life-style/gadgets-and-tech/news/25-years-of-the-world-wide-web-the-inventor-of-the-web-tim-bernerslee-explains-how-it-all-began-9185040.html)</sup>"
+The World Wide Web was born in 1989, based on one single, simple, yet extremely powerful building block of the Internet: the link. Tim Berners Lee wrote a paper at CERN called "Information Management: A Proposal," in which he outlined an ever-evolving pool of information &mdash; "a universal linked information system" where "generality and portability are more important than fancy graphics techniques and complex extra facilities. <sup>[1](http://www.independent.co.uk/life-style/gadgets-and-tech/news/25-years-of-the-world-wide-web-the-inventor-of-the-web-tim-bernerslee-explains-how-it-all-began-9185040.html)</sup>"
 
 That, in a nutshell, is why the web was created. It was a system of information sharing and linking, leading users to be able to connect between documents and share content. There is beauty in that simplicity of pure content sharing and information transfer.
 
 ![Opte Project](../../images/posts/web-hack/opte-project.png)
 <div class="caption">An image from the [Opte Project](http://www.opte.org/), which visualizes Internet connections.</div>
 
-But we wanted those fancy graphics techniques and complex add-ons. Unfortunately, all we really had to work with was basic HTML that you couldn't even nest that deep, and anchor tag &mdash; the manifestation of a link.
+But while we wanted those fancy graphics and complex add-ons, unfortunately, all we really had to work with was basic HTML that you couldn't even nest too deeply, and the anchor tag as the manifestation of a link.
 
 <figure class="right">
   <img src="../images/posts/web-hack/html-elements.png" alt="html 1.0 elements" style="max-width: 460px; width: 100%;">
   <figcaption>The <a href="http://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt">HTML 1.0 Draft Spec</a> (it's super interesting &mdash; highly recommend giving it a read!</figcaption>
 </figure>
 
-This link has become the basis of the web. Seriously. If you think about it, <a class="twitter-share">everything is a link: from images to CSS styles to scripts.</a> They are all just links.
+This link has become the basis of the web. Seriously. If you think about it, <a class="twitter-share">everything is a link: from images to CSS styles to scripts.</a> They are all just links. We never really created a new system, we just continued to link assets regardless of type *into* the page instead of *outside* of it.
 
 <ul>
   <li> Images: <code>&lt;img src="&lt;LINK&gt;"&gt;</code></li>
@@ -40,7 +40,7 @@ This link has become the basis of the web. Seriously. If you think about it, <a 
   <li> Scripts: <code>&lt;script src="&lt;LINK&gt;"&gt;</code></li>
 </ul>
 
-These have become the building blocks of the web today, but at its core, you can pretty much call this a hack. Instead of creating a new system, we've just continued linking elements regardless of type. And it's just getting worse and worse. The original purpose of the link was pure content connectivity, but here we are, hacking the link to extend it as much as we can and cluttering the web as we go.
+These have become the building blocks of the web today, but at its core, you can pretty much think of this as a hack. And it's just getting worse and worse. The original purpose of the link was pure content connectivity, but here we are, hacking the link to extend it as much as we can and cluttering the web as we go.
 
 <figure class="left">
   <img src="../images/posts/web-hack/webpage-sizes.jpg" alt="In about 7 months average web page size will be same as Doom install image." style="max-width: 460px; width: 100%;">
@@ -54,14 +54,14 @@ Because this proliferation of links we now inject into each and every web page, 
 
 ## CSS
 
-We looked at the HTML Tags spec, so naturally, its time to take a step [back](http://www.w3.org/TR/REC-CSS1-961217) in time again and see what happened to the way we visually represent content when webpages transcended being pure content and became hubs of information. They needed what is now the bane of many developers' existance (and our next hack): **layout.**
+We looked at the HTML Tags spec, so naturally, its time to take a step [back](http://www.w3.org/TR/REC-CSS1-961217) in time again and see what happened to the way we visually represent content when web pages transcended being pure content and became hubs of information. They needed what is now the bane of many developers' existence (and our next hack): **layout.**
 
 <figure class="right">
   <img src="../images/posts/web-hack/css.gif" alt="flexbox justify">
   <figcaption>A physical representation of CSS.</figcaption>
 </figure>
 
-Remember table-based layouts? By 1998, this was our fancy solution (read:hack) to website presentation! *Why would we lay out a web-page document, with headers and navigation and content elements, as a table?* Because it's all we had. You could create nested layouts and it was great and everyone complained and nothing has changed.
+Remember table-based layouts? By 1998, this was our fancy solution (read: hack) to website presentation! *Why would we lay out a web-page document, with headers and navigation and content elements, as a table?* Because it's all we had. You could create nested layouts and it was great and everyone complained and nothing has changed.
 
 But because this didn't make any semantic sense, we did the next best thing: *floated layouts*. Which were also a mess.
 
@@ -100,7 +100,7 @@ body {
 }
 ```
 
-Not the cleanest solution. But now with `backdrop-filter` which just *dropped* a few days [ago](https://www.webkit.org/blog/3632/introducing-backdrop-filters/) (sorry i'm not sorry about that pun), this hack will become reality! It looks a little bit like this and the code is only one line of CSS:
+Not the cleanest solution. But now with `backdrop-filter` which just *dropped* a few days [ago](https://www.webkit.org/blog/3632/introducing-backdrop-filters/) (sorry I'm not sorry about that pun), this hack will become reality! It looks a little bit like this and the code is only one line of CSS:
 
 <video controls style="width:100%" src="../images/posts/web-hack/backdrop-filter.mov"></video>
 <div class="caption"> We're still a long way to go to <a href="http://caniuse.com/#feat=css-backdrop-filter">adoption</a>, but it's step one!
@@ -114,9 +114,12 @@ Look at some of its most highlighted features: classes, generators, constant var
 
 ## Conclusion
 
-Basically if you think about it, the internet is just a hack. It is built on hacks and it will continue to be built on hacks as long as people are building for it. Hacking is all we can really do in the meantime to make it better. We complain on Twitter, go to conferences, have intellegent discussion, figure out a hack to fix it, then submit a proposal to instigate change.
+Basically if you think about it, the Internet is just a hack. It is built on hacks and it will continue to be built on hacks as long as people are building for it. Hacking is all we can really do in the meantime to make it better. We complain on Twitter, go to conferences, have intelligent discussion, figure out a hack to fix it, then submit a proposal to instigate change.
 
-Everything we build is a hack. And these hacks have become the cornerstones of what the internet is (and is becoming). It's a **great** thing that <a class="twitter-share">we, as a collective and user base of the web are paving the cowpaths of the internet.</a> We're building together, deciding together, and hacking it together together.
+Everything we build is a hack. And these hacks have become the cornerstones of what the Internet is (and is becoming). It's a **great** thing that <a class="twitter-share">we, as a collective and user base of the web are paving the cow-paths of the Internet.</a> We're building together, deciding together, and hacking it together together.
 
-*Hack is not a dirty word*, and messing with the way things are "supposed to be" is vital to the ecosystem of the internet. Keep on hacking and remember that perfect solutions never spring out of first iterations.
+*Hack is not a dirty word*, and messing with the way things are "supposed to be" is vital to the ecosystem of the Internet. Keep on hacking and remember that perfect solutions never spring out of first iterations.
 
+<small style="float: none;">Big thank you to <a href="http://twitter.com/rmurphey">Rebecca</a> for reading over & debating some of the points in this post with me!</small>
+
+<div class="clear"></div>
