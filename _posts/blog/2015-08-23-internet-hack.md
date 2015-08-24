@@ -2,7 +2,7 @@
 layout: post
 title: The Internet We Know is Built on Hacks
 permalink: /Internet-is-hacks
-date: '2015-08-15'
+date: '2015-08-23'
 comments: true
 tags:
 - development
@@ -108,9 +108,9 @@ Not the cleanest solution. But now with `backdrop-filter` which just *dropped* a
 
 ## Javascript
 
-I can't round out the three pillars of web development without at least mentioning Javascript. I can't even begin to get into all of the ways that we [hack](http://blog.mdnbar.com/javascript-common-tricks) Javascript and invent faux-patterns to make it work for us. Some of these classic techniques include things like creating fake [classes](http://www.phpied.com/3-ways-to-define-a-javascript-class/) and implementing conventions like <strong style="text-transform:uppercase">capitalizing constants</strong>. But those conventions are just like saying *"don't be an escalefter"* and are really expectations only understood by people who frequent the *(DC Metro)* system. [ES6](https://github.com/lukehoban/es6features) is the solution that will (begin to) save us from these hacks, but that too, isn't completely ideal yet.
+I can't round out the three pillars of web development without at least mentioning Javascript. I can't even begin to get into all of the ways that we [hack](http://blog.mdnbar.com/javascript-common-tricks) Javascript and invent faux-patterns to make it work for us. Some of these classic techniques include things like creating fake [classes](http://www.phpied.com/3-ways-to-define-a-javascript-class/) and implementing conventions like <strong style="text-transform:uppercase">capitalizing constants</strong>. But those conventions are just like saying *"don't be an escalefter"* and are really expectations only understood by people who frequent the system (like the non-escalefters who frequent the DC Metro and understand its etiquette). [ES6](https://github.com/lukehoban/es6features) is the solution that will (begin to) save us from these hacks, but that too, isn't completely ideal yet.
 
-Look at some of its most highlighted features: classes, generators, constant variables, block scoping. Hmm.. sounds suspiciously like conventions that we've been trying to hack around. (And while ES6 [classes](http://www.2ality.com/2015/02/es6-classes-final.html#constructor_static_methods_prototype_methods) are still a hack on prototypes, the reserved name is there, and the convention is there, so things are looking up).
+Look at some of its most highlighted features: classes, generators, constant variables, block scoping. Hmm.. sounds suspiciously like conventions that we've been trying to hack around all along. (And while ES6 [classes](http://www.2ality.com/2015/02/es6-classes-final.html#constructor_static_methods_prototype_methods) are still a hack on prototypes, the reserved name is there, and the convention is there, so things *are* looking up).
 
 ## Conclusion
 
