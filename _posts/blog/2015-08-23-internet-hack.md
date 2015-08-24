@@ -2,7 +2,7 @@
 layout: post
 title: The Internet We Know is Built on Hacks
 permalink: /Internet-is-hacks
-date: '2015-08-23'
+date: '2015-08-24'
 comments: true
 tags:
 - development
