@@ -14,7 +14,7 @@ subtitle: From HTTP2, Flexbox, CSS Filters, and ES6, the Internet we know today 
 header-bg: ../images/posts/web-hack/opte-project.png
 ---
 
-The Internet we know today is built on hacks. All of the newest trends that have come out have been based on workarounds of the past. HTTP2, Flexbox, and CSS Filter options are all examples of things that have solved inevitable hacks. Let's start by taking a look at the past.
+The Internet we know today is built on hacks, and that's a great thing. All of the newest trends that have come out have been based on workarounds of the past. HTTP2, Flexbox, and CSS Filter options are all examples of things that have solved inevitable hacks out of frustration. Let's start by taking a look at where it all began.
 
 ## HTML
 
@@ -77,7 +77,7 @@ But because this didn't make any semantic sense, we did the next best thing: *fl
 
 ### Getting Graphic
 
-As layouts became increasingly complex, so did graphic rendering on the web, and hacks for visual effects are endless. I'll talk about one example in particular because I'm ridiculously excited about its implications: **backdrop filters.** They allow for image editing (filter effects) directly in the browser and only on the background layer of a div. But before we get into them, lets look at how we hacked them.
+As layouts became increasingly complex, so did graphic rendering on the web, and hacks for visual effects are endless (remember `text-indent: -9999px`?). I'll talk about one example in particular because I'm ridiculously excited about its implications: **backdrop filters.** They allow for image editing (filter effects) directly in the browser and only on the background layer of a div. But before we get into them, lets look at how we hacked them.
 
 One of my favorite CSS effect hacks was sorted out by [Lea Verou](https://vimeo.com/52882799) and shared in her "CSS Secrets" talk. Lea demonstrated how to create a "Live CSS Blur" that allows us to make the image blurred within a div, but clear otherwise, with the content of the div remaining lucid. That sounds confusing, but basically it looks like:
 
@@ -105,10 +105,6 @@ Not the cleanest solution. But now with `backdrop-filter` which just *dropped* a
 <video controls style="width:100%" src="../images/posts/web-hack/backdrop-filter.mov"></video>
 <div class="caption"> We're still a long way to go to <a href="http://caniuse.com/#feat=css-backdrop-filter">adoption</a>, but it's step one!
 </div>
-
-### Visibility
-
-Remember the days of hover navigation that was enabled by sprited images? And that fun little `margin-left: -9999px` hack for fonts so that we could keep this navigation "accesible"? Well. That's a hack if I've ever seen one.
 
 ## Javascript
 
