@@ -17,7 +17,7 @@ subtitle: The first post in a series on creating custom image effects in CSS. We
 header-bg: ../images/posts/blend-modes/bg.jpg
 ---
 
-Last week, I gave a talk at [CSS Conf EU](http://2015.cssconfeu.com) called "PS is Dead!: Editing Photos in CSS." The original idea was to go over 10 things you traditionally used Photoshop for that you can now just do in the browser, but when I started to look into filter effects and blend modes there was just *so* much to explore! I showed a few of those effects in the talk, and now I'm going to write a series of posts to split it into more digestible and sharable bits. Let's start with something simple and effective!
+Last week, I gave a talk at [CSS Conf EU](http://2015.cssconfeu.com) called *PS is Dead!: Editing Photos in CSS*. My original idea was to outline 10 things you traditionally used Photoshop for that you can now just do in the browser, but when I started to look into filter effects and blend modes there was just *so* much to explore! I showed a few of those effects in the talk, and now I'm going to write a series of posts to split it into more digestible and sharable bits. Let's start with something simple and effective!
 
 ## The Washout Effect
 
@@ -69,7 +69,9 @@ The best way to apply this effect is via multiple backgrounds right now. This is
   <!-- <img src="../images/posts/blend-modes/example-img.jpg" alt="example image"> -->
 </figure>
 
-<style contenteditable class="live-code half--right">.vintage-effect {
+<style contenteditable class="live-code half--right">/* you can edit me! */
+
+.vintage-effect {
   height: 350px;
   background:
     url('../images/posts/blend-modes/example-img.jpg'),
@@ -77,10 +79,45 @@ The best way to apply this effect is via multiple backgrounds right now. This is
   background-size: cover;
   background-blend-mode: lighten;
 }
-
-// you can edit me!
 </style>
+
+## @Mixin For the Win
+
+Okay, so that's cool and all, but we can make it even easier to apply with a `@mixin`!
+
+<div class="half--left">
+Sass
+<pre><code>@mixin fade-it($img, $shadow: #536) {
+  background: url('#{$img}'), $shadow;
+  background-blend-mode: lighten;
+}
+
+.apply-base {
+  @include fade-it('1.jpg');
+}
+
+.apply-unique-shade {
+  @include fade-it('2.jpg',
+                   #293e78);
+}
+</code></pre>
+</div>
+
+<div class="half--right">
+CSS Output
+
+<pre><code>.apply-base {
+  background: url('1.jpg'), #536;
+  background-blend-mode: lighten;
+}
+
+.apply-unique-shade {
+  background: url('2.jpg'), #293e78;
+  background-blend-mode: lighten;
+}
+</code></pre>
+</div>
 
 <div class="clearfix"></div>
 
-**tldr; vintage effect = lighten blend mode + element with a background that is the shadow color**
+**tldr; vintage washout effect = lighten blend mode + element with a background that is the shadow color**

@@ -10,4 +10,9 @@
   margin: 1em 0;
   padding: .2em .5em;
   white-space: pre-wrap;
+
+  &:active,
+  &:focus {
+    outline: 3px solid lightgrey;
+  }
 }
