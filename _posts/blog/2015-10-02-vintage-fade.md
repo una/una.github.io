@@ -2,7 +2,7 @@
 layout: post
 title: CSS Image Effects &num;1&colon; Vintage Washout
 permalink: /vintage-washout
-date: '2015-10-06'
+date: '2015-10-02'
 comments: true
 tags:
 - development
