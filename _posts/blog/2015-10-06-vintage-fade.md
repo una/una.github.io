@@ -59,14 +59,28 @@ We can use this feature to then determine what we want to set as the darkest pos
 <video autoplay loop controls src="../images/posts/blend-modes/vintage-effect-demo--noaudio.mp4"></video>
 </div>
 
--- ADD STATIC IMAGES OF THE EFFECT --
-
-Choosing a dark purple or brown color will likely get you the effect you are looking for.
+<small> Choosing a dark purple or brown color will likely get you the effect you are looking for.</small>
 
 ## Application
 
-The best way to apply this effect is via multiple backgrounds right now. This is because not [every](http://caniuse.com/#search=blend%20modes) browser supports blend modes yet. If you use multiple backgrounds, the top image will show regardless and the lightened second background will appear if they are supported as progressive enhancement. Here is an example:
+The best way to apply this effect is via multiple backgrounds right now. This is because not [every](http://caniuse.com/#search=blend%20modes) browser supports blend modes yet. If you use multiple backgrounds, the top image will show regardless and the lightened second background will appear if they are supported as progressive enhancement. Here is a live example:
+
+<figure class="half--left vintage-effect">
+  <!-- <img src="../images/posts/blend-modes/example-img.jpg" alt="example image"> -->
+</figure>
+
+<style contenteditable class="live-code half--right">.vintage-effect {
+  height: 350px;
+  background:
+    url('../images/posts/blend-modes/example-img.jpg'),
+    #533a16;
+  background-size: cover;
+  background-blend-mode: lighten;
+}
+
+// you can edit me!
+</style>
+
+<div class="clearfix"></div>
 
 **tldr; vintage effect = lighten blend mode + element with a background that is the shadow color**
-
-&num;artTheWeb

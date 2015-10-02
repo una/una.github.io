@@ -1,0 +1,13 @@
+.live-code {
+  background: $color--subtlegrey;
+  border-radius: .2em;
+  border: 1px solid lightgrey;
+  color: $color--lightpurple;
+  display: block;
+  font-size: 1.2em;
+  font-family: monospace;
+  line-height: 1.2;
+  margin: 1em 0;
+  padding: .2em .5em;
+  white-space: pre-wrap;
+}
