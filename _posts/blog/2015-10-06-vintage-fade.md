@@ -23,7 +23,8 @@ Last week, I gave a talk at [CSS Conf EU](http://2015.cssconfeu.com) called "PS 
 
 This effect is something we often see in filters trying to get a vintage feel. What happens is that the darkest shade is lightened and the detail in the shadows is lost (washing out the darker details). It appears as a lower contrast because the color (and thus) luminosity range is being limited.
 
---> example images here <--
+<img class="half--left" src="../images/posts/blend-modes/tahoe-prefilter.jpg" alt="">
+<img class="half--right" src="../images/posts/blend-modes/tahoe-postfilter.jpg" alt="">
 
 What is happening here is that we are replacing the dark tones with a slightly lighter shade. If the existing tone is darker than the "new" darkest tone, it is simply overriden by that tone. Thus, the lighten blend mode is perfect for our needs here.
 
@@ -33,15 +34,21 @@ We apply the lighten blend mode to either an overlapping element or a pseudo ele
 
 <small>Please note: the <code>img</code> element cannot have its own pseudo elements.</small>
 
-With the [lighten]() <-- GET LINK --0-- blend mode, the luminosity of the pixels (brightness value) is determined between overlapping pixels and the pixel with the darker luminosity has its tone and hue overriden by the lighter one. If a bright yellow overlapped a dark brown, for instance, the pixels would become yellow. Here is an example:
+With the [lighten]() <-- GET LINK --0-- blend mode, the luminosity of the pixels (brightness value) is determined between overlapping pixels and the pixel with the darker luminosity has its tone and hue overriden by the lighter one. If a bright orange overlapped a dark brown, for instance, the pixels would become orange. Here is an example:
 
 <img src="../images/posts/blend-modes/lighten-ex.png" alt="">
+
+The reason we lose the box outline is because on the white background, it takes the luminosity of the white (1).
 
 ## Step 2: Determine Darkest Color
 
 We can use this feature to then determine what we want to set as the darkest possible value on the image, therefore eliminating any detail in darker elements and creating that subdued effect. For instance, if we choose our dark shade to be a dimgrey, any pixels darker than dimgrey will become dimgrey, while any pixels lighter than it will remain.
 
---> a few examples of different blend modes <--
+<div class="video-container">
+<video autoplay loop controls src="../images/posts/blend-modes/vintage-effect-demo--noaudio.mp4"></video>
+</div>
+
+-- ADD STATIC IMAGES OF THE EFFECT --
 
 Choosing a dark purple or brown color will likely get you the effect you are looking for.
 
