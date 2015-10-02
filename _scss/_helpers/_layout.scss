@@ -14,3 +14,27 @@
 .transition {
 	transition-duration: .5s;
 }
+
+.half--left {
+  width: 48%;
+  margin: 1%;
+  float: left;
+
+  @include breakpoint(xs) {
+    width: 100%;
+    margin: 1em 0;
+    float: none;
+  }
+}
+
+.half--right {
+  width: 48%;
+  margin: 1%;
+  float: right;
+
+  @include breakpoint(xs) {
+    width: 100%;
+    margin: 1em 0;
+    float: none;
+  }
+}

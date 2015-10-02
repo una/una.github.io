@@ -25,6 +25,6 @@
   }
 
   @else {
-    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+    @warn "Breakpoint mixin supports: xs, sm, sm-rev,  md, md-rev, lg";
   }
 }
