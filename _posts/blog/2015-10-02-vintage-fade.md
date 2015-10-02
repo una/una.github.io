@@ -65,9 +65,8 @@ We can use this feature to then determine what we want to set as the darkest pos
 
 The best way to apply this effect is via multiple backgrounds right now. This is because not [every](http://caniuse.com/#search=blend%20modes) browser supports blend modes yet. If you use multiple backgrounds, the top image will show regardless and the lightened second background will appear if they are supported as progressive enhancement. Here is a live example:
 
-<figure class="half--left vintage-effect">
-  <!-- <img src="../images/posts/blend-modes/example-img.jpg" alt="example image"> -->
-</figure>
+<div class="half--left vintage-effect">
+</div>
 
 <style contenteditable class="live-code half--right">/* you can edit me! */
 
