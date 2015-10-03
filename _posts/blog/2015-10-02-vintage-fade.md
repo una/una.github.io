@@ -68,7 +68,7 @@ The best way to apply this effect is via multiple backgrounds right now. This is
 <div class="half--left vintage-effect">
 </div>
 
-<style contenteditable class="live-code half--right">/* you can edit me! */
+<style contenteditable class="css live-code half--right">/* you can edit me! */
 
 .vintage-effect {
   height: 350px;
