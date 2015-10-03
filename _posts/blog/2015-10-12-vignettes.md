@@ -92,4 +92,8 @@ So I think this works okay and all, but its not what a *real* vignette looks lik
 ## Way 2: Radial Gradients
 
 
+## Way 3: Double Vignette Sparkle Shine
+
+
+
 {% include css-effects.html %}
