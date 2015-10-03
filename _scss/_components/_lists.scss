@@ -295,3 +295,20 @@ ol {
 		}
 	}
 }
+
+.css-effects-series {
+	border: $color--purple dashed 1px;
+	background: $color--subtlegrey;
+	border-radius: 3px;
+	padding: 2em;
+	width: 90%;
+	margin: 2em auto 4em;
+
+	h2 {
+		margin-top: 0;
+	}
+
+	@include breakpoint(sm) {
+		width: 100%;
+	}
+}

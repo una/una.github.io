@@ -121,4 +121,7 @@ CSS Output
 
 **tldr; vintage washout effect = lighten blend mode + element with a background that is the shadow color**
 
+
 For further reading, [this](http://photoblogstop.com/photoshop/photoshop-blend-modes-explained) article is an excellent resource on how blend modes work.
+
+{% include css-effects.html %}
