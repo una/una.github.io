@@ -22,24 +22,74 @@ This is part of a series of posts breaking down visual effects using CSS filters
 
 ## Way 1: Inset Box Shadow
 
-The first and most widely supported method is to use an inset `box-shadow` on an image. Box shadow is actually a very interesting and flexible property. I wrote an etire post on show to made [pixel art](/sass-pixel-art) out of box shadows using Sass lists and functions.
+The first and most widely supported method is to use an inset `box-shadow` on an image. `box-shadow` is actually a very interesting and flexible property. I even wrote an entire post on how to made [pixel art](/sass-pixel-art) out of box shadows using Sass lists and functions.
 
-```
-.vignette-1 {
-  height: 300px;
+The way it works is generally like this <sup><a href="https://css-tricks.com/almanac/properties/b/box-shadow/">1</a></sup>: `box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];`
+
+Here is an editable example of a pretty standard usage of box shadow:
+
+<div class="half--left"><div class="normal-shadow-ex"></div></div>
+<div class="half--right"><style contenteditable class="live-code">.normal-shadow-ex {
+  background: hotpink;
+  height: 180px;
+  box-shadow: 10px 10px 20px black;
+}
+</style></div>
+
+<div class="clearfix"></div>
+<br>
+But `box-shadow` also has an *inset* property which reverses the direction of the spread. Instead of starting *outside* of the div, the shadow begins at its perimiters and works its way toward the center. If we take the exact same code as above but add the `inset` keyword, it looks like this:
+
+<div class="half--right"><div class="inner-shadow-ex"></div></div>
+<div class="half--left"><style contenteditable class="live-code">.inner-shadow-ex {
+  background: hotpink;
+  height: 180px;
+  box-shadow: inset 10px 10px 20px black;
+}
+</style></div>
+
+<div class="clearfix"></div>
+<br>
+So we can center that shadow by giving it a value of `0` for its vertical and horizontal offset, and extending the shadow to spread over a wider range:
+
+<div class="half--left"><div class="vignette-shadow-ex"></div></div>
+<div class="half--right"><style contenteditable class="live-code">.vignette-shadow-ex {
+  background: hotpink;
+  height: 180px;
+  box-shadow: inset 0 0 100px black;
+}
+</style></div>
+
+<div class="clearfix"></div>
+
+So basically with one line of code we can add a vignette to our images! Now there's one catch about this &mdash; when applying `box-shadow` *the browser renders the shadow behind the content* (makes sense..) but because `<img>` is content, applying an inset shadow to it won't let us see the shadow at all. Thus you'd need to use pseudo elements or layer divs:
+
+<div class="half--right" style="margin-top: 4em;"><div class="vignette-photo"></div></div>
+<div class="half--left"><style contenteditable class="live-code">.vignette-photo {
   position: relative;
-  background-image: url('jungle.jpg');
+  height: 400px;
+  display: block;
+  background-image: url('../images/posts/css-effects/3/atx-rooftop.jpg');
+  background-size: cover;
+}
 
-  &:after {
-  content: "";
+.vignette-photo:after {
+  content: '';
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
-  box-shadow: inset 0px 0px 100px rgba(0,0,0,1);
-  }
+  box-shadow: inset 0px 0px 150px black;
 }
-```
 
-## Way 2: CSS Gradients
+/* removing shadow on hover */
+.vignette-photo:hover:after {
+  box-shadow: none;
+}</style></div>
+
+<div class="clearfix"></div>
+
+So I think this works okay and all, but its not what a *real* vignette looks like (which is round because of the roundness of the lens filter). But there are luckily solutions!
+
+## Way 2: Radial Gradients
 
 
 {% include css-effects.html %}
