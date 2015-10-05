@@ -172,7 +172,7 @@ In particular, the **diference** or **exclusion** blend modes provide some prett
 
 They were originally used for lining up documents. When the document was perfectly black (in the case of difference) or at a 50% grey (in case of exclusion) they were exactly aligned. As briefly mentioned, the only difference is that in the difference blend mode, *identical pixels cancel out to black* whereas for exclusion, they cancel out to *50% grey*.
 
-But when pixels are different colors, they create vivid differences, and therefore when used subtly, create bright light effects. This example uses a red gradient and the difference blend mode:
+But when pixels are different colors, they create vivid differences, and therefore when used subtly, create bright light effects. The following example uses a red gradient and the difference blend mode. You can layer multiple gradients for a more dramatic effect.
 
 <div class="half--right" style="margin-top: 4em;"><div class="vignette-colorful"></div>
 <div class="caption">Feel free to play around with changing the gradient color and the blend mode.</div></div>
@@ -200,5 +200,6 @@ for demonstration purposes */
 
 <div class="clearfix"></div>
 
+**tl;dr: Vignettes are easy to implement and more realistic with gradients than box shadows. Colors are always fun, too.**
 
 {% include css-effects.html %}
