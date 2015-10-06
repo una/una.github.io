@@ -117,9 +117,11 @@ Now, that darkens the image a *lot* more than we'd like it to. This is because t
 
 ### The Lens Effect
 
-Now, this is getting a little closer, but it's not what a *"real"* vignette looks like. If we think about vignettes in photography, the lens is creating a darkening around the image, like this:
+<br>
 
--- diagram here --
+<img class="left" style="max-width: 500px" src="../images/posts/css-effects/3/lens.jpg" alt="">
+
+Now, this is getting a little closer, but it's not what a *"real"* vignette looks like. If we think about vignettes in photography, the lens is creating a darkening around the image, like this:
 
 So to solve this, we can first change the *shape* of our gradient ellipse to mimic a lens and be a perfect circle from the center of the image. This is done really easily with simply denoting the shape as `circle` in front of the gradient declaration. The next thing we'll want to do is extend the spread of the dark color to outside of the border of the image. Those two things together look like this:
 
@@ -132,9 +134,7 @@ So to solve this, we can first change the *shape* of our gradient ellipse to mim
 </style></div>
 <div class="clearfix"></div>
 <br>
-Using gradients in this was is also an excellent technique for making text more legible on top of a light image. You can use transparent-to-black gradients which cover over areas of text (such as if there was text on the bottom of an image area).
-
---- add link here to the css tricks article ---
+Using gradients in this was is also an excellent technique for making text more legible on top of images. You can use transparent-to-black gradients on light images which cover over areas of text (such as if there was text on the bottom of an image area), and the inverse on dark images. There's an excellent [CSS Tricks](https://css-tricks.com/design-considerations-text-images/) article on this, and other techniques.
 
 Anyway, here's a live example to play with if you're into that sort of thing:
 
