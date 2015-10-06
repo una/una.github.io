@@ -16,13 +16,14 @@ tags:
 - vignette
 subtitle: This week we'll take a look at one of the most popular photo manipulations&colon; adding a vignette to draw attention to the center of an image.
 header-bg: ../images/posts/css-effects/3/bg.jpg
+audio: audio-vignette
 ---
 
 This is part of a series of posts breaking down visual effects using CSS filters and blend modes. Read [Part 1: The Vintage Washout Effect](/vintage-washout) and [Part 2: 3d Glasses](/3d-effect) for some background on blend modes. In this post we'll explore one of the most popular photo filters: the vignette. A vignette fades an image around the corners to draw attention to the center. There are a few ways to get this effect with CSS.
 
 ## Method 1: Inset Box Shadow
 
-The first and most widely supported method is to use an inset `box-shadow` on an image. `box-shadow` is actually a very interesting and flexible property. I even wrote an entire post on how to made [pixel art](/sass-pixel-art) out of box shadows using Sass lists and functions.
+The first and most widely supported method is to use an inset `box-shadow` on an element. `box-shadow` is actually a very interesting and flexible property. I even wrote an entire post on how to made [pixel art](/sass-pixel-art) out of box shadows using Sass lists and functions.
 
 The way it works is generally like this <sup><a href="https://css-tricks.com/almanac/properties/b/box-shadow/">1</a></sup>: `box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];`
 
