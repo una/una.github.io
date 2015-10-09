@@ -9,4 +9,6 @@ hidden: true
 event-link: http://2015.cssconf.eu/
 image: ../images/speaking/cssconfeu.jpg
 talk: Photoshop is Dead&colon; Editing Images with CSS
+main-link: https://www.youtube.com/watch?v=LY65F2e4B5w
+link-type: video
 ---
