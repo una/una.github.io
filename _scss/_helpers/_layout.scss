@@ -38,3 +38,15 @@
     float: none;
   }
 }
+
+.third {
+  width: 31%;
+  margin: 1% !important; //override for everything
+  float: left;
+
+  @include breakpoint(sm) {
+    width: 100%;
+    margin: 1em 0;
+    float: none;
+  }
+}
