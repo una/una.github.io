@@ -6,13 +6,13 @@ layout:
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <link>http://una.im</link>
     <language>en-us</language>
-    <copyright>Copyright &#xA9; Una Kravets 2016</copyright>
+    <copyright>Copyright &#xA9; Una Kravets 2015</copyright>
     <webMaster>una.kravets@gmail.com (Una Kravets)</webMaster>
     <managingEditor>una.kravets@gmail.com (Una Kravets)</managingEditor>
     <category>Web, Development, Design</category>
     <image>
         <url>http://una.im/images/itunes-1400-1400.jpg</url>
-        <title>Almost Profound &mdash; the audio version of Una Kravets' Blog</title>
+        <title>Almost Profound: Una Kravets' Audio Blog</title>
         <link>http://una.im</link>
     </image>
 
@@ -27,11 +27,11 @@ layout:
     <itunes:explicit>no</itunes:explicit>
     <itunes:image href="http://una.im/images/itunes-1400-1400.jpg" />
     <atom:link href="http://una.im/podcast.xml" rel="self" type="application/rss+xml" />
-    <title>Almost Profound: Audio Snippets of the Blog of Una Kravets</title>
+    <title>Almost Profound: The Audio Blog of Una Kravets</title>
     <itunes:author>Una Kravets</itunes:author>
-    <description>The audio version of the blog of Una Kravets, focusing on front-end development, design, and other web technologies.</description>
-    <itunes:summary>The audio version of the blog of Una Kravets, focusing on front-end development, design, and other web technologies.</itunes:summary>
-    <itunes:subtitle>Short bits of knowledge about front-end development, design, and other web technologies.</itunes:subtitle>
+    <description>The blog of Una Kravets, focusing on front-end development, design, and other web technologies.</description>
+    <itunes:summary>The blog of Una Kravets, focusing on front-end development, design, and other web technologies.</itunes:summary>
+    <itunes:subtitle>Read out loud by the author.</itunes:subtitle>
     {% for post in site.posts limit:1 %}
         <lastBuildDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
     {% endfor %}
@@ -46,12 +46,10 @@ layout:
           <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
           <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
           {% if post.audio %}
-            <item>
-                <itunes:subtitle>{{ post.subtitle }}</itunes:subtitle>
-                <itunes:summary>{{ post.summary }}</itunes:subtitle>
-                <enclosure url="../audio/{{ post.audio }}.mp3" type="audio/mpeg" />
-                <itunes:duration>{{ post.duration }}</itunes:duration>
-            </item>
+            <itunes:subtitle>{{ post.subtitle }}</itunes:subtitle>
+            <itunes:summary>{{ post.summary }}</itunes:subtitle>
+            <enclosure url="../audio/{{ post.audio }}.mp3" type="audio/mpeg" />
+            <itunes:duration>{{ post.duration }}</itunes:duration>
           {% endif %}
         </item>
         {% endunless %}
