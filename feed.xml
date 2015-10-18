@@ -48,7 +48,7 @@ layout:
           {% if post.audio %}
           <itunes:summary>{{ post.subtitle }}</itunes:summary>
           <itunes:subtitle>{{ post.subtitle }}</itunes:subtitle>
-          <enclosure url="{{ site.url }}/{{ post.audio }}.mp3" length="{{post.audio-size}}" type="audio/mpeg" />
+          <enclosure url="{{ site.url }}/audio/{{ post.audio }}.mp3" length="{{post.audio-size}}" type="audio/mpeg" />
           <itunes:duration>{{ post.duration }}</itunes:duration>
           {% endif %}
         </item>
