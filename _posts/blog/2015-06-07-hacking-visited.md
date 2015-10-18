@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hacking &colon;visited
+title: "Hacking :visited"
 permalink: /hacking-visited
 date: '2015-06-07'
 comments: true
