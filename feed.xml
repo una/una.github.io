@@ -18,7 +18,6 @@ layout:
           <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
           <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
           {% if post.audio %}
-          <enclosure url="../audio/{{ post.audio }}.mp3" type="audio/mpeg" />
           {% endif %}
         </item>
         {% endunless %}
