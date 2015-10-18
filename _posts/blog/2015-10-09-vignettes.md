@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CSS Image Effects &num;3&colon; Vignettes 3 Ways
+title: CSS Image Effects #3: Vignettes 3 Ways
 permalink: /vignettes
 date: '2015-10-09'
 comments: true
@@ -14,7 +14,7 @@ tags:
 - photo
 - effect
 - vignette
-subtitle: This week we'll take a look at one of the most popular photo manipulations&colon; adding a vignette to draw attention to the center of an image.
+subtitle: "This week we'll take a look at one of the most popular photo manipulations: adding a vignette to draw attention to the center of an image."
 header-bg: ../images/posts/css-effects/3/bg.jpg
 audio: audio-vignette
 duration: "6:55"

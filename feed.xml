@@ -3,30 +3,34 @@ layout:
 ---
 
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <link>http://una.im</link>
+
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:itunes="http://www.itunes.co...odcast-1.0.dtd">
+
+<channel>
+    <link>http://una.github.io</link>
     <language>en-us</language>
     <copyright>Copyright &#xA9; Una Kravets 2015</copyright>
     <webMaster>una.kravets@gmail.com (Una Kravets)</webMaster>
     <managingEditor>una.kravets@gmail.com (Una Kravets)</managingEditor>
     <category>Web, Development, Design</category>
     <image>
-        <url>http://una.im/images/itunes-1400-1400.jpg</url>
+        <url>http://una.github.io/images/itunes-1400-1400.jpg</url>
         <title>Almost Profound: Una Kravets' Audio Blog</title>
-        <link>http://una.im</link>
+        <link>http://una.github.io</link>
     </image>
-
     <itunes:owner>
-        <itunes:name>Una Kravets</itunes:name>
-        <itunes:email>Una21136@yahoo.com</itunes:email>
+      <itunes:name>Una Kravets</itunes:name>
+      <itunes:email>una21136@yahoo.com</itunes:email>
     </itunes:owner>
     <itunes:category text="Technology">
         <itunes:category text="Tech News" />
     </itunes:category>
     <itunes:keywords>web, development, front-end, front end, css, sass, javascript, js, design</itunes:keywords>
     <itunes:explicit>no</itunes:explicit>
-    <itunes:image href="http://una.im/images/itunes-1400-1400.jpg" />
-    <atom:link href="http://una.im/podcast.xml" rel="self" type="application/rss+xml" />
+    <itunes:image href="http://una.github.io/images/itunes-1400-1400.jpg" />
+    <atom:link href="http://una.github.io/podcast.xml" rel="self" type="application/rss+xml" />
     <title>Almost Profound: The Audio Blog of Una Kravets</title>
     <itunes:author>Una Kravets</itunes:author>
     <description>The blog of Una Kravets, focusing on front-end development, design, and other web technologies.</description>
