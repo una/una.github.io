@@ -46,10 +46,10 @@ layout:
           <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
           <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
           {% if post.audio %}
-            <itunes:subtitle>{{ post.subtitle }}</itunes:subtitle>
-            <itunes:summary>{{ post.summary }}</itunes:subtitle>
-            <enclosure url="../audio/{{ post.audio }}.mp3" type="audio/mpeg" />
-            <itunes:duration>{{ post.duration }}</itunes:duration>
+          <itunes:summary>{{ post.subtitle }}</itunes:summary>
+          <itunes:subtitle>{{ post.subtitle }}</itunes:subtitle>
+          <enclosure url="{{ site.url }}/{{ post.audio }}.mp3" length="{{post.audio-size}}" type="audio/mpeg" />
+          <itunes:duration>{{ post.duration }}</itunes:duration>
           {% endif %}
         </item>
         {% endunless %}

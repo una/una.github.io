@@ -14,7 +14,8 @@ tags:
 - scss
 header-bg: ../images/posts/visited/bg.jpg
 audio: audio-visited
-duration: "0:07:44"
+duration: "7:44"
+audio-size: 9274561
 subtitle: Hacking the :visited selector to show unread posts. We'll look at the limitations and my little work-around.
 ---
 

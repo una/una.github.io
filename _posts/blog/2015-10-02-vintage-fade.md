@@ -16,7 +16,8 @@ tags:
 subtitle: The first post in a series on creating custom image effects in CSS. We'll take a look at the vintage washout effect.
 header-bg: ../images/posts/css-effects/1/bg.jpg
 audio: audio-vintagewashout
-duration: "0:04:41"
+duration: "4:41"
+audio-size: 5618470
 ---
 
 Last week, I gave a talk at [CSS Conf EU](http://2015.cssconf.eu) called *PS is Dead!: Editing Photos in CSS*. My original idea was to outline 10 things you traditionally used Photoshop for that you can now just do in the browser, but when I started to look into filter effects and blend modes there was just *so* much to explore! I showed a few of those effects in the talk, and now I'm going to write a series of posts to split it into more digestible and sharable bits. Let's start with something simple and effective!

@@ -15,7 +15,8 @@ tags:
 - development
 header-bg: ../images/posts/lexus.jpg
 audio: gulp-psi
-duration: "0:11:27"
+duration: "11:27"
+audio-size: 10998502
 subtitle: This is a walk through of how to set up Google PageSpeed Insights within your existing gulp project. This way, you can get your page speed score information within your terminal without first needing to push your site to a live server.
 ---
 

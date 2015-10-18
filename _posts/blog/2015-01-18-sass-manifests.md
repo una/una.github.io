@@ -12,7 +12,8 @@ tags:
 - open source
 header-bg: ../images/posts/crossing-delaware.jpg
 audio: sassdirector
-duration: "0:02:18"
+duration: "2:18"
+audio-size: 2215090
 subtitle: I created a tool that lets you architect your Sass project in a single location (your manifest file), and it will build all of the directories and partials for you! This blog explains what a Sass manifest file is, what it does, and why you should use one.
 ---
 
