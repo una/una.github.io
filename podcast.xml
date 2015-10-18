@@ -4,47 +4,53 @@ layout:
 
 <?xml version="1.0" encoding="utf-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:itunesu="http://www.itunesu.com/feed" version="2.0">
-    <channel>
+
+<channel>
+    <link>http://una.im</link>
+    <language>en-us</language>
+    <copyright>Copyright &#xA9; Una Kravets 2016</copyright>
+    <webMaster>una.kravets@gmail.com (Una Kravets)</webMaster>
+    <managingEditor>una.kravets@gmail.com (Una Kravets)</managingEditor>
+    <category>Web, Development, Design</category>
+    <image>
+        <url>http://una.im/images/itunes-1400-1400.jpg</url>
+        <title>Almost Profound &mdash; the audio version of Una Kravets' Blog</title>
         <link>http://una.im</link>
-        <language>en-us</language>
-        <copyright>Copyright &#xA9; Una Kravets 2016</copyright>
-        <webMaster>una.kravets@gmail.com (Una Kravets)</webMaster>
-        <managingEditor>una.kravets@gmail.com (Una Kravets)</managingEditor>
-        <image>
-            <!-- <url>http://www.YourSite.com/ImageSize300X300.jpg</url> -->
-            <title>Almost Profound &mdash; the audio version of Una Kravets' Blog</title>
-            <link>http://una.im</link>
-        </image>
-        <itunes:owner>
-            <itunes:name>Una Kravets</itunes:name>
-            <itunes:email>Una21136@yahoo.com</itunes:email>
-        </itunes:owner>
-        <itunes:category text="Technology">
-            <itunes:category text="Tech News" />
-        </itunes:category>
-        <itunes:keywords>web, development, front-end, front end, css, sass, javascript, js, design</itunes:keywords>
-        <itunes:explicit>no</itunes:explicit>
-<!--         <itunes:image href="http://www.YourSite.com/ImageSize300X300.jpg" />
-        <atom:link href="http://www.YourSite.com/feed.xml" rel="self" type="application/rss+xml" />
-        <pubDate>Sun, 01 Jan 2012 00:00:00 EST</pubDate>
-        <title>Verbose title of the podcast</title>
-        <itunes:author>College, school, or department owning the podcast</itunes:author>
-        <description>Verbose description of the podcast.</description>
-        <itunes:summary>Duplicate of above verbose description.</itunes:summary>
-        <itunes:subtitle>Short description of the podcast - 255 character max.</itunes:subtitle>
-        <lastBuildDate>Thu, 02 Feb 2012 00:00:00 EST</lastBuildDate> -->
-        {% for post in site.posts limit:20 %}
-          {% if post.audio %}
-            <item>
-                <title>{{ post.title }}</title>
-                <description>{{ post.subtitle }}</description>
-                <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-                <itunes:subtitle>{{ post.subtitle }}</itunes:subtitle>
-                <enclosure url="../audio/{{ post.audio }}.mp3" type="audio/mpeg" />
-                <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-                <itunes:duration>{{ post.duration }}</itunes:duration>
-            </item>
-          {% endif %}
-        {% endfor %}
-    </channel>
+    </image>
+
+    <itunes:owner>
+        <itunes:name>Una Kravets</itunes:name>
+        <itunes:email>Una21136@yahoo.com</itunes:email>
+    </itunes:owner>
+    <itunes:category text="Technology">
+        <itunes:category text="Tech News" />
+    </itunes:category>
+    <itunes:keywords>web, development, front-end, front end, css, sass, javascript, js, design</itunes:keywords>
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:image href="http://una.im/images/itunes-1400-1400.jpg" />
+    <atom:link href="http://una.im/podcast.xml" rel="self" type="application/rss+xml" />
+    <title>Almost Profound: Audio Snippets of the Blog of Una Kravets</title>
+    <itunes:author>Una Kravets</itunes:author>
+    <description>The audio version of the blog of Una Kravets, focusing on front-end development, design, and other web technologies.</description>
+    <itunes:summary>The audio version of the blog of Una Kravets, focusing on front-end development, design, and other web technologies.</itunes:summary>
+    <itunes:subtitle>Short bits of knowledge about front-end development, design, and other web technologies.</itunes:subtitle>
+    {% for post in site.posts limit:1 %}
+        <lastBuildDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
+    {% endfor %}
+
+    {% for post in site.posts limit:20 %}
+      {% if post.audio %}
+        <item>
+            <title>{{ post.title }}</title>
+            <description>{{ post.subtitle }}</description>
+            <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+            <itunes:subtitle>{{ post.subtitle }}</itunes:subtitle>
+            <itunes:summary>{{ post.summary }}</itunes:subtitle>
+            <enclosure url="../audio/{{ post.audio }}.mp3" type="audio/mpeg" />
+            <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
+            <itunes:duration>{{ post.duration }}</itunes:duration>
+        </item>
+      {% endif %}
+    {% endfor %}
+</channel>
 </rss>
