@@ -15,16 +15,24 @@ subtitle: Yep
 header-bg: ../images/posts/classy-css/seurat.jpg
 ---
 
-(Before life got in the way this Autumn) I began writing this article in August a few weeks after releasing a semi-satirical article about my take on the mix of current CSS naming convention/styling trends on Sitepoint called [Atomic OOBEMITSCSS](http://sitepoint.com/atomic-oobemitscss/). I called it *Atomic OOBEMITSCSS* as a joke, but people started picking up the name and using it in the wild (which was honestly pretty entertaining as questions about it sprung up in-person).
-
-This post has two goals:
-
-1. To defend `@extend`
-2. To explain a scalable, modular, and class-based approach to CSS
+(Before life got in the way) I began writing this blog post a few weeks after releasing a semi-satirical article about my take on the mix of current CSS naming convention/styling trends on Sitepoint called [Atomic OOBEMITSCSS](http://sitepoint.com/atomic-oobemitscss/). (That was back in August, by the way) I called it *Atomic OOBEMITSCSS* as a joke, but people started picking up the name and using it in the wild (which was honestly pretty entertaining as questions about it sprung up in-person). Debate over using `@extend` at SassConf this year (and on Twitter lately) reminded me about revisiting this idea.
 
 ## Classy CSS, Please.
 
-In the article mentioned above, I explain how I mark up components (via an example using Pinterest) and correlate their styling with some syntacticly awesome sugar sheets. I now use the post as a handy manual for people around me who ask about our front-end architecture. I've gotten a lot of positive feedback on it as it has been stress-tested over months of building a large-scale pattern library. Consequently, I have found myself needing to explain the system (and Sass itself) to people with traditional computer science backgrounds, and doing so made me realize just how programmatic and class-based the CSS architecture system (*Atomic OOBEMITSCSS*) I described in the article was. So I'd like to take a moment to give it a legitimate name that I can actually get behind, **Classy CSS,** and to also explain it in a way that a programmer may find a bit closer to home.
+In the article mentioned above (Atomic OOBEMITSCSS), I explain how I mark up components (via an example using Pinterest) and correlate their styling. I still use that post as a handy manual for people around me who ask about our front-end architecture, which has since been stress-tested on a large-scale pattern library.
+
+<figure class="left">
+  <img src="../../images/posts/classy-css/ex.jpg">
+  <figcaption>One of the examples from the Sitepoint article.</figcaption>
+</figure>
+
+Consequently, I have found myself needing to explain the system (and Sass itself) to people with traditional computer science backgrounds. Doing so made me realize just how programmatic and class-based the CSS architecture system I described in the article was. So I'd like to take a moment to give it a legitimate name that I can actually get behind, **Classy CSS,** and to also explain it in a way that a traditional programmer may find a bit closer to home.
+
+This post has three goals:
+
+1. To defend `@extend`
+2. To introduce **Classy CSS** (much easier to pronounce than Atomic OOBEMITSCSS)
+2. To explain a scalable, modular, and class-based approach to CSS
 
 ## A Classy Button
 
@@ -32,7 +40,7 @@ I’ll go into a little bit more depth with how it works here, using a button as
 
 <img src="../../images/posts/classy-css/buttons.png" alt="buttons" style="max-width: 500px;">
 
-We start with a silent placeholder selector with the button’s base. It is named using a customized BEM-like syntax, so the first part of its naming is going to be the object we’re referencing (button or btn) and after a double dash, we have the modifier (base in this case):
+We start with a silent placeholder selector with the base code for every single button, using a modified BEM-like syntax. The first part of its naming is going to be the object we're referencing (button or btn) and after a double dash, we have the modifier (base in this case). **Note:** variables are named in the same way &mdash; the type of variable being the base (color in the case of the below example).
 
 ```sass
 $color--primary: #b29;
@@ -55,7 +63,7 @@ $color--secondary: #19d;
 }
 ```
 
-This base is our class. We will be building on this for every button, as every button is an instance of that class. Every button element has the type button, and thus shares some common traits (solid outline, transparent background, etc.)
+**This base button is our button class.** We will be building on top of this for every button, as **every button is an instance of that class**. Every button element has the type button, and thus shares some common traits (solid outline, transparent background, etc.). Every button pulls from the same common properties and builds on *top* of them. They do not overwrite, but add onto those properties. They are all buttons++ and inherit from the base button. (*was that enough ways to say it?*)
 
 <figure class="right">
 <img src="../../images/posts/classy-css/ydkjs-fig.png" alt="protoypal inheritance" style="max-width: 500px;">
@@ -94,7 +102,7 @@ usage here:
 }
 ```
 
-But really if you're writing those in the *classy* way, each *component* (hero, sidebar, global-nav) would have its own partial .scss file that could look something like:
+If you're writing those in the *classy* way, each **component** (hero, sidebar, global-nav) would have its own partial .scss file where the classes are being instantiated for real use. That could look something like:
 
 _hero.scss
 
@@ -150,117 +158,27 @@ _global-nav.scss
 
 ## Well, What About Mixins?
 
-When making buttons, some of my coworkers got confused about using `@mixin` vs. an `@extend` and wondered why they shouldn't be using the `@mixin` instead. Well to me, the `@mixin` denotes some sort of argument (yes, I know it doesn't *have* to, but it makes sense to `@extend` styles of classes rather than build them each time). This created a smaller output CSS file and cleaner code if you understand what is going on.
+You may be wondering, well why not use a `@mixin` instead? In the way that we're breaking up these classes, the purpose and concept of using `@extend` makes more sense. You can create mixins within the placeholder classes we are extending from to build out styles, and then use `@extend` to instantiate those into classes.
 
-## In Defence of @extend
+## In Defense of @extend
 
-Okay &mdash; so what exactly *is* "going on?" Before moving on, it's important to understand the underlying differences between `@mixin` vs. `@extend`:
+Using `@extend` allows a smaller output CSS file and cleaner code if you understand what is going on (we're appending styles instead of duplicating them). You can argue that this isn't a concern with gzip compression, but you can't always ensure gzip compression unless you have access to server configuration settings.
 
-> A `@mixin` is like a **stamp**: it creates a duplicated version of the property block (optionally) with arguments provided.
+To understand and use `@extend` effectively, it's really important to understand exactly what's *"going on"* and the underlying differences between `@mixin` vs. `@extend`. Here is a visual:
 
-> An `@extend` **appends the element** you are extending to the property block.
+<figure class="half--left">
+<figcaption>@mixin</figcaption>
+<img src="../../images/posts/classy-css/mixin.png">
+</figure>
 
-<section class="code--half">
-Sass
+<figure class="half--right">
+<figcaption>@extend</figcaption>
+<img src="../../images/posts/classy-css/extend.png">
+</figure>
 
-<pre><code>
-// Input for @mixin
+<div class="clearfix"></div>
 
-@mixin center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.pitbull {
-  @include center-block;
-  width: 4500px;
-}
-
-.boxer {
-  @include center-block;
-  width: 3000px;
-}
-
-.husky {
-  @include center-block;
-  width: 3400px;
-}
-
-// Input for @extend
-
-%center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.yorkie {
-  @extend %center-block;
-  width: 400px;
-}
-
-.poodle {
-  @extend %center-block;
-  width: 550px;
-}
-
-.jack-russel {
-  @extend %center-block;
-  width: 750px;
-}
-
-</code></pre>
-
-</section>
-
-<section class="code--half">
-
-CSS Output
-
-<pre><code>
-// Output using @mixin:
-
-.pitbull {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 4500px; }
-
-.boxer {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 3000px; }
-
-.husky {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 3400px; }
-
-
-
-
-// Output using @extend:
-
-.yorkie, .poodle, .jack-russel {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
-.yorkie {
-  width: 400px; }
-
-.poodle {
-  width: 550px; }
-
-.jack-russel {
-  width: 750px; }
-</code></pre>
-</section>
-
-<div style="clear:both; float: none"></div>
+> A `@mixin` is like a **stamp**: it creates a duplicated version of the property block (optionally) with arguments provided. An `@extend` **appends the element** you are extending to the property block. It is your **"yes, and ___"** statement.
 
 This means that we have a smaller output CSS file because we are not reproducing the code block each time we are implementing it. The `@extend` simply allows us to *reference* the properties. Extends are so perfect for this! Their logical purpose makes sense. <strong><a href="" class="twitter-share">#teamExtend</a></strong>
 
@@ -333,23 +251,6 @@ And the CSS output looks like:
   background: blue;
 }
 ```
-
-## File Structure
-
-So what does the file architecture look like then? I like to break things up into modular components.
-
-```scss
-scss/
-├── components/
-│   └── buttons/
-│       ├── vars
-│       │   └── _vars.scss
-│       ├── extends
-│       │   └── _vars.scss
-│       └── _buttons.scss
-```
-
---> MUCH MORE ON FILE STRUCTURE <--
 
 ## Benefits
 
