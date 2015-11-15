@@ -1,5 +1,4 @@
 ---
-timeline: upcoming
 talk-type: conference
 location: online conference
 event: CSS Summit
