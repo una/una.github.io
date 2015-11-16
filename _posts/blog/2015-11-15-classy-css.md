@@ -2,7 +2,7 @@
 layout: post
 title: Classy CSS&colon; a Programmatic Approach to CSS
 permalink: /classy-css
-date: '2015-11-20'
+date: '2015-11-15'
 comments: true
 tags:
 - css
@@ -15,7 +15,7 @@ subtitle: Yep
 header-bg: ../images/posts/classy-css/seurat.jpg
 ---
 
-(Before life got in the way) I began writing this blog post a few weeks after releasing a semi-satirical article about my take on the mix of current CSS naming convention/styling trends on Sitepoint called [Atomic OOBEMITSCSS](http://sitepoint.com/atomic-oobemitscss/). (That was back in August, by the way) I called it *Atomic OOBEMITSCSS* as a joke, but people started picking up the name and using it in the wild (which was honestly pretty entertaining as questions about it sprung up in-person). Debate over using `@extend` at SassConf this year (and on Twitter lately) reminded me about revisiting this idea.
+I began writing this blog post a few weeks after releasing a semi-satirical article about my take on the mix of current CSS naming convention/styling trends on Sitepoint called [Atomic OOBEMITSCSS](http://sitepoint.com/atomic-oobemitscss/). That was back in August, but life got in the way. I called it *Atomic OOBEMITSCSS* as a joke, but people started picking up the name and using it in the wild (which was honestly pretty entertaining as questions about it sprung up in-person). Debate over using `@extend` at SassConf this year (and on Twitter lately) reminded me about revisiting this idea.
 
 ## Classy CSS, Please.
 
@@ -63,7 +63,7 @@ $color--secondary: #19d;
 }
 ```
 
-**This base button is our button class.** We will be building on top of this for every button, as **every button is an instance of that class**. Every button element has the type button, and thus shares some common traits (solid outline, transparent background, etc.). Every button pulls from the same common properties and builds on *top* of them. They do not overwrite, but add onto those properties. They are all buttons++ and inherit from the base button. (*was that enough ways to say it?*)
+**This base button is our button class.** We will be building on top of this for every button, as **every button is an instance of that class**. Every button element has the type button, and thus shares some common traits (solid outline, transparent background, etc.). Every button pulls from the same common properties and builds on *top* of them. They do not overwrite, but add onto those properties. They are all buttons++ and inherit from the base button. *(was that enough ways to say the same thing?)*
 
 <figure class="right">
 <img src="../../images/posts/classy-css/ydkjs-fig.png" alt="protoypal inheritance" style="max-width: 500px;">
@@ -201,6 +201,7 @@ For instance, lets make a button mixin to make primary and secondary buttons eas
   cursor: pointer;
   margin: 30px;
   padding: .5em 1em;
+
   @if $size == 'small' {
     font-size: .8em;
   } @else {
@@ -254,14 +255,14 @@ And the CSS output looks like:
 
 ## Benefits
 
-Okay, so that might seem a bit complex to the uninitiated, but once you get started with it, it really makes naming decisions and architectural decisions easy. This is clearly an opinionated system.
+This is clearly an opinionated system, and  may seem a bit complex to the uninitiated, but once you get started with it, it really helps with naming and architectural decisions.
 
 Benefits include:
 
-- It ensures code organized in a way that prevents specificity clashing and overrides (see [ITCSS](http://csswizardry.com/2014/10/the-specificity-graph/)) which means that a smaller file size of CSS is output
-- Consistent naming ([BEM](http://getbem.com/naming/)) keeps uniformity among teams and implements a system to reduce confusion
+- Ensures code organized in a way that prevents specificity clashing and overrides (see [ITCSS](http://csswizardry.com/2014/10/the-specificity-graph/)) &mdash; which means CSS is streamlines, performant, and a smaller CSS file size is output
+- A consistent naming convention ([BEM](http://getbem.com/naming/)) keeps uniformity among teams and provides a reference to reduce confusion
 - The system is organized, maintainable, and scalable
 
-> Keep it classy. Keep it Sassy <span style="font-style: none">💁</span>
+> Keep it classy. Keep it Sassy <span style="font-style: normal">💁</span>
 
 Ok.. I'll walk myself out.
