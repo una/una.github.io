@@ -171,8 +171,6 @@ Now, who said gradients had to be all black and white? (don't answer that). We c
 
 In particular, the **diference** or **exclusion** blend modes provide some pretty neat effects when used in this way. These two blend modes are both comparative blend modes, and essentially take the overlapping pixels and subtract them from each other on a per-channel basis to find their difference (no pun intended).
 
---> add codepen example of animated difference blend mode <--
-
 They were originally used for lining up documents. When the document was perfectly black (in the case of difference) or at a 50% grey (in case of exclusion) they were exactly aligned. As briefly mentioned, the only difference is that in the difference blend mode, *identical pixels cancel out to black* whereas for exclusion, they cancel out to *50% grey*.
 
 But when pixels are different colors, they create vivid differences, and therefore when used subtly, create bright light effects. The following example uses a red gradient and the difference blend mode. You can layer multiple gradients for a more dramatic effect.
