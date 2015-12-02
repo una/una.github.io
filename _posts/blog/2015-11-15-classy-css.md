@@ -13,6 +13,9 @@ tags:
 - scss
 subtitle: An opinionated Sass architecture system for writing modular and scalable libraries. Also, a case in defense of extends.
 header-bg: ../images/posts/classy-css/seurat.jpg
+audio: classycss
+duration: "10:06"
+audio-size: 12127651
 ---
 
 I began writing this blog post a few weeks after releasing a semi-satirical article about my take on the mix of current CSS naming convention/styling trends on Sitepoint called [Atomic OOBEMITSCSS](http://sitepoint.com/atomic-oobemitscss/). That was back in August, but life got in the way. I called it *Atomic OOBEMITSCSS* as a joke, but people started picking up the name and using it in the wild (which was honestly pretty entertaining as questions about it sprung up in-person). Debate over using `@extend` at SassConf this year (and on Twitter lately) reminded me about revisiting this idea.
