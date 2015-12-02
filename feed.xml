@@ -44,14 +44,14 @@ layout:
     {% for post in site.posts limit:20 %}
       {% unless post.event %}
         <item>
-          <title>{{ post.title }}</title>
-          <description>{{ post.subtitle }}</description>
+          <title>{{ post.title | xml_escape }}</title>
+          <description>{{ post.subtitle | xml_escape }}</description>
           <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
           <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
           <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
           {% if post.audio %}
-          <itunes:summary>{{ post.subtitle }}</itunes:summary>
-          <itunes:subtitle>{{ post.subtitle }}</itunes:subtitle>
+          <itunes:summary>{{ post.subtitle | xml_escape }}</itunes:summary>
+          <itunes:subtitle>{{ post.subtitle | xml_escape }}</itunes:subtitle>
           <enclosure url="{{ site.url }}/audio/{{ post.audio }}.mp3" length="{{post.audio-size}}" type="audio/mpeg" />
           <itunes:duration>{{ post.duration }}</itunes:duration>
           {% endif %}
