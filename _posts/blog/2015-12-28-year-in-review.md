@@ -11,6 +11,9 @@ tags:
 - retrospective
 header-bg: ../images/posts/2015-review/bg-montreux.jpg
 subtitle: It's time for my annual reflection and goal resetting! It's been a crazy year for sure.
+audio: yearinreview
+duration: "10:05"
+audio-size: 9677375
 ---
 
 [Last year](http://una.im/2015-resolutions) I started a (now annual) tradition of reviewing my personal goals, and setting new ones. Looking back, **I can't believe how much has happened this year.** It's definitely been a roller coaster, and I've definitely grown a ton as a person. Thank you all for joining me on this journey!
@@ -20,7 +23,7 @@ subtitle: It's time for my annual reflection and goal resetting! It's been a cra
 Here are a few projects I've launched over the past year (all source code available on GitHub, where I made **2,396 commits** this year):
 
 - [Sass Director](http://sassdirector.com/): A file generator for Sass partials that uses a single "director script" (aka your `main.scss`)
-- [Gulp Starter Environment](https://github.com/una/gulp-starter-env): Created for the designers I worked with the learn gulp and get familiar with using Github.
+- [Gulp Starter Environment](https://github.com/una/gulp-starter-env): Created for the designers I worked with to learn gulp and get familiar with using Github.
 - [Happy Moments](http://happy-moments.herokuapp.com): A node app that pulls in a single happy moment memory from each day I've had this year.
 - [Travels](http://travels.surge.sh/): A web experiment site that uses filters and blend modes, featuring my travel poetry as content.
 - [CSSgram](http://una.im/cssgram): A tiny CSS library recreating Instragram filters using just CSS features.
@@ -54,9 +57,10 @@ I traveled *a lot* this year. According to my TripIt data, I traveled a total of
   <p class="caption">Interviewing with Sylvain after my dotCSS talk in Paris.</p>
 </div>
 
-I started to [read](https://github.com/una/personal-goals/blob/master/ideas-and-misc/book-checklist.md) a lot, too (by read, I really mean *listen* to audiobooks). I finished **49 books** this year. My favorites were:
+I started to [read](https://github.com/una/personal-goals/blob/master/ideas-and-misc/book-checklist.md) a lot, too (by read, I really mean *listen* to audiobooks). I finished **51 books** this year. My favorites were:
 
 - *Ready Player One* by Ernest Cline
+- *All the Light We Cannot See* by Anthony Doerr
 - *The Martian* by Andy Weir
 - *Outliers* by Malcolm Gladwell
 - *Ghost in the Wires* by Kevin Mitnick
