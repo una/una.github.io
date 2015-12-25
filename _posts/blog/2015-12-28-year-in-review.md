@@ -40,9 +40,9 @@ Last year, I said I wanted to "participate in conferences and community" as one 
 
 <img src="../../images/posts/2015-review/dog.gif" alt="dog gif">
 
-I gave **17 talks/workshops** on Sass, UI interaction, performance optimizations, keyboard ninjary, open source design, goal setting, and CSS filters and blend modes. I wrote **30 blog posts** on topics ranging from experimental (like [Generative Pixel Art](http://una.im/sass-pixel-art/) via Sass matrices and blend-mode hacks to create [Faux 3d Effects](http://una.im/3d-effect), to quite practical ([5 Uses for Sass Maps](http://www.sitepoint.com/5-great-uses-sass-maps/) and a class-based [CSS architecture](http://una.im/classy-css/) system). I also *recorded audio for every post I wrote on my blog* and started a **podcast** about developer tools called [Toolsday](http://toolsday.io).
+I gave **17 talks/workshops** on Sass, UI interaction, performance optimizations, keyboard ninjary, open source design, goal setting, and CSS filters and blend modes. I wrote **30 blog posts** on topics ranging from experimental (like [Generative Pixel Art](http://una.im/sass-pixel-art/) via Sass matrices and blend-mode hacks to create [Faux 3d Effects](http://una.im/3d-effect), to quite practical ([5 Uses for Sass Maps](http://www.sitepoint.com/5-great-uses-sass-maps/) and a class-based [CSS architecture](http://una.im/classy-css/) system). I also *recorded audio for every post I wrote on my blog* and the audiobook version of the <a href="http://svgpocketguide.com/book/">SVG Pocket Guide</a>. And finally, I started a **podcast** about developer tools called [Toolsday](http://toolsday.io)!
 
-<blockquote class="left">If you'd like to support my code calligraphy or just send a simple thank you, I made an <a href="#">Amazon wishlist</a> of pens, paper, and audiobooks :)</blockquote>
+<blockquote class="left">If you'd like to support my code calligraphy or just send a simple thank you, I made an <a href="http://amzn.com/w/2BOPP6HPWDL9S">Amazon wishlist</a> of pens, paper, and audiobooks :)</blockquote>
 
 I also started doing **code calligraphy** as a way to visualize some mnemonic devices and solidify my skills. People on Twitter seemed to really resonate with them, so I want to make more. A lot of people mentioned that they wanted prints, a book, or posters. I've got some ideas, but we'll see how it pans out with time.
 
@@ -57,7 +57,7 @@ I traveled *a lot* this year. According to my TripIt data, I traveled a total of
   <p class="caption">Interviewing with Sylvain after my dotCSS talk in Paris.</p>
 </div>
 
-I started to [read](https://github.com/una/personal-goals/blob/master/ideas-and-misc/book-checklist.md) a lot, too (by read, I really mean *listen* to audiobooks). I finished **51 books** this year. My favorites were:
+I started to read a lot, too (by read, I really mean *listen* to audiobooks). I finished **51 books** [this year](https://github.com/una/personal-goals/blob/master/ideas-and-misc/book-checklist.md). My favorites were:
 
 - *Ready Player One* by Ernest Cline
 - *All the Light We Cannot See* by Anthony Doerr
@@ -66,7 +66,7 @@ I started to [read](https://github.com/una/personal-goals/blob/master/ideas-and-
 - *Ghost in the Wires* by Kevin Mitnick
 - *Ender's Game* by Orson Scott Card
 
-### Awards
+### Recognition
 
 Apparently people took notice of my work, but didn't know where to categorize my contributions. I was shortlisted for [Young Designer of the Year](https://thenetawards.com/vote/young-designer/) while also getting on a list of [2015's Top JS Devs to Follow](http://blog.bithound.io/2015-top-js-devs/) and [Female Tech Influencers](http://skillcrush.com/2015/11/04/50-female-tech-influencers-to-follow-on-twitter/) 💪. One day there will be a place for people like us.
 
@@ -133,7 +133,7 @@ I'm cutting this down to fewer and more concise goals than last years. Here they
 2. **Write a Book** <br><p style="font-size:85%">I have a book idea in mind and I really want to make it a reality.</p>
 3. **Bridge the Designer/Developer Gap** <br><p style="font-size:85%">Continue sharing knowledge on front-end topics relevant to both designers and devs.</p>
 4. **Build All The Things** <br><p style="font-size:85%">Build things quickly, ship, learn, and then build them better. Open source it all, too.</p>
-5. **Prioritize my Health** <br><p style="font-size:85%">Run that half marathon &mdash; fitness is mandatory, not optional, for performing my best.</p>
+5. **Prioritize my Health** <br><p style="font-size:85%">Run that half marathon &mdash; fitness is mandatory, not optional.</p>
 
 I'll leave you with this lovely holiday song about the state of developer life from your [Toolsday](http://toolsday.io) hosts (Chris Dhanaraj and me) 😃
 
