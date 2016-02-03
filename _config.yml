@@ -9,3 +9,9 @@ redcarpet:
 twitter_username: una
 github_username:  una
 paginate: 5
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  startings: [head, body]
