@@ -1,11 +1,12 @@
 name: Almost Profound
 description: Front end development and design musings
-url: http://una.github.io
-markdown: redcarpet
-highlighter: pygments # or rouge or null
+url: http://una.im
+markdown: kramdown
+highlighter: pygmentize # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json"]
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
+kramdown:
+  input: GFM
 twitter_username: una
 github_username:  una
 paginate: 5
+gems: ["jekyll-paginate"]
