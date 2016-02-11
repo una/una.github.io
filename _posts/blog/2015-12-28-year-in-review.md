@@ -102,7 +102,7 @@ So how am I doing on those overall goals I laid out last year?
 
 ### Professional Goals
 
-There are so many things I want to learn and get better at! First and foremost, **JavaScript.** I feel like I have a general grasp on most web-development concerns (accesibility, performance, progressive enhancement), and I'm pretty darn good at styling (Sass & CSS). So for me, the next step is to really focus on improving my JavaScript skills from just being functional to having a really good base understanding of how to build and work within a web app. <a class="twitter-share">In the current state of the web, Javascript == Power</a>.
+There are so many things I want to learn and get better at! First and foremost, **JavaScript.** I feel like I have a general grasp on most web-development concerns (accessibility, performance, progressive enhancement), and I'm pretty darn good at styling (Sass & CSS). So for me, the next step is to really focus on improving my JavaScript skills from just being functional to having a really good base understanding of how to build and work within a web app. <a class="twitter-share">In the current state of the web, Javascript == Power</a>.
 
 <blockquote class="left">I'm going to share as I learn, so get ready to join the JavaScript train, my friends.
 </blockquote>
