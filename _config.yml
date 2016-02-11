@@ -1,3 +1,4 @@
+
 name: Almost Profound
 description: Front end development and design musings
 url: http://una.im
@@ -10,3 +11,4 @@ twitter_username: una
 github_username:  una
 paginate: 5
 gems: ["jekyll-paginate"]
+future: true
