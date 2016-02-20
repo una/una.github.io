@@ -60,6 +60,31 @@
 	      text-align: right;
 	  }
 
+	  &.half--left,
+	  &.half--right {
+	  	width: 50%;
+
+	  	@include breakpoint(sm) {
+	  		width: calc(100% - 1.5em);
+	  	}
+	  }
+
+	  &.half--right {
+	  	margin: 1em -4em 1em 1em;
+
+	  	@include breakpoint(md) {
+	  		margin: 1em;
+	  	}
+	  }
+
+	  &.half--left {
+	  	margin: 1em 1em 1em -4em;
+
+	  	@include breakpoint(md) {
+	  		margin: 1em;
+	  	}
+	  }
+
 	}
 
 	em,
