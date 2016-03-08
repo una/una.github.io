@@ -4,7 +4,8 @@
   "description": "Una Kravets blogs about front end development and design sometimes.",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "surge ./_site http://una.im"
   },
   "author": "Una Kravets",
   "license": "ISC",
@@ -38,5 +39,8 @@
   "bugs": {
     "url": "https://github.com/una/una.github.io/issues"
   },
-  "homepage": "http://una.github.io"
+  "homepage": "http://una.github.io",
+  "dependencies": {
+    "simple-jekyll-search": "^1.1.1"
+  }
 }
