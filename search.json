@@ -6,7 +6,7 @@ layout: null
     {% unless post.event %}
       {
         "title"    : "{{ post.title | escape }}",
-        "tags"     : "{{ post.tags | join: ', ' }}",
+        "tags"     : "{{ post.tags | join: ', ' | remove_chars }}",
         "url"      : "{{ site.baseurl }}{{ post.url }}",
         "date"     : "{{ post.date }}"
       } {% unless forloop.last %},{% endunless %}

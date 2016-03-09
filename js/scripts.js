@@ -39,10 +39,14 @@ window.BLOG || (BLOG = {});
   SimpleJekyllSearch({
     searchInput: document.getElementById('search-input'),
     resultsContainer: document.getElementById('results-container'),
-    json: 'search.json',
+    json: '/search.json',
     searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
-    noResultsText: 'No results found',
+    noResultsText: '<li>No results found</li>',
     limit: 10
+  });
+
+  $('.search-area').click(function(){
+    $('.search-area').addClass('clicked');
   });
 
   // emoji
