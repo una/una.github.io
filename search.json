@@ -6,11 +6,7 @@ layout: null
     {% unless post.event %}
       {
         "title"    : "{{ post.title | escape }}",
-<<<<<<< HEAD
         "tags"     : "{{ post.tags | join: ', ' | remove_chars }}",
-=======
-        "tags"     : "{{ post.tags | join: ', ' }}",
->>>>>>> 9a3bfd0b85ee6c054c71796f77b851cc3f5d4ad4
         "url"      : "{{ site.baseurl }}{{ post.url }}",
         "date"     : "{{ post.date }}"
       } {% unless forloop.last %},{% endunless %}

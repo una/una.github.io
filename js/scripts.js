@@ -52,7 +52,6 @@ window.BLOG || (BLOG = {});
   $('body').click(function(){
     if ($('.search-area').hasClass('clicked')) {
       document.getElementById('results-container').innerHTML = "<li style='height: 0; padding: 0; margin: 0'></li>";
-      console.log('off')
     }
   });
 

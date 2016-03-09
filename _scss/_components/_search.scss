@@ -68,10 +68,10 @@
     outline: 1px solid $color--lightgrey;
 
     li {
-      min-width: 17em;
+      width: 17em;
 
       @include breakpoint(md) {
-        min-width: 20.5em;
+        width: 23em;
       }
 
       &:first-child {

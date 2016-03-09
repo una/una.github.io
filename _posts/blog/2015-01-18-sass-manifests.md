@@ -7,7 +7,7 @@ comments: true
 tags:
 - sass
 - manifest
-- \@import
+- import
 - tools
 - open source
 header-bg: ../images/posts/crossing-delaware.jpg
