@@ -51,6 +51,10 @@
     z-index: 3;
     position: relative;
 
+    &::placeholder {
+      font-style: italic;
+    }
+
     &:hover,
     &:focus {
       outline: 2px solid $color--purple;
@@ -64,6 +68,12 @@
     outline: 1px solid $color--lightgrey;
 
     li {
+      min-width: 17em;
+
+      @include breakpoint(md) {
+        min-width: 20.5em;
+      }
+
       &:first-child {
         padding-top: .75em;
       }
