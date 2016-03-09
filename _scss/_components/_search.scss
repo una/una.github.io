@@ -1,0 +1,93 @@
+.search-area {
+  padding: 0 .5em;
+  position: absolute;
+  top: 0;
+  right: 21em;
+  max-width: 8em;
+  transition-duration: .25s;
+
+  &.clicked {
+    max-width: 16em;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    max-width: 16em;
+  }
+
+  @include breakpoint(md) {
+    position: relative;
+    float: right;
+    right: .5em;
+    top: .5em;
+
+    &.clicked {
+      max-width: 19.5em;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      max-width: 19.5em;
+    }
+  }
+
+  @include breakpoint(sm) {
+    float: none;
+    top: 0;
+    right: 0;
+    margin: 0 0 1em .5em;
+  }
+
+  input {
+    margin: .5em 1em 0 0;
+    background: white;
+    border: none;
+    outline: 1px solid $color--lightgrey;
+    transition-duration: .25s;
+    width: 100%;
+    padding: .5em .75em;
+    z-index: 3;
+    position: relative;
+
+    &::placeholder {
+      font-style: italic;
+    }
+
+    &:hover,
+    &:focus {
+      outline: 2px solid $color--purple;
+    }
+  }
+
+  ul {
+    background: white;
+    list-style: none;
+    font-size: 80%;
+    outline: 1px solid $color--lightgrey;
+
+    li {
+      min-width: 17em;
+
+      @include breakpoint(md) {
+        min-width: 20.5em;
+      }
+
+      &:first-child {
+        padding-top: .75em;
+      }
+
+      &:last-child {
+        padding-bottom: .75em;
+      }
+
+      padding: .5em 1.25em;
+      transition-duration: .25s;
+
+      &:hover {
+        background: $color--lightgrey;
+      }
+    }
+  }
+}

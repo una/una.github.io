@@ -38,5 +38,8 @@
   "bugs": {
     "url": "https://github.com/una/una.github.io/issues"
   },
-  "homepage": "http://una.github.io"
+  "homepage": "http://una.github.io",
+  "dependencies": {
+    "simple-jekyll-search": "^1.1.1"
+  }
 }
