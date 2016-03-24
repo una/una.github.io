@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '2015 Year In Review & 2016 Resolutions'
-permalink: /2015-review
+permalink: /2015-review/
 date: '2015-12-28'
 comments: true
 tags:

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A Pretty Long List of Style Guides and Pattern Libraries
-permalink: /pattern-libraries
+permalink: /pattern-libraries/
 date: '2014-11-13'
 comments: true
 tags:

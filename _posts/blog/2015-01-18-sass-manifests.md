@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sass Director and Manifest Files
-permalink: /sass-manifests
+permalink: /sass-manifests/
 date: '2015-01-18'
 comments: true
 tags:

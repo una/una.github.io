@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hacking :visited"
-permalink: /hacking-visited
+permalink: /hacking-visited/
 date: '2015-06-07'
 comments: true
 tags:

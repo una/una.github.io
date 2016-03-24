@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open Source Design
-permalink: /open-source-design
+permalink: /open-source-design/
 date: '2014-11-19'
 comments: true
 tags:
@@ -34,11 +34,11 @@ Often, designers and developers have the same user-centered goals. But why don't
 
 ### The "Fuck You, Pay Me" Mentality
 
-If you haven't [seen it yet](https://www.youtube.com/watch?v=jVkLVRt6c1U), Mike Montiero gave one of the most famous Creative Mornings talks ever in 2011 where he encouraged creatives to not take abuse and payment refusal from their clients. 
+If you haven't [seen it yet](https://www.youtube.com/watch?v=jVkLVRt6c1U), Mike Montiero gave one of the most famous Creative Mornings talks ever in 2011 where he encouraged creatives to not take abuse and payment refusal from their clients.
 
 <a class="quote twitter-share left">Designers often feel undervalued for their craft and therefore have a knee-jerk reaction when asked to do "free work." </a>
 
-Because of the ignorant and prevalent public opinion that design is superfluous and subjective, designers need to defend their value to clients. With development it's simple: it either works or it doesn't (okay, okay it's definitely not that simple, there are a ton of factors that go into how efficiently it works), but for designers, it can come down to tastes or a clients' child's "favorite color." Designers often feel undervalued for their craft and therefore have a knee-jerk reaction when asked to do "free work." 
+Because of the ignorant and prevalent public opinion that design is superfluous and subjective, designers need to defend their value to clients. With development it's simple: it either works or it doesn't (okay, okay it's definitely not that simple, there are a ton of factors that go into how efficiently it works), but for designers, it can come down to tastes or a clients' child's "favorite color." Designers often feel undervalued for their craft and therefore have a knee-jerk reaction when asked to do "free work."
 
 
 Since so many beginner designers feel forced into free or low-paying work to start out, students in art school are often taught about how to defend their value. Well, this is all important and good, but it's a mentality that creates a division. This is not a problem often faced by developers.
@@ -53,7 +53,7 @@ Right now, developers and designers don't really have a "best way of communicati
 
 ### The Ownership Problem
 
-This is not an issue of greed or wanting credit for work, but it's a problem with feeling like your work isn't really yours to design. That sounds strange, especially to proponents of open source, but let me explain. 
+This is not an issue of greed or wanting credit for work, but it's a problem with feeling like your work isn't really yours to design. That sounds strange, especially to proponents of open source, but let me explain.
 
 Focusing on small design components is creatively blocking. How can a designer make the best choices for people when they might not have the full story? How can we delineate tasks when multiple designers and developers are working together without stepping on each other's feet? The issue queue is one solution for developers, could this be translated to design as well? Designers generally want to build systems for users, not just components on a page.
 
@@ -67,7 +67,7 @@ Design by committee is a designer's worst nightmare. It's when things get a litt
 
 ## What Can We Do Right Now?
 
-We need to foster more conversation between designers and developers. 
+We need to foster more conversation between designers and developers.
 
 ### Developers Recognizing the Value of Design
 
@@ -89,7 +89,7 @@ Again, like contribution docs for designers, this system could use work, but its
 
 ### Styleguides as a Solution
 
-I see [styleguides](http://una.github.io/pattern-libraries) as the best way for designers and developers to work together quickly and efficiently. Now, there IS [psd viewing/diffing](https://github.com/blog/1845-psd-viewing-diffing) on Github, but that still creates the boundary of not having the designs coded for developers to use as the product grows and changes (which you know, happens in open source). Static comps are not a good solution for open source design for this reason, but that's not to say that designers who don't code (yet ;)) can't participate. 
+I see [styleguides](http://una.github.io/pattern-libraries) as the best way for designers and developers to work together quickly and efficiently. Now, there IS [psd viewing/diffing](https://github.com/blog/1845-psd-viewing-diffing) on Github, but that still creates the boundary of not having the designs coded for developers to use as the product grows and changes (which you know, happens in open source). Static comps are not a good solution for open source design for this reason, but that's not to say that designers who don't code (yet ;)) can't participate.
 
 There can be a mix of static comps and design ideas submitted in the conversation for the style guide issue, from which designers with more coding experience can build them out. Styleguides are a great introduction to playing around with how the style layer will affect an entire application. The changes are quick and global. (And it will likely inspire more designers to learn how to code)
 

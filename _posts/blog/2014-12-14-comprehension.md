@@ -1,7 +1,7 @@
 ---
 layout: post
 title: On Learning and Comprehension
-permalink: /comprehension
+permalink: /comprehension/
 date: '2014-12-14'
 comments: true
 tags:

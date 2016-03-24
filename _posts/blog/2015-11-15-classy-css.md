@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Classy CSS&colon; a Programmatic Approach to Sass Stylesheets
-permalink: /classy-css
+permalink: /classy-css/
 date: '2015-11-15'
 comments: true
 tags:

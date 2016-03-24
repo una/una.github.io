@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sketchnotes, FTW
-permalink: /sketchnotes
+permalink: /sketchnotes/
 date: '2015-01-24'
 comments: true
 tags:

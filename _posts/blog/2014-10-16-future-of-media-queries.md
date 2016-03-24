@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Media Queries of the Future!
-permalink: /media-queries-of-the-future
+permalink: /media-queries-of-the-future/
 date: '2014-10-16'
 comments: true
 tags:
@@ -172,7 +172,7 @@ Values:
 Here's an example (stolen right from the spec):
 
 {% highlight sass %}
-//If a page styles its links to only add underlines on hover, 
+//If a page styles its links to only add underlines on hover,
 // it may want to always display underlines when printed:
 
 a {

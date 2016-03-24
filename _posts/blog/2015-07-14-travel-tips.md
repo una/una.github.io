@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tech Conference Travel Tips
-permalink: /travel-tips
+permalink: /travel-tips/
 date: '2015-07-14'
 comments: true
 tags:

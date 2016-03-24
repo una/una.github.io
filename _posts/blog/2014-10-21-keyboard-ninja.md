@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Becoming a Keyboard Ninja&colon; The Sticky Note Method
-permalink: /keyboard-ninja
+permalink: /keyboard-ninja/
 date: '2014-10-27T10:21:36-05:00'
 tags:
 - keyboard
@@ -33,9 +33,9 @@ If you're not convinced yet, let's break it down:
 1. It will remind you not to use it, causing you to Google alternative navigation flows (you'll learn a lot this way)
 2. You can still easily access the trackpad by simply lifting the sticky note from below or on the edge (where you'd be accessing it anyway)
 
-Make sure to write down new shortcuts you learn on that sticky note &mdash; use a felt tip pen so you don't need press too hard and accidentally click on something.  
+Make sure to write down new shortcuts you learn on that sticky note &mdash; use a felt tip pen so you don't need press too hard and accidentally click on something.
 <br>
-When you've covered your sticky with shortcut reminders, put it somewhere visible for a while (i.e. next to your track pad on your laptop or on your desk). Soon, you'll have a great collection of shortcuts you find useful, and will quickly memorize them!  
+When you've covered your sticky with shortcut reminders, put it somewhere visible for a while (i.e. next to your track pad on your laptop or on your desk). Soon, you'll have a great collection of shortcuts you find useful, and will quickly memorize them!
 <br>
 To use this method with a mouse &mdash; not a track pad &mdash; put the sticky underneath the mouse to disable the motion sensor. You'll need a separate sticky to write new commands down on.
 
