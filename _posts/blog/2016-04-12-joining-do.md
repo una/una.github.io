@@ -42,6 +42,10 @@ Their enthusiasm while we sorted out a design/dev Github workflow was so contagi
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Telling a designer they need to learn code will make them defensive. Sharing your excitement &amp; joy for code with them will make them curious</p>&mdash; Una Kravets (@Una) <a href="https://twitter.com/Una/status/575064162616766464">March 9, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+<br>
+
+**Enthusiasm is the solution to bridging skill gaps and spreading knowledge.** Be patient and remember that everyone has the best intentions in mind. After all, *everyone on your team wants the product to succeed*. Try to remember that!
+
 ## 2. Relentlessly Reinvent
 
 This is another phrase frequently heard in the studio. Keep building, iterating, and testing until it works. This can feel like endless work, going back to square one every time, but ultimately, after you've exhausted all of the possibilities, you come out with a legitimately solid solution.
@@ -55,17 +59,21 @@ This is how design thinking works at its core. You think about your user, build,
 
 I really internalized this lesson while working on four different iterations of component libraries. After all of the efforts, the opinions and meetings and discussions, I can't express how much love and respect I have for the team. The Bluemix Design Guide in particular has been a long time coming, and I'm so proud of where it is now, and excited about where it is going! [Brian Han](https://twitter.com/_brianhan) had exemplary patience throughout this process that I always hope to emulate in any task I need to accomplish in the future.
 
+**<a class="twitter-share">The road to solving design problems is long and winding and worth it.</a>**
+
 ## 3. Ask for Forgiveness, Not Permission
 
 <br>
 
-<blockquote class="left">You can't wait for things to become good around you, you have to make things good around yourself.</blockquote>
+<blockquote class="left"><a class="twitter-share">You can't wait for things to become good around you &mdash; you have to make things good around yourself.</a></blockquote>
 
-It may surprise you that a company as structured as IBM advocates for some of its employees to forge ahead, do the thing, and if it didn't work out, to ask for forgiveness later. But that's exactly the mentality that sums up my experience working in the IBM Design Austin studio. I love the sentiment. It's one of the most important lessons I learned, along with the realization that "You can't wait for things to become good around you, you have to make things good around yourself." And both of those things go hand-in-hand.
+It may surprise you that a company as structured as IBM tells some of its employees to forge ahead, do the thing, and if it doesn't work out, to ask for forgiveness later. But that's exactly the mentality that defined my experience.
 
 ### FED Date
 
-When I started at IBM, there was no front-end community yet. I was inspired by the above sentiment and by by a company I interned at a few summers ago called [Viget](http://Viget.com), to start an internal knowledge share to unite the developers in the studio and open their eyes to new skills/ideas. It was a place to practice giving talks, an excuse to play with a new technology, and a space to meet coworkers that you might not work with or see on a daily basis.
+When I started at IBM Design, the front-end development culture was in its infancy. A lot of us felt disconnected and weren't really learning. But I quickly learned that **your work culture and environment can be largely up to you**. We wanted to make it better.
+
+Inspired by the above sentiment and by a company I interned at a few summers ago called [Viget](http://Viget.com), I started an internal knowledge share. This was for a few reasons &mdash; to unite the developers in the studio and open their eyes to new skills/ideas, to create a safe space for presentation practice, to give an excuse for experimenting with new technology, and to provide a place to meet and see coworkers that you might not work nearby on a daily basis.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">^ what used to be 6 ppl has now quadrupled and we&#39;ve had &gt; 35 unique dev presentations among peers. Highly recommend! <a href="http://t.co/qjf9m1VIER">pic.twitter.com/qjf9m1VIER</a></p>&mdash; Una Kravets (@Una) <a href="https://twitter.com/Una/status/628319979725824001">August 3, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -74,14 +82,14 @@ A few months later, a studio-supported education initiative was started, making 
 
 ### IBM Radio
 
-FED Date was not the only grassroots initiative started within the studio. Among others (like a side projects community and a really beautiful magazine) the IBM Radio was dreamed up by [Mirko Azis](https://twitter.com/miroslavazis) and [Edouard Urcades](https://twitter.com/edouerd). I ended up building the IBM radio web app for a hackathon project, which got me involved with its community.
+FED Date was far from the only grassroots initiative started within the studio. Among others (like a side projects community and a really beautiful magazine) the IBM Radio was dreamed up by [Mirko Azis](https://twitter.com/miroslavazis) and [Edouard Urcades](https://twitter.com/edouerd). I was lucky enough to (almost randomly) end up getting involved in its community via a hackathon project.
 
 <figure class="left">
   <img src="../../images/posts/byeibm/teamradioventure-test1.jpg" alt="">
   <figcaption>The IBM Radio hack team! <a href="https://twitter.com/jeffersonwlam">Jefferson Lam</a>, <a href="https://twitter.com/ATLankford">Adam Lankford</a>, <a href="https://twitter.com/Tay1orJones">Taylor Jones</a>, <a href="https://twitter.com/Dave_Conner">David Conner</a>, and me.</figcaption>
 </figure>
 
-This led to me starting a podcast called [Toolsday](http://toolsday.io) (20ish minutes of tech tools, tips, and tricks on Tuesdays st 2!) with my really awesome coworker, [Chris Dhanaraj](https://twitter.com/chrisdhanaraj). We were (are?) both just the right amount of nerdy about various topics on the front end development scale to make it work. I ended up singing every intro song because our friend who was going to make us an audio track fell through. But **you just have to make things work sometimes.**
+This led to me starting a podcast called [Toolsday](http://toolsday.io) (20ish minutes of tech tools, tips, and tricks on Tuesdays st 2!) with my really awesome coworker, [Chris Dhanaraj](https://twitter.com/chrisdhanaraj) to record our nerdy lunchtime talks about technology. I learned a ton from him we knew that recording those conversations would be useful to more people than just ourselves. We didn't have audio, or a plan each week, but we made it work. The people in this studio are really goos at **making things good** around them.
 
 <figure class="half--left">
   <img src="../../images/posts/byeibm/mirko-cake.png" alt="">
@@ -98,6 +106,8 @@ This led to me starting a podcast called [Toolsday](http://toolsday.io) (20ish m
   <figcaption>Toolsday hosts hard at work in the recording studio.</figcaption>
 </figure>
 
-There's this really **strong love for craft within a supportive little community at IBM Design**. And while not everyone mentioned above is still there, each designer and developer there exemplifies what makes its community so awesome. With each new-hire cohort, new ideas are brought into the studio and it's been really exciting to have been involved in such a massive cultural shift!
+> All of that is to say that you have all the power in the world to make your workplace awesome. <a class="twitter-share">Culture comes from community, and communities are built by the people within them.</a>
+
+There's this really strong love for craft as the basis of the community within IBM Design. And while not everyone mentioned above is still there, each designer and developer exemplifies what makes its community so awesome. With every new-hire cohort, new ideas are brought into the studio and it's been really exciting to have been involved in such a massive cultural shift! Stay curious, y'all 💕
 
 Oh and by the way, IBM design is [hiring](https://www.ibm.com/design/careers.shtml) if you're interested.
