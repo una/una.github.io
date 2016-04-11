@@ -2,7 +2,7 @@
 layout: post
 title: "Lessons Learned at IBM Design"
 permalink: /ibm-lessons/
-date: '2016-04-11'
+date: '2016-04-12'
 comments: true
 tags:
 - lesson
