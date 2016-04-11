@@ -2,7 +2,7 @@
 layout: post
 title: "Lessons Learned at IBM Design"
 permalink: /ibm-lessons/
-date: '2016-04-11'
+date: '2016-04-12'
 comments: true
 tags:
 - lesson
@@ -12,7 +12,8 @@ tags:
 - new
 - job
 header-bg: ../images/posts/byeibm/hallowinning.jpg
-subtitle: "stuff here"
+subtitle: "I've learned so much during my time at IBM Design! This is a little wrap up post and an announcement about my next adventure."
+hidden: true
 ---
 
 I'm excited to share the news that I'll be joining [Digital Ocean](http://digitalocean.com) as a UI Engineer on the Creative and Community Engineering team next week! I'm pretty stoked about the opportunity to work in a smaller team setting, get my work out there faster, and also work remotely. I'm keeping Austin my home base but since I won't need to physically be in an office every day, I'll be able to travel more freely &mdash; which is really important to me!
