@@ -155,7 +155,7 @@
 }
 
 .twitter-share {
-	@extend transition-duration;
+	@extend %transition-duration;
 	&:after {
 		font-family: "icomoon";
 		content: " \e602";
@@ -164,7 +164,7 @@
 	}
 
 	&:hover:after {
-		@extend transition-duration;
+		@extend %transition-duration;
 		color: white;
 	}
 
