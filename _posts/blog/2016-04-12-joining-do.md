@@ -16,6 +16,9 @@ audio: ibm-lessons
 duration: "05:14"
 audio-size: 6272569
 subtitle: "I've learned so much during my time at IBM Design! This is a little wrap up post and an announcement about my next adventure."
+audio: ibm-lessons
+duration: "05:14"
+audio-size: 6272568
 ---
 
 I'm excited to share the news that I'll be joining [Digital Ocean](http://digitalocean.com) as a UI Engineer on the Creative and Community Engineering team next week! I'm pretty stoked about the opportunity to work in a smaller team setting, get my work out there faster, and also work remotely. I'm keeping Austin my home base but since I won't need to physically be in an office every day, I'll be able to travel more freely &mdash; which is really important to me!
