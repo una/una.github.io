@@ -13,7 +13,7 @@ Performance is key in positive product outcomes. Not only do we need to deliver 
 
 > Accessibility is like a blueberry muffin — you can't push the berries in there afterward. It needs to be baked in from the beginning &mdash; [Cordelia Dillon](https://twitter.com/cordeliadillon)
 
-*From the beginning.* This is exactly why we need to empower our UX designers and copywriters to think about these topics. And it's especially relevant to designers, when [media is the lynch-pin to performance optimization](#LINK TO THAT SITE WHERE THEY QUOTES PPLS - I KNOW I TWEETED THIS TOO).
+*From the beginning.* This is exactly why we need to empower our UX designers and copywriters to think about these topics. And it's especially relevant to designers, when [media is the lynch-pin to performance optimization](https://www.keycdn.com/blog/web-performance-experts/).
 
 -- image here of images on the web --
 
