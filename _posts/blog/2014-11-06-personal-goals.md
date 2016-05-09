@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How Open Sourcing My Personal Goals Made Me Really Productive
-permalink: /personal-goals-guide
+permalink: /personal-goals-guide/
 date: '2014-11-06'
 comments: true
 tags:
@@ -49,7 +49,7 @@ You can also include additional folders with more specifics for your goals. For 
 </a>
 
 
-Writing down your goals make you think about them, and publicizing them holds you more accountable. It's the same reason why keeping a [food diary](http://www.ncbi.nlm.nih.gov/pubmed/22795495) yields better results for dieters. The simple act of writing down your day's actions makes you more likely to stick to a plan. 
+Writing down your goals make you think about them, and publicizing them holds you more accountable. It's the same reason why keeping a [food diary](http://www.ncbi.nlm.nih.gov/pubmed/22795495) yields better results for dieters. The simple act of writing down your day's actions makes you more likely to stick to a plan.
 
 Reviewing these goals in a positive light at the end of the week definitely made me feel accomplished. **Positive** is the key word here. Don't beat yourself up for not accomplishing everything you planned at the beginning of the week &mdash; simply re-evaluate your time allocation for the following week.
 

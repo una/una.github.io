@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Sass Director and Manifest Files
-permalink: /sass-manifests
+permalink: /sass-manifests/
 date: '2015-01-18'
 comments: true
 tags:
 - sass
 - manifest
-- \@import
+- import
 - tools
 - open source
 header-bg: ../images/posts/crossing-delaware.jpg

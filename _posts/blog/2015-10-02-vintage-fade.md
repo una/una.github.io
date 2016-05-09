@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CSS Image Effects #1: Vintage Washout"
-permalink: /vintage-washout
+permalink: /vintage-washout/
 date: '2015-10-02'
 comments: true
 tags:

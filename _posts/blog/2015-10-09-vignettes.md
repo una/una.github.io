@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CSS Image Effects #3: Vignettes 3 Ways"
-permalink: /vignettes
+permalink: /vignettes/
 date: '2015-10-09'
 comments: true
 tags:

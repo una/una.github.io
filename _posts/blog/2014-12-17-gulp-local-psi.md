@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Setting up PageSpeed Insights to test Performance Locally via Gulp
-permalink: /gulp-local-psi
+permalink: /gulp-local-psi/
 date: '2014-12-17'
 comments: true
 tags:

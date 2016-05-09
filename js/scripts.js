@@ -35,6 +35,26 @@ window.BLOG || (BLOG = {});
     });
   });
 
+  // search
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: '<li>No results found</li>',
+    limit: 10
+  });
+
+  $('.search-area').click(function(){
+    $('.search-area').addClass('clicked');
+  });
+
+  $('body').click(function(){
+    if ($('.search-area').hasClass('clicked')) {
+      document.getElementById('results-container').innerHTML = "<li style='height: 0; padding: 0; margin: 0'></li>";
+    }
+  });
+
   // emoji
   function addEmoji() {
     if (navigator.userAgent.indexOf('Mac OS X') != -1) {

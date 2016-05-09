@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sketchnotes from SXSW 2015
-permalink: /sxsw-sketchnotes
+permalink: /sxsw-sketchnotes/
 date: '2015-03-23'
 comments: true
 tags:

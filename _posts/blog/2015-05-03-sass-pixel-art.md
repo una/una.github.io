@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sass Pixel Art
-permalink: /sass-pixel-art
+permalink: /sass-pixel-art/
 date: '2015-05-03'
 comments: true
 tags:

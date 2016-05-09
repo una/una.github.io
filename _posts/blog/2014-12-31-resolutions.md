@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 2015 Resolutions
-permalink: /2015-resolutions
+permalink: /2015-resolutions/
 date: '2014-12-31'
 comments: true
 tags:

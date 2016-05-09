@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Internet We Know is Built on Hacks
-permalink: /Internet-is-hacks
+permalink: /internet-is-hacks/
 date: '2015-08-24'
 comments: true
 tags:
