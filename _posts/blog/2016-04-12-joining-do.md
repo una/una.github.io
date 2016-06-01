@@ -12,6 +12,9 @@ tags:
 - new
 - job
 header-bg: ../images/posts/byeibm/hallowinning.jpg
+audio: ibm-lessons
+duration: "05:14"
+audio-size: 6272569
 subtitle: "I've learned so much during my time at IBM Design! This is a little wrap up post and an announcement about my next adventure."
 ---
 
