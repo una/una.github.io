@@ -2,6 +2,7 @@
 hidden: true
 location: Austin, TX
 event: All Girl Hack Night
+flag: 🇺🇸
 talk-type: meetup
 date: '2015-01-14'
 talk: Sass for Developers

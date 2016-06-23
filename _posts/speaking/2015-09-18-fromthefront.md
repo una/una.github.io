@@ -1,7 +1,7 @@
 ---
-timeline: upcoming
 talk-type: conference
 location: Bologna, Italy
+flag: 🇮🇹
 event: From the Front
 date: '2015-09-18'
 hidden: true

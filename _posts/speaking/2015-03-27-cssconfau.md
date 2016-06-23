@@ -2,6 +2,7 @@
 hidden: true
 talk-type: conference
 location: Melbourne, Australia
+flag: 🇦🇺
 event: CSS Conf AU
 date: '2015-03-27'
 talk: Open Source Design&colon; A Call to Arms

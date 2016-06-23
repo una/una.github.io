@@ -2,6 +2,7 @@
 talk-type: conference
 location: online conference
 event: CSS Summit
+flag: 🇺🇸
 date: '2015-07-09'
 hidden: true
 event-link: http://environmentsforhumans.com/2015/css-summit/

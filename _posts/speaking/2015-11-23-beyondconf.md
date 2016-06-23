@@ -1,7 +1,7 @@
 ---
-timeline: upcoming
 talk-type: conference
 location: London, UK
+flag: 🇬🇧
 event: Beyond Conf
 date: '2015-11-23'
 hidden: true

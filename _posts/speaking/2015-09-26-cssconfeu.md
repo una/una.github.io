@@ -1,7 +1,7 @@
 ---
-timeline: upcoming
 talk-type: conference
 location: Berlin, Germany
+flag: 🇩🇪
 event: CSS Conf EU
 date: '2015-09-26'
 upcoming: false
