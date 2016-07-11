@@ -9,13 +9,14 @@ tags:
 - design
 - how-to
 - tips
+audio: perf-des
+duration: "06:03"
+audio-size: 7253200
 subtitle: "Wish media being the biggest performance bottleneck on the web, let's turn our focus to design. This post outlines 3 easy wins for more performant UI's."
 header-bg: ../images/posts/des-perf/bg.jpg
 ---
 
-Performance. We hear about it often and talk about it plenty at developer conferences, but maybe we need to shift our focus to a different audience: designers. We already know that performance is a corner-stone to the success of our projects, and since [media is the bottleneck to performance optimization](https://www.keycdn.com/blog/web-performance-experts/), why aren't we talking about it at design events? Why is performance typically not a priority in the design process?
-
-> 99% of response time problems are still caused by the UI being too slow. [[source]](https://blog.radware.com/applicationdelivery/applicationaccelerationoptimization/2014/01/55-web-performance-stats-youll-want-to-know/)
+Performance. We hear about it often and talk about it plenty at developer conferences, but maybe we need to shift our focus to a different audience: designers. We already know that performance is a corner-stone to the success of our projects, and since [media is the bottleneck to performance optimization](https://www.keycdn.com/blog/web-performance-experts/), **why aren't we talking about it at design events?** Why is performance typically not a priority in the design process? *99% of response time problems are still caused by the UI being too slow. [[source]](https://blog.radware.com/applicationdelivery/applicationaccelerationoptimization/2014/01/55-web-performance-stats-youll-want-to-know/)*
 
 **Performance optimization is a team effort** and we need to get the whole team on board instead of waiting for the point in the project where we're developing the thing to double-back and fix our mistakes. We need to start prioritizing performance (and accessibility) as a part of the design process, because it is. <a class="twitter-share">Performance is a design challenge.</a>
 
@@ -29,7 +30,7 @@ Performance. We hear about it often and talk about it plenty at developer confer
 
 *But it isn't just about that bottom line. It's about making an experience work seamlessly. It's about saving humans from frustration, cognitive load, and the most valuable resources we have &mdash; time and money. (Yes, money &mdash; because [websites can be more expensive to access than you realize](https://speakerdeck.com/benschwarz/vanity-performance-metrics-looking-beyond-the-numbers)).*
 
-*You have such a big impact on performance and accessibility, and can literally make the Web better for other humans. We need you!*
+*You have such a big impact, and can literally make the web better for other humans. We need you!*
 
 💖 *The People of the Internet*
 
@@ -105,13 +106,13 @@ Typography is a key part of the identity of any company, and plays an important 
 
 No matter how much optimization you do, there will still be some delay in load time as assets roll in. This is where design becomes even more important in improving a website's performance, and specifically in improving **percieved performance** &mdash; AKA how fast a user *feels* the website is loading. Is a lag noticeable?
 
-> "Progress bars are the hold music of the web. They highlight to the user that they're waiting" -- [Tim Kadlec](https://twitter.com/tkadlec) at Generate NYC
+> "Progress bars are the hold music of the web. They highlight to the user that they're waiting" -- [Tim Kadlec](https://twitter.com/tkadlec)
 
 There is so much you can do to take advantage of this waiting time &mdash; also known as **active waiting.** Tim Kadlec gave a great [talk](https://www.youtube.com/watch?v=S8B7oYsjBtM) on this subject where he highlighted some of the behavior that various companies do in this waiting time. For example, Facebook loads up blank divs where the content will go so the user is cued that content is coming, and visually primed to receive it.
 
 <img class="right" style="max-width:400px; border: 1px solid lightgray" src="../images/posts/des-perf/fb-waiting.png" alt="Facebook active waiting">
 
-This is akin to going to a restaurant for dinner. The table is set for food to arrive. We're primed to receive it. When we arrive and there is no place setting, we're just sitting there with the menu and nothing else, it feels strange.
+This is akin to going to a restaurant for dinner. The table is set for food to arrive. We're primed to receive it. When we arrive and there is no place setting, if we're just sitting there with the menu and nothing else, it feels strange.
 
 [Viget](http://www.viget.com), an agency based out of DC, did a [study](https://www.viget.com/articles/experiments-in-loading-how-long-will-you-wait) on the customized loading animation vs. generic experiences. They found that "Overall, the branded loading experiences as a group held participants' on the loading page for longer, and had lower abandon rates than the non-branded, generic experiences."
 
@@ -121,5 +122,23 @@ This is akin to going to a restaurant for dinner. The table is set for food to a
 - <input type="checkbox"><label>Consider UI placeholders</label>
 
 **TL;DR: Image optimization, typography consideration, and active waiting are all ways to improve performance as a designer**
+
+
+<section class="css-effects-series">
+  <h3 style="margin-top:0">Superstar combo-checklist </h3>
+
+  <ul>
+    <li><input type="checkbox"><label>Resize images to fit their containers. <br> <span class="small-check"><i class="blue">(don't send assets larger than the greatest common factor size)</i></span></label></li>
+    <li><input type="checkbox"><label>Download <a href="https://imageoptim.com">ImageOptim</a> and run your assets through it</label></li>
+    <li><input type="checkbox"><label>Remove additional layers and artifacts from SVGs <br> <span class="small-check"><i class="blue">(such as uneccesary headers from Sketch or Illustrator)</i></span></label></li>
+    <li><input type="checkbox"><label>Minify SVG with <a href="https://jakearchibald.github.io/svgomg/">SVGO</a></label></li>
+    <li><input type="checkbox"><label>Consider using <a href="https://scottjehl.github.io/picturefill/">Picturefill</a><br> <span class="small-check"><i class="blue">(for retina images and responsive assets)</i></span></label></li>
+    <li><input type="checkbox"><label>Lazy load images where applicable</label></li>
+    <li><input type="checkbox"><label>Font audit to group similar styles/font-weights</label></li>
+    <li><input type="checkbox"><label>Consider <a href="http://www.heydonworks.com/article/font-hacking">subsetting</a> individual characters<br> <span class="small-check"><i class="blue">(like header typography and ampersands)</i></label></li>
+    <li><input type="checkbox"><label>Provide a unique waiting experience</label></li>
+    <li><input type="checkbox"><label>Consider UI placeholders</label></li>
+  </ul>
+</section>
 
 *Further reading: [Designing for Performance by Lara Hogan](http://designingforperformance.com/)*
