@@ -84,7 +84,7 @@ As layouts became increasingly complex, so did graphic rendering on the web, and
 
 One of my favorite CSS effect hacks was sorted out by [Lea Verou](https://vimeo.com/52882799) and shared in her "CSS Secrets" talk. Lea demonstrated how to create a "Live CSS Blur" that allows us to make the image blurred within a div, but clear otherwise, with the content of the div remaining lucid. That sounds confusing, but basically it looks like:
 
-<video controls style="width:100%">
+<video autoplay loop muted style="width:100%">
   <source src="../images/posts/web-hack/blur-bg.mp4" type="video/mp4">
   <source src="../images/posts/web-hack/blur-bg.ogg" type="video/ogg">
 </video>
@@ -108,7 +108,7 @@ body {
 
 Not the cleanest solution. But now with `backdrop-filter` which just *dropped* a few days [ago](https://www.webkit.org/blog/3632/introducing-backdrop-filters/) (sorry I'm not sorry about that pun), this hack will become reality! It looks a little bit like this and the code is only one line of CSS:
 
-<video controls style="width:100%">
+<video autoplay loop muted style="width:100%">
   <source src="../images/posts/web-hack/backdrop-filter.mp4" type="video/mp4">
   <source src="../images/posts/web-hack/backdrop-filter.ogg" type="video/ogg">
 </video>
