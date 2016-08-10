@@ -1,6 +1,7 @@
 name: Almost Profound
 description: Front end development and design musings
-url: http://una.im
+url: https://una.im
+enforce_ssl: una.im
 markdown: redcarpet
 highlighter: pygments # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json"]
