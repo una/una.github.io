@@ -1,11 +1,11 @@
-th, 
+th,
 tr:nth-child(2n+1) {
 	background: lightgrey;
 }
 
 table {
 	@extend pre;
-	font-family: 'Open Sans', sans-serif;
+	font-family: sans-serif;
     border-spacing: 0;
 
     td,
