@@ -31,7 +31,7 @@ title: Speaking
                     {% if post.link-type %}
                         <div class="flag"><p>{% if post.link-type %}{{ post.link-type }}{% endif %}</p></div>
                     {% endif %}
-                    <h2 class="event-name">{{ post.event }}:</h2> <span class="title">{{post.talk}}</span>
+                    <h2 class="event-name">{{ post.event }} <div class="event-flag">{{ post.flag }}</div></h2> <span class="title">{{post.talk}}</span>
                     <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
                 </div>
             {% if post.link-type %}

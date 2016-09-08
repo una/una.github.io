@@ -154,7 +154,7 @@
 	}
 }
 
-.twitter-share {
+.post .twitter-share {
 	@extend %transition-duration;
 	&:after {
 		font-family: "icomoon";
@@ -232,4 +232,8 @@
 		color: currentColor;
 		margin: 0 auto 2em;
 	}
+}
+
+.event-flag {
+  float: right;
 }
