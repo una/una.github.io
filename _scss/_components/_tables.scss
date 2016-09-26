@@ -1,32 +1,32 @@
 th,
 tr:nth-child(2n+1) {
-	background: lightgrey;
+	background: white;
 }
 
 table {
 	@extend pre;
 	font-family: sans-serif;
-    border-spacing: 0;
+  border-spacing: 0;
 
-    td,
-    th {
-    	padding: .5em 1em;
-    	text-align: left;
-    }
+	td,
+	th {
+		padding: .5em 1em;
+		text-align: left;
+	}
 
-    th {
-    	@extend strong;
+	th {
+		@extend strong;
 
-    	&:first-child {
-    		border-right: 1px solid #aaa;
-    	}
-
-    	&:last-child {
-    	border-left: 1px solid #aaa;
+		&:first-child {
+			border-right: 1px solid #aaa;
 		}
-    }
 
-    td {
-    	border: 1px solid lightgrey;
-    }
+		&:last-child {
+		border-left: 1px solid #aaa;
+	}
+	}
+
+	td {
+		border: 1px solid lightgrey;
+	}
 }
