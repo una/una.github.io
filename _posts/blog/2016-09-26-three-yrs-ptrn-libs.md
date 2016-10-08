@@ -12,6 +12,9 @@ tags:
 - component
 header-bg: ../images/posts/flowers.jpg
 subtitle: "Component libraries can be very useful in terms of organization, unity, and ensuring performance/accessibility. Here are 3 things to understand when embarking on building your own."
+audio: patternlibs
+duration: "06:22"
+audio-size: 7639816
 ---
 
 Component libraries can be very useful in terms of organization, unity, and ensuring performance/accessibility. They're a great asset to any team (especially as teams grow) and I've learned a lot about the development of design systems along the way from working on various teams of varying size and with unique groups of people (From [nvite](https://nvite.com/), to IBM's [Watson](http://www.ibm.com/watson/) and [Bluemix](https://console.ng.bluemix.net/), and now at [DigitalOcean](https://www.digitalocean.com/)). This is not a technical post, but a few good items to consider before diving into such an endeavor.
