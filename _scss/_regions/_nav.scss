@@ -6,7 +6,7 @@ nav {
 	@include breakpoint(sm){
 		position: relative;
 		right: 0;
-		top: -0.5em;
+		top: 0;
 		margin: initial;
 	}
 
@@ -15,7 +15,6 @@ nav {
 			clear: both;
 			display: block;
 			margin: 0 auto;
-			// testing here
 		}
 	}
 
