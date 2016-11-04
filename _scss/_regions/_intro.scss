@@ -31,6 +31,10 @@
   background-size: 100%;
   background-repeat: no-repeat;
 
+  &:hover {
+    animation: rainbowize 1s ease-in-out forwards;
+  }
+
   @include breakpoint(sm) {
 		margin: 4em auto 1em;
     height: 260px;
