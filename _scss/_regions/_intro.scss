@@ -7,22 +7,32 @@
   p {
     @extend %center;
     @extend %pink-aside;
-    margin: 16em 0 0;
-    max-width: 330px;
-    font-size: .9rem;
+    margin: 17em 0 0;
+    max-width: 360px;
+    font-size: 1rem;
+    background: $color--darkerpurple;
+    color: white;
+
+    a {
+      color: $color--hotpink;
+    }
+
+    @include breakpoint(sm) {
+      margin: 15em 0 0;
+    }
   }
 }
 
 .self-portrait {
-  width: 300px;
-  height: 325px;
-  background-image: url('../images/me-sketchtransp.gif');
-  margin: 1em auto;
+  background-image: url('../images/unicorncode.svg');
+  max-width: 500px;
+  height: 300px;
+  margin: 3em auto 1em;
   background-size: 100%;
   background-repeat: no-repeat;
 
   @include breakpoint(sm) {
-    margin: 3em auto 1em;
-  }
-
+		margin: 4em auto 1em;
+    height: 260px;
+	}
 }

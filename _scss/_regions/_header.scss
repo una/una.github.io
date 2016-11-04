@@ -6,19 +6,14 @@ header {
 	top: 0;
 	opacity: 1;
 
-	.lil-fish {
-		background-image: url("https://38.media.tumblr.com/avatar_79b8b35f65b8_128.png");
-		height: 45px;
-		width: 47px;
-		display: inline-block;
+	.lil-unicorn {
+		background-image: url('../images/unicorn-single.svg');
+		background-repeat: no-repeat;
 		background-size: 100%;
-
-	}
-
-	.title {
-		@include fontsize(16);
-		float: left;
-		margin: 1rem;
+    width: 2.5em;
+    height: 3.2em;
+    margin: 0.4em 1em 0 0.5em;
+		display: inline-block;
 	}
 
 	a {
