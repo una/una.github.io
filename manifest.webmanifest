@@ -1,0 +1,22 @@
+{
+  "dir": "ltr",
+  "lang": "en",
+  "name": "✨Home | Una Kravets Online✨",
+  "scope": "/",
+  "display": true,
+  "start_url": "/",
+  "short_name": "✨Home | Una Kra",
+  "theme_color": "#5A4B60",
+  "description": "Thoughts about front-end development and design, plus other ramblings, by Una Kravets.",
+  "orientation": "any",
+  "background_color": "transparent",
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "https://una.im/images/favicon.png",
+      "type": "image/png",
+      "sizes": "80x80"
+    }
+  ]
+}

@@ -26,7 +26,7 @@ From Google's [physical web project](https://google.github.io/physical-web/) to 
 
 ## Web VR
 
-This an exciting time to work on the web because the platforms on which we can communicate are growing quickly. VR (virtual reality) has a really exciting future. It can change how we receive information and communicate with people around the world, making distance feel like less of an obstacle. Recently, Mark Zuckerberg [showed a demo](https://www.youtube.com/watch?v=OyW4CBSZfL0) at Oculus Connect of what they've been working on lately in terms of VR chat. It's an incredible tool for communication and story-telling, especially when applied to journalism, as it really immerses the viewer an environment to help them to absorb a story.
+This is an exciting time to work on the web because the platforms on which we can communicate are growing quickly. VR (virtual reality) has a really exciting future. It can change how we receive information and communicate with people around the world, making distance feel like less of an obstacle. Recently, Mark Zuckerberg [showed a demo](https://www.youtube.com/watch?v=OyW4CBSZfL0) at Oculus Connect of what they've been working on lately in terms of VR chat. It's an incredible tool for communication and story-telling, especially when applied to journalism, as it really immerses the viewer an environment to help them to absorb a story.
 
 <iframe width="720" height="405" style="margin: 1em 0 2em"  src="https://www.youtube.com/embed/0QY72R3ZDzw?rel=0" frameborder="0" allowfullscreen></iframe>
 
