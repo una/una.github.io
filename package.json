@@ -4,7 +4,9 @@
   "description": "Una Kravets blogs about front end development and design sometimes.",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Una Kravets",
   "license": "ISC",
@@ -41,6 +43,8 @@
   },
   "homepage": "http://una.github.io",
   "dependencies": {
-    "simple-jekyll-search": "^1.1.1"
-  }
+    "simple-jekyll-search": "^1.1.1",
+    "snyk": "^1.21.2"
+  },
+  "snyk": true
 }
