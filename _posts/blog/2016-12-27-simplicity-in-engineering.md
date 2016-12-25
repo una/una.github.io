@@ -16,12 +16,12 @@ duration: "09:01"
 audio-size: 12994657
 ---
 
-Over the holidays I went home and chatted with someone who I admire very much&mdash;my father. My dad is an industrial engineer with over 20 years of experience, building control systems for large factories that make anything from deodorants to flash-dried strawberries. My dad and I have a lot in common&mdash;we both travel a lot for work and have an insatiable appetite for knowledge. I'm definitely his favorite daughter (I'm his only daughter, so it's fine).
+Over the holidays I went home and chatted with someone who I admire very much&mdash;my father. My dad is an industrial engineer with over 20 years of experience, building control systems for large factories that make anything from deodorants to flash-dried strawberries. My dad and I have a lot in common&mdash;we both travel a lot for work and he's definitely been a huge source of support in my life.
 
-<blockquote class="left">In my dad’s world, codebases live for at least 20 years. There are no UX Designers to look out for the user’s needs. No A/B testing, no coding bootcamps to get someone up to speed. <b>His users are the operators, his products: massive machines.</b>
+<blockquote class="left">In my dad's world, codebases live for at least 20 years. There are no UX Designers to look out for the user’s needs. No A/B testing, no coding bootcamps to get someone up to speed. <b>His users are the operators, his products: massive machines.</b>
 </blockquote>
 
-I never thought about web development in terms of an industrial systems before, but there are definite parallels, so I recorded bits of our conversation to share with you all. On the ride home from the airport, my dad and I discussed his personal engineering mantra: **keeping it simple**, in both interface design and industrial code production.
+I never thought about web development in terms of industrial systems before, but there are definite parallels, so I recorded bits of our conversation to share. So on the ride home from the airport, my dad and I discussed his personal engineering mantra: **keeping it simple**, in both interface design and industrial code production.
 
 Listen to a 5-minute snippet here:
 
@@ -35,9 +35,9 @@ Listen to a 5-minute snippet here:
 
 Intuitive, self-navigable interfaces are something we always strive for. Hearing this in terms of a control panel as well makes total sense. Instead of putting something 5 levels deep, my dad said he would try to keep it on the first level, and if he had to (due to space constraints or otherwise) move it deeper into the interface.
 
-This is how the decision to move things around the interface ias decided. Keep it on the same plane by default, and as the user action grows more complex or specific, move it inward. Moving actions "inward" also helps to isolate them, removing confusion and cruft of other data floating around. But, **the fewer clicks the better** my dad and I both agreed.
+This is one way to make interface decisions. Keep it on the same plane by default (dashboards work really well for industrial monitoring products), and as the user action grows more complex or specific, move them inward. Moving actions "inward" also helps to isolate said action, removing confusion and cruft of other data floating around. But, **the fewer clicks the better** my dad and I both agreed.
 
-Intuitive interfaces should explain themselves. That's the ideal approach. Combining actions that we're accustomed to (like common gestures on your mobile device) with anticipated placement of information (menus and search bars) help the user to navigate your product without frustration or confusion.
+Interfaces should explain themselves. That's the ideal approach, and what makes them "intuitive". Combining actions that we're accustomed to (like common gestures on your mobile device) with anticipated placement of information (menus and search bars) help the user to navigate your product without frustration or confusion.
 
 ## Making Decisions
 
@@ -59,4 +59,4 @@ That could very well be the mark of a more seasoned engineer. You no longer reac
 
 He mentions that this next maintainer, since you can't factor for their background and experience, could end up just refactoring and getting rid of all of that "elegant" code you spent so much time perfecting in the first place if they can't work with it, which is a waste of time and effort for everyone. **Keep it simple, readable, and make sure to include documentation and code comments**.
 
-> <a class="twitter-share">No matter what kind of engineer or designer you are, the principle of simplicity is a common thread that should influence all of our work.</a>
+<blockquote>No matter what kind of engineer or designer you are, <a class="twitter-share">the principle of simplicity should be at the core of all of our work.</a></blockquote>
