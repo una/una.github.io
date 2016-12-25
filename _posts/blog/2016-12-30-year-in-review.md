@@ -13,31 +13,64 @@ tags:
 subtitle: It's time for my annual reflection and goal resetting circa 2016
 ---
 
-For the past [two](http://una.im/2015-resolutions [years](http://una.im/2015-in-review) I've been reviewing my personal goals, setting new ones, and taking a look back on the year. A lot has happened this year for sure. I started a new job, was a digital nomad for a while (traveled a ton), moved cities, started new ventures and entered into new relationships. 
+For the past [two](http://una.im/2015-resolutions) [years](http://una.im/2015-review) I've been reviewing my personal goals, setting new ones, and taking a look back on the year. A lot has happened this year for sure. I started a new job, was a digital nomad for a while (traveled a ton), moved cities, started new ventures and met a ton of great people 
 
-When I think of overall year themes, this one was definitely less hectic than last year. hanks for following me through it all :)
+Why do I do this year in review? Sure, parts are a little vain, but I do it primarily for myself, and share it for the sake of transparency. I started this 2016 year-in-review kind-of being bummed out that I didn't accomplish as much this year as [last year](http://una.im/2015-review), but as I compiled some things I did, I realized how much I actually *had* done. (Also it's probably a good thing I had a less intense year for my own sanity.)
 
-## 2015 Retrospective
+It feels really good to ennumerate your accomplishments, and it's important to then evaluate your progress and make new goals. That's why I do these posts ☺️
+
+## 2016 in Review
 
 ### Code
 
 Here are a few of the projects I either launched or continued to do significant work on (in no particular order). I made **1046** commits this year on:
 
+- [SVG Icon System Boilerplate](https://github.com/una/svg-icon-system-boilerplate): A boilerplate for making an SVG icon system using symbol sprites
 - [Diffee](http://diffee.me/): A visual diff checker using CSS blend modes
 - [CanIUse Component](https://github.com/una/caniuse-component): Live CanIUse data for your presentations
 - [YouMightNotNeedJS.com](http://youmightnotneedjs.com/): A showcase of CSS/HTML-only tricks to build interactive UI elements
 - [CSSgram](http://una.im/cssgram): A tiny CSS library recreating Instragram filters using just CSS features
+- [Travels](http://travels.surge.sh/): An experimental website featuring my travel poetry that uses filters and blend modes for unique layouts
 - [Toolsday](http://toolsday.io/): A 20-ish-minute podcast about the latest in tech tools, tips, and tricks (hosted with [Chris Dhanaraj](https://twitter.com/chrisdhanaraj))
+- [VR Pong](http://vr-pong.com): A collaborative WebVR experiment with [Mike _____](#)
 
 -- contribution graph here --
 
 While I didn't *launch* as many projects last year as I did the year before, I did keep a lot of the ones I started toward the end of last year going (CSSgram and Toolsday).
 
-In addition to speaking with new people the podcast (we had guests this year!) I spoke at **9** [conferences](http://una.im/speaking) this year.
+### Knowledge sharing
 
-### Conferences
+In addition to speaking with new people the podcast (we had guests this year!) I spoke on a few other podcasts and did some interviews for blogs. These are the highlights:
 
-This year I spoke at **9** conferences. 
+- The year kicked off with an interview for [SuperYesMore](https://superyesmore.com/cartoon-dolls-c2bbe6bb982658b3e614716715beda25) on how I began coding (there's an adorable baby photo in there)
+- I got to guest on one of my favorite podcasts, [The Start](http://thestart.fm/interviews/the-unacorn)&mdash;so excited to do that
+- [Sarah Drasner](#) interviewed me for [CSS Tricks](https://css-tricks.com/an-interview-with-una-kravets/) (and we fangirled over each other hard)
+- I was on the wonderful [Hack to Start](https://soundcloud.com/hacktostart/hacktostart-episode-121-una-kravets-ui-engineer-digital-ocean?utm_source=soundcloud&utm_campaign=share&utm_medium=twitter) podcast
+- I did an [AMA on Hasnode](https://hashnode.com/ama/with-una-kravets-cive3utpm07w8vi53m48rgth8), which was a ton of fun
+- [Scott Hanselman](#) interviewed me on [Hanselminutes](http://hanselminutes.com/557/rethinking-front-end-design-and-development-with-una-kravets), a great podcast you should subscribe to
+- I was interviewed by [Karen McGrane](#) and [Ethan Marcotte](#) for the [Responsive Web Design podcast](https://responsivewebdesign.com/podcast/digitalocean/). Thanks for having us on!
+
+I also spoke at **9 conferences** (way fewer than last year!), and they were all really great 😊 This year I gave talks in San Francisco, New York, Amsterdam, Buenos Aires, Zurich, Freiburg, Budapest, Perth and Berlin, focusing on [CSS filters/blend modes in UI](https://vimeo.com/181110918) and [image optimization](https://vimeo.com/190871719) for more performant interfaces. I've already got a few conferences lined up for [next year](http://una.im/speaking) and some talk topics I'm excited about :)
+
+-- image from conf stage -- maybe a slideshow of the shoes?
+
+I wrote ___ blog posts 
+
+### Recognition
+
+I was in [Net Magazine](#) **twice** this year! Look how stoked I look:
+
+-- images from netmag --
+
+I also made [Rachel Andrew's](#) list of [Women in CSS](https://rachelandrew.co.uk/archives/2016/10/11/the-amazing-women-of-css), another list of [Programmers to Follow on Facebook](https://www.thebalance.com/programmers-on-twitter-2072010), a list of [60 Web Performance Experts to Follow](https://www.keycdn.com/blog/web-performance-experts/), and [Toolsday](http://toolsday.io) made it on not one, but **two** lists of [15 Web Design Podcasts](https://www.elegantthemes.com/blog/resources/15-web-design-podcasts-to-add-to-your-listening-queue) to [Listen to this Year](https://www.shopify.com/partners/blog/114348998-15-web-design-podcasts-you-need-to-listen-to-in-2016). WEEE!! I also had the opportunity to judge the [10k-Apart](https://a-k-apart.com/) contest (which was super cool!) and 
+
+## This Year's Goals
+
+How did I do on the Goals
+
+> This year was full of adventure for me. I fell in love, explored new cities, and balanced work. There was more balance. But here I am now, back to where I was, in a new city (New York) and ready to re-focus again.
+
+## Next Year's Goals
 
 <!--  
 <img src="../../images/posts/2015-review/contribs.png" alt="contribution graph">
