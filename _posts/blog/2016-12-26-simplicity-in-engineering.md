@@ -2,7 +2,7 @@
 layout: post
 title: "Simplicity in Design: Insights from an Industrial Engineer"
 permalink: /simplicity-in-eng/
-date: '2016-12-27'
+date: '2016-12-26'
 comments: true
 tags:
 - design
