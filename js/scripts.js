@@ -35,26 +35,6 @@ window.BLOG || (BLOG = {});
     });
   });
 
-  // search
-  SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    json: '/search.json',
-    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
-    noResultsText: '<li>No results found</li>',
-    limit: 10
-  });
-
-  $('.search-area').click(function(){
-    $('.search-area').addClass('clicked');
-  });
-
-  $('body').click(function(){
-    if ($('.search-area').hasClass('clicked')) {
-      document.getElementById('results-container').innerHTML = "<li style='height: 0; padding: 0; margin: 0'></li>";
-    }
-  });
-
   // emoji
   function addEmoji() {
     if (navigator.userAgent.indexOf('Mac OS X') != -1) {
@@ -64,10 +44,22 @@ window.BLOG || (BLOG = {});
   addEmoji();
   console.log('Hello, beautiful :)');
 
+  // Servive Workers
+  if ('serviceWorker' in navigator) {
+    // Attempt to register it
+    navigator.serviceWorker.register('/sw.js').then(function() {
+      // Success
+      console.log('ServiceWorker registration successful');
+    }).catch(function(err) {
+      // Fail
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  }
+
   // defer CSS loading
   var cb = function() {
   var l = document.createElement('link'); l.rel = 'stylesheet';
-  l.href = 'css/main.min.css';
+  l.href = location.origin + '/css/main.min.css';
   var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
   };
   var raf = requestAnimationFrame || mozRequestAnimationFrame ||
