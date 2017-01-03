@@ -29,6 +29,8 @@ Support for service workers is still a bit patchy, but getting much better:
 ![Service worker can be used in Chrome, Safari, Opera, and Samsung internet](../images/posts/save-for-offline/serviceworker-caniuse.jpg)
 <small class="caption"><a href="https://jakearchibald.github.io/isserviceworkerready/">Service Worker Support Progress</a></small>
 
+Also be aware that for ServiceWorker [Cache](https://developer.mozilla.org/en-US/docs/Web/API/Cache), some versions of browsers support different versions of cache than others.
+
 ### Implementing Service Workers
 
 Before we can use service workers, we'll need to implement HTTPS (a secure HTTP connection). The easiest way I know to do this is via [Cloudflare](https://www.cloudflare.com/). It's quick to set up and works flawlessly with Github pages too (what I have my blog served on).
@@ -49,9 +51,13 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
+Great, so we have a service worker. Now what? That's the fun part! There are so many options!
+
 ## Decisions, Decisions
 
-But we don't want to cache *everything*, so how do we decide what's important enough to save?
+While service workers can do a [variety of things](https://serviceworke.rs/) like push notifications, we're going to focus on its offline capabilities, specifically for caching files.
+
+We don't want to cache *everything* because cache is expensive and limited, so how do we decide what's important enough to save?
 
 ## Offline Switch
 
@@ -61,4 +67,7 @@ By giving our users the option to save a post for offline reading, we're not tak
 
 Some future resources:
 
-- [Service Worker Script](https://gist.github.com/dgrijuela/38cde675b70ed097dbbe)
+- [Service Worker Cache Script](https://gist.github.com/dgrijuela/38cde675b70ed097dbbe)
+- [Jake Archibald's Offline Cookbook](https://jakearchibald.com/2014/offline-cookbook/)
+- [Mozilla Service Worker Cookbook](https://serviceworke.rs/)
+- [CSS TricksService Worker for Offline](https://css-tricks.com/serviceworker-for-offline/)
