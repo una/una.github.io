@@ -9,6 +9,7 @@ tags:
 - tutorial
 - service
 - workers
+header-bg: ../images/posts/save-for-offline/bg.jpg
 subtitle: 'I recently added an option to save blog posts for offline reading. This post details how I did that and how you can too.'
 ---
 

@@ -247,14 +247,6 @@
 	color: $color--links;
 	padding: 0 .2em;
 
-	>.tooltip {
-		transform: translateX(1.8em);
-
-		@include breakpoint(sm) {
-			transform: translateX(1.3em);
-		}
-	}
-
 	&:hover {
 		background: $color--main;
 		color: #fff;
