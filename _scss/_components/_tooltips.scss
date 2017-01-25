@@ -17,6 +17,7 @@
 		transform: translateY(10px);
 		transition: all .25s ease-out;
 		border-radius: 3px;
+		z-index: 50;
 
 		&:before {
 			bottom: -0.5em;

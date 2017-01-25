@@ -54,6 +54,34 @@ window.BLOG || (BLOG = {});
       // Fail
       console.log('ServiceWorker registration failed: ', err);
     });
+
+    var currentPath = window.location.pathname;
+    var cacheButton = document.querySelector('.offline-btn');
+
+    // Event listener
+    if(cacheButton) {
+      cacheButton.addEventListener('click', function(event) {
+       event.preventDefault();
+        // Build an array of the page-specific resources.
+        var pageResources = [currentPath];
+        console.log('clicked cache btn');
+
+        // Open the unique cache for this URL.
+        caches.open('offline-' + currentPath).then(function(cache) {
+          var updateCache = cache.addAll(pageResources);
+
+          // Update UI to indicate success.
+          updateCache.then(function() {
+            console.log('Article is now available offline.');
+          });
+
+          // Catch any errors and report.
+          updateCache.catch(function (error) {
+            console.log('Article could not be saved offline.');
+          });
+        });
+      });
+    }
   }
 
   // defer CSS loading

@@ -12,9 +12,11 @@ tags:
 subtitle: 'I recently added an option to save blog posts for offline reading. This post details how I did that and how you can too.'
 ---
 
-The offline web is something we all need to start thinking about as a part of the experience we're providing to our users. __why offline is important here __
+I just moved to New York City and started commuting to work on the subway. On said subway ride, despite its many glorious people watching moments, most commuters are just on their phones or reading books. The subway is also famous for not having reliable cell service, so many of those people trying to read articles on their phone are struggling with cache and unexpected reloads if they click the wrong button. The offline web experience we're providing users is something we all need to start thinking about. Luckily, we have the tools.
 
-So, if someone is reading your blog on the subway, and loses their Internet connection, they won't lose their place if their browser refreshes. Similarly, with this technique, one can elect to save your content to their device when they do have a good Internet connection for later reading when they may not (say on the subway or on an airplane, or just to save data).
+**I recently added an option to save blog posts for offline reading, and this post will detail how I did that so you can too.**
+
+This way, if someone is reading your blog on the subway, and loses their Internet connection, they won't lose their place. If they accidentally click and the browser refreshes, they won't lose their place. If they want to save your article to read on an airplane or at at a café in a foreign country where they have no internet plan, they can do that. And if they just want to save battery and be on airplane mode, that's cool too. ✨Magic.✨
 
 ## Offline-First
 
@@ -27,9 +29,11 @@ If you're wondering [what a service worker is](https://developers.google.com/web
 Support for service workers is still a bit patchy, but getting much better:
 
 ![Service worker can be used in Chrome, Safari, Opera, and Samsung internet](../images/posts/save-for-offline/serviceworker-caniuse.jpg)
-<small class="caption"><a href="https://jakearchibald.github.io/isserviceworkerready/">Service Worker Support Progress</a></small>
+<small>While <a href="https://jakearchibald.github.io/isserviceworkerready/">service worker support</a> is still missing in Safari and Edge, they seem to be [working on it](https://jakearchibald.github.io/isserviceworkerready/#request). Also be aware that for service worker [Cache](https://developer.mozilla.org/en-US/docs/Web/API/Cache), some versions of browsers support different versions of cache than others.</small>
 
-Also be aware that for ServiceWorker [Cache](https://developer.mozilla.org/en-US/docs/Web/API/Cache), some versions of browsers support different versions of cache than others.
+You likely already have a few service workr caches saved in your browser. To see them, navigate to to `chrome://serviceworker-internals.` in Chrome, or `about:debugging` in Firefox. You'll see something like:
+
+-- image here --
 
 ### Implementing Service Workers
 
@@ -61,7 +65,19 @@ We don't want to cache *everything* because cache is expensive and limited, so h
 
 ## Offline Switch
 
-By giving our users the option to save a post for offline reading, we're not taking up valuable space in their cache without permission.
+By giving our users the option to save a post for offline reading, we're not taking up valuable space in their cache without permission. I wanted to give you all the option to save posts for web by clicking this download button next to the article title:
+
+- image of download button --
+
+It's important to not that despite the Service Worker being separate from your page, its cache is still accessible from within the page's JavaScript.
+
+## Hot Protip: skipWaiting
+
+https://davidwalsh.name/service-worker-claim
+
+## Testing in Production
+
+ngrok
 
 ## Resources
 
@@ -71,3 +87,4 @@ Some future resources:
 - [Jake Archibald's Offline Cookbook](https://jakearchibald.com/2014/offline-cookbook/)
 - [Mozilla Service Worker Cookbook](https://serviceworke.rs/)
 - [CSS TricksService Worker for Offline](https://css-tricks.com/serviceworker-for-offline/)
+- [Chris Ruppel's Post on Service Worker](https://chrisruppel.com/blog/service-worker-offline-content/)
