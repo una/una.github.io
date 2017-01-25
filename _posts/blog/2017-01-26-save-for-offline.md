@@ -2,7 +2,7 @@
 layout: post
 title: 'Implementing "Save For Offline" with Service Workers'
 permalink: /save-for-offline/
-date: '2017-01-05'
+date: '2017-01-26'
 comments: true
 tags:
 - offline
