@@ -44,7 +44,7 @@ window.BLOG || (BLOG = {});
   addEmoji();
   console.log('Hello, beautiful :)');
 
-  // Servive Workers
+  // Service Workers
   if ('serviceWorker' in navigator) {
     // Attempt to register it
     navigator.serviceWorker.register('/sw.js').then(function() {
@@ -58,13 +58,18 @@ window.BLOG || (BLOG = {});
     var currentPath = window.location.pathname;
     var cacheButton = document.querySelector('.offline-btn');
 
+    var audioTrack = function() {
+        if(document.querySelector('audio')) {
+          return (document.querySelector('audio source').src);
+      }
+    };
+
     // Event listener
     if(cacheButton) {
       cacheButton.addEventListener('click', function(event) {
        event.preventDefault();
         // Build an array of the page-specific resources.
-        var pageResources = [currentPath];
-        console.log('clicked cache btn');
+        var pageResources = [currentPath, audioTrack()];
 
         // Open the unique cache for this URL.
         caches.open('offline-' + currentPath).then(function(cache) {
