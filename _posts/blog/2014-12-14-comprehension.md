@@ -70,7 +70,7 @@ Listening also allows for that mild, ideal temperament to best retain informatio
 
 Keep in mind, none of these are ideal solutions &mdash; TTS (Text to Speech) has a long way to go, especially when it comes to development or code-heavy posts. The screen reader trying to read code is just downright hilarious (but also very confusing/annoying). That's why I've decided to provide an audio version for this post, and all future blog posts. It also makes the post less robotic to hear, since it'll be coming from the author's own voice. Regardless, audio works best for non-code-focused articles.
 
-The task you're doing while listening is also important. For example, I can't write while I listen to another audio source, making coding and blogging difficult. However, I do <a class="twitter-share">listen to blog posts while casually browsing the internet, driving, or crafting</a>. Its a great way to passively absorb information, especially when you've got a long [list](https://github.com/una/personal-goals/blob/master/content-list/blog-posts.md) like I do..
+The task you're doing while listening is also important. For example, I can't write while I listen to another audio source, making coding and blogging difficult. However, I do <a class="twitter-share">listen to blog posts while casually browsing the internet, driving, or crafting</a>. Its a great way to passively absorb information, especially when you've got a long [list](http://sharedli.st/ukravets) like I do..
 
 ## Actively Avoid Your Other Tasks
 
