@@ -9,6 +9,7 @@ var assetsToCache = [
   '/js/scripts.js',
   '/images/unicorncode.svg',
   '/images/unicorn-single.svg',
+  '/fonts/icomoon.woff',
   'https://fonts.gstatic.com/s/alegreyasanssc/v3/AjAmkoP1y0Vaad0UPPR46zqXxEMZsh1tOw6O6jsjRmU.woff2'
 ];
 
@@ -22,7 +23,6 @@ self.addEventListener('install', function(event) {
         // Important to `return` the promise here to have `skipWaiting()`
         // fire after the cache has been updated.
         return cache.addAll(assetsToCache);
-        cachePages(cache);
     }).then(function() {
       // `skipWaiting()` forces the waiting ServiceWorker to become the
       // active ServiceWorker, triggering the `onactivate` event.
@@ -43,24 +43,34 @@ self.addEventListener('activate', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
-  // Ignore non-get request like when accessing the admin panel
-  if (event.request.method !== 'GET') { return; }
-  // Don't try to handle non-secure assets because fetch will fail
-  if (/http:/.test(event.request.url)) { return; }
+  // Get current path
+  var requestUrl = new URL(event.request.url);
+
+  // Save all resources on origin path only
+  if (requestUrl.origin === location.origin) {
+      if (requestUrl.pathname === '/') {
+      event.respondWith(
+        // Open the cache created when install
+        caches.open(cacheName).then(function(cache) {
+          // Go to the network to ask for that resource
+          return fetch(event.request).then(function(networkResponse) {
+            // Add a copy of the response to the cache (updating the old version)
+            cache.put(event.request, networkResponse.clone());
+            // Respond with it
+            return networkResponse;
+          }).catch(function() {
+            // If there is no internet connection, try to match the request
+            // to some of our cached resources
+            return cache.match(event.request);
+          })
+        })
+      );
+    }
+  }
+
   event.respondWith(
-    // Open the cache created when install
-    caches.open(cacheName).then(function(cache) {
-      // Go to the network to ask for that resource
-      return fetch(event.request).then(function(networkResponse) {
-        // Add a copy of the response to the cache (updating the old version)
-        cache.put(event.request, networkResponse.clone());
-        // Respond with it
-        return networkResponse;
-      }).catch(function() {
-        // If there is no internet connection, try to match the request
-        // to some of our cached resources
-        return cache.match(event.request);
-      })
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
     })
   );
 });

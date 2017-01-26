@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Implementing "Save For Offline" with Service Workers'
-permalink: /save-for-offline/
+permalink: /save-offline/
 date: '2017-01-26'
 comments: true
 tags:
@@ -9,6 +9,7 @@ tags:
 - tutorial
 - service
 - workers
+- cache
 header-bg: ../images/posts/save-for-offline/bg.jpg
 subtitle: 'I recently added an option to save blog posts for offline reading. This post details how I did that and how you can too.'
 ---
@@ -32,7 +33,7 @@ Support for service workers is still a bit patchy, but getting much better:
 ![Service worker can be used in Chrome, Safari, Opera, and Samsung internet](../images/posts/save-for-offline/serviceworker-caniuse.jpg)
 <small>While <a href="https://jakearchibald.github.io/isserviceworkerready/">service worker support</a> is still missing in Safari and Edge, they seem to be [working on it](https://jakearchibald.github.io/isserviceworkerready/#request). Also be aware that for service worker [Cache](https://developer.mozilla.org/en-US/docs/Web/API/Cache), some versions of browsers support different versions of cache than others.</small>
 
-You likely already have a few service workr caches saved in your browser. To see them, navigate to to `chrome://serviceworker-internals` in Chrome, or `about:debugging` in Firefox. You'll see something like:
+You likely already have a few service worker caches saved in your browser. To see them, navigate to to `chrome://serviceworker-internals` in Chrome, or `about:debugging` in Firefox. You'll see something like:
 
 ![What service worker looks like in the background](../images/posts/save-for-offline/sw-view.jpg)
 
@@ -81,7 +82,7 @@ var assetsToCache = [
   '/css/main.min.css',
   '/js/scripts.js',
   '/images/unicorn.svg',
-  '/fonts/font-file.woff'
+  '/fonts/icomoon.woff'
 ];
 
 self.addEventListener('install', function(event) {
@@ -94,7 +95,6 @@ self.addEventListener('install', function(event) {
         // Important to `return` the promise here to have `skipWaiting()`
         // fire after the cache has been updated.
         return cache.addAll(assetsToCache);
-        cachePages(cache);
     }).then(function() {
       // `skipWaiting()` forces the waiting ServiceWorker to become the
       // active ServiceWorker, triggering the `onactivate` event.
@@ -119,6 +119,8 @@ self.addEventListener('fetch', function(event) {
   if (event.request.method !== 'GET') { return; }
   // Don't try to handle non-secure assets because fetch will fail
   if (/http:/.test(event.request.url)) { return; }
+
+  // Here's where we cache all the things!
   event.respondWith(
     // Open the cache created when install
     caches.open(cacheName).then(function(cache) {
@@ -142,12 +144,11 @@ Great, so **now we have a service worker registered**. Rejoice!
 
 While service workers can do a [variety of things](https://serviceworke.rs/) like web-based push notifications and load balancing, we're going to focus on its offline capabilities, specifically for caching files.
 
-We don't want to cache *everything* (see note above on what to cache) because cache is expensive and limited, so how do we decide what's important enough to save?
+*The above code snippet caches every HTTP request on the "fetch" call*, but we don't want to cache *everything* (see note above on what to cache), so how can we let the user decide what they want to cache or not?
 
 ## Offline Switch
 
 By giving our users the option to save a post for offline reading, we're not taking up valuable space in their cache without permission. I wanted to give you all the option to save posts for web by clicking this download button next to the article title:
-
 
 ![Example header with save for offline button](../images/posts/save-for-offline/exbg.jpg)
 
@@ -155,7 +156,7 @@ It's important to note that despite the Service Worker being separate from your 
 
 Essentially all we need to do is add an event listener to the trigger element (in this case it's `.offline-btn`), add resources we want to cache, and then update the existing cache with those resources.
 
-I used this separate button to also cache the audio track for each post, and the example below shows this to illustrate that you can pass multiple items into your cache. If you're using this code, you'll want to touch it up and make it your own.
+I used this separate button to also cache the audio track for each post, and the example below shows this to illustrate that you can pass multiple items into your cache. I'm adding the http request text, inline images, and the audio file.
 
 All in all, it looks like:
 
@@ -175,9 +176,13 @@ if ('serviceWorker' in navigator) {
   // Set variables for use in the event listener
   var currentPath = window.location.pathname;
   var cacheButton = document.querySelector('.offline-btn');
+  var imageArray = document.querySelectorAll('img');
+
   var audioTrack = function() {
-      if(document.querySelector('audio')) {
-        return (document.querySelector('audio source').src);
+    if(document.querySelector('audio') !== null) {
+      return (document.querySelector('audio source').src);
+    } else {
+      return;
     }
   };
 
@@ -185,8 +190,13 @@ if ('serviceWorker' in navigator) {
   if(cacheButton) {
     cacheButton.addEventListener('click', function(event) {
      event.preventDefault();
-      // Build an array of the page-specific resources.
-      var pageResources = [currentPath, audioTrack()];
+     // Build an array of the page-specific resources.
+     var pageResources = [currentPath, audioTrack()];
+
+     // Add images to the array
+     for (i = 0; i < imageArray.length; i++) {
+       pageResources.push(imageArray[i].src);
+     }
 
       // Open the unique cache for this URL.
       caches.open('offline-' + currentPath).then(function(cache) {
@@ -205,6 +215,36 @@ if ('serviceWorker' in navigator) {
     });
   }
 }
+```
+
+We will also need to edit the `sw.js` file to remove the fetch event from every single URL. We still want to download the initial page (home page) so that our users can navigate, but don't want to save any additional/unnecessary items. We want to update our fetch event:
+
+```
+self.addEventListener('fetch', function(event) {
+  // Get current path
+  var requestUrl = new URL(event.request.url);
+
+  // Save all resources on origin path only
+  if (requestUrl.origin === location.origin) {
+      if (requestUrl.pathname === '/') {
+      event.respondWith(
+        // Open the cache created when install
+        caches.open(cacheName).then(function(cache) {
+          // Go to the network to ask for that resource
+          return fetch(event.request).then(function(networkResponse) {
+            // Add a copy of the response to the cache
+            cache.put(event.request, networkResponse.clone());
+            // Respond with it
+            return networkResponse;
+          }).catch(function() {
+            // If there is no internet connection, try to match the request
+            // to some of our cached resources
+            return cache.match(event.request);
+          })
+        })
+      );
+    }
+  }
 ```
 
 ## Testing in Production

@@ -57,10 +57,14 @@ window.BLOG || (BLOG = {});
 
     var currentPath = window.location.pathname;
     var cacheButton = document.querySelector('.offline-btn');
+    var typeFace = 'https://fonts.gstatic.com/s/alegreyasanssc/v3/AjAmkoP1y0Vaad0UPPR46zqXxEMZsh1tOw6O6jsjRmU.woff2';
+    var imageArray = document.querySelectorAll('img');
 
     var audioTrack = function() {
-        if(document.querySelector('audio')) {
-          return (document.querySelector('audio source').src);
+      if(document.querySelector('audio') !== null) {
+        return (document.querySelector('audio source').src);
+      } else {
+        return ("/")
       }
     };
 
@@ -69,7 +73,10 @@ window.BLOG || (BLOG = {});
       cacheButton.addEventListener('click', function(event) {
        event.preventDefault();
         // Build an array of the page-specific resources.
-        var pageResources = [currentPath, audioTrack()];
+        var pageResources = [currentPath, audioTrack(), typeFace];
+        for (i = 0; i < imageArray.length; i++) {
+          pageResources.push(imageArray[i].src);
+        }
 
         // Open the unique cache for this URL.
         caches.open('offline-' + currentPath).then(function(cache) {
@@ -78,11 +85,15 @@ window.BLOG || (BLOG = {});
           // Update UI to indicate success.
           updateCache.then(function() {
             console.log('Article is now available offline.');
+            cacheButton.style.color = "#a8e400";
+            cacheButton.innerHTML = "☺";
           });
 
           // Catch any errors and report.
           updateCache.catch(function (error) {
             console.log('Article could not be saved offline.');
+            cacheButton.style.color = "#f15d00";
+            cacheButton.innerHTML = "☹";
           });
         });
       });
