@@ -12,6 +12,9 @@ tags:
 - cache
 header-bg: ../images/posts/save-for-offline/bg.jpg
 subtitle: 'I recently added an option to save blog posts for offline reading. This post details how I did that and how you can too.'
+audio: save-for-offline
+audio-size: 12772127
+duration: '08:52'
 ---
 
 I just moved to New York City and started commuting to work on the subway. On said subway ride, despite its many glorious people watching moments, most commuters are just on their phones, reading articles or trying to browse the web. The subway is also famous for not having reliable cell service, so many of those people trying to read articles on their phone are struggling with cache and unexpected reloads if they click the wrong button. The offline web experience we're providing users is something we all need to start thinking about. Luckily, we have the tools to do so.
