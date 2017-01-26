@@ -1,8 +1,9 @@
 ---
 layout: default
 ---
-<div class="post-intro" {% if page.header-bg %}style='background: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), 50% url("{{ page.header-bg }}"); background-size: cover;' {% endif %}>
-	<h1>{{ page.title }}</h1>
+
+<div class="post-intro" {% if page.header-bg %}style='background: linear-gradient( rgba(0, 0, 0, .8), rgba(0, 0, 0, .5)), 50% url("{{ page.header-bg }}"); background-size: cover;' {% endif %}>
+	<h1>{{ page.title }} <button alt="save for offline" class="has-tooltip offline-btn">⬇<span class="tooltip">Save for Offline</span></button></h1>
 	<p class="meta">{{ page.date | date: '%B %-d, %Y' }}</p>
 </div>
 

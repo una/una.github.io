@@ -35,26 +35,6 @@ window.BLOG || (BLOG = {});
     });
   });
 
-  // search
-  SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    json: '/search.json',
-    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
-    noResultsText: '<li>No results found</li>',
-    limit: 10
-  });
-
-  $('.search-area').click(function(){
-    $('.search-area').addClass('clicked');
-  });
-
-  $('body').click(function(){
-    if ($('.search-area').hasClass('clicked')) {
-      document.getElementById('results-container').innerHTML = "<li style='height: 0; padding: 0; margin: 0'></li>";
-    }
-  });
-
   // emoji
   function addEmoji() {
     if (navigator.userAgent.indexOf('Mac OS X') != -1) {
@@ -64,10 +44,66 @@ window.BLOG || (BLOG = {});
   addEmoji();
   console.log('Hello, beautiful :)');
 
+  // Service Workers
+  if ('serviceWorker' in navigator) {
+    // Attempt to register it
+    navigator.serviceWorker.register('/sw.js').then(function() {
+      // Success
+      console.log('ServiceWorker registration successful');
+    }).catch(function(err) {
+      // Fail
+      console.log('ServiceWorker registration failed: ', err);
+    });
+
+    var currentPath = window.location.pathname;
+    var cacheButton = document.querySelector('.offline-btn');
+    var typeFace = 'https://fonts.gstatic.com/s/alegreyasanssc/v3/AjAmkoP1y0Vaad0UPPR46zqXxEMZsh1tOw6O6jsjRmU.woff2';
+    var imageArray = document.querySelectorAll('img');
+
+    var audioTrack = function() {
+      if(document.querySelector('audio') !== null) {
+        return (document.querySelector('audio source').src);
+      } else {
+        return ("/")
+      }
+    };
+
+    // Event listener
+    if(cacheButton) {
+      cacheButton.addEventListener('click', function(event) {
+       event.preventDefault();
+        // Build an array of the page-specific resources.
+        var pageResources = [currentPath, audioTrack(), typeFace];
+        for (i = 0; i < imageArray.length; i++) {
+          pageResources.push(imageArray[i].src);
+        }
+
+        // Open the unique cache for this URL.
+        caches.open('offline-' + currentPath).then(function(cache) {
+          var updateCache = cache.addAll(pageResources);
+
+          // Update UI to indicate success.
+          updateCache.then(function() {
+            console.log('Article is now available offline.');
+            cacheButton.style.color = "#a8e400";
+            cacheButton.innerHTML = "☺";
+          });
+
+          // Catch any errors and report.
+          updateCache.catch(function (error) {
+            console.log('Article could not be saved offline.');
+            cacheButton.style.color = "#f15d00";
+            cacheButton.innerHTML = "☹";
+          });
+        });
+      });
+    }
+  }
+
   // defer CSS loading
   var cb = function() {
   var l = document.createElement('link'); l.rel = 'stylesheet';
-  l.href = 'css/main.min.css';
+  l.href = location.origin + '/css/main.min.css';
   var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
   };
   var raf = requestAnimationFrame || mozRequestAnimationFrame ||

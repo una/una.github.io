@@ -24,9 +24,10 @@ var messages = {
 /**
  * Build the Jekyll Site
  */
+var jekyll = process.platform === "win32" ? "jekyll.bat" : "jekyll";
 gulp.task('jekyll-build', function (done) {
     browserSync.notify(messages.jekyllBuild);
-    return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
+    return cp.spawn(jekyll, ['build'], {stdio: 'inherit'})
         .on('close', done);
 });
 
@@ -162,7 +163,8 @@ gulp.task('psi', ['psi-seq'], function() {
 gulp.task('watch', function () {
     gulp.watch('_scss/**/*.scss', ['sass', 'jekyll-build']);
     gulp.watch(['index.html', 'archive.html', '_layouts/*.html', '_includes/*.html', '_posts/**/*', 'archive/*', 'diffeedemo/*', 'speaking/*', 'about/*'], ['jekyll-rebuild']);
-    gulp.watch(['images/*'], ['imagemin'])
+    gulp.watch(['images/*'], ['imagemin']),
+    gulp.watch(['js/*.js'], ['jekyll-build'])
 });
 
 /**

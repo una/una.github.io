@@ -234,6 +234,25 @@
 	}
 }
 
+.offline-btn {
+	position: relative;
+	transition-duration: .25s;
+	background: none;
+	border: none;
+	outline: none;
+	padding: .25em .4em;
+	list-style: none outside none;
+	display: inline-block;
+	border-bottom: 1px dashed $color--main;
+	color: $color--links;
+	padding: 0 .2em;
+
+	&:hover {
+		background: $color--main;
+		color: #fff;
+	}
+}
+
 .event-flag {
   float: right;
 }

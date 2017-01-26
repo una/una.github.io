@@ -1,6 +1,11 @@
 .has-tooltip {
 	position: relative;
 
+	&.offline-btn .tooltip {
+		left: -50%;
+		right: -50%;
+	}
+
 	 .tooltip {
 	 	@extend %font-title;
 	 	@include fontsize(12);
@@ -17,6 +22,7 @@
 		transform: translateY(10px);
 		transition: all .25s ease-out;
 		border-radius: 3px;
+		z-index: 50;
 
 		&:before {
 			bottom: -0.5em;
@@ -33,7 +39,7 @@
 			border-right: solid transparent 10px;
 			border-top: solid $color--hotpink 10px;
 			bottom: -10px;
-			content: " ";
+			content: "";
 			height: 0;
 			left: 50%;
 			margin-left: -13px;
