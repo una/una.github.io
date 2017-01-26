@@ -20,7 +20,8 @@ I just moved to New York City and started commuting to work on the subway. On sa
 
 This way, if someone is reading your blog on the subway, and loses their Internet connection, they won't lose their place. If they accidentally click and the browser refreshes, they won't lose their place. If they want to save your article to read on an airplane or at at a café in a foreign country where they have no internet plan, they can do that. And if they just want to save battery and be on airplane mode, that's cool too. ✨Magic.✨
 
---illustration here--
+![Dino illustration](../images/posts/save-for-offline/dino.jpg)
+
 
 This modality is an idea called **offline-first web design** and we're really just starting to see what that means, and have [discussions](http://offlinefirst.org/) around best practices and implications.
 

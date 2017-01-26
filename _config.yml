@@ -3,7 +3,7 @@ description: Front-end development and design musings
 url: https://una.im
 enforce_ssl: una.im
 markdown: redcarpet
-highlighter: pygments # or rouge or null
+highlighter: pygments.rb # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
