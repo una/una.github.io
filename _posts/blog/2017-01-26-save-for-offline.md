@@ -14,16 +14,15 @@ header-bg: ../images/posts/save-for-offline/bg.jpg
 subtitle: 'I recently added an option to save blog posts for offline reading. This post details how I did that and how you can too.'
 ---
 
-I just moved to New York City and started commuting to work on the subway. On said subway ride, despite its many glorious people watching moments, most commuters are just on their phones or reading books. The subway is also famous for not having reliable cell service, so many of those people trying to read articles on their phone are struggling with cache and unexpected reloads if they click the wrong button. The offline web experience we're providing users is something we all need to start thinking about. Luckily, we have the tools.
+I just moved to New York City and started commuting to work on the subway. On said subway ride, despite its many glorious people watching moments, most commuters are just on their phones, reading articles or trying to browse the web. The subway is also famous for not having reliable cell service, so many of those people trying to read articles on their phone are struggling with cache and unexpected reloads if they click the wrong button. The offline web experience we're providing users is something we all need to start thinking about. Luckily, we have the tools to do so.
 
 **I recently added an option to save blog posts for offline reading, and this post will detail how I did that so you can too.**
 
+<img class="right" style="max-width:480px" alt="dino illustration" src="../images/posts/save-for-offline/dino.jpg">
+
 This way, if someone is reading your blog on the subway, and loses their Internet connection, they won't lose their place. If they accidentally click and the browser refreshes, they won't lose their place. If they want to save your article to read on an airplane or at at a café in a foreign country where they have no internet plan, they can do that. And if they just want to save battery and be on airplane mode, that's cool too. ✨Magic.✨
 
-![Dino illustration](../images/posts/save-for-offline/dino.jpg)
-
-
-This modality is an idea called **offline-first web design** and we're really just starting to see what that means, and have [discussions](http://offlinefirst.org/) around best practices and implications.
+This modality is an idea called **offline-first web design** and we're really just starting to scratch the surface of what that means. You can join the [discussion](http://offlinefirst.org/) around best practices and implications.
 
 ## The Service Worker
 
@@ -34,7 +33,7 @@ Support for service workers is still a bit patchy, but getting much better:
 ![Service worker can be used in Chrome, Safari, Opera, and Samsung internet](../images/posts/save-for-offline/serviceworker-caniuse.jpg)
 <small>While <a href="https://jakearchibald.github.io/isserviceworkerready/">service worker support</a> is still missing in Safari and Edge, they seem to be [working on it](https://jakearchibald.github.io/isserviceworkerready/#request). Also be aware that for service worker [Cache](https://developer.mozilla.org/en-US/docs/Web/API/Cache), some versions of browsers support different versions of cache than others.</small>
 
-You likely already have a few service worker caches saved in your browser. To see them, navigate to to `chrome://serviceworker-internals` in Chrome, or `about:debugging` in Firefox. You'll see something like:
+You likely already have a few service worker caches saved in your browser. To see them, navigate to to `chrome://serviceworker-internals` in Chrome, or `about:debugging` in Firefox. This is where you can see your list of service workers and work with them (no pun intended), such as if you need to unregister one while debugging. You'll see something like:
 
 ![What service worker looks like in the background](../images/posts/save-for-offline/sw-view.jpg)
 
@@ -42,7 +41,7 @@ You likely already have a few service worker caches saved in your browser. To se
 
 Before we can use service workers, we'll need to implement HTTPS (a secure HTTP connection). The easiest way I know to do this is via [Cloudflare](https://www.cloudflare.com/). It's quick to set up and works flawlessly with Github pages too (what I have my blog served on).
 
-Then, we'll need to do is create a service worker file, usually called `sw.js`, and check to see if its supported. This file should live in the root of your site/app. In your application JavaScript, you can write a little script to test it and then register the service worker if its supported like so:
+We'll need to create a service worker file, called `sw.js`. This file should live in the root of your site/app. Then, in your application JavaScript (not the `sw.js` file, but where you keep your other scripts), you can write a little script to test for feature support and then register the service worker if its supported like so:
 
 ```
 // This is application logic (i.e. scripts.js)
@@ -60,7 +59,7 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-Then, we'll need to give our service worker a name (usually versioned to prevent problems with updated versions), install our service worker, add the items we want to cache, and activate our service worker. We'll be doing this via `self.addEventListener()` passing in an `install` event, `activate` event. We'll then want to use a `fetch` event to grab that data and serve it upon a connection that's down.
+Then, we'll need to give our service worker a name (usually versioned to prevent problems with updated versions), install our service worker, add the items we want to cache, and activate our service worker. We'll be doing this via `self.addEventListener()` passing in an `install` event, and an `activate` event. Next, we'll want to use a `fetch` event to grab that data and serve it upon a downed connection.
 
 <small>The items to cache at this point should be something you don't forsee changing often, such as base styles, scripts, fonts, logos, etc.</small>
 
@@ -149,15 +148,13 @@ While service workers can do a [variety of things](https://serviceworke.rs/) lik
 
 ## Offline Switch
 
-By giving our users the option to save a post for offline reading, we're not taking up valuable space in their cache without permission. I wanted to give you all the option to save posts for web by clicking this download button next to the article title:
+By giving our users the option to save a post for offline reading, we're not taking up valuable space in their cache without permission. I wanted to give you all the *option* to save posts for web by clicking a download button next to the article title:
 
 ![Example header with save for offline button](../images/posts/save-for-offline/exbg.jpg)
 
 It's important to note that despite the Service Worker being separate from your page, its cache is still accessible from within the page's JavaScript. So let's go back to our application logic and add some more code.
 
-Essentially all we need to do is add an event listener to the trigger element (in this case it's `.offline-btn`), add resources we want to cache, and then update the existing cache with those resources.
-
-I used this separate button to also cache the audio track for each post, and the example below shows this to illustrate that you can pass multiple items into your cache. I'm adding the http request text, inline images, and the audio file.
+Essentially all we need to do is add an event listener to the trigger element (in this case it's `.offline-btn`), populate the resources we want to cache, and then update the existing cache with those resources. In the example, I'm adding the http request text, inline images, and the audio file to the cache upon clicking `.offline-btn`:
 
 All in all, it looks like:
 
@@ -216,7 +213,7 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-We will also need to edit the `sw.js` file to remove the fetch event from every single URL. We still want to download the initial page (home page) so that our users can navigate, but don't want to save any additional/unnecessary items. We want to update our fetch event:
+We will also need to edit the `sw.js` file to remove the fetch event from every HTTP request. We still want to download the initial page (home page) so that our users can navigate, but don't want to save any additional/unnecessary items. We want to update our fetch event like so:
 
 ```
 self.addEventListener('fetch', function(event) {
@@ -225,7 +222,7 @@ self.addEventListener('fetch', function(event) {
 
   // Save all resources on origin path only
   if (requestUrl.origin === location.origin) {
-      if (requestUrl.pathname === '/') {
+    if (requestUrl.pathname === '/') {
       event.respondWith(
         // Open the cache created when install
         caches.open(cacheName).then(function(cache) {
@@ -236,7 +233,7 @@ self.addEventListener('fetch', function(event) {
             // Respond with it
             return networkResponse;
           }).catch(function() {
-            // If there is no internet connection, try to match the request
+            // If no internet connection, try to match request
             // to some of our cached resources
             return cache.match(event.request);
           })
@@ -252,7 +249,7 @@ We're almost there. Everything is in place, we have our service worker instantia
 
 Chrome has some great service worker tools for debugging errors we get in the process, but the last thing to do is to test and make sure that this works. I like to use [Ngrok](https://ngrok.com/), which I've written about [before](http://una.im/gulp-local-psi/). After setup, in your terminal, you'd use `ngrok http <port-name>`, and it will create a tunnel for you to access your site through. Use the **https** link, and test it out.
 
-Click around, then turn off wifi. The page resources you access or save should now be available to you. Congrats! You're building offline first. Give yourself a pat on the back.
+Click around, then turn off wifi. The page resources you access or save should now be available to you. Congrats! *You're building a better offline web experience and improving site performance!* Give yourself a pat on the back.
 
 ## Further Resources
 
