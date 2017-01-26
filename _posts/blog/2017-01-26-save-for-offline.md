@@ -261,3 +261,6 @@ Click around, then turn off wifi. The page resources you access or save should n
 - [Mozilla Service Worker Cookbook](https://serviceworke.rs/)
 - [CSS TricksService Worker for Offline](https://css-tricks.com/serviceworker-for-offline/)
 - [Chris Ruppel's Post on Service Worker](https://chrisruppel.com/blog/service-worker-offline-content/)
+
+<small>Shoutout to [Jake Archibald](https://twitter.com/jaffathecake), [Nolan Lawson](https://twitter.com/nolanlawson), and [Mariko Kosamari](https://twitter.com/kosamari) for answering my weird service worker questions.</small>
+<br><br>
