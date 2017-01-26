@@ -198,17 +198,15 @@ if ('serviceWorker' in navigator) {
        pageResources.push(imageArray[i].src);
      }
 
-      // Open the unique cache for this URL.
+      // Open the unique cache for this URL
       caches.open('offline-' + currentPath).then(function(cache) {
         var updateCache = cache.addAll(pageResources);
 
-        // Update UI to indicate success.
+        // Update UI to indicate success
+        // Or catch any errors if it doesn't succeed
         updateCache.then(function() {
           console.log('Article is now available offline.');
-        });
-
-        // Catch any errors and report.
-        updateCache.catch(function (error) {
+        }).catch(function (error) {
           console.log('Article could not be saved offline.');
         });
       });
