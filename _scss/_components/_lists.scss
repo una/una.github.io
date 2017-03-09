@@ -168,7 +168,7 @@ ol {
 		@extend %font-title;
 		font-weight: 100;
 		color: $color--blue;
-		left: 40%;
+		left: 35%;
 		position: absolute;
 
 		@include breakpoint(xs) {
