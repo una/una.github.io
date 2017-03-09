@@ -291,7 +291,8 @@ ol {
 		}
 
 		@include breakpoint(sm) {
-			right: 0;
+			left: 0;
+			right: initial;
 		}
 	}
 }
