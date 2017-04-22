@@ -13,6 +13,7 @@ tags:
 - environment
 - text editor
 subtitle: "VSCode just released custom workspaces! This means you can customize your text editor layout and style for different projects within a single editor!"
+header-bg: ../images/posts/vscode-workspace/bg.jpg
 ---
 
 [Visual Studio Code](https://code.visualstudio.com/) just [released](https://code.visualstudio.com/updates/v1_11#_workbench) experimental workbench theming. This is such an awesome feature ("to-be"?) because it allows you to customize your text editor's look and feel on a per-project basis! Why is this so exciting? Read on:
@@ -23,11 +24,11 @@ Cal Newport, author of the book [Deep Work](#), [defines](https://80000hours.org
 
 I have a theory that our digital workspaces, or text editors, can help get into this state more quickly by providing visual cues that move us from one task to another.
 
-Have you ever noticed that changing your environment might help give you some inspiration or help you focus? Like going to a coffee shop to write a blog post or moving to another corner of the office to work on a difficult problem? I have an (untested) theory that this phenomenon extends to our digital spaces as well.
+Have you ever noticed that changing your environment might help give you some inspiration or help you focus? Like going to a coffee shop to write a blog post or moving to another corner of the office to work on a difficult problem? This phenomenon may extend to our digital spaces as well, particularly to where we're doing the work (text editors).
 
-> Having visual differentiation between project themes may help you more fluidly "swap" into another mindset and keep you there.
+> Having visual differentiation between projects may help you more fluidly "swap" into another mindset and keep you there.
 
-Seems plausible at least, and it certainly couldn't hurt to try.
+*Note: This isn't a tested theory, but it seems plausible, and it certainly couldn't hurt to try.*
 
 ## Implementation
 
@@ -45,7 +46,7 @@ And more! The autocomplete for settings is pretty great, and results are instant
 
 ## Use Cases
 
-To me, this feature is great for differentiating between work and personal projects, as well as customizing layout to suite certain needs. For blog posts, I'll likely want larger text, increased line height, and really good markdown support, so I use a theme called [Gray Matter](https://marketplace.visualstudio.com/items?itemName=philipbe.theme-gray-matter) which feels a lot like iA writer (the UI of which which I love, but prefer to stay within my own code base and use the commands I'm used to in VS Code).
+To me, this feature is great for differentiating between work and personal projects, as well as customizing layout to suit certain needs. For blog posts, I'll likely want larger text, increased line height, and really good markdown support, so I use a theme called [Gray Matter](https://marketplace.visualstudio.com/items?itemName=philipbe.theme-gray-matter) which feels a lot like iA writer (the UI of which which I love, but prefer to stay within my own code base and use the commands I'm used to in VS Code).
 
 <div style="overflow:hidden">
   <div class="third"><img src="../images/posts/vscode-workspace/default.jpg" alt=""><p class="center">Default Workspace</p></div>
@@ -63,4 +64,4 @@ This is still an experimental feature that isn't at its final implementation yet
 
 Also, doing any such customizations will add a `.vscode/` folder to your filesystem to read the configuration. Be sure to add `.vscode/` to your `.gitignore` file to make sure it doesn't get merged in to your code base.
 
-Despite the warnings, we can start to play now! And optimize our experience for the spaces where we spend a lot of our time.
+Despite the warnings, we can start to play now! And better customize our experience for the digital spaces in which we spend a lot of our time.
