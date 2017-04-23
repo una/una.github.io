@@ -14,6 +14,9 @@ tags:
 - text editor
 subtitle: "VSCode just released custom workspaces! This means you can customize your text editor layout and style for different projects within a single editor!"
 header-bg: ../images/posts/vscode-workspace/bg.jpg
+audio: vscode-workspaces
+audio-size: 5053071
+duration: '03:30'
 ---
 
 [Visual Studio Code](https://code.visualstudio.com/) just [released](https://code.visualstudio.com/updates/v1_11#_workbench) experimental workbench theming. This is such an awesome feature ("to-be"?) because it allows you to customize your text editor's look and feel on a per-project basis! Why is this so exciting? Read on:
@@ -22,7 +25,7 @@ header-bg: ../images/posts/vscode-workspace/bg.jpg
 
 Cal Newport, author of the book [Deep Work](#), [defines](https://80000hours.org/2016/08/is-deep-work-the-most-underappreciated-skill-for-career-success-an-interview-with-cal-newport/) the concept of "deep work" as *"the ability to focus without distraction on a cognitively demanding task"*. "Deep work" as he describes it is also known as *"flow"*, a state of being where a person becomes extremely productive by focusing on a single task and actively avoiding distraction.
 
-I have a theory that our digital workspaces, or text editors, can help get into this state more quickly by providing visual cues that move us from one task to another.
+I have a theory that our digital workspaces, or text editors, can help us get into this state more quickly by providing visual cues that move us from one task to another (also known as context switching).
 
 Have you ever noticed that changing your environment might help give you some inspiration or help you focus? Like going to a coffee shop to write a blog post or moving to another corner of the office to work on a difficult problem? This phenomenon may extend to our digital spaces as well, particularly to where we're doing the work (text editors).
 
