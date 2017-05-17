@@ -70,7 +70,7 @@ Unfortunately, PageSpeed Insights (psi) doesn't work on locally hosted websites.
 npm install -g ngrok
 ```
 
-Now, depending on what server you're running gulp on, type `ngrok <port>` into your terminal. Since I'm using port 3000, I'll use `ngrok 3000`. Then you should see something like this:
+Now, depending on what server you're running gulp on, type `ngrok http <port>` into your terminal. Since I'm using port 3000, I'll use `ngrok http 3000`. Then you should see something like this:
 
 ```
 Tunnel Status       online
