@@ -13,3 +13,9 @@ gems: [jekyll-paginate]
 paginate: 5
 future: true
 permalink: pretty
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  startings: [head, body]
