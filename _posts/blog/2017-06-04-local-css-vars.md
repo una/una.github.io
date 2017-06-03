@@ -22,10 +22,6 @@ duration: '03:30'-->
 
 CSS Custom Properties (also popularly called CSS Variables) are [here](http://caniuse.com/#feat=css-variables)! This is really exciting because we finally have *true* variables in CSS! What do I mean by *true* variables? Well, variables that can be updated and altered dynamically in the file. While we had "variables" with pre/post-processors (like Sass and PostCSS), variables got compiled into CSS and didn't have dynamic capabilities to update their content.
 
-<p class="ciu_embed" data-feature="css-variables" data-periods="future_1,current,past_1">
-  <a href="http://caniuse.com/#feat=css-variables">Can I Use css-variables?</a> Data on support for the css-variables feature across the major browsers from caniuse.com.
-</p>
-
 The way you set CSS variables is with a pre-pended `--` and the way you access them is via `var(--varName)`. In a very elemental way, you can write the following to use a CSS variable that declares the text color to be red:
 
 ```
@@ -245,7 +241,64 @@ So just to demonstrate with our example, lets give `.card` a red border and appl
   </div>
 </div>
 
+## Is it Ready?
+
+CSS Variables are widely supported in browsers today, though support is lacking in Internet Explorer, and edge is still working on it. However, there are two alternatives if you need to support those browsers and want to get started today.
+
+Current Support is as follows:
+
+<p class="ciu_embed" data-feature="css-variables" data-periods="future_1,current,past_1">
+  <a href="http://caniuse.com/#feat=css-variables">Can I Use css-variables?</a> Data on support for the css-variables feature across the major browsers from caniuse.com.
+</p>
+
+### `@supports`
+
+Within CSS, we have a way of detecting feature support by using the `@supports` query. (Can we take a minute to note how cool this is, by the way?). `@supports` is an excellent tool when you want to play with some of the more modern CSS properties like [CSS Grid](/css-grid). You can check for variable support and send fallbacks for browsers who don't support it:
+
+```
+@supports(--color: red) {
+  // code here implementing variables
+}
+```
+
+Using `@supports` is definitely an option, but may be difficult to wrangle for a functionality like CSS variables (it works really well with Grid though!), so sending a backup value may be a better solution.
+
+### Sending a Backup Value
+
+You can leverage the forgiving style of CSS (pun intended) to send multiple values. First send the value as you normally would, then have a second statement with the variable:
+
+```
+div {
+  --color: red;
+  color: red;
+  color: var(--color);
+}
+```
+
+Another way to send a backup value is within the `var()` declaration itself:
+
+-- SELF NOTE TRY THIS IN EDGE ---
+
+```
+div {
+  --color: red;
+  color: var(--color, red);
+}
+```
+
+This is redundant for now, but it allow you to slowly ease into using some CSS Variables within an existing codebase, making it easier to refactor once support catches up.
+
 **tl;dr: CSS Variables are super powerful, and scoping them locally makes them an even more powerful tool for clean, modular design systems.**
+
+#### More Resources
+
+- [Demo I Made Sending Using JS to Rewrite CSS Variables Inline](https://codepen.io/una/pen/ZKqMqj)
+- [Types of CSS Variables, CSS Tricks](https://css-tricks.com/difference-between-types-of-css-variables/)
+- [Using CSS Variables, MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables)
+- [Why You Should Care About CSS Variables, Rob Dodson](https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care)
+- [Theming With Custom Properties, Harry Roberts](https://csswizardry.com/2016/10/pragmatic-practical-progressive-theming-with-custom-properties)
+- [Time To Start Using CSS Custom Properties, Serg Hospodarets](https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/)
+
 
 <!-- Live CSS Vars -->
 <script src="//cdn.jsdelivr.net/caniuse-embed/1.1.0/caniuse-embed.min.js"></script>
