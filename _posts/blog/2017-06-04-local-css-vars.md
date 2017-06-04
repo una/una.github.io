@@ -2,7 +2,7 @@
 layout: post
 title: "Locally Scoped CSS Variables: What, How, and Why"
 permalink: /local-css-vars/
-date: '2017-06-04'
+date: '2017-06-05'
 comments: true
 tags:
 - css
@@ -12,6 +12,7 @@ tags:
 - scope
 - modern
 - proprties
+header-bg: ../images/posts/css-var-scope/bg.jpg
 subtitle: "Leveraging CSS Variable scope improves the size, specificity, and semantics of our stylesheets. This article talks all about what CSS Variables are and how we can leverage scope to improve our styling."
 ---
 
@@ -60,9 +61,7 @@ calculateLoadProgress() => {
 document.documentElement.style.setProperty('--progressBarWidth', calculateLoadProgress());
 ```
 
-That's just one example of many! [David Piano](#) is doing some really interesting explorations using React and JS Physics Libraries to identify values which he then passes back into CSS variables. He gave a *great* talk about this at CSS Conf EU recently:
-
--- video from CSS Conf EU --
+That's just one example of many! [David Khourshid](https://twitter.com/DavidKPiano) is doing some really interesting explorations using React and JS Physics Libraries to identify values which he then passes back into CSS variables. He gave a *great* [talk about this at CSS Conf EU](https://www.youtube.com/watch?v=4IRPxCMAIfA&t=1s) recently.
 
 ### Dynamic Property Fragments
 
@@ -95,7 +94,9 @@ We're updating the `--gradientAngle` and not the entire background property. We 
 CSS variables also allow us to write modular code with modifiers in a cleaner way. A typical example for components are multi-style buttons, so let's stick with those? Take a look at the following example:
 
 <figure>
-  <img src="../../images/posts/css-var-scope/buttonsexample.jpg" alt="Button types example">
+  <a href="https://codepen.io/una/pen/bRGaBE">
+    <img src="../../images/posts/css-var-scope/buttonsexample.jpg" alt="Button types example">
+  </a>
 </figure>
 
 Traditionally, with a naming convention like BEM, we would set classes via a pre/post processor, and then make modifier classes to override the base classes:
@@ -141,18 +142,16 @@ It can look something like this:
 
 ## We Can Do Better with Local Scope
 
-Like this example, most current examples of CSS Variables in [docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables), [articles](https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care), and [demos](SELF_NOTE_LINK_TO_DAVIDS_DEMOS), use the `:root` of the CSS file to initiate and access variables. 
+Similar to the one above, most current examples of CSS Variables in [docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables), [articles](https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care), and [demos](SELF_NOTE_LINK_TO_DAVIDS_DEMOS), use the `:root` of the CSS file to initiate and access variables. 
 
-This is a great way to set global variables, but they become even more powerful as a component customization tool. CSS variables don't need to be declared only in the `:root`—they can be declared at any point in the CSS file, and live within the scope at which point they are specified.
+This is a great way to set global variables, but isn't a necessity. CSS variables don't need to be declared only in the `:root`—they can be declared at any point in the CSS file, and live within the scope at which point they are specified. This is similar to JavaScript variables instantiated with the `let` keyword, which take the scope of their containing block (`{}`) (aka *block scope*). So we can leverage this specificity in our component styling declarations.
 
 <figure class="right" style="max-width: 65%">
   <img src="../../images/posts/css-var-scope/04-css-vars.png" alt="">
   <aside class="caption" style="width: 100%">CSS Custom Properties are scoped to their containing blocks (<code>{}</code>), just like JavaScript variables instantiated with the *let* keyword.</aside>
 </figure>
 
-So we're no longer forced to use globally scoped variables! **<a class="twitter-share">Leveraging CSS Variable scope improves the size, specificity, and semantics of our stylesheets</a>.** That's a lot of alliteration!
-
-CSS Variables, like JavaScript variables instantiated with the `let` keyword take the scope of their containing block (`{}`). So we can leverage this specificity in our component styling declarations.
+With CSS Variables, we're no longer forced to use globally scoped declarations! **<a class="twitter-share">Leveraging CSS Variable scope improves the size, specificity, & semantics of our stylesheets</a>.** That's a lot of alliteration!
 
 For example, `--buttonBgColor` isn't something we should put in `:root` as a global variable. A cleaner approach would be to rename that variable to just `--bgColor` and place it within the `<button>` component. This makes it more tightly coupled with its parent component, and makes more semantic sense in its ordering within the CSS file.
 
@@ -205,6 +204,31 @@ With Sass, we can extend this idea use the nested `&` to rewrite this a little b
 
 Note: We can and should still leverage `:root` for global variables, like base color styling and sizing resets, but locally scoped variables reduce specificity, thereby reducing size, and also increase semantics.
 
+### Default Values
+
+It's also interesting to note that you can use *default values* to stub variables in case they don't exist yet. `var()` gives us this capability by accepting two arguments (and can be nested within itself). In the example below, if `--bgColor` is not defined, the card will take the primary color (red). So we can potentially remove step 2 from `.button` and just update `--bgColor` in the modifiers, if we wanted the base button to be the primary color.
+
+```
+// 0. Set global variables here
+:root {
+  --colorPrimary: red;
+}
+
+.button {
+  // 1. Default Styles
+  // If --bgColor is not defined, the background will be the fallback: red
+  background: var(--bgColor, var(--colorPrimary));
+  
+  // 2. Default Values
+  // Since --bgColor is defined, the button remains lightgreen
+  --bgColor: lightgreen;
+
+  // ...
+}
+```
+
+### Theming with the Trailing &
+
 If we have more complex components, we can still use this technique. To make it even more concise, we can combine this with a CSS preprocessor like Sass. Theming buttons inside of card components using the Sass [trailing ampersand](/2014/03/06/sass-snippets-the-almighty-ampersand) can work like so:
 
 ```
@@ -243,7 +267,7 @@ So just to demonstrate with our example, lets give `.card` a red border and appl
 
 ## Is it Ready?
 
-CSS Variables are widely supported in browsers today, though support is lacking in Internet Explorer, and edge is still working on it. However, there are two alternatives if you need to support those browsers and want to get started today.
+CSS Variables are widely supported in browsers today, though support is lacking in Internet Explorer, and Edge is still working on full support. However, there are two alternatives if you need to support those browsers and want to get started today.
 
 Current Support is as follows:
 
@@ -272,17 +296,6 @@ div {
   --color: red;
   color: red;
   color: var(--color);
-}
-```
-
-Another way to send a backup value is within the `var()` declaration itself:
-
--- SELF NOTE TRY THIS IN EDGE ---
-
-```
-div {
-  --color: red;
-  color: var(--color, red);
 }
 ```
 
