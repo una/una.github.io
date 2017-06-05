@@ -14,12 +14,10 @@ tags:
 - proprties
 header-bg: ../images/posts/css-var-scope/bg.jpg
 subtitle: "Leveraging CSS Variable scope improves the size, specificity, and semantics of our stylesheets. This article talks all about what CSS Variables are and how we can leverage scope to improve our styling."
+audio: cssvarslinks
+audio-size: 17159774
+duration: '11:55'
 ---
-
-<!--header-bg: ../images/posts/vscode-workspace/bg.jpg
-audio: vscode-workspaces
-audio-size: 5053071
-duration: '03:30'-->
 
 CSS Custom Properties (also popularly called CSS Variables) are [here](http://caniuse.com/#feat=css-variables)! This is really exciting because we finally have *true* variables in CSS! What do I mean by *true* variables? I mean variables that can be updated and altered dynamically in the file. While we had "variables" with pre/post-processors (like Sass and PostCSS), these "variables" got compiled into CSS and didn't have dynamic capabilities to update their content. This isn't true with CSS variables, which truly store updateable values.
 
@@ -32,7 +30,7 @@ div {
 }
 ```
 
-## CSS Variables Are Very Cool
+## CSS Variables Are Very Exciting
 
 Lets talk for a moment *why* dynamic CSS Variables are so much better than what we've had before.
 
@@ -142,7 +140,7 @@ It can look something like this:
 
 ## We Can Do Better with Local Scope
 
-Similar to the one above, most current examples of CSS Variables in [docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables), [articles](https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care), and [demos](SELF_NOTE_LINK_TO_DAVIDS_DEMOS), use the `:root` of the CSS file to initiate and access variables. 
+Similar to the one above, most current examples of CSS Variables in [docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables), [articles](https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care), and [demos](https://codepen.io/davidkpiano/pen/vxZEoO), use the `:root` of the CSS file to initiate and access variables. 
 
 This is a great way to set global variables, but isn't a necessity. CSS variables don't need to be declared only in the `:root`—they can be declared at any point in the CSS file, and live within the scope at which point they are specified. This is similar to JavaScript variables instantiated with the `let` keyword, which take the scope of their containing block (`{}`) (aka *block scope*). So we can leverage this specificity in our component styling declarations.
 
@@ -278,7 +276,7 @@ Current Support is as follows:
 
 ### `@supports`
 
-Within CSS, we have a way of detecting feature support by using the `@supports` query. (Can we take a minute to note how cool this is, by the way?). `@supports` is an excellent tool when you want to play with some of the more modern CSS properties like [CSS Grid](/css-grid). You can check for variable support and send fallbacks for browsers who don't support it:
+Within CSS, we have a way of detecting feature support by using the `@supports` query. (Can we take a minute to note how cool this is too, by the way?). `@supports` is an excellent tool when you want to play with some of the more modern CSS properties like [CSS Grid](/css-grid). You can check for variable support and send fallbacks for browsers who don't support it:
 
 ```
 @supports(--color: red) {
