@@ -6,6 +6,15 @@
     <meta name="description" content="Thoughts about front-end development and design. And probably other ramblings by Una Kravets.">
     <link rel="manifest" href="/manifest.webmanifest">
     <link rel="icon" type="image/png" href="/images/favicon.png">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:creator" content="@una">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="description" content="Una Kravets' Blog | {{ page.subtitle }}">
+    <meta name="twitter:description" content="{{ page.subtitle }} | on Una Kravets' Blog">
+    <meta name="twitter:image" content="{{ page.header-bg }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:image" content="{{ page.header-bg }}" />
 
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" name="{{ site.name }}" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
