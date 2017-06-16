@@ -1,0 +1,65 @@
+---
+layout: post
+title: 'Sass Snippets #2 - Image Helpers'
+date: '2013-08-12T13:03:49-05:00'
+tags:
+- sass snippets
+- sass
+- scss
+- compass
+- image
+- coding
+- image-hepers
+- image-height
+- image-width
+- image-url
+- cache busting
+- snippets
+- tips
+- shortcuts
+tumblr_url: http://unakravets.tumblr.com/post/58056695534/sass-snippets-2-image-helpers
+subtitle: Compass is a beautiful, beautiful thing and its image helpers make working with visuals just that much more beautiful. Here are two methods to let compass do all of the work for you. Just hit cmd+s!
+---
+<p>Compass is a beautiful, beautiful thing and its image helpers make working with visuals just that much more beautiful. Here are two methods to let compass do all of the work for you. Just hit ⌘s!</p>
+<h3>Image-Url</h3>
+<p>Image-url is FANTASTIC. Basically, you must first set up your compass.rb or config.rb (whatever your compass configuration file is) and update the images path to its correct directory in relation to this file (like, &#8220;public/images&#8221; or just &#8220;images&#8221; if they&#8217;re on the same level). Here&#8217;s a great <a href="http://blog.grayghostvisuals.com/compass/image-url/" target="_blank">link</a> with more detail on relative paths and how to set them up.</p>
+<h4>Config.rb&#160;:</h4>
+<pre><code># Set this to the root of your project when deployed:
+    http_path = "/"
+	css_dir = "stylesheets"
+	sass_dir = "sass"
+	images_dir = "images"
+	javascripts_dir = "js"
+</code></pre>
+<p>Then, all you have to do is link to the specific image you&#8217;re looking for in the sass file:</p>
+<h4>SCSS:</h4>
+<pre><code>.my-little-pony {
+    background: image-url("rainbow_unicorn.jpg");    
+}
+</code></pre>
+<h4>CSS output:</h4>
+<pre><code>.my-little-pony {
+    background: url("/images/rainbow_unicorn.jpg?1375810680");
+}
+</code></pre>
+<p>Compass does all of the work for you! It links to your images directory, and pulls the file (no more searching confusingly through directories: ../../images), AND it does a clever little thing called cache-busting. You may be wondering what all of the numbers after the &#8220;?&#8221; in that CSS are. Well, what Compass did was added these numbers so that if I changed that image, the numbers would change and a user&#8217;s cache wouldn&#8217;t be loading the old image anymore. It&#8217;s called &#8220;cache-busting.&#8221; Pretty clever, Compass. <br/><br/> The only downside is that image-url doesn&#8217;t support .svg&#8217;s yet. It can&#8217;t read the file&#8217;s image size properly (well, neither can your computer). A good rule of thumb is: if your system can return information on a file&#8217;s dimensions, you can use that file format for image-url.</p>
+<h3>Image-Height &amp; Image-Width</h3>
+<p>Compass can also read the width and height of your image, so you don&#8217;t have to!</p>
+<h4>SCSS:</h4>
+<pre><code>
+.my-little-pony {$image: "rainbow_unicorn.jpg"; // note: no svgs here either :(
+     background: image-url($image); // see! image-url rocks  
+    height: image-height($image);
+    width: image-width($image); </code></pre>
+<h4>CSS output:</h4>
+<pre><code>.my-little-pony {
+	background: url("/images/rainbow_unicorn.jpg");
+	height: 204px;
+	width: 163px;
+}
+</code></pre>
+<p>Now isn&#8217;t that nice? :)</p>
+<p><strong>TL;DR: Use image-url as much as possible, &amp; know about other Compass image helpers :)</strong></p>
+<ul><li><a href="http://blog.grayghostvisuals.com/compass/image-url/" target="_blank">http://blog.grayghostvisuals.com/compass/image-url/</a></li>
+<li><a href="http://compass-style.org/reference/compass/helpers/image-dimensions/" target="_blank">http://compass-style.org/reference/compass/helpers/image-dimensions/</a></li>
+</ul>

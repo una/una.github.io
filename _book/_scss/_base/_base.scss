@@ -1,0 +1,49 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  @extend %font-copy;
+  @include fontsize(12);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+  @include breakpoint(md) {
+    @include fontsize(11);
+  }
+
+  @include breakpoint(sm) {
+    @include fontsize(10);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: $color--main;
+  color: $color--lightest;
+}
+
+.row {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.container,
+%container {
+  margin: 2em auto 0;
+  max-width: $post-width;
+}
+
+img {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+%transition-duration {
+  transition-duration: .5s;
+}

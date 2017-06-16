@@ -1,0 +1,45 @@
+nav {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+
+	@include breakpoint(sm){
+		position: relative;
+		right: 0;
+		top: 0;
+		margin: initial;
+	}
+
+	ul {
+		@include breakpoint(sm){
+			clear: both;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	li {
+		display: inline-block;
+		margin-left: 1em;
+	}
+
+	a {
+		&:after {
+			@extend %transition-duration;
+			content: "";
+			background: currentColor;
+			width: 0%;
+			height: 2px;
+			display: block;
+		}
+
+		&.active:after,
+		&:hover:after {
+			width: 105%;
+		}
+
+		@include breakpoint(sm){
+			color: $color--main;
+		}
+	}
+}

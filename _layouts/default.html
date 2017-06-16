@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
+
+  <!-- Social -->
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:creator" content="@Una">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="description" content="{{ page.description }}">
+  <meta name="twitter:description" content="{{ page.description }}">
+  <meta name="twitter:image" content="{{ page.header-bg }}">
+  <meta property="og:url" content="{{ page.url }}" />
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:image" content="{{ page.header-bg }}" />
+
   <body>
 
     {% include header.html %}

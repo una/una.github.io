@@ -1,0 +1,15 @@
+name: Una Kravets Online
+description: Front-end development and design musings
+url: https://una.im
+enforce_ssl: una.im
+markdown: redcarpet
+highlighter: pygments.rb # or rouge or null
+exclude: ["node_modules", "gulpfile.js", "package.json"]
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
+twitter_username: una
+github_username:  una
+gems: [jekyll-paginate]
+paginate: 5
+future: true
+permalink: pretty

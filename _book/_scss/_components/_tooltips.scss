@@ -1,0 +1,56 @@
+.has-tooltip {
+	position: relative;
+
+	&.offline-btn .tooltip {
+		left: -50%;
+		right: -50%;
+	}
+
+	 .tooltip {
+	 	@extend %font-title;
+	 	@include fontsize(12);
+		background: $color--hotpink;
+		bottom: 100%;
+		color: white;
+		display: block;
+		left: -100%;
+		margin-bottom: 15px;
+		opacity: 0;
+		padding: .5em;
+		position: absolute;
+		visibility: hidden;
+		transform: translateY(10px);
+		transition: all .25s ease-out;
+		border-radius: 3px;
+		z-index: 50;
+
+		&:before {
+			bottom: -0.5em;
+			content: "";
+			display: block;
+			height: 0.5em;
+			left: 0;
+			position: absolute;
+			width: 100%;
+		}
+
+		&:after {
+			border-left: solid transparent 10px;
+			border-right: solid transparent 10px;
+			border-top: solid $color--hotpink 10px;
+			bottom: -10px;
+			content: "";
+			height: 0;
+			left: 50%;
+			margin-left: -13px;
+			position: absolute;
+			width: 0;
+		}
+	}
+}
+
+.has-tooltip:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}

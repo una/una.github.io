@@ -1,0 +1,42 @@
+.intro {
+  @include fontsize(18);
+  @extend %pink-links;
+  @extend %container;
+  @extend %center;
+
+  p {
+    @extend %center;
+    @extend %pink-aside;
+    margin: 17em 0 0;
+    max-width: 360px;
+    font-size: 1rem;
+    background: $color--darkerpurple;
+    color: white;
+
+    a {
+      color: $color--hotpink;
+    }
+
+    @include breakpoint(sm) {
+      margin: 15em 0 0;
+    }
+  }
+}
+
+.self-portrait {
+  background-image: url('../images/unicorncode.svg');
+  max-width: 500px;
+  height: 300px;
+  margin: 3em auto 1em;
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  &:hover {
+    animation: rainbowize 1s ease-in-out forwards;
+  }
+
+  @include breakpoint(sm) {
+		margin: 4em auto 1em;
+    height: 260px;
+	}
+}

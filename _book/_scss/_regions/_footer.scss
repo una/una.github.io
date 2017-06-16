@@ -1,0 +1,88 @@
+footer {
+	padding: 4rem 1rem;
+	position: relative;
+	z-index: 10;
+	margin-top: 4em;
+	background-color: $color--subtlegrey;
+
+	// @include breakpoint($small-tab) {
+	// 	padding: 3rem 1rem;
+	// }
+
+	p {
+		@extend %pink-links;
+		@include fontsize(12);
+		margin: 2em auto 0;
+		text-align: center;
+
+		@include breakpoint(md) {
+			@include fontsize(10)
+		}
+	}
+
+
+}
+
+.footer--solid {
+	background-color: $color--darkgrey;
+}
+
+.social-icons {
+	@extend %center;
+
+	li {
+		display: inline-block;
+		margin: .5em;
+		
+		a {
+			@include fontsize(24);
+			border-bottom: none;
+			color: $color--copy;
+
+			@include breakpoint(md) {
+				@include fontsize(20)
+			}
+
+			// these hovers are all brand-color specific
+			&.icon-twitter:hover {
+				color: #55acee;
+			}
+
+			&.icon-dribbble:hover {
+				color: #ea4c89
+			}
+
+			&.icon-paragraph-left:hover {
+				color: #0ba6ab;
+			}
+
+			&.icon-pencil:hover {
+				color: #f86960;
+			}
+
+			&.icon-codepen:hover {
+				color: #666666;
+			}
+
+			&.icon-github2:hover {
+				color: #76cc1e;
+			}
+
+			&.icon-vimeo:hover {
+				color: #44bbff;
+			}
+
+			&.icon-linkedin:hover {
+				color: #0e76a8;
+			}
+
+			&.icon-mail2:hover {
+				color: $color--gold;
+			}
+
+			.tooltip {
+				width: 120px;
+			}
+		}
+	}
+}

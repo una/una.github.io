@@ -1,0 +1,74 @@
+%center,
+.center {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+%clearfix,
+.clearfix {
+	clear: both;
+}
+
+%transition,
+.transition {
+	transition-duration: .5s;
+}
+
+.half--left {
+  width: 48%;
+  margin: 1%;
+  float: left;
+
+  @include breakpoint(xs) {
+    width: 100%;
+    margin: 1em 0;
+    float: none;
+  }
+}
+
+.half--right {
+  width: 48%;
+  margin: 1%;
+  float: right;
+
+  @include breakpoint(xs) {
+    width: 100%;
+    margin: 1em 0;
+    float: none;
+  }
+}
+
+.two-third {
+  width: 62%;
+  margin: 1% !important; //override for everything
+  float: left;
+
+  @include breakpoint(sm) {
+    width: 100%;
+    margin: 1em 0;
+    float: none;
+  }
+}
+
+.third {
+  width: 31%;
+  margin: 1% !important; //override for everything
+  float: left;
+
+  @include breakpoint(sm) {
+    width: 100%;
+    margin: 1em 0;
+    float: none;
+  }
+}
+
+.block-center {
+  margin: 0 auto;
+  display: block;
+}
+
+.row {
+  overflow: hidden;
+  margin: 1em 0;
+}

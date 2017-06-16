@@ -1,0 +1,37 @@
+---
+layout: post
+title: Colourify! The Plugin!
+date: '2013-07-25T10:03:00-05:00'
+tags:
+- jQuery
+- plugin
+- color
+- random
+- array
+- property
+- list
+- javascript
+- easy
+tumblr_url: http://unakravets.tumblr.com/post/56425086544/colourify
+subtitle: Last week, I learned how to write jQuery plugins. So this week, I wrote one for y&#8217;all to enjoy! Selecting/use a random color from a given list of options.
+---
+<p>Last week, I learned how to write jQuery plugins. So this week, I wrote one for y&#8217;all to enjoy! Remember that article about <a href="http://playgroundinc.com/" target="_blank">Playground</a> &amp; selecting/using a random color from a given <a href="http://blog.unakravets.com/2013/05/20/dynamic-page-styling-with-selective-colors.html" target="_blank">list of options</a>? Well I&#8217;ve now made it easier for you to use and input options. YAY.</p>
+<p>The plugin defaults to using the colors on my website and changing the &#8220;color&#8221; property of the element you&#8217;re calling it on, but you can insert your own color choices and change any element that takes a color value in its argument (i.e. fill, background, border-color, etc.)</p>
+<p>Basically, its just a fun, simple plugin for indecisive people who want to have a little bit of control. <strong>All you have to do is:</strong></p>
+<ol><li>Download <strong><a href="https://github.com/Una21136/colourify/blob/master/colourify.js" title="Colourify Plugin" target="_blank">this</a> </strong>plugin</li>
+<li>Link to jQuery</li>
+<li>Link to the plugin location in your code</li>
+<li>Choose which element you want to color and attach it with<strong>.colourify()</strong>!</li>
+</ol><p class="p1"><strong>Here&#8217;s an example of its use:</strong></p>
+<pre><code>$('h1').colourify({
+    colors: ['#4eb19d','#f32047','#02f7c6', '#bab8ef'],
+    property: 'background'
+});
+</code></pre>
+<p><strong><a href="http://unakravets.com/demos/colourify/" target="_blank">And a DEMO</a></strong></p>
+<p>For a better understanding of the core function happening in there, and more control over the variable changing, see <a href="http://blog.unakravets.com/2013/05/20/dynamic-page-styling-with-selective-colors.html" target="_blank">this</a> blog post (I apologize for that code being a bit of a mess &#8212; I&#8217;ve improved significantly since I started interning at Viget a few weeks ago)</p>
+<h3>A Note on Colourify</h3>
+<p>The plugin takes two arguments: an element and options. The element we pass in when we instantiate the plugin is &#8220;this&#8221;, aka the thing on which we are calling this plugin. For example, if we called $(&#8216;.groovy&#8217;).colourify(), anything with a class of &#8216;groovy&#8217; would be &#8216;this&#8217; (odd word choice, I know).</p>
+<p>Anyway, the plugin then looks at the provided (or default) list of colors, chooses one at random, and changes the provided property (or color by default) based on a random choice from the list.</p>
+<p>I just really made this for practice and for fun :)</p>
+<p><strong>TL;DR: <a class="no-underline" href="https://github.com/Una21136/colourify" target="_blank">COLOURIFY ALL THE THINGS!</a></strong></p>
