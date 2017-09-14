@@ -5,8 +5,8 @@ location: Copenhagen, Denmark
 flag: 🇩🇰
 event: 'Coldfront Conf'
 date: '2017-09-05'
-upcoming: true
 hidden: true
-talk: TBD
+image: ../images/speaking/coldfront.jpg
+talk: From Doodles to Dashboards, Diagrams, and Docs
 event-link: https://2017.coldfront.co/
 ---
