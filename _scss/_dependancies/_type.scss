@@ -90,6 +90,37 @@ em {
   font-style: normal;
 }
 
+/* alegreya-sans-sc-regular - latin */
+@font-face {
+  font-family: 'Alegreya Sans SC';
+  font-style: normal;
+  font-display: optional;
+  font-weight: 400;
+  src: local('Alegreya Sans SC Regular'), local('AlegreyaSansSC-Regular'),
+       url('../fonts/alegreya-sans-sc-v6-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/alegreya-sans-sc-v6-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* alegreya-sans-sc-800 - latin */
+@font-face {
+  font-family: 'Alegreya Sans SC';
+  font-style: normal;
+  font-display: optional;
+  font-weight: 800;
+  src: local('Alegreya Sans SC ExtraBold'), local('AlegreyaSansSC-ExtraBold'),
+       url('../fonts/alegreya-sans-sc-v6-latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/alegreya-sans-sc-v6-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* alegreya-sans-sc-900 - latin */
+@font-face {
+  font-family: 'Alegreya Sans SC';
+  font-style: normal;
+  font-display: optional;
+  font-weight: 900;
+  src: local('Alegreya Sans SC Black'), local('AlegreyaSansSC-Black'),
+       url('../fonts/alegreya-sans-sc-v6-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/alegreya-sans-sc-v6-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon';
   speak: none;
