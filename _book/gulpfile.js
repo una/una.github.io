@@ -162,7 +162,7 @@ gulp.task('psi', ['psi-seq'], function() {
  */
 gulp.task('watch', function () {
     gulp.watch('_scss/**/*.scss', ['sass', 'jekyll-build']);
-    gulp.watch(['index.html', 'archive.html', '_layouts/*.html', '_includes/*.html', '_posts/**/*', 'archive/*', 'diffeedemo/*', 'speaking/*', 'about/*'], ['jekyll-rebuild']);
+    gulp.watch(['index.html', 'archive.html', '_layouts/*.html', '_includes/*.html', '_posts/**/*', 'archive/*', 'diffeedemo/*', 'speaking/*', 'about/*', 'clarityintro/*'], ['jekyll-rebuild']);
     gulp.watch(['images/*'], ['imagemin']),
     gulp.watch(['js/*.js'], ['jekyll-build'])
 });
