@@ -22,6 +22,11 @@ I’m useless without a to-do list, and that's okay. **Productivity takes practi
 
 It doesn't matter where your system is, or how you maintain it, but as long as the system works for your schedule and is maintained in a medium you will look over and return to, it's a solid choice. I've had two different types of goal/to-do lists (one digital, and more recently, a physical one), so it just depends on where you want to track your progress. I've found them both to be solid approaches.
 
+<figure>
+    <img src="../../images/posts/productivity/organize-list.jpg" alt="An example of one of my todo lists">
+  <figcaption>I've been keeping lists since high school. Here's one from a sememter at university — the only way I'm able to get everything done.</figcaption>
+</figure>
+
 ## 3 Years of Open Sourced Personal Goals
 
 I wrote about my first attempt at keeping on track a little while ago. I [Open Sourced my Personal Goals](https://una.im/personal-goals-guide) in a [Github repo](https://github.com/una/personal-goals-starter), and have been keeping track with that ever since. This system includes a few key components:
@@ -46,21 +51,25 @@ My open sourced personal goals system lived where I lived: in my browser. And I 
 
 I realized that the closer I followed this system (the more I checked in and the more on-top of my reviews I was) the more productive I was. Hands down. But I also saw myself moving away from this system, checking in a little bit less, and writing reviews days late as my life shifted a bit. So I wanted to revamp my organizational system and take it offline just to try something new.
 
-I started bullet journaling along with maintaining the personal goals repo, and found that I really enjoyed my time offline spent organizing the thoughts in my mind onto a journal page.
+I started bullet journaling along with maintaining the personal goals repo, and found that I really enjoyed my time offline spent organizing the thoughts in my mind onto a journal page. So now, I mostly focus on the bullet journal :)
 
 ## Bullet Journaling
 
-Bullet journaling is a catch-all name that started out referencing a specific style of note-taking. I use “bullet” journaling to plan everything. And being a creative person, I like to make my pages look nice :)
+Bullet journaling references a specific style of note-taking created by ______. I use “bullet” journaling in my own adopted way, to really plan everything in my life with both weekly and monthly views. And being a creative person, I like to make my pages look nice :). Spending time on this is meditative for me.
 
-— include picture here of september spread —
-— image of travels page — 
+<div class="row">
+  <img class="half--left"  src="../../images/posts/productivity/septspread.jpg" alt="September Spread">
+  <img class="half--right"  src="../../images/posts/productivity/25days.jpg" alt="25 Days Project Progress">
+</div>
 
 Journaling provides a blank page with a lot more freedom than a text document could, and I enjoy decorating it with color and symbols, physically laying out items, and correlating pages.
 
 I still do goal check-ins (I think this is really important) and I’ve also maintained that for me, writing goals in week-long “sprints” works best.
 
-— image of checking in page — 
-— image of morning routine page — 
+<figure>
+    <img src="../../images/posts/productivity/checkingin.jpg" alt="An example of one of my todo lists">
+  <figcaption>Doing a check-in of my yearly goals.</figcaption>
+</figure>
 
 So I want to go through one of those spreads with you: the one I find most useful — **the weekly spread**. I use separate journals for work and for my personal/outside-of-my-day-job projects, and spend time on them (it’s worth it and also relaxing) every Sunday night (for my personal to-dos) and an hour Monday mornings for my work to-do list.
 
@@ -74,6 +83,8 @@ For me, I break up the weekly spread into th following sections:
 - *Mini Calendar*: This view is color-coded to correspond to the schedule below it. It lets me see the week overview and also know what's coming for the following week (which events color-correspond to the *Future Box*)
 - *Future Box*: Events for the following week, or even ones further in advance I should be aware of (this is a great place to put conference dates for talks I still need to be preparing)
 - *Backlog Box*: Things you want to do at some point, but haven’t added them to your todo list for this week now — they can move into your weekly list if you accomplish all of your goals for the week, or can just be used for longer-term projects, with parts of them in your weekly list at a time (Though if you see yourself with this usecase often, you may want to add an *Ongoing Box* — see, isn't this sytem fun and flexible? :P)
+
+<img src="../../images/posts/productivity/example-weekly.jpg" alt="Example Weekly">
 
 ### Migration
 
