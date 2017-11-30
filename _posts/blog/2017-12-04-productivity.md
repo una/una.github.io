@@ -2,17 +2,17 @@
 layout: post
 title: "I'm Useless Without a To-Do List"
 permalink: /productivity-2017/
-date: '2017-09-26'
+date: '2017-12-04'
 comments: true
 tags:
 - productivity
 - todo
 - list
 - bullet journal
-subtitle: "TBD"
+subtitle: "It's hard to stay on task and productive — especially when we've got so much going on in our lives. This post details how I maintain a TODO list system to accomplish just that."
 ---
 
-This post was originally written for [The Human in the Machine](#)
+This post was originally written for [The Human in the Machine](https://superyesmore.com/publication/the-human-in-the-machine-a4064599cde2cb3397239e8d72219f48)
 
 As someone who has a **lot** going on, is often (unfortunately) absent-minded, and has 1000 ideas at a time rolling around in my head, productivity is something I need to actively focus on and keep myself accountable to in order to get anything done.
 
@@ -55,16 +55,26 @@ I started bullet journaling along with maintaining the personal goals repo, and 
 
 ## Bullet Journaling
 
-Bullet journaling references a specific style of note-taking created by ______. I use “bullet” journaling in my own adopted way, to really plan everything in my life with both weekly and monthly views. And being a creative person, I like to make my pages look nice :). Spending time on this is meditative for me.
+Bullet journaling references a specific style of note-taking created by <a href="http://rydercarroll.com/">Ryder Caroll</a>. There's a whole system invented by him that you can learn about <a href="http://bulletjournal.com/">here</a>. My adopted system takes some cues from the original bullet journaling system, but is updated to my preferences.
+
+For example, instead of bullets, I use circles and boxes. I use circles to represent events and boxes to represent tasks. When I accomplish something, I fill in the entire box. When it's partially complete, I fill in half of the box.
+
+It looks (kind of) like this:
+
+- `☐︎` : Task to accomplish
+- `◤` : Partially accomplished task
+- `◼︎` : Accomplished task
+- `◎` : Event/Action to accomplish
+- `◉` : Event/Action finished
 
 <div class="row">
   <img class="half--left"  src="../../images/posts/productivity/septspread.jpg" alt="September Spread">
   <img class="half--right"  src="../../images/posts/productivity/25days.jpg" alt="25 Days Project Progress">
 </div>
 
-Journaling provides a blank page with a lot more freedom than a text document could, and I enjoy decorating it with color and symbols, physically laying out items, and correlating pages.
+Journaling provides a blank page with a lot more freedom than a text document could, and I enjoy decorating it with color and symbols, physically laying out items, and correlating pages. But basically, I've converted my online system into a little notebook
 
-I still do goal check-ins (I think this is really important) and I’ve also maintained that for me, writing goals in week-long “sprints” works best.
+I still do goal check-ins (I think this is really important) and I’ve also maintained week-long “sprints” of TODO lists, which I have found work best for me.
 
 <figure>
     <img src="../../images/posts/productivity/checkingin.jpg" alt="An example of one of my todo lists">
@@ -88,7 +98,13 @@ For me, I break up the weekly spread into th following sections:
 
 ### Migration
 
-Akin to the "week in review" I would do for my open source personal goals, I do a migration for my bullet journal. I basically go through all of the tasks I didn't get done and decide which ones I want to move over to the following week, put in the backlog, or discard.
+Akin to the "week in review" I would do for my open source personal goals, I do a migration for my bullet journal. I basically go through all of the tasks I didn't get done and decide which ones I want to move over to the following week, put in the backlog, or discard, and use the following key to mark the space just to the left of the box/circle:
+
+- `>` : migrate to the following week
+- `-` : remove / don't migrate
+- `<` : add to backlog
+
+Then, I go through and write up next week's list :).
 
 It's important to have a set date/time to review and update your system periodically (I use Sunday nights or Monday mornings for this). Consistency is really key here to make this something that actually makes you more productive. If you write a list once and never refer to it, then it's not very useful!
 
