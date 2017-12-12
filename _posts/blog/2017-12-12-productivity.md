@@ -2,13 +2,14 @@
 layout: post
 title: "I'm Useless Without a To-Do List"
 permalink: /productivity-2017/
-date: '2017-12-04'
+date: '2017-12-12'
 comments: true
 tags:
 - productivity
 - todo
 - list
 - bullet journal
+header-bg: ../images/posts/productivity/IMG_4596.jpg
 subtitle: "It's hard to stay on task and productive — especially when we've got so much going on in our lives. This post details how I maintain a TODO list system to accomplish just that."
 ---
 
