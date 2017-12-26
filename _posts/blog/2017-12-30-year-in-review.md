@@ -52,6 +52,12 @@ subtitle: "TBD"
 .instagrams a:hover {
   background: none;
 }
+
+@media (min-width: 500px) {
+  .wedding-photo {
+    padding-top: 3em
+  }
+}
 </style>
 
 To be honest, this year was pretty hard for me. And it wasn't just the political climate: I had a lot going on that made it difficult to care about side projects and blog posts as much. But I'm really hopeful next year will be better 🙏🏼
@@ -81,6 +87,7 @@ Despite all of that, a lot of good things happened too, and I recognize that I�
 - 🎵 I was gifted a ukulele from a really good friend after my ski accident, and consequently learned to play it (and started writing music)
 - 📈 I started investing in stocks & bitcoin, and taking a more careful look at my savings and finances
 - 🎓 I got a promotion at [work](http://digitalocean.com) to Senior UI Engineer!
+- 📌 I hosted a mentor session at [SXSW](https://sxsw.com)
 - ✏️ I started [bullet journaling](https://www.instagram.com/unadoestype/)
 - 📚 I read (i.e. listened to) **35 Books**. I loved so many of them, but if I had to choose only 6, my favorite from a variety of genres were:
     - *Love Star* by Andri Snaer Magnason
@@ -91,7 +98,7 @@ Despite all of that, a lot of good things happened too, and I recognize that I�
     - *Sapiens* by Yuval Noah Harari
 
 <div style="overflow: hidden">
-  <figure class="half--left">
+  <figure class="half--left wedding-photo">
       <img src="../../images/posts/2017-review/liza-and-i.jpg" alt="Liza's Wedding">
   </figure>
     <div class="half--right">
@@ -143,7 +150,7 @@ I made **490** contributions this year and built an [ASL Slack Bot](https://gith
 
 I gave **17 talks** at **15 conferences** and **2 meetups** (and MC-ed 2 conferences — one of which I preformed a song at 😂). My favorite new talks were:
 
-## 25 Days Projects
+### 25 Days Projects
 
 I turned 25 this year, and wanted to do something to commemorate that — so I chose 5 different projects that I would complete bit-by-bit every day. I ended up finishing 3 of the 5, including mentorship, dev doodles, and meditation. I wasn't able to finish letter writing and running.
 
