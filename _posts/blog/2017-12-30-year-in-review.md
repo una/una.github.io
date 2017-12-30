@@ -222,12 +222,16 @@ I noticed that my most enjoyable and consistent project this year was a collabor
 3. **Writing/Videos**: I want to write more blog posts next year (my goal is at least 1 per month). I'm going to be contributing to the [Pastry Box Project](https://the-pastry-box-project.net/) next year, so that should help :). I also want to start making video content!
 4. **Build Things by Hand**: I used to love crafts and painting and making things with my hands. I've lost that a little bit, but hope to do more of it next year. Maybe I'll get into electronics or learn pottery making. With less travel, I should be able to take a class or two.
 5. **Get Fit**: Even though running isn't an option right now, I want to figure out other ways to get healthy and relieve stress. This is really important to me, so I'm going to focus on diet and low-impact forms of exercise.
-6. **500+ Open Source Contributions**: I used to put out more open source projects and contribute to other projects more. I miss that! So I resolve to contribute more next year, and one way to do that (albeit not the best way) is by comparing commits to this year.
+6. **500 Contributions**: I used to put out more open source projects and contribute to other projects more. I miss that! So I resolve to contribute more next year, and one way to do that (albeit not the best way) is by comparing commits to this year.
+
+<figure class="right" style="max-width: 450px">
+    <img src="../../images/posts/2017-review/2018-goals.jpg" alt="2018 goals list">
+</figure>
 
 Okay so goals are really important to have, but more important is figuring out *how* I'm going to accomplish those goals. I've been thinking about this a lot. For goal #1 and #3 (JavaScript projects and more content creation), I'll be keeping long lists of ideas in my journal to refer to. I'm also going to go back to reserving one night a week to focus on writing and going through this list, which should help with goal #6 as well. The same goes for goal #4 (building things by hand). I'll reserve at least one night per week for this. I find that making time is really the only way to get things done.
 
 For goal #2 (publishing a book), I know what I need to do at this point, and its just make a few meetings and re-focus. In terms of goal #5 (get fit), I really need to get another opinion about my knee and make a plan of action with a doctor. Then I can also start tracking what I'm eating again. Hopefully all of this combined will make a difference. I want to say I'll run another half marathon this year, but that's really a pipe dream at this point (fingers crossed).
 
-So that's all for this year! I'll see you all in 2018!
+So that's all for this year! I'm very excited to start a new role and a new year. I'll see you all in 2018!
 
 <script src="https://cdn.rawgit.com/edenspiekermann/a11y-toggle/master/a11y-toggle.min.js"></script>
