@@ -4,9 +4,7 @@
   "description": "Una Kravets blogs about front end development and design sometimes.",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Una Kravets",
   "license": "ISC",
@@ -23,7 +21,7 @@
     "gulp-sass": "2.2.0",
     "gulp-scss-lint": "^0.3.9",
     "imagemin-pngquant": "^4.2.0",
-    "ngrok": "^0.2.2",
+    "ngrok": "^2.0.0",
     "psi": "^2.0.2",
     "pygments": "^0.2.0",
     "run-sequence": "^1.1.5"
@@ -43,8 +41,6 @@
   },
   "homepage": "http://una.github.io",
   "dependencies": {
-    "simple-jekyll-search": "^1.1.1",
-    "snyk": "^1.21.2"
-  },
-  "snyk": true
+    "simple-jekyll-search": "^1.1.1"
+  }
 }
