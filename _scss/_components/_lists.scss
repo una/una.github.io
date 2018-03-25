@@ -193,34 +193,25 @@ ol {
 
 .event-list--past {
 	@extend %post-list;
-	max-width: 980px;
-	margin: 0 auto;
+	max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 
 	a {
 		cursor: pointer;
 	}
 
+	@include breakpoint(md) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include breakpoint(sm) {
+		grid-template-columns: 1fr;
+	}
+
 	li {
-		width: 32%;
-		height: 350px;
-		padding: 1em;
-		display: inline-block;
-		vertical-align: top;
-		text-align: left;
+		width: 100%;
 		border-bottom: none;
-		position: relative;
-
-		@include breakpoint(sm) {
-			width: 100%;
-			height: auto;
-			max-height: 160px;
-		}
-
-		@include breakpoint(sm) {
-			width: 100%;
-			height: auto;
-			max-height: none;
-		}
 
 		.img-container {
 			max-height: 180px;
