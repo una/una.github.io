@@ -4,9 +4,9 @@ talk-type: conference
 location: Leeds, UK
 flag: 🇬🇧
 event: 'All Day Hey'
-upcoming: true
 date: '2018-04-30'
 hidden: true
-talk: TBD
+talk: 'The Past, Present, & Future of CSS'
 event-link: https://alldayhey.com/
+image: ../images/speaking/alldayhey.jpg
 ---

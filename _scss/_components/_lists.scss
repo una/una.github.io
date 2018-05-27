@@ -198,7 +198,8 @@ ol {
     grid-template-columns: repeat(4, 1fr);
 
 	a {
-		cursor: pointer;
+    cursor: pointer;
+    position: relative;
 	}
 
 	@include breakpoint(md) {
@@ -267,8 +268,8 @@ ol {
 
 	.flag {
 		position: absolute;
-		top: 0;
-		right: 0;
+    top: -1.2rem;
+    right: -1.3rem;
 		margin: 1em;
 		font-size: 70%;
 		background: $color--purple;
