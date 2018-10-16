@@ -208,7 +208,11 @@ ol {
 
 	@include breakpoint(sm) {
 		grid-template-columns: 1fr;
-	}
+  }
+  
+  .meta-container {
+    text-align: left;
+  }
 
 	li {
 		width: 100%;
@@ -242,7 +246,7 @@ ol {
 				display: inline-block;
 				float: left;
 				padding-left: 1em;
-				max-height: 200px;
+        max-height: 200px;
 			}
 
 			@include breakpoint(xs) {
