@@ -5,7 +5,9 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sayHi": "echo 'hi'"
+    "sayHi": "echo 'hi'",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "Una Kravets",
   "license": "ISC",
@@ -42,6 +44,8 @@
   },
   "homepage": "http://una.github.io",
   "dependencies": {
-    "simple-jekyll-search": "^1.1.1"
-  }
+    "simple-jekyll-search": "^1.1.1",
+    "snyk": "^1.83.0"
+  },
+  "snyk": true
 }
