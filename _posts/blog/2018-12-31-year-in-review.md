@@ -9,17 +9,11 @@ tags:
 - reflection
 - yearly
 - 2018
-header-bg: ../images/posts/2017-review/cape-town.jpg
+header-bg: ../images/posts/2018-review/nyc2.jpg
 subtitle: "Reviewing how my 2018 went, and discussing goals for next year!"
 ---
 
 <style>
-
-[aria-hidden='true'],
-[data-a11y-toggle]:not([aria-controls]) {
-  display: none;
-}
-
 .instagrams {
   margin-top: -2em;
 }
@@ -42,8 +36,8 @@ subtitle: "Reviewing how my 2018 went, and discussing goals for next year!"
 }
 
 @media (min-width: 500px) {
-  .wedding-photo {
-    padding-top: 3em
+  .push-top {
+    padding-top: 5em
   }
 }
 
@@ -61,55 +55,103 @@ subtitle: "Reviewing how my 2018 went, and discussing goals for next year!"
   display: flex;
   justify-content: flex-start;
 }
+
+.post a.clearstyle {
+  padding: 0;
+  border-bottom: none;
+}
 </style>
 
-I love doing [these](/2015-resolutions) [year](/2015-review) [in](/2016-review) [reviews](/2017-in-review), as it's a great way to compile everything and realize how much you've accomplished, but this year I've found it a bit harder to make the time for it than previous years. It's been a busy holiday season, moving into a new apartment with my partner and seeing family. It's been a bit hectic, but all in all, it's nice to be offline for a little while.
+I love doing [these](/2015-resolutions) [year](/2015-review) [in](/2016-review) [reviews](/2017-in-review), as it's a great way to compile everything and realize how much you've accomplished. I think refelction is a really important part of my year, though this year I've found it a bit harder to make the time for it. 
 
-This year was hard for me because my knee issues are still an every-day challenge. But it's slowly getting better, and I was even able to run a 5K for Thanksgiving this year.
 
-## Dev Things
+It's been a busy holiday season, moving into a new apartment with my partner and seeing a lot of family. It's been a bit hectic, but it's nice to have been offline for a little while. So that's why my year in review is a little late this year 😛 Sorry not sorry.
 
-## Life Things
+This year was hard for me and my family. We lost some wonderful people in 2018, and they will be missed. I had another knee surgery in March, and my knee from an ACL tear [last year](/2017-in-review) is still an every-day challenge (but it's slowly getting better!). After a lot of time and strength training, I can squat without pain most of the time now, and I was even able to run (most of) a 5K for Thanksgiving this year!
 
-- 🏙 I started to settle into a new city (New York)
-- 👰🏻 I was the maid of honor in my best friend's wedding
-- 🎵 I was gifted a ukulele from a really good friend after my ski accident, and consequently learned to play it (and started writing music)
-- 📈 I started investing in stocks & cryptocurrency, and taking a more careful look at my finances
-- 🎓 I got a promotion at [work](http://digitalocean.com) to a Senior UI Engineer on the UX team!
-- ✨ I got a new job! I'll be starting in January as the Director of Product Design at [Bustle Digital Group](https://bustle.company/)!
-- 📌 I hosted a mentor session at [SXSW](https://sxsw.com) — a nice little Austin reunion
-- ✏️ I started [bullet journaling](https://www.instagram.com/unadoestype/) and meditating
-- 📚 I read (mostly listened to) **36 Books** this year! I loved so many of them, but if I had to choose only 7, my favorite from a variety of genres were:
-    - *Love Star* by Andri Snaer Magnason
-    - *The Design of Everyday Things* by Donald A. Norman
-    - *Solve for Happy* by Mo Gawdat (get the audiobook!)
-    - *Prisoners of Geography* by Tim Marshall
-    - *The Time Traveler's Wife* by Audrey Niffenegger
-    - *Sapiens* by Yuval Noah Harari
-    - *Orbiting the Giant Hairball* by Gordon Mackenzie
+## Dev Projects + Content Production
 
-<div style="overflow: hidden">
-  <figure class="half--left wedding-photo">
-      <img src="../../images/posts/2017-review/liza-and-i.jpg" alt="Liza's Wedding">
-  </figure>
-    <div class="half--right">
-      <figure>
-        <img src="../../images/posts/2017-review/workstation.jpg" alt="My workstation">
-      </figure>
-      <figure>
-        <img src="../../images/posts/2017-review/clarity.jpg" alt="Playing on stage at Clarity Conf">
-    </figure>
+The [Toolsday](https://spec.fm/podcasts/toolsday) podcast turned 3 years old this year! I redesigned the branding and [Chris](https://twitter.com/chrisdhanaraj) and I recorded **[24 episodes](https://itunes.apple.com/us/podcast/toolsday/id1063765302?mt=2&ign-mpt=uo%3D4)** of  with over **160,000 downloads**. It's been really rewarding to see it grow more each year.
+
+<img class="figure" src="../../images/posts/2018-review/toolsday.jpg"/>
+
+I also wrote **7 blog posts**, including a series on CSS Tricks called ["Solved with CSS"](https://css-tricks.com/solved-with-css-colorizing-svg-backgrounds/).
+
+I started working at [Bustle Digital Group](http://bustle.company) this year. There, I worked on a lot of smaller internal projects including the ability to make shoppable Sliding Zones (__example link here__), made pages more themable, added a news ticker zone, worked on the redesign of Elite Daily, and the redesign of The Zoe Report after its acquisition. I'm working on some exciting projects now! (elaborate)
+
+<img class="figure" src="../../images/posts/2018-review/ghcontrib.jpg"/>
+
+I made **775** total, and **183** public contributions, and launched the following side projects this year:
+
+- [Gradient Folders](https://una.im/gradient-folders/): A nice set of gradient desktop folder icons.
+- [Grid to Flex](https://www.gridtoflex.com/): Flexbox fallbacks for popular UI solutions that use CSS Grid.
+- [Keto.nyc](https://keto.nyc/): A collection of my keto recipes, built in Gatsby.
+- [LV Code Calc](https://www.lvcodecalc.com/): An authenticator for Louis Vuitton bags based on their product codes.
+
+I'm also working on a CSS Houdini library, and have some more guides and small projects in mind for next year. Building more small web projects is definitely one of my goals for 2019. Read on to hear more.
+
+## Speaking
+
+<a class="clearstyle" href='/speaking'><figure>
+  <img src="../../images/posts/2018-review/2018confs.jpg" alt="screenshot of my conference speaking in 2018">
+</figure>
+</a>
+
+I gave **12 talks** at conferences and meetups this year (and MC-ed a conference too). I got to speak in front of 4000 people are one of the events! And spoke in 7 different countries! My favorite talks were about Design Systems, the Past, Present, and Future of CSS, and CSS Houdini. That last one wasn't record, but I'm really hoping to talk more about Houdini and experimental CSS next year!
+
+<div class="full-width" style="overflow:hidden">
+  <div class="half--left flex-end">
+    <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/xlCYisIGnPE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p class="caption">Speaking to a massive crowd in Austria about the power of CSS.</p>
+    </div>
+  </div>
+  <div class="half--right flex-start">
+    <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/XZmvHVVj0Ns" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p class="caption">Opening up a JavaScript conference giving a talk about the power of web styling with blend modes.</p>
+    </div>
   </div>
 </div>
 
-With Dev Doodles, I now have 3 Instagram accounts I keep up now:
+## Life Things
+
+- 🖼 I saw a lot of art this year. I visited at least 8 museums and went to 2 art shows (one in Singapore and one in Paris).
+- 🕯 I got really crafty! I took a pottery class and started making candles this year too! It's been a lot of fun so far.
+- 👯‍ I got to do a fun photoshoot with my coworkers for a [Bustle article](https://www.bustle.com/p/the-female-engineers-of-bustle-on-work-team-falling-in-love-with-coding-9120066).
+- 🏙 I just moved into a *beautiful* new apartment with my partner last week 😁 We've been super busy this holiday season decorating and getting the place in order.
+- 📚 I read (mostly listened to) **34 Books** this year! I loved SO MANY of them, but if I had to choose 5 of my favorites from a variety of genres were:
+    - [American Kingpin](https://amzn.to/2LLQlL6) by Nick Bilton
+    - [The Gone World](https://amzn.to/2LIbvd5) by Tom Sweterlitsch
+    - [Broad Band](https://amzn.to/2VnhQ1G) by Claire L. Evans
+    - [Educated: A Memoir](https://amzn.to/2SsVCJP) by Tara Westover
+    - [This is How It Always Is](https://amzn.to/2BPIJT7) Laurie Frankel
+
+<div style="overflow: hidden">
+  <div class="half--left push-top">
+    <figure>
+      <img src="../../images/posts/2018-review/pottery.jpg" alt="My pottery">
+      <figcaption>The pottery I made this year.</figcaption>
+    </figure>
+    <figure>
+      <img src="../../images/posts/2018-review/070.jpg" alt="Speaking on a stage">
+      <figcaption>Speaking at a conference in St. Petersburg. Mama was proud.</figcaption>
+  </figure>
+  </div>
+  <figure class="half--right">
+    <img src="../../images/posts/2018-review/cheetah.jpg" alt="cheetah print jacket and nails">
+    <figcaption>Living my best Brooklyn life decked out in cheetah print.</figcaption>
+  </figure>
+</div>
+
+This year I've tried to diversify my content stream by starting a [Youtube Channel](https://youtube.com/unakravets), and being much more active on Instagram. It's been a fun challenge to explore new interests on these mediums, and I like the idea of not being tethered to one content stream and exploring interests outside of tech. I even played with a new medium for tech tutorials/content: [Instagram stories](https://www.instagram.com/stories/highlights/17904689101261588/)! I've been continuing to maintain 3 Instagram accounts, here are my top 9 posts from each based on likes:
 
 <div class="full-width instagrams">
   <div class="third">
     <a href="https://instagram.com/unakravets">
       <figure>
         <img src="../../images/posts/2018-review/best9-unakravets.jpg" alt="Una Kravets Instagram Account -- best 9">
-      <figcaption class="center">Travel/Personal Instagram</figcaption>
+      <figcaption class="center">@unakravets (Travel/Personal) </figcaption>
       </figure>
     </a>
   </div>
@@ -117,7 +159,7 @@ With Dev Doodles, I now have 3 Instagram accounts I keep up now:
     <a href="https://instagram.com/themarkupartist_">
       <figure>
         <img src="../../images/posts/2018-review/best9-markup.jpg" alt="Lettering Instagram Account -- best 9">
-      <figcaption class="center">Lettering &amp; Journaling</figcaption>
+      <figcaption class="center">@themarkupartist_ (Hand Lettering)</figcaption>
       </figure>
     </a>
   </div>
@@ -125,84 +167,54 @@ With Dev Doodles, I now have 3 Instagram accounts I keep up now:
     <a href="https://instagram.com/dev_doodles">
       <figure>
         <img src="../../images/posts/2018-review/best9-devdoodles.jpg" alt="Dev Doodles -- best 9">
-      <figcaption class="center">Dev Doodles</figcaption>
+      <figcaption class="center">@dev_doodles (Web Tech Illustrations)</figcaption>
       </figure>
     </a>
   </div>
 </div>
 
-## Side Projects / Writing / Speaking
-
-I recorded **25 podcast episodes** of [Toolsday](https://toolsday.io) with over **125,000 downloads** this year. *And* have exciting news that Toolsday is joining the [Spec.FM Network](https://spec.fm/) next year! I also wrote **9 blog posts** (including this one), on topics ranging from [service workers](https://una.im/save-offline/) to [CSS grid](https://una.im/css-grid/) to [image micro-optimizations](https://css-tricks.com/contrast-swap-technique-improved-image-performance-css-filters/).
-
-<figure class="right">
-  <img src="../../images/posts/2017-review/chris-and-i.jpg" alt="Photobooth images from CSS Conf EU">
-<figcaption>Chris Dhanaraj and I (cohosts of Toolsday) at CSSConf EU.</figcaption>
-</figure>
-
-I made **490** contributions this year and built an [ASL Slack Bot](https://github.com/una/asl-bot), converted the [Toolsday](http://www.toolsday.io/) site to CSS grid and played with it on my [Travel Poetry Site](http://travels.surge.sh/jungfrau/). I started keeping my [Dev Doodles](https://www.instagram.com/dev_doodles/) consistent and in a single space, and prepared a script for a video series, as well as wrote most of a book. I also was a technical editor for [Addy Osmani's Essential Image Optimization E-Book](https://images.guide/).
-
-I gave **17 talks** at **15 conferences** and **2 meetups** (and MC-ed 2 conferences — one of which I preformed a song at 😂). My favorite new talks were about the power of CSS, accessibility, image optimization, and design systems. I hope to talk more about these topics next year.
-
-<div class="full-width" style="overflow:hidden">
-  <div class="half--left flex-end">
-    <div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/WmVH85G59Lk?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-      <p class="caption">I built a CSS Game live on stage at CSS Conf EU.</p>
-    </div>
-  </div>
-  <div class="half--right flex-start">
-    <div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/IRI1H5tyEAo?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-      <p class="caption">The Power of CSS: A talk about CSS-based UI and why that may or may not be a good idea.</p>
-    </div>
-  </div>
-</div>
-
 ## Travel
 
-I did a ton of traveling this year! And I feel really lucky for all of these opportunities. I visited *South Africa*, *Denmark*, *Estonia*, and *Chile* for the first time, bringing my country count to 34 😄! According to my TripIt data, I traveled **124,318 miles** to **36 cities** and **15 countries**. That's more places, but less distance than last year.
-
-South Africa was a particularly incredible trip. I learned a ton from the people I met there about their web experiences and also got to experience some incredible nature too.
+According to TripIt, I traveled to **32** cities in **13** countries, making a total of **86** days on the road, and **101,180** miles traveled. This sounds like a lot, but it's less travel than I've done the past few years. I'm very lucky to have been able to explore some really awesome places this year. My favorite trips were *Tokyo, Singapore, Vienna, St.Petersburg, Leeds, Napa, Malmo, Dusseldorf*, and *Los Angeles*. The people I met there or went with definitely made these trips the most memorable. 🤗 Shoutout to everyone who showed me around or gave me recs.
 
 <figure>
-<img src="../../images/posts/2017-review/stellenbosch.jpg" alt="Stellenbosch">
-<figcaption>Stellenbosch, South Africa</figcaption>
+  <img src="../../images/posts/2018-review/singapore.jpg" alt="Singapore">
+  <figcaption>Singapore</figcaption>
+</figure>
+<figure class="half--left">
+  <img src="../../images/posts/2018-review/paris.jpg"">
+  <figcaption>Paris</figcaption>
+</figure>
+<figure class="half--right">
+  <img src="../../images/posts/2018-review/japansnow.jpg" alt="Snow in Japan">
+  <figcaption>Tokyo</figcaption>
 </figure>
 
-## 2017 Resolutions Review
+## 2018 Resolutions Review
 
-Last years goal was to: **Make an Impact**. I think I did a decent job of that through publishing and speaking, but not so much with my specific goals.
+Last years goal was: **Collaboration**. I don't think I did *that* much collaboration in the past year, but I'm hoping to do more in the coming year. Let's take a look at the goal breakdown:
 
-1. **JavaScript**: I did a little bit of JS work, and tried out Preact and Vue outside of my day job, but didn't really get as into it as much as I would have liked. I really want to build more with it next year.
-* **Be a Teacher**: I think I did a decent job of this in 2017, and heard from a lot of people who learned things from me and built on that knowledge :)
-* **Stay Experimental**: I think I did some interesting experimentation around image optimization with CSS this year. And with the [CUBS](http://toolsday.io/episodes/electron.html) series starting at the end of the year, I hope to continue this next year and do more things!
-* **Publish a Book**: I wrote 60,000 words this year, but really dropped the ball on this when all my knee problems started. So next year I hope to review, revise, and start again.
-* **Start A Daily Run Streak**: Ha.ha. Yeah. No. I physically can't even run now. Really hoping to resolve my knee issues soon.
+1. **Build 3 New JS-focused Projects**: While I did ship 3 new project last year, only one was primarily JS-based. I also built 2 more for a podcast series (CUBS) using D3 and React Native, but I didn't end up publishing them. A goal for the future would be to just publish more small projects when the mood strikes.
+2. **Publish a Book**: 3 years in the making now. I really need to get my book off the stall-wagon. I also have another idea for a children's book I've been flushing out, so we'll see what gets done in 2019.
+3. **Writing/Videos**: My goal was to write a blog post a month and also start producing other types of content. I started my Youtube channel making videos, so that was a success, but I didn't write as much as I had hoped to.
+4. **Build Things by Hand**: Definitely accomplished this one! I took a pottery wheel class and also started candle making. Look out for some Kravets candles next year :)
+5. **Get Fit**: There were points in there year where I was more fit than others. I started going to the gym a lot (over 100 check ins, yay!), and did keto for 2 months (lost 12 lbs, yay!). But all-in-all, it was still a rough year for me health-wise because of my knee, and it really prevented me from being able to run and work out harder. I need to continue strength training (squat life), and I hope that I'll be able to make running more comfortable.
+6. **500 Contributions**: I did technically have over 500 github contributions this year, but very few were to outside projects. I was excited to be able to contribute to the Google Labs Houdini repo though :) even though it was small.
 
-Like I said at the start, this wasn't my year. So I'm going to just focus on the future.
+<h2>2019: __INTENTION HERE __</h2>
 
-<h2>2018: Collaboration</h2>
+In 2018, I had a lot of ideas and explored new interests and platforms. I really like that about myself and my past year, but what I also did was second guess a lot of what I was putting out there, and was in my own head too much about it. Next year, I want to live my best life and not appologize for it or second guess myself. Life's not that serious, so I'm ready to go into 2019 giving fewer fucks and making more things.
 
-I noticed that my most enjoyable and consistent project this year was a collaboration (Toolsday). And I want to do more of that in the coming year. I loved being on a friend's Twitch stream, and I love working with other people to craft ideas and bring them to life. Having someone else work on projects with you keeps you accountable and makes it more fun. That's why I'm going to focus on **collaboration** for 2018. I love learning new things, and if you have an idea, send me an email!
+I've been thinking a lot about goals for next year, and how to keep them actionable + myself accountable. So for each goal, I'm going to think about a plan for success.
 
-### Goals for the New Year
+### Goals for 2019
 
-1. **Build 3 New JS-focused Projects**: Improving my JavaScript skills is a goal I've had almost every year I've been [writing](https://una.im/2016-review/) [these](https://una.im/2015-review/) [reviews](https://una.im/2015-resolutions/). I'm going to put a number on it to make it more attainable, and hope some more collaborations will give me an excuse to write more JS too.
-2. **Publish a Book**: Another one from 2017 that I hope to make happen in the new year. I really need to dig in and focus, and I hope to do just that.
-3. **Writing/Videos**: I want to write more blog posts next year (my goal is at least 1 per month). I'm going to be contributing to the [Pastry Box Project](https://the-pastry-box-project.net/) next year, so that should help :). I also want to start making video content!
-4. **Build Things by Hand**: I used to love crafts and painting and making things with my hands. I've lost that a little bit, but hope to do more of it next year. Maybe I'll get into electronics or learn pottery making. With less travel, I should be able to take a class or two.
-5. **Get Fit**: Even though running isn't an option right now, I want to figure out other ways to get healthy and relieve stress. This is really important to me, so I'm going to focus on diet and low-impact forms of exercise.
-6. **500 Contributions**: I used to put out more open source projects and contribute to other projects more. I miss that! So I resolve to contribute more next year, and one way to do that (albeit not the best way) is by comparing commits to this year.
+1. **Ship 10 Web Projects**: 10 sounds like a lot, but I want to ship more small projects next year. The best way to improve your technical skills is via practice, so I want to build as I learn and focus on upping my JavaScript and GraphQL game.
+2. **Refine Content Production Workflow**: I want to continue my existing content streams (podcast, dev doodles, blogging), but also make more video content and product more of the others as well. I'm doing a Skillshare course next year, so that'll be a good start but I want to also refine my process for continuing to put out more content. I'd love to post a blog post a month (12/year), and a video every week, but it will take discipline and thought. I still have to think about this one -- maybe a blog post to come.
+3. **Make More Money**: Everyone wants to make more money don't they 😛 What I really mean by this goal is monetizing a side project and figuring out how to make passive income. I've been playing with a few things casually this year, and I'm looking forward to diving in more next year.
+4. **Consume Daily Dev Content**: I want to *consume* more technical content and continue to stay on top of this ever-changing field. So I resolve to consume at least 1 blog post (like actually read it, not just skim), or podcast, or video, and share what I'm learning as I go with the hashtag *#dailydevdollop*.
+5. **Support Women**: I want to support women and minorities in tech more next year. This year I donated money but next year I'd like to donate my time and resources, or make resources that can help boost others up.
+6. **Physical Fitness**: I have resolutions to be more physically fit every year (relatable content,  I'm sure), and this year I want to do that with two goals: doing more healthy cooking and meal prep, and if possible, running a half marathon with my partner somewhere fun this year. That would be my dream. I really miss running!
 
-<figure class="right" style="max-width: 450px">
-    <img src="../../images/posts/2017-review/2018-goals.jpg" alt="2018 goals list">
-</figure>
+So that's all for now. I'm going to do some more thinking about next steps with project and video ideas, and I'll catch you all in 2019!
 
-Okay so goals are really important to have, but more important is figuring out *how* I'm going to accomplish those goals. I've been thinking about this a lot. For goal #1 and #3 (JavaScript projects and more content creation), I'll be keeping long lists of ideas in my journal to refer to. I'm also going to go back to reserving one night a week to focus on writing and going through this list, which should help with goal #6 as well. The same goes for goal #4 (building things by hand). I'll reserve at least one night per week for this. I find that making time is really the only way to get things done.
-
-For goal #2 (publishing a book), I know what I need to do at this point, and its just make a few meetings and re-focus. In terms of goal #5 (get fit), I really need to get another opinion about my knee and make a plan of action with a doctor. Then I can also start tracking what I'm eating again. Hopefully all of this combined will make a difference. I want to say I'll run another half marathon this year, but that's really a pipe dream at this point (fingers crossed).
-
-So that's all for this year! I'm very excited to start a new role at [Bustle](https://bustle.company/) and a new year. I'm excited to refocus and try not to let last year's problems seep into the next year. And I'll see you all in 2018!
-
-<script src="https://cdn.rawgit.com/edenspiekermann/a11y-toggle/master/a11y-toggle.min.js"></script>
