@@ -2,7 +2,7 @@
 layout: post
 title: "2018 in Review"
 permalink: /2018-in-review/
-date: '2018-12-31'
+date: '2018-01-04'
 comments: true
 tags:
 - year in review
@@ -62,10 +62,7 @@ subtitle: "Reviewing how my 2018 went, and discussing goals for next year!"
 }
 </style>
 
-I love doing [these](/2015-resolutions) [year](/2015-review) [in](/2016-review) [reviews](/2017-in-review), as it's a great way to compile everything and realize how much you've accomplished. I think refelction is a really important part of my year, though this year I've found it a bit harder to make the time for it. 
-
-
-It's been a busy holiday season, moving into a new apartment with my partner and seeing a lot of family. It's been a bit hectic, but it's nice to have been offline for a little while. So that's why my year in review is a little late this year 😛 Sorry not sorry.
+I love doing [these](/2015-resolutions) [year](/2015-review) [in](/2016-review) [reviews](/2017-in-review), as it's a great way to compile everything and realize how much you've accomplished. I think reflection is a really important part of my year, though this year I've found it a bit harder to make the time for it. It's been a busy holiday season, moving into a new apartment with my partner and seeing a lot of family. So I've been offline for a little while (that's why my year in review is a little late this year 😛) Sorry not sorry.
 
 This year was hard for me and my family. We lost some wonderful people in 2018, and they will be missed. I had another knee surgery in March, and my knee from an ACL tear [last year](/2017-in-review) is still an every-day challenge (but it's slowly getting better!). After a lot of time and strength training, I can squat without pain most of the time now, and I was even able to run (most of) a 5K for Thanksgiving this year!
 
@@ -77,7 +74,7 @@ The [Toolsday](https://spec.fm/podcasts/toolsday) podcast turned 3 years old thi
 
 I also wrote **7 blog posts**, including a series on CSS Tricks called ["Solved with CSS"](https://css-tricks.com/solved-with-css-colorizing-svg-backgrounds/).
 
-I started working at [Bustle Digital Group](http://bustle.company) this year. There, I worked on a lot of smaller internal projects including the ability to make shoppable Sliding Zones (__example link here__), made pages more themable, added a news ticker zone, worked on the redesign of Elite Daily, and the redesign of The Zoe Report after its acquisition. I'm working on some exciting projects now! (elaborate)
+I started working at [Bustle Digital Group](http://bustle.company) this year. There, I refined a QA process for visual components across sites, worked on a few different internal projects including the ability to make shop-able [sliding components](https://www.thezoereport.com/heres-every-beauty-gift-youll-want-to-give-get-this-holiday-season) and pages more [theme-able](https://www.bustle.com/evolution), and led the UI design/dev on much bigger projects like the redesigns of [Elite Daily](https://www.elitedaily.com)and [The Zoe Report](https://www.thezoereport.com/). I'm working on some more exciting projects now and can't wait to see them launch in 2019!
 
 <img class="figure" src="../../images/posts/2018-review/ghcontrib.jpg"/>
 
@@ -88,7 +85,7 @@ I made **775** total, and **183** public contributions, and launched the followi
 - [Keto.nyc](https://keto.nyc/): A collection of my keto recipes, built in Gatsby.
 - [LV Code Calc](https://www.lvcodecalc.com/): An authenticator for Louis Vuitton bags based on their product codes.
 
-I'm also working on a CSS Houdini library, and have some more guides and small projects in mind for next year. Building more small web projects is definitely one of my goals for 2019. Read on to hear more.
+I'm also working on a CSS Houdini library, and have some more guides and small projects in mind for next year.
 
 ## Speaking
 
@@ -97,7 +94,7 @@ I'm also working on a CSS Houdini library, and have some more guides and small p
 </figure>
 </a>
 
-I gave **12 talks** at conferences and meetups this year (and MC-ed a conference too). I got to speak in front of 4000 people are one of the events! And spoke in 7 different countries! My favorite talks were about Design Systems, the Past, Present, and Future of CSS, and CSS Houdini. That last one wasn't record, but I'm really hoping to talk more about Houdini and experimental CSS next year!
+I gave **12 talks** at conferences and meetups this year (and MC-ed a conference too). I got to speak in front of 4000 people are one of the events! And spoke in 7 different countries! My favorite talks were about *Design Systems*, the *Past, Present, and Future of CSS*, and *Houdini*. That last one wasn't record, but I'm really hoping to talk more about Houdini and experimental CSS next year!
 
 <div class="full-width" style="overflow:hidden">
   <div class="half--left flex-end">
@@ -120,7 +117,7 @@ I gave **12 talks** at conferences and meetups this year (and MC-ed a conference
 - 🕯 I got really crafty! I took a pottery class and started making candles this year too! It's been a lot of fun so far.
 - 👯‍ I got to do a fun photoshoot with my coworkers for a [Bustle article](https://www.bustle.com/p/the-female-engineers-of-bustle-on-work-team-falling-in-love-with-coding-9120066).
 - 🏙 I just moved into a *beautiful* new apartment with my partner last week 😁 We've been super busy this holiday season decorating and getting the place in order.
-- 📚 I read (mostly listened to) **34 Books** this year! I loved SO MANY of them, but if I had to choose 5 of my favorites from a variety of genres were:
+- 📚 I read (mostly listened to) **37 Books** this year! I loved SO MANY of them, but if I had to choose 5 of my favorites from a variety of genres were:
     - [American Kingpin](https://amzn.to/2LLQlL6) by Nick Bilton
     - [The Gone World](https://amzn.to/2LIbvd5) by Tom Sweterlitsch
     - [Broad Band](https://amzn.to/2VnhQ1G) by Claire L. Evans
@@ -201,20 +198,20 @@ Last years goal was: **Collaboration**. I don't think I did *that* much collabor
 5. **Get Fit**: There were points in there year where I was more fit than others. I started going to the gym a lot (over 100 check ins, yay!), and did keto for 2 months (lost 12 lbs, yay!). But all-in-all, it was still a rough year for me health-wise because of my knee, and it really prevented me from being able to run and work out harder. I need to continue strength training (squat life), and I hope that I'll be able to make running more comfortable.
 6. **500 Contributions**: I did technically have over 500 github contributions this year, but very few were to outside projects. I was excited to be able to contribute to the Google Labs Houdini repo though :) even though it was small.
 
-<h2>2019: __INTENTION HERE __</h2>
+<h2>2019: Confidently Create</h2>
 
-In 2018, I had a lot of ideas and explored new interests and platforms. I really like that about myself and my past year, but what I also did was second guess a lot of what I was putting out there, and was in my own head too much about it. Next year, I want to live my best life and not appologize for it or second guess myself. Life's not that serious, so I'm ready to go into 2019 giving fewer fucks and making more things.
+In 2018, I had a lot of ideas and explored new interests and platforms. I really like that about myself and my past year, but what I also did was second guess a lot of what I was putting out there, and was in my own head too much about it. Next year, I want to live my best life and not apologize for it or second guess myself. Life's not that serious, so I'm ready to go into 2019 giving fewer fucks and making more things.
 
 I've been thinking a lot about goals for next year, and how to keep them actionable + myself accountable. So for each goal, I'm going to think about a plan for success.
 
 ### Goals for 2019
 
-1. **Ship 10 Web Projects**: 10 sounds like a lot, but I want to ship more small projects next year. The best way to improve your technical skills is via practice, so I want to build as I learn and focus on upping my JavaScript and GraphQL game.
-2. **Refine Content Production Workflow**: I want to continue my existing content streams (podcast, dev doodles, blogging), but also make more video content and product more of the others as well. I'm doing a Skillshare course next year, so that'll be a good start but I want to also refine my process for continuing to put out more content. I'd love to post a blog post a month (12/year), and a video every week, but it will take discipline and thought. I still have to think about this one -- maybe a blog post to come.
-3. **Make More Money**: Everyone wants to make more money don't they 😛 What I really mean by this goal is monetizing a side project and figuring out how to make passive income. I've been playing with a few things casually this year, and I'm looking forward to diving in more next year.
-4. **Consume Daily Dev Content**: I want to *consume* more technical content and continue to stay on top of this ever-changing field. So I resolve to consume at least 1 blog post (like actually read it, not just skim), or podcast, or video, and share what I'm learning as I go with the hashtag *#dailydevdollop*.
+1. **Ship 10 Web Projects**: 10 sounds like a lot, but I want to ship more small projects next year. The best way to improve your technical skills is via practice, so I want to build as I learn and focus on upping my JavaScript and GraphQL game. I want to build useful things that help people, but sometimes small utilities are the best for that.
+2. **Refine Content Production Workflow**: I want to continue my existing content streams (podcast, dev doodles, blogging), but also make more video content and product more of the others as well. I'm doing a Skillshare course next year, so that'll be a good start but I want to also refine my process for continuing to put out more content. I'd love to post a blog post a month (12/year), and a video every week, but it will take discipline and thought. I still have to think about optimizing my schedule and how to achieve this one -- maybe a blog post to come.
+3. **Increase Income Streams**: Everyone wants to make more money don't they? 😛 What I really mean by this goal is monetizing a side project and figuring out how to make passive income. I've been playing with a few ideas casually this year, and I'm looking forward to diving in more next year.
+4. **Consume Daily Dev Content**: I want to *consume* more technical content to continue to stay on top of this ever-changing field. So I resolve to consume at least 1 blog post (like actually read it, not just skim things with interesting headlines), or podcast, or video, and share what I'm learning as I go with the hashtag *[#dailydevdollop](https://twitter.com/search?q=%40una%20%23dailydevdollop)*.
 5. **Support Women**: I want to support women and minorities in tech more next year. This year I donated money but next year I'd like to donate my time and resources, or make resources that can help boost others up.
 6. **Physical Fitness**: I have resolutions to be more physically fit every year (relatable content,  I'm sure), and this year I want to do that with two goals: doing more healthy cooking and meal prep, and if possible, running a half marathon with my partner somewhere fun this year. That would be my dream. I really miss running!
 
-So that's all for now. I'm going to do some more thinking about next steps with project and video ideas, and I'll catch you all in 2019!
+So that's all for now. I'm going to do some more thinking about next steps with project and video ideas, and if there's anything you'd like to see from me, comment below!
 
