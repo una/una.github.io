@@ -2,7 +2,7 @@
 layout: post
 title: "2018 in Review"
 permalink: /2018-in-review/
-date: '2018-01-04'
+date: '2019-01-04'
 comments: true
 tags:
 - year in review
