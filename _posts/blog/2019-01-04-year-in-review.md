@@ -172,19 +172,21 @@ This year I've tried to diversify my content stream by starting a [Youtube Chann
 
 ## Travel
 
-According to TripIt, I traveled to **32** cities in **13** countries, making a total of **86** days on the road, and **101,180** miles traveled. This sounds like a lot, but it's less travel than I've done the past few years. I'm very lucky to have been able to explore some really awesome places this year. My favorite trips were *Tokyo, Singapore, Vienna, St.Petersburg, Leeds, Napa, Malmo, Dusseldorf*, and *Los Angeles*. The people I met there or went with definitely made these trips the most memorable. 🤗 Shoutout to everyone who showed me around or gave me recs.
+According to TripIt, I traveled to **32** cities in **13** countries, making a total of **86** days on the road, and **101,180** miles traveled. This sounds like a lot, but it's less travel than I've done the past few years. That was actually a goal of mine: to travel less and work on my personal life in New York more. So success on that count! 
+
+I'm very lucky to have been able to explore some really awesome places this year. My favorite trips were *Tokyo, Singapore, Vienna, St.Petersburg, Leeds, Napa, Malmo, Dusseldorf*, and *Los Angeles*. The people I met there or went with definitely made these trips the most memorable. 🤗 Shoutout to everyone who showed me around or gave me recs.
 
 <figure>
   <img src="../../images/posts/2018-review/singapore.jpg" alt="Singapore">
-  <figcaption>Singapore</figcaption>
+  <figcaption>Singapore at Night</figcaption>
 </figure>
 <figure class="half--left">
-  <img src="../../images/posts/2018-review/paris.jpg"">
-  <figcaption>Paris</figcaption>
+  <img src="../../images/posts/2018-review/paris.jpg">
+  <figcaption>Paris with Ben</figcaption>
 </figure>
 <figure class="half--right">
   <img src="../../images/posts/2018-review/japansnow.jpg" alt="Snow in Japan">
-  <figcaption>Tokyo</figcaption>
+  <figcaption>Tokyo in a Snowstorm</figcaption>
 </figure>
 
 ## 2018 Resolutions Review
