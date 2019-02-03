@@ -9,4 +9,6 @@ hidden: true
 talk: 'The Past, Present, & Future of CSS'
 event-link: https://alldayhey.com/
 image: ../images/speaking/alldayhey.jpg
+main-link: https://www.youtube.com/watch?v=bemec16v5oA&
+link-type: video
 ---
