@@ -9,4 +9,6 @@ hidden: true
 talk: 'Why Design Systems Fail'
 event-link: https://aneventapart.com/event/orlando-2018
 image: ../images/speaking/aeaorl.jpg
+link-type: video
+main-link: https://aneventapart.com/news/post/why-design-systems-fail-by-una-kravets
 ---

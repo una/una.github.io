@@ -6,7 +6,7 @@ flag: 🇳🇱
 event: 'Frontend United'
 date: '2019-05-17'
 hidden: true
-upcoming: true
-talk: TBD
+image: ../images/speaking/frontendunited.jpg
+talk: 'CSS Houdini: New Horizons'
 event-link: https://www.frontendunited.org/
 ---
