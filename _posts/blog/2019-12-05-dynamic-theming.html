@@ -1,0 +1,238 @@
+---
+layout: post
+title: "Calculating Color: Dynamic Color Theming with Pure CSS"
+permalink: /dynamic-theming/
+date: '2019-12-05'
+comments: true
+tags:
+- css
+- variables
+- theme
+- custom properties
+- pure css
+header-bg: '../images/posts/css-custom-props-colors/cover.jpg'
+subtitle: "Did you know that you can build custom dynamic color themes without the use of JavaScript or a CSS preprocessor!? Read on!"
+---
+
+<p>Did you know that you can build custom dynamic color themes without the use of JavaScript or a CSS preprocessor!? With the magic of CSS Custom Properties, HSL colors, and some calc() fun, you too can create custom theming with no dependencies. That means we can support any framework or web technology without adding cruft to a codebase! <span class="uppercase"> Hooray for CSS!</span></p>
+
+<h2>The Demo</h2>
+
+<p class="codepen" data-height="570" data-theme-id="36912" data-default-tab="result" data-user="una" data-slug-hash="VJMBbx" style="height: 850px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Dynamic Color Theme With CSS Vars">
+  <span>See the Pen <a href="https://codepen.io/una/pen/VJMBbx/">
+  Dynamic Color Theme With CSS Vars</a> by Una Kravets (<a href="https://codepen.io/una">@una</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<br/>
+<p>In the above demo, you can select a primary and secondary color and create entire color systems with vanilla CSS alone. The only JavaScript used in that demo is to change the colors dynamically.</p>
+
+<h2>What CSS *-Processors Give Us</h2>
+
+<p>When it comes to color systems, there are several <a href="https://sass-lang.com/documentation/functions/color">Sass color functions</a> that authors find useful. Jackie Balzar has a great <a href="http://jackiebalzer.com/color">visual post</a> about this. Some of the most common are:</p>
+
+<ul>
+  <li><code>lighten()</code> and <code>>darken()</code></li>
+  <li><code>complement()</code></li>
+  <li><code>hue()</code></li>
+  <li><code>mix()</code></li>
+  <li><code>contrast-color()</code></li>
+</ul>
+
+<p>Some of these transformations can actually be re-created with CSS filters. For example, <code>lighten</code> and <code>darken</code> are essentially just the <code>lightness</code> value from HSL (the L). Others are based on the HSL model, such as <code>hue</code> being the H from HSL. Complementary colors can be calculated by taking the inverse of the hue (i.e. adding or subtracting <code>180</code>, which would transform the hue to the other side of the 360 degree color wheel. Using <code>calc()</code> in our CSS, along with custom properties, lets us apply these transformations based on a single value.</p>
+
+<p>In this blog post (like in the demo above), I'll show you how to recreate <code>lighten()</code>, <code>darken()</code>, <code>complement()</code>, and even triadic colors, all using CSS custom properties with the <code>calc()</code> function. I'll also show a hacky technique for <code>color-contrast()</code>. This will work in all modern browsers, but you still need to use a preprocessor to support older browsers like Internet Explorer 11.</p>
+
+<h2>Setting it Up</h2>
+
+<p>To get started, we'll need to break up our colors into hue, saturation, and lightness values (and if you want to take this a step further, you can also break out the alpha value). This means that a variable for the color <code>red</code>, or <code>hsl(0, 100%, 50%)</code> would look like this:</p>
+
+<p>Initial custom property declaration:</p>
+<div class="codegroup"> 
+<div class="color-block" style="background-color: hsl(0,100%,50%)"></div>
+<pre><code>--colorPrimary: hsl(0, 100%, 50%);
+</code></pre></div>
+
+<p>Custom property declaration with HSL values broken out:</p>
+
+<div class="codegroup"> 
+<div class="color-block" style="background-color: hsl(0,100%,50%)"></div>
+<pre><code>--colorPrimary-h: 0;
+--colorPrimary-s: 100%;
+--colorPrimary-l: 50%;
+
+--colorPrimary: var(--colorPrimary-h), var(--colorPrimary-s), --colorPrimary-l);
+</code></pre>
+</div>
+
+<h2>Adjusting Values with HSL</h2>
+
+<p>Awesome! So now we can use these values to make adjustments. Should we start with recreating the <em>lighten</em> and <em>darken</em> functions? Why not!</p>
+
+<p>To start, we'll need to identify how much we want to lighten and darken, so let's go ahead and save those as additional custom properties.</p>
+
+<pre><code>--lighten-percentage: 20%;
+--darken-precentage: 15%;
+</code></pre>
+
+<p>Once we’ve identified our transformations, now we can write the new value. We’ll want to adjust the lightness with a calculation like so: <code>calc(var(--colorPrimary-l) + var(--lighten-percentage))</code>. </p>
+
+<p>All together it looks like this:</p>
+
+<div class="codegroup"> 
+  <div class="color-block" style="background-color: hsl(0,100%,70%)"></div>
+  <pre><code>--colorPrimary--light: var(--colorPrimary-h), var(--colorPrimary-s), calc(var(--colorPrimary-l) + var(--lighten-percentage)));
+  </code></pre>
+</div>
+<br/>
+<p>While this seems a bit verbose, essentially all we are doing is using the base hue and saturation value, and adjusting the lightness value by adding the new lightness percentage to the original value.</p>
+
+<p>For a <em>darken</em> function, we can subtract the lightness (or add it if you set the darken percentage to a negative value) in the same way:</p>
+
+<div class="codegroup"> 
+  <div class="color-block" style="background-color: hsl(0,100%,35%)"></div>
+  <pre><code>--colorPrimary--dark: var(--colorPrimary-h), var(--colorPrimary-s), calc(var(--colorPrimary-l) - var(--darken-percentage)));</code></pre>
+</div>
+
+<h2>Getting the Complement and Triads</h2>
+
+<figure><img src="../../images/posts/css-custom-props-colors/hslcolorwheel.png"/>
+<figcaption>Source: tallys.github.io/color-theory/</figcaption>
+</figure>
+
+<p>To get the complimentary or triadic shades, we'll need to adjust the hue of the primary color instead of the lightness. We could set up individual variables, but can also take a shorcut and remember that the color wheel in HSL goes from <strong>0</strong> to <strong>360</strong>. That means adding or subtracting <strong>180</strong> will give us the complementary shade.</p>
+
+<img height="200px" src="../../images/posts/css-custom-props-colors/complementary.png"/>
+
+
+<div class="codegroup"> 
+  <div class="color-block" style="background-color: hsl(180,100%,50%)"></div>
+  <pre><code>--colorPrimary--complement: calc(var(--colorPrimary-h) + 180), var(--colorPrimary-s), var(--colorPrimary-l));</code></pre>
+</div>
+<br/>
+<p>For triadic colors, we cut <strong>360</strong> into thirds, meaning we can get the first and second triad by adding or subtracting <strong>120</strong> and <strong>240</strong> respectively.</p>
+
+<img height="200px" src="../../images/posts/css-custom-props-colors/triadic.png"/>
+
+
+<div class="codegroup"> 
+  <div>
+    <div class="color-block" style="background-color: hsl(120,100%,50%)"></div>
+    <div class="color-block" style="background-color: hsl(240,100%,50%)"></div>
+  </div>
+<pre><code>--colorPrimary--triad1: calc(var(--colorPrimary-h) + 120), var(--colorPrimary-s), var(--colorPrimary-l));
+
+--colorPrimary--triad2: calc(var(--colorPrimary-h) + 240), var(--colorPrimary-s), var(--colorPrimary-l));</code></pre>
+</div>
+<br/>
+
+<p>For analogous shades, we can determine the hue adjustment per shade, and get a nice analogous scheme of colors based on our preferences.</p>
+
+
+<h2>Recreating Mix()</h2>
+
+<p>The <code>mix()</code> blend mode is a little bit trickier than something like <code>lighten()</code> or <code>darken()</code> but it can totally be done with HSL calculations!</p>
+
+<p class="codepen" data-height="370" data-theme-id="36912" data-default-tab="result" data-user="una" data-slug-hash="qzKXgr" style="height: 370px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Color Mix in Vanilla CSS">
+  <span>See the Pen <a href="https://codepen.io/una/pen/qzKXgr/">
+  Color Mix in Vanilla CSS</a> by Una Kravets (<a href="https://codepen.io/una">@una</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<br/>
+<p>In order to mix colors, we need two colors to mix, so let's break them down:</p>
+
+<div class="codegroup"> 
+  <div>
+    <div class="color-block" style="background-color: hsl(0,100%,50%)"></div>
+    <div class="color-block" style="background-color: hsl(50,80%,50%)"></div>
+  </div>
+<pre><code>--color-1-h: 0;
+--color-1-s: 100%;
+--color-1-l: 50%;
+
+--color-2-h: 50;
+--color-2-s: 80%;
+--color-2-l: 50%;</pre></code>
+</div>
+
+<br/>
+<p>Then, we can get the averages between those two colors:</p>
+
+<pre><code>--avg-1-2-h: calc((var(--color-1-h) + var(--color-2-h)) / 2);
+--avg-1-2-s: calc((var(--color-1-s) + var(--color-2-s)) / 2);
+--avg-1-2-l: calc((var(--color-1-l) + var(--color-2-l)) / 2);
+</code></pre>
+
+<p> finally, we can write our mixed color: </p>
+
+<div class="codegroup">
+  <div class="color-block" style="background-color: hsl(25,90%,50%)"></div>
+<pre><code>--mixed-color: hsl(var(--avg-1-2-h), var(--avg-1-2-s), var(--avg-1-2-l));</pre></code>
+</div>
+
+<h2>Creating a Color Contrast Function</h2>
+
+<p>Another key functionality that CSS processors provide are logical values, which allow for us to calculate accessible colors based on their background is the <code>contrast-color()</code> function. This function takes a series of values: the base color to contrast against, a light value, and a dark value, and will return whichever of the provided values contrasts more with the base. While we can't currently model this directly in pure CSS, we can hack around it.</p>
+
+<img src="../../images/posts/css-custom-props-colors/demo.gif"/>
+
+<p>I'm using this technique from <a href="https://css-tricks.com/switch-font-color-for-different-backgrounds-with-css/">Facundo Corradini</a>, so please don't give me the credit! 😄</p>
+
+<p>First, we set a contrast threshold:</p>
+
+<pre><code>--contrastThreshold: 60%;</code></pre>
+
+<p>Then, as we update the color value in each box from the demo at the top of the page, we test the lightness value to determine if it meets the contrast threshold for "light" or not. If the threshold is higher than the lightness of the base color, the color returns light because we multiply the lightness result by <strong>-100</strong>. For example, if our lightness was 40 and the <code>contrastThreshold</code> is 60, <strong>40 - 60 = -20</strong>, so when we multiply that lightness by -100, it becomes <strong>2000</strong>, resulting in white, since white shows when the lightness is 100 <em>or higher</em>.</p>
+
+<p>The opposite happens when the lightness is higher than the <code>contrastThreshold</code>. If our lightness is <strong>90</strong>, and the <code>contrastThreshold</code> is 60, the result is <strong>30</strong>, so when we multiply this positive value by <strong>-100</strong>, we get a lightness of <strong>-3000</strong>, meaning the result is black, since the lightness is lower than 0.</p>
+
+<p>We then return this lightness as the "L" in the HSL of the color value that lives on top of this background color. It looks like this:</p>
+
+<pre><code>.primary {
+  background: var(--colorPrimary);
+  
+  --switch: calc((var(--colorPrimary-l) - var(--contrastThreshold)) * -100);
+  color: hsl(0, 0%, var(--switch));
+}</code></pre>
+
+<p><strong>If you want to see this in action, check out the demo at the top of the page</strong></p>
+
+<p>Keep in mind, since HSL is how the <em>computer</em><a href="https://twitter.com/argyleink/status/1201908189257555968?s=20">understands lightness</a> and not how the *user* understands lightness, this technique is not perfect, and it clearly shows us where custom properties and the calc function still fall short.</p>
+
+<h2>The Future of CSS Color Functions</h2>
+
+<p>...which is exactly why we need color modification functions on the web! Wouldn't it be nice if this stuff actually worked natively? If we didn't have to break everything up into individual HSLA values and hack around color contrast? </p>
+
+<p>So many design systems and websites rely on color modification, and the CSS Working Group is listening, working on identifying how we can bring color <a href="https://www.w3.org/TR/css-color-adjust-1/">adjustment</a> and modification functions to web browsers.
+</p> 
+
+<blockquote>I hope you enjoyed this post or learned something new! If you use color modification in your design systems or user interfaces, I would love to hear about it! <em>Please tweet at me <a href="https://twitter.com/una">@una</a> or leave a comment below!</em></blockquote>
+
+<style>
+.uppercase {
+  text-transform: uppercase;
+}
+
+pre > code {
+  padding: 1rem;
+}
+
+.codegroup {
+  display: flex;
+  align-items: center;
+}
+
+.codegroup pre {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.color-block {
+  min-width: 50px;
+  height: 50px;
+  margin: 10px;
+  display: block;
+}
+</style>
