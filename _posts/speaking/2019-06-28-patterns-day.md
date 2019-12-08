@@ -6,7 +6,7 @@ flag: 🇬🇧
 event: 'Patterns Day'
 date: '2019-06-28'
 hidden: true
-upcoming: true
-talk: TBD
+talk: The Problem with Legos & Systems at Scale
 event-link: https://patternsday.com/
+image: ../images/speaking/patternsday.jpg
 ---

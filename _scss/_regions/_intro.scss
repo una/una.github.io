@@ -7,11 +7,12 @@
   p {
     @extend %center;
     @extend %pink-aside;
-    margin: 17em 0 0;
+    margin: 17em 0 2em;
     max-width: 360px;
     font-size: 1rem;
     background: $color--darkerpurple;
     color: white;
+    text-align: left;
 
     a {
       color: $color--hotpink;
