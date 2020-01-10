@@ -207,10 +207,10 @@ South Africa was a particularly incredible trip. I learned a ton from the people
 Last years goal was to: **Make an Impact**. I think I did a decent job of that through publishing and speaking, but not so much with my specific goals.
 
 1. **JavaScript**: I did a little bit of JS work, and tried out Preact and Vue outside of my day job, but didn't really get as into it as much as I would have liked. I really want to build more with it next year.
-* **Be a Teacher**: I think I did a decent job of this in 2017, and heard from a lot of people who learned things from me and built on that knowledge :)
-* **Stay Experimental**: I think I did some interesting experimentation around image optimization with CSS this year. And with the [CUBS](http://toolsday.io/episodes/electron.html) series starting at the end of the year, I hope to continue this next year and do more things!
-* **Publish a Book**: I wrote 60,000 words this year, but really dropped the ball on this when all my knee problems started. So next year I hope to review, revise, and start again.
-* **Start A Daily Run Streak**: Ha.ha. Yeah. No. I physically can't even run now. Really hoping to resolve my knee issues soon.
+2. **Be a Teacher**: I think I did a decent job of this in 2017, and heard from a lot of people who learned things from me and built on that knowledge :)
+3. **Stay Experimental**: I think I did some interesting experimentation around image optimization with CSS this year. And with the [CUBS](http://toolsday.io/episodes/electron.html) series starting at the end of the year, I hope to continue this next year and do more things!
+4. **Publish a Book**: I wrote 60,000 words this year, but really dropped the ball on this when all my knee problems started. So next year I hope to review, revise, and start again.
+5. **Start A Daily Run Streak**: Ha.ha. Yeah. No. I physically can't even run now. Really hoping to resolve my knee issues soon.
 
 Like I said at the start, this wasn't my year. So I'm going to just focus on the future.
 

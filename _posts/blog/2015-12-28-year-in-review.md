@@ -129,11 +129,11 @@ My last personal goal from 2015 was to be better at **keeping in touch** with pe
 
 I'm cutting this down to fewer and more concise goals than last years. Here they are:
 
-1. **JavaScript.** <br><p style="font-size:85%">It's so powerful, and I want to get much better at it so I can be a powerful wizard, too!</p>
-2. **Write a Book** <br><p style="font-size:85%">I have a book idea in mind and I really want to make it a reality.</p>
-3. **Bridge the Designer/Developer Gap** <br><p style="font-size:85%">Continue sharing knowledge on front-end topics relevant to both designers and devs.</p>
-4. **Build All The Things** <br><p style="font-size:85%">Build things quickly, ship, learn, and then build them better. Open source it all, too.</p>
-5. **Prioritize my Health** <br><p style="font-size:85%">Run that half marathon &mdash; fitness is mandatory, not optional.</p>
+1. **JavaScript.** It's so powerful, and I want to get much better at it so I can be a powerful wizard, too!
+2. **Write a Book** I have a book idea in mind and I really want to make it a reality.
+3. **Bridge the Designer/Developer Gap** Continue sharing knowledge on front-end topics relevant to both designers and devs.
+4. **Build All The Things** Build things quickly, ship, learn, and then build them better. Open source it all, too.
+5. **Prioritize my Health** Run that half marathon &mdash; fitness is mandatory, not optional.
 
 I'll leave you with this lovely holiday song about the state of developer life from your [Toolsday](http://toolsday.io) hosts (Chris Dhanaraj and me) 😃
 
