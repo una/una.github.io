@@ -96,8 +96,8 @@ So how am I doing on those overall goals I laid out last year?
 ## 2016: Small Dreams are Boring
 
 <figure>
-  <img src="../../images/posts/2015-review/mantra.jpg">
-  <figcaption>That's my mantra for the year. To dream big and put in the effort to make things happen.<figcaption>
+  <img src="../../images/posts/2015-review/mantra.jpg" />
+  <figcaption>That's my mantra for the year. To dream big and put in the effort to make things happen.</figcaption>
 </figure>
 
 ### Professional Goals
