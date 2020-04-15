@@ -41,13 +41,13 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
+gulp.task('browser-sync', gulp.series(gulp.parallel(['sass', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
         }
     });
-});
+})));
 
 /**
  * Compile files from _scss into both css and _includes
@@ -67,10 +67,10 @@ gulp.task('sass', function () {
 /**
  * Deploy to Gh-Pages
  */
-gulp.task("deploy", ["jekyll-build"], function () {
+gulp.task("deploy", gulp.series(["jekyll-build"], function () {
     return gulp.src("./_site/**/*")
         .pipe(deploy());
-});
+}));
 
 /**
  * Minify Images
@@ -130,7 +130,7 @@ gulp.task('ngrok-url', function(cb) {
  * Wait for jekyll-build, then launch the Server with port 3020
  */
 
-gulp.task('browser-sync-psi', ['jekyll-build'], function() {
+gulp.task('browser-sync-psi', gulp.series(['jekyll-build'], function() {
     browserSync({
         port: portVal,
         open: false,
@@ -138,7 +138,7 @@ gulp.task('browser-sync-psi', ['jekyll-build'], function() {
             baseDir: '_site',
         }
     });
-});
+}))
 
 gulp.task('psi-seq', function (cb) {
  return sequence(
@@ -150,10 +150,10 @@ gulp.task('psi-seq', function (cb) {
  );
 });
 
-gulp.task('psi', ['psi-seq'], function() {
+gulp.task('psi',  gulp.series(['psi-seq'], function() {
     console.log('Woohoo! Check out your page speed scores!')
     process.exit();
-})
+}))
 
 /**
  * Watch scss files for changes & recompile AND lint :)
@@ -161,10 +161,10 @@ gulp.task('psi', ['psi-seq'], function() {
  * Minify images too
  */
 gulp.task('watch', function () {
-    gulp.watch('_scss/**/*.scss', ['sass', 'jekyll-build']);
-    gulp.watch(['index.html', 'archive.html', '_layouts/*.html', '_includes/*.html', '_posts/**/*', 'archive/*', 'diffeedemo/*', 'speaking/*', 'about/*'], ['jekyll-rebuild']);
-    gulp.watch(['images/*'], ['imagemin']),
-    gulp.watch(['js/*.js'], ['jekyll-build'])
+    gulp.watch('_scss/**/*.scss', gulp.parallel(gulp.series(['sass', 'jekyll-build'])));
+    gulp.watch(gulp.parallel(gulp.series(['index.html', 'archive.html', '_layouts/*.html', '_includes/*.html', '_posts/**/*', 'archive/*', 'diffeedemo/*', 'speaking/*', 'about/*'], ['jekyll-rebuild'])));
+    gulp.watch(['images/*'], gulp.parallel(['imagemin'])),
+    gulp.watch(['js/*.js'], gulp.parallel(['jekyll-build']))
 });
 
 /**
