@@ -11,7 +11,6 @@ var imagemin    = require('gulp-imagemin');
 var pngquant    = require('imagemin-pngquant');
 var ngrok       = require('ngrok');
 var psi         = require('psi');
-var sequence    = require('run-sequence');
 var site        = '';
 var portVal     = 3020;
 var exit = require('gulp-exit');
@@ -41,12 +40,12 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', gulp.series(gulp.parallel(['sass', 'jekyll-build'], function() {
+gulp.task('browser-sync', gulp.series(gulp.parallel(['sass', 'jekyll-build'], function(cb) {
     browserSync({
         server: {
             baseDir: '_site'
         }
-    });
+    }, cb);
 })));
 
 /**
@@ -89,7 +88,7 @@ gulp.task('imagemin', function () {
  * Lint .scss
  */
 gulp.task('scss-lint', function() {
-  gulp.src('_scss/**/*.scss')
+  return gulp.src('_scss/**/*.scss')
     .pipe(scsslint({
         'bundleExec': true,
         'config': 'lint-config.yml'
@@ -141,7 +140,7 @@ gulp.task('browser-sync-psi', gulp.series(['jekyll-build'], function() {
 }))
 
 gulp.task('psi-seq', function (cb) {
- return sequence(
+ return gulp.series(
     'browser-sync-psi',
     'ngrok-url',
     'psi-desktop',
@@ -150,7 +149,7 @@ gulp.task('psi-seq', function (cb) {
  );
 });
 
-gulp.task('psi',  gulp.series(['psi-seq'], function() {
+gulp.task('psi', gulp.series(['psi-seq'], function() {
     console.log('Woohoo! Check out your page speed scores!')
     process.exit();
 }))
