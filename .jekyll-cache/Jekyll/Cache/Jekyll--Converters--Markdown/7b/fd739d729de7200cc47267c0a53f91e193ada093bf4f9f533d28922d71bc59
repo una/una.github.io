@@ -1,0 +1,53 @@
+I"<p><a href="https://code.visualstudio.com/">Visual Studio Code</a> just <a href="https://code.visualstudio.com/updates/v1_11#_workbench">released</a> experimental workbench theming. This is such an awesome feature (“to-be”?) because it allows you to customize your text editor’s look and feel on a per-project basis! Why is this so exciting? Read on:</p>
+
+<h2 id="creating-spaces-for-flow">Creating Spaces for Flow</h2>
+
+<p>Cal Newport, author of the book <a href="#">Deep Work</a>, <a href="https://80000hours.org/2016/08/is-deep-work-the-most-underappreciated-skill-for-career-success-an-interview-with-cal-newport/">defines</a> the concept of “deep work” as <em>“the ability to focus without distraction on a cognitively demanding task”</em>. “Deep work” as he describes it is also known as <em>“flow”</em>, a state of being where a person becomes extremely productive by focusing on a single task and actively avoiding distraction.</p>
+
+<p>I have a theory that our digital workspaces, or text editors, can help us get into this state more quickly by providing visual cues that move us from one task to another (also known as context switching).</p>
+
+<p>Have you ever noticed that changing your environment might help give you some inspiration or help you focus? Like going to a coffee shop to write a blog post or moving to another corner of the office to work on a difficult problem? This phenomenon may extend to our digital spaces as well, particularly to where we’re doing the work (text editors).</p>
+
+<blockquote>
+  <p>Having visual differentiation between projects may help you more fluidly “swap” into another mindset and keep you there.</p>
+</blockquote>
+
+<p><em>Note: This isn’t a tested theory, but it seems plausible, and it certainly couldn’t hurt to try.</em></p>
+
+<h2 id="implementation">Implementation</h2>
+
+<p>Workbench customization can be implemented in the same way you would theme anything else. You can access it with <code>cmd + shift + p</code> on a Mac, or <code>ctrl + shift + p</code> on a Windows machine and looking for <code>Preferences: Open Workspace Settings</code>.</p>
+
+<p><img src="../images/posts/vscode-workspace/setup.jpg" alt="Sample setup" /></p>
+
+<p>Right now you can update entire themes on your projects using the customization of <code>workbench.colorTheme</code> along with various positioning and visibility options. Color customization options are a bit limited and experimental, but include (within <code>workbench.experimental.colorCustomizations</code>: <code>statusBarBackground</code>, <code>panelBackground</code>, <code>sideBarBackground</code>, <code>sideBarTitleForeground</code>, <code>activeTabBackground</code>, <code>editorForeground</code>, <code>editorLineHighlight</code>, <code>titleBarActiveBackground</code>.</p>
+
+<p>And more! The autocomplete for settings is pretty great, and results are instant, too:</p>
+
+<p><img src="../images/posts/vscode-workspace/instant.jpg" alt="Bright red highlight" /></p>
+<p class="caption">😬 Well, at least it's working.</p>
+
+<h2 id="use-cases">Use Cases</h2>
+
+<p>To me, this feature is great for differentiating between work and personal projects, as well as customizing layout to suit certain needs. For blog posts, I’ll likely want larger text, increased line height, and really good markdown support, so I use a theme called <a href="https://marketplace.visualstudio.com/items?itemName=philipbe.theme-gray-matter">Gray Matter</a> which feels a lot like iA writer (the UI of which which I love, but prefer to stay within my own code base and use the commands I’m used to in VS Code).</p>
+
+<div style="overflow:hidden">
+  <div class="third"><img src="../images/posts/vscode-workspace/default.jpg" alt="" /><p class="center">Default Workspace</p></div>
+  <div class="third"><img src="../images/posts/vscode-workspace/do.jpg" alt="" /><p class="center">DigitalOcean Workspace</p></div>
+  <div class="third"><img src="../images/posts/vscode-workspace/book.jpg" alt="" /><p class="center">Writing Workspace</p></div>
+</div>
+
+<p>For the other workspaces, I’ve just customized themes and colors as I’ve seen above. There are a lot of possibilities here with the large amount of themes on the plug-in market, and now with the ability to further customize those to fit your own needs.</p>
+
+<h2 id="drawbacks">Drawbacks</h2>
+
+<p>This is still an experimental feature that isn’t at its final implementation yet. According to Microsoft:</p>
+
+<blockquote>
+  <p>“There are still several gaps and we have not finalized the new theme file format. For that reason, there’s no documentation and we ask theme authors to not use the new theme format yet.”</p>
+</blockquote>
+
+<p>Also, doing any such customizations will add a <code>.vscode/</code> folder to your filesystem to read the configuration. Be sure to add <code>.vscode/</code> to your <code>.gitignore</code> file to make sure it doesn’t get merged in to your code base.</p>
+
+<p>Despite the warnings, we can start to play now! And better customize our experience for the digital spaces in which we spend a lot of our time.</p>
+:ET

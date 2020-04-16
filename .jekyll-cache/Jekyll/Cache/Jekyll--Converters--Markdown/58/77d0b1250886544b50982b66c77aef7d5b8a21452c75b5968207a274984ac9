@@ -1,0 +1,290 @@
+I"�U<style>
+.doggie {
+  width: 100%;
+  height: 200px;
+  display: block;
+  position: relative;
+  background-image: url('../images/posts/css-effects/4/dog-model.jpg');
+  background-position: 50%;
+  background-size: cover;
+}
+.snow {
+  width: 100%;
+  height: 200px;
+  display: block;
+  position: relative;
+  background-image: url('../images/posts/css-effects/4/snow-overlay.jpg');
+  background-position: 50%;
+  background-size: cover;
+}
+.snow-me:after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    display: block;
+    width: 100%;
+    height: 200px;
+    background-image: url('../images/posts/css-effects/4/snow-overlay.jpg');
+    background-size: cover;
+    mix-blend-mode: screen;
+  }
+}
+</style>
+
+<p>This is part of a series of posts breaking down visual effects using CSS filters and blend modes. Read <a href="/vintage-washout">Part 1: The Vintage Washout Effect</a>, <a href="/3d-effect">Part 2: 3d Glasses</a>, and <a href="/vignettes">Part 3: Vignettes</a> for some background on blend modes. In this post we’ll explore a popular photography technique called bokeh and how to recreate the illusion of a bokeh-style image. P.S. in this post I refer to the little dots of light created via this blur as “bokehs.” Please don’t be mad about it :)</p>
+
+<h2 id="so-what-is-bokeh">So What is Bokeh?</h2>
+
+<figure class="right" style="margin-top: -3em">
+<img src="../images/posts/css-effects/4/bokeh-ex2.jpg" alt="" />
+  <figcaption>A little bokeh <a href="http://digital-photography-school.com/how-to-take-beautiful-bokeh-christmas-images-with-31-stunning-examples/">how-to</a>.</figcaption>
+</figure>
+
+<p>Bokeh is a photography technique that creates intentional blur for visual effect. The name itself stems from the Japanese word for blur or haze: boke. <sup><a href="http://www.pocket-lint.com/news/127591-what-is-bokeh-here-s-the-photography-effect-explained">1</a></sup> Technically, any image with a blur in it can be considred bokeh, but they are most distinguished by the imagery of large circluar forms on photographs.</p>
+
+<p>Christmas lights are popularly used to get this effect, and so are night scenes. Often, bokeh photography is simple round shapes, but can also include subjects in the foreground. Let’s look into how we can recreate the illusion of bokeh photography in CSS.</p>
+
+<h2 id="applying-texture">Applying Texture</h2>
+
+<p>Let’s start with some blend modes — particularly multiply and screen are going to be your friends when applying texture (also Google). All you really need to do is layer a texture on top of an image and <code>multiply</code> if the texture is white, or <code>screen</code> if the texture is on a black background. It’s super easy!</p>
+
+<figure class="third">
+  <div class="doggie"></div><br />
+  <figcaption>Just a doggie with a red hat.</figcaption>
+</figure>
+
+<figure class="third">
+  <div class="snow"></div><br />
+  <figcaption>Snow overlay.</figcaption>
+</figure>
+
+<figure class="third">
+  <div class="doggie snow-me"></div><br />
+  <figcaption>Doggie with pseudo-element containing snow overlay and <code>mix-blend-mode: screen</code><br /> (See <a href="http://codepen.io/una/pen/Qjgojy">Codepen</a>)</figcaption>
+</figure>
+
+<div class="clearfix"></div>
+
+<p>See, aren’t blend modes fun? 😊 There are so many textures you can play with. Just Google search what you’re looking for, and feel free to get carried away.</p>
+
+<h2 id="css-gradients">CSS Gradients</h2>
+
+<p>CSS Gradients and box shadows are extremely powerful for creating a variety of <a href="http://a.singlediv.com/">visualizations</a>. We can leverage them for building custom bokeh effects, too! Check out the <a href="http://una.im/vignettes">Vignette article</a> for more of a baseline on gradients.</p>
+
+<div class="half--left">
+  <div class="radial-1"></div>
+</div>
+<div class="half--right"><style contenteditable="" class="live-code">.radial-1 {
+  background: radial-gradient(hotpink, transparent);
+  height: 180px;
+}
+</style></div>
+<div class="clearfix"></div>
+
+<p>We can make this gradient become a distinct circle by making sure the stops overlap, like so:</p>
+
+<div class="half--right">
+  <div class="radial-2"></div>
+</div>
+<div class="half--left"><style contenteditable="" class="live-code">.radial-2 {
+  background: radial-gradient(hotpink, hotpink 40%, transparent 40%, transparent);
+  height: 180px;
+}
+</style></div>
+<div class="clearfix"></div>
+
+<p>To make this look more like a bokeh effect, however, we’ll want to make this a circular shape and maybe have a bit of blur on the edges. Keep in mind, we can also position this circle anywhere within the element:</p>
+
+<div class="clearfix"></div>
+
+<div class="half--left">
+  <div class="radial-3"></div>
+</div>
+<div class="half--right"><style contenteditable="" class="live-code">.radial-3 {
+  background: radial-gradient(circle at center, hotpink, hotpink 40%, transparent 42%, transparent);
+  height: 180px;
+}
+</style></div>
+
+<h2 id="creating-bokeh-patterns">Creating Bokeh Patterns</h2>
+
+<p>Now, we’re almost there. The really fun thing about CSS gradients is that you can have as many as you’d like. You can use the above technique combined with positioning to create entire patterns like this:</p>
+
+<figure class="bokehs">
+</figure>
+
+<style contenteditable="" class="live-code">/*
+you can edit me!
+*/
+
+.bokehs {
+  width: 100%;
+  height: 400px;
+  background:
+    radial-gradient(90px at 500px 200px, rgba(255, 105, 180, .4), rgba(255, 105, 180, .4) 97%, transparent),
+    radial-gradient(40px at 200px 80px, rgba(255, 99, 71, .7), rgba(255, 99, 71, .7) 94%, transparent),
+    radial-gradient(70px at 100px 50px, rgba(255, 20, 147, .6), rgba(255, 20, 147, .6) 96%, transparent),
+    radial-gradient(120px at 50px 300px, rgba(255, 105, 150, .6), rgba(255, 105, 150, .6) 97%, transparent),
+    radial-gradient(30px at 300px 90px, rgba(255, 192, 203, .7), rgba(255, 192, 203, 0.7) 96%, transparent),
+    radial-gradient(50px at 120px 150px, rgba(255, 192, 203, 0.6), rgba(255, 192, 203, 0.6) 95%, transparent),
+    radial-gradient(60px at 230px 40px, rgba(255, 99, 71, .68), rgba(255, 99, 71, .68) 94%, transparent),
+    radial-gradient(80px at 160px 170px, rgba(255, 20, 147, .4), rgba(255, 20, 147, .4) 96%, transparent),
+    radial-gradient(100px at 0px 210px, rgba(255, 105, 180, .5), rgba(255, 105, 180, .5) 97%, transparent),
+    radial-gradient(40px at 250px 190px, rgba(255, 192, 203, .8), rgba(255, 192, 203, .8) 96%, transparent),
+    radial-gradient(50px at 220px 250px, rgba(255, 182, 193, .6), rgba(255, 182, 193, .6) 95%, transparent);
+}
+</style>
+
+<aside>Please note: nobody said this was a good idea for performance.</aside>
+
+<h2 id="randomly-generated-bokeh">Randomly Generated Bokeh</h2>
+
+<p>And the best part is that you can take that and randomize it! Since this series is sticking to CSS — I’ll show you an example of using the Sass <code>random()</code> function to create this effect without all of that typing. Now, keep in mind, Sass compiles to CSS, so <code>random()</code> is <strong>not truly “random”</strong> upon page refresh, but it is random upon each recompilation.</p>
+
+<p>So let’s start with a Sass function for a single Bokeh:</p>
+
+<pre><code class="language-scss">// Sass
+@function randomBokeh($size: 100, $spread: 3) {
+  $randomColor: rgba(random()*255, random()*255, random()*255, random());
+  $singleBokeh: radial-gradient(random()*$size+px at random()*$size*$spread+px random()*$size*$spread+px, $randomColor, $randomColor 96%, transparent);
+  @return $singleBokeh;
+}
+
+.bokehs {
+  width: 100%;
+  height: 400px;
+  background: randomBokeh();
+}
+</code></pre>
+
+<pre><code class="language-css">/* CSS Output */
+.bokehs {
+  width: 100%;
+  height: 400px;
+  background: radial-gradient(29.73333px at 17.50791px 7.48488px, rgba(100, 168, 142, 0.97455), rgba(100, 168, 142, 0.97455) 96%, rgba(0, 0, 0, 0));
+}
+</code></pre>
+
+<p>Now, we can create a Sass function to loop through and make as many bokehs as we want!</p>
+
+<pre><code class="language-scss">// All the bokehs
+@function gimmeBokehs($howMany: 10, $size: 100, $spread: 3) {
+  $bgList: ();
+  @for $i from 1 through $howMany {
+    $bgList: append($bgList, randomBokeh($size, $spread), comma);
+  }
+  @return $bgList;
+}
+
+.bokehs {
+  width: 100%;
+  height: 400px;
+  background: gimmeBokehs(20, 60, 10)
+}
+</code></pre>
+
+<pre><code class="language-css">/* CSS Outut */
+.bokehs {
+  width: 100%;
+  height: 400px;
+  background: radial-gradient(42.72811px at 304.55032px 69.5741px, rgba(200, 147, 255, 0.50688), rgba(200, 147, 255, 0.50688) 96%, rgba(0, 0, 0, 0)), radial-gradient(14.78788px at 121.83054px 240.35838px, rgba(200, 156, 238, 0.93022), rgba(200, 156, 238, 0.93022) 96%, rgba(0, 0, 0, 0)), radial-gradient(46.62831px at 94.34362px 348.44101px, rgba(200, 255, 209, 0.36045), rgba(200, 255, 209, 0.36045) 96%, rgba(0, 0, 0, 0)), radial-gradient(50.7989px at 13.48329px 60.76727px, rgba(200, 156, 223, 0.23304), rgba(200, 156, 223, 0.23304) 96%, rgba(0, 0, 0, 0)), radial-gradient(29.85886px at 445.38605px 86.69019px, rgba(200, 88, 255, 0.40567), rgba(200, 88, 255, 0.40567) 96%, rgba(0, 0, 0, 0)), radial-gradient(15.46872px at 384.19081px 223.41316px, rgba(200, 206, 228, 0.58455), rgba(200, 206, 228, 0.58455) 96%, rgba(0, 0, 0, 0)), radial-gradient(27.29657px at 174.63441px 69.86441px, rgba(200, 191, 255, 0.68286), rgba(200, 191, 255, 0.68286) 96%, rgba(0, 0, 0, 0)), radial-gradient(28.55569px at 42.5358px 199.80861px, rgba(200, 83, 255, 0.35207), rgba(200, 83, 255, 0.35207) 96%, rgba(0, 0, 0, 0)), radial-gradient(44.88105px at 324.30742px 179.19289px, rgba(200, 249, 255, 0.96513), rgba(200, 249, 255, 0.96513) 96%, rgba(0, 0, 0, 0)), radial-gradient(56.65911px at 276.17854px 328.82421px, rgba(200, 255, 255, 0.80879), rgba(200, 255, 255, 0.80879) 96%, rgba(0, 0, 0, 0)), radial-gradient(1.50256px at 8.89644px 307.86249px, rgba(200, 123, 215, 0.43712), rgba(200, 123, 215, 0.43712) 96%, rgba(0, 0, 0, 0)), radial-gradient(6.73496px at 573.19463px 200.36501px, rgba(200, 255, 255, 0.63492), rgba(200, 255, 255, 0.63492) 96%, rgba(0, 0, 0, 0)), radial-gradient(41.59125px at 370.85632px 269.10117px, rgba(200, 123, 255, 0.75385), rgba(200, 123, 255, 0.75385) 96%, rgba(0, 0, 0, 0)), radial-gradient(15.8851px at 89.81562px 87.5804px, rgba(200, 159, 255, 0.40528), rgba(200, 159, 255, 0.40528) 96%, rgba(0, 0, 0, 0)), radial-gradient(5.83483px at 418.45742px 27.21459px, rgba(200, 91, 255, 0.11832), rgba(200, 91, 255, 0.11832) 96%, rgba(0, 0, 0, 0)), radial-gradient(36.02768px at 174.25894px 426.27577px, rgba(200, 90, 237, 0.03737), rgba(200, 90, 237, 0.03737) 96%, rgba(0, 0, 0, 0)), radial-gradient(6.5848px at 129.48342px 278.22334px, rgba(200, 88, 255, 0.31982), rgba(200, 88, 255, 0.31982) 96%, rgba(0, 0, 0, 0)), radial-gradient(31.3291px at 253.3642px 346.42431px, rgba(200, 243, 255, 0.48109), rgba(200, 243, 255, 0.48109) 96%, rgba(0, 0, 0, 0)), radial-gradient(52.24982px at 68.79468px 539.88069px, rgba(200, 255, 255, 0.09886), rgba(200, 255, 255, 0.09886) 96%, rgba(0, 0, 0, 0)), radial-gradient(3.93163px at 573.94226px 75.22354px, rgba(200, 221, 255, 0.60513), rgba(200, 221, 255, 0.60513) 96%, rgba(0, 0, 0, 0));
+}
+</code></pre>
+
+<style>
+.bokehs-rando {
+  width: 100%;
+  height: 400px;
+  background: radial-gradient(42.72811px at 304.55032px 69.5741px, rgba(200, 147, 255, 0.50688), rgba(200, 147, 255, 0.50688) 96%, rgba(0, 0, 0, 0)), radial-gradient(14.78788px at 121.83054px 240.35838px, rgba(200, 156, 238, 0.93022), rgba(200, 156, 238, 0.93022) 96%, rgba(0, 0, 0, 0)), radial-gradient(46.62831px at 94.34362px 348.44101px, rgba(200, 255, 209, 0.36045), rgba(200, 255, 209, 0.36045) 96%, rgba(0, 0, 0, 0)), radial-gradient(50.7989px at 13.48329px 60.76727px, rgba(200, 156, 223, 0.23304), rgba(200, 156, 223, 0.23304) 96%, rgba(0, 0, 0, 0)), radial-gradient(29.85886px at 445.38605px 86.69019px, rgba(200, 88, 255, 0.40567), rgba(200, 88, 255, 0.40567) 96%, rgba(0, 0, 0, 0)), radial-gradient(15.46872px at 384.19081px 223.41316px, rgba(200, 206, 228, 0.58455), rgba(200, 206, 228, 0.58455) 96%, rgba(0, 0, 0, 0)), radial-gradient(27.29657px at 174.63441px 69.86441px, rgba(200, 191, 255, 0.68286), rgba(200, 191, 255, 0.68286) 96%, rgba(0, 0, 0, 0)), radial-gradient(28.55569px at 42.5358px 199.80861px, rgba(200, 83, 255, 0.35207), rgba(200, 83, 255, 0.35207) 96%, rgba(0, 0, 0, 0)), radial-gradient(44.88105px at 324.30742px 179.19289px, rgba(200, 249, 255, 0.96513), rgba(200, 249, 255, 0.96513) 96%, rgba(0, 0, 0, 0)), radial-gradient(56.65911px at 276.17854px 328.82421px, rgba(200, 255, 255, 0.80879), rgba(200, 255, 255, 0.80879) 96%, rgba(0, 0, 0, 0)), radial-gradient(1.50256px at 8.89644px 307.86249px, rgba(200, 123, 215, 0.43712), rgba(200, 123, 215, 0.43712) 96%, rgba(0, 0, 0, 0)), radial-gradient(6.73496px at 573.19463px 200.36501px, rgba(200, 255, 255, 0.63492), rgba(200, 255, 255, 0.63492) 96%, rgba(0, 0, 0, 0)), radial-gradient(41.59125px at 370.85632px 269.10117px, rgba(200, 123, 255, 0.75385), rgba(200, 123, 255, 0.75385) 96%, rgba(0, 0, 0, 0)), radial-gradient(15.8851px at 89.81562px 87.5804px, rgba(200, 159, 255, 0.40528), rgba(200, 159, 255, 0.40528) 96%, rgba(0, 0, 0, 0)), radial-gradient(5.83483px at 418.45742px 27.21459px, rgba(200, 91, 255, 0.11832), rgba(200, 91, 255, 0.11832) 96%, rgba(0, 0, 0, 0)), radial-gradient(36.02768px at 174.25894px 426.27577px, rgba(200, 90, 237, 0.03737), rgba(200, 90, 237, 0.03737) 96%, rgba(0, 0, 0, 0)), radial-gradient(6.5848px at 129.48342px 278.22334px, rgba(200, 88, 255, 0.31982), rgba(200, 88, 255, 0.31982) 96%, rgba(0, 0, 0, 0)), radial-gradient(31.3291px at 253.3642px 346.42431px, rgba(200, 243, 255, 0.48109), rgba(200, 243, 255, 0.48109) 96%, rgba(0, 0, 0, 0)), radial-gradient(52.24982px at 68.79468px 539.88069px, rgba(200, 255, 255, 0.09886), rgba(200, 255, 255, 0.09886) 96%, rgba(0, 0, 0, 0)), radial-gradient(3.93163px at 573.94226px 75.22354px, rgba(200, 221, 255, 0.60513), rgba(200, 221, 255, 0.60513) 96%, rgba(0, 0, 0, 0));
+}
+</style>
+
+<p>which looks like:</p>
+
+<div class="bokehs-rando"></div>
+
+<h2 id="bokeh-portraits">Bokeh Portraits</h2>
+
+<figure class="half--left">
+<img src="../images/posts/css-effects/4/bokeh-portrait-1.jpg" alt="" />
+<figcaption>Bokeh portraits from <a href="http://icanbecreative.com/article/be-inspired-gorgeous-showcase-of-bokeh-inspired-female-portrait-photography/">here</a>.</figcaption>
+</figure>
+
+<figure class="half--right">
+<img src="../images/posts/css-effects/4/bokeh-portrait-2.jpg" alt="" />
+</figure>
+
+<div class="clearfix"></div>
+
+<p>You can really play around with the colors on the random function above. Simply adding to the random values will give you a lighter color and less variation (i.e. <code>$randomColor: rgba(random()*255 + 200, random()*255 + 100, random()*155 + 200, random());</code>). So we can do that as well as use one of our blend modes and combine it with a basic portrait to make some of those fun effects!</p>
+
+<p>In the example below, on the second dog, I am changing the random color variable as such:</p>
+
+<pre><code>$randomColor: rgba(200, random()*255 + 80, random()*155 + 200, random());
+</code></pre>
+
+<p>And applying <code>background: gimmeBokehs(30, 50, 6);</code> as well as a <code>mix-blend-mode: screen;</code>:</p>
+
+<style>
+  .rando-bokeh {
+    height: 300px;
+    position: relative;
+    display: block;
+    background-image: url('../../images/posts/css-effects/4/dog-model.jpg');
+    background-size: cover;
+  }
+
+  .bokeh-applied:after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 400px;
+      mix-blend-mode: screen;
+      opacity: .75;
+      background: radial-gradient(23.56803px at 199.16063px 76.345px, rgba(200, 131, 255, 0.14366), rgba(200, 131, 255, 0.14366) 96%, rgba(0, 0, 0, 0)), radial-gradient(33.43549px at 119.10143px 287.86755px, rgba(200, 85, 255, 0.79607), rgba(200, 85, 255, 0.79607) 96%, rgba(0, 0, 0, 0)), radial-gradient(45.29169px at 5.37634px 8.73683px, rgba(200, 255, 255, 0.28739), rgba(200, 255, 255, 0.28739) 96%, rgba(0, 0, 0, 0)), radial-gradient(36.39863px at 10.28366px 24.12337px, rgba(200, 175, 255, 0.35702), rgba(200, 175, 255, 0.35702) 96%, rgba(0, 0, 0, 0)), radial-gradient(11.08492px at 38.92755px 101.20679px, rgba(200, 185, 255, 0.03827), rgba(200, 185, 255, 0.03827) 96%, rgba(0, 0, 0, 0)), radial-gradient(39.03352px at 71.71275px 56.06578px, rgba(200, 121, 251, 0.32557), rgba(200, 121, 251, 0.32557) 96%, rgba(0, 0, 0, 0)), radial-gradient(7.44399px at 253.75913px 24.76962px, rgba(200, 250, 255, 0.13923), rgba(200, 250, 255, 0.13923) 96%, rgba(0, 0, 0, 0)), radial-gradient(44.48707px at 238.17421px 121.26373px, rgba(200, 189, 236, 0.1068), rgba(200, 189, 236, 0.1068) 96%, rgba(0, 0, 0, 0)), radial-gradient(43.37039px at 82.33873px 193.54799px, rgba(200, 140, 255, 0.73585), rgba(200, 140, 255, 0.73585) 96%, rgba(0, 0, 0, 0)), radial-gradient(24.27794px at 35.21706px 163.59205px, rgba(200, 255, 238, 0.93552), rgba(200, 255, 238, 0.93552) 96%, rgba(0, 0, 0, 0)), radial-gradient(25.12086px at 269.96945px 205.90288px, rgba(200, 172, 241, 0.49073), rgba(200, 172, 241, 0.49073) 96%, rgba(0, 0, 0, 0)), radial-gradient(16.41232px at 92.68212px 231.46975px, rgba(200, 212, 255, 0.95893), rgba(200, 212, 255, 0.95893) 96%, rgba(0, 0, 0, 0)), radial-gradient(28.58788px at 243.88216px 225.64002px, rgba(200, 160, 255, 0.0805), rgba(200, 160, 255, 0.0805) 96%, rgba(0, 0, 0, 0)), radial-gradient(33.61381px at 60.43995px 42.66561px, rgba(200, 253, 255, 0.40846), rgba(200, 253, 255, 0.40846) 96%, rgba(0, 0, 0, 0)), radial-gradient(12.59858px at 60.00865px 220.58083px, rgba(200, 175, 255, 0.95237), rgba(200, 175, 255, 0.95237) 96%, rgba(0, 0, 0, 0)), radial-gradient(29.59471px at 216.66447px 192.62853px, rgba(200, 150, 255, 0.58779), rgba(200, 150, 255, 0.58779) 96%, rgba(0, 0, 0, 0)), radial-gradient(31.47805px at 196.17551px 5.55141px, rgba(200, 199, 212, 0.40877), rgba(200, 199, 212, 0.40877) 96%, rgba(0, 0, 0, 0)), radial-gradient(41.69165px at 244.82045px 245.97781px, rgba(200, 142, 255, 0.99561), rgba(200, 142, 255, 0.99561) 96%, rgba(0, 0, 0, 0)), radial-gradient(5.02161px at 101.76944px 72.64799px, rgba(200, 255, 255, 0.11336), rgba(200, 255, 255, 0.11336) 96%, rgba(0, 0, 0, 0)), radial-gradient(41.76944px at 278.09962px 264.76583px, rgba(200, 187, 255, 0.60733), rgba(200, 187, 255, 0.60733) 96%, rgba(0, 0, 0, 0)), radial-gradient(37.88597px at 268.49041px 147.10852px, rgba(200, 195, 255, 0.13612), rgba(200, 195, 255, 0.13612) 96%, rgba(0, 0, 0, 0)), radial-gradient(34.70447px at 242.42041px 63.78312px, rgba(200, 255, 244, 0.73879), rgba(200, 255, 244, 0.73879) 96%, rgba(0, 0, 0, 0)), radial-gradient(10.87022px at 20.97959px 91.8106px, rgba(200, 100, 255, 0.51644), rgba(200, 100, 255, 0.51644) 96%, rgba(0, 0, 0, 0)), radial-gradient(31.99344px at 82.22693px 46.28486px, rgba(200, 106, 255, 0.03922), rgba(200, 106, 255, 0.03922) 96%, rgba(0, 0, 0, 0)), radial-gradient(23.40796px at 143.21235px 16.78504px, rgba(200, 88, 245, 0.95627), rgba(200, 88, 245, 0.95627) 96%, rgba(0, 0, 0, 0)), radial-gradient(36.78517px at 198.29065px 245.34634px, rgba(200, 215, 210, 0.36781), rgba(200, 215, 210, 0.36781) 96%, rgba(0, 0, 0, 0)), radial-gradient(46.18204px at 293.99842px 284.90201px, rgba(200, 252, 255, 0.81469), rgba(200, 252, 255, 0.81469) 96%, rgba(0, 0, 0, 0)), radial-gradient(12.1663px at 273.95006px 200.42229px, rgba(200, 113, 230, 0.38008), rgba(200, 113, 230, 0.38008) 96%, rgba(0, 0, 0, 0)), radial-gradient(27.62209px at 184.84354px 36.75212px, rgba(200, 212, 242, 0.10051), rgba(200, 212, 242, 0.10051) 96%, rgba(0, 0, 0, 0)), radial-gradient(24.11243px at 42.74105px 66.45672px, rgba(200, 233, 255, 0.56555), rgba(200, 233, 255, 0.56555) 96%, rgba(0, 0, 0, 0));
+}
+</style>
+
+<figure class="half--left rando-bokeh">
+</figure>
+
+<figure class="half--right rando-bokeh bokeh-applied">
+</figure>
+
+<div class="clearfix"></div>
+
+<p>Alternatively, if you’d like a more uniform color in your bokehs (like in the images above) , remember, you can always use <strong>filters</strong> such as  <code>grayscale</code>, <code>hue-rotate</code>, <code>saturate</code>, <code>brightness</code>, etc. Here’s an example of the random bokehs from above, but with a <code>filter: sepia(.75)</code> applied:</p>
+
+<style>
+  .bokeh-sepia {
+    -webkit-filter: sepia(.75);
+    filter: sepia(.75);
+  }
+</style>
+
+<div class="bokehs-rando bokeh-sepia"></div>
+
+<p>So we can use that in combination with images like this pen (I recommend opening the pen and recompiling the code to see how it randomizes and changes). It’s a more subtle and usable way to integrate this effect:</p>
+
+<p data-height="520" data-theme-id="5255" data-slug-hash="PPOBWd" data-default-tab="result" data-user="una" class="codepen">See the Pen <a href="http://codepen.io/una/pen/PPOBWd/">Random Bokeh Dots</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<h2 id="conclusion-and-warnings">Conclusion and Warnings</h2>
+
+<p>This effect is pretty dynamic and fun to play with. Keep in mind, however, creating 60 gradients on your page is not the most performant option at this point! I hope you picked up some new Sass tips from this post and some new ideas to <strong>#artTheWeb</strong>!</p>
+
+<p><strong>tl;dr: you can create bokeh-like dot effects via CSS gradients and apply them to your images. Using Sass makes it much easier.</strong></p>
+
+<section class="css-effects-series">
+  <h2>More CSS Effects:</h2>
+  <ul>
+    <li><a href="/vintage-washout">Part 1: The Vintage Washout Effect</a></li>
+    <li><a href="/3d-effect">Part 2: 3D Glasses Effect</a></li>
+    <li><a href="/vignettes">Part 3: Vignettes in 3 Ways</a></li>
+    <li><a href="/bokeh">Part 4: Bokeh Textures</a></li>
+    <li><a href="/lomo">Part 5: Lomography Filters</a></li>
+    <li><a href="/infrared">Part 6: Infrared Photo Effect</a></li>
+  </ul>
+</section>
+:ET

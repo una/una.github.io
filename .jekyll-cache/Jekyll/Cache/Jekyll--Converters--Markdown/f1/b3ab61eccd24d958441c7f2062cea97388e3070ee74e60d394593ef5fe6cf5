@@ -1,0 +1,198 @@
+I"(<p>I really love — 1 — clever hacks and — 2 — pushing the limits of CSS. Many people don’t realize how powerful it is (especially when combined with the preprocessing prowess of Sass). This post combines those two loves. While it may or may not be something your next client will ask for, there is value in experimenting and pushing boundaries to really understand a language. You too, can make games with just CSS!</p>
+
+<h2 id="counter-increment">Counter-Increment</h2>
+
+<p><code>counter-increment</code> is a relatively obscure CSS property originally intended for use for numbering outlines. This is quite practical and thus <em>very well supported</em>:</p>
+
+<p><img src="../images/posts/css-games/caniuse.png" alt="" /></p>
+
+<aside><a href="http://tympanus.net/codrops/css_reference/counter-increment/">Codrops</a> has a great CSS reference that includes this property. I'd recommend you check it out.</aside>
+
+<h3 id="counter-reset">Counter-Reset</h3>
+
+<p>In order to use <code>counter-increment</code>, we must first instantiate a counter on a section with <code>counter-reset</code>. The value for both <code>counter-increment</code> and <code>counter-reset</code> should match, but can be anything. For example:</p>
+
+<pre><code class="language-scss">// parent element has a counter-reset
+// applied to instantiate it
+section {
+  counter-reset: unicornCounter;
+}
+
+// specify the child element being counted
+section h1 {
+  counter-increment: unicornCounter;
+}
+</code></pre>
+
+<p>In the above code, each <code>&lt;h1&gt;</code> element inside of the section will be counted up by the value of <strong>1</strong> (this number can be customized, as we will cover soon).</p>
+
+<h2 id="counting-with-counter-increment">Counting with Counter-Increment</h2>
+
+<p>CSS does not provide us with many variable options (yet) or means to store numbers, but there is a little workaround: check boxes (or <code>&lt;input type="checkbox"&gt;</code>)!. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox">Check boxes</a> have a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">global attribute</a> (<code>checked</code>) that can be altered without any JavaScript (just by clicking). This makes it unique, and also suited for dynamic counting:</p>
+
+<pre><code class="language-scss">input:checked {
+  counter-increment: counterName;
+}
+</code></pre>
+
+<p>We can set the <code>counter-increment</code> on every input element that has the global attribute of <code>checked</code> (shown above) to count the number of checked checkboxes. The user dynamically adds and removes checks from this group via simple clicks, and the <code>counter-increment</code> responds accordingly.</p>
+
+<h3 id="displaying-count">Displaying Count</h3>
+
+<p>To display the counter, we can use a pseudo element and the <code>content</code> property! Because the name of our counter is a variable that holds a counter-increment value, we can access that increment value in our CSS like so:</p>
+
+<pre><code class="language-css">span::after {
+  content: counter(counterName);
+}
+</code></pre>
+
+<p><strong>Note: It’s important to include the element which displays the counter value <em>after</em> the elements which you are counting in the DOM order.</strong></p>
+
+<p>Here’s an example of a game I created using counter-increment to count how many targets were hit. Each target is a checkbox input with a randomized animation-duration applied to it to vary the speed it is moving. I also used a CSS animation with a 10 second delay to stop the game by applying an overlay once the delay timer was up. <em>I recommend “rerunning” the pen (bottom right corner) instead of clicking “Play Again” to stay in this window:</em></p>
+
+<p data-height="700" data-theme-id="5255" data-slug-hash="NxZaNr" data-default-tab="result" data-user="una" class="codepen">See the Pen <a href="http://codepen.io/una/pen/NxZaNr/">Pure CSS (Sass) Carnival Game</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<aside>I did all of those animations with simple CSS transitions and animations, but the <a href="https://w3c.github.io/web-animations/">Web Animations API</a> is going to provide for a lot more control capability in the near future.</aside>
+
+<h3 id="custom-counters">Custom Counters</h3>
+
+<p>You can also set custom counters (yes this is plural because you can use multiple counters) and specify the amount of the increment (which is <strong>1</strong> by default). The syntax would be as follows:</p>
+
+<pre><code class="language-scss">// count inputs by 2
+input:checked {
+  counter-increment: counterName 2;
+}
+
+// subtract 3 with each checked box
+input:checked {
+  counter-increment: counterName -3;
+}
+</code></pre>
+
+<p>So if I wanted to make the game above a little more complex, I could apply a unique counter to each ring of the target:</p>
+
+<p data-height="300" data-theme-id="5255" data-slug-hash="yOpPEG" data-default-tab="result" data-user="una" class="codepen">See the Pen <a href="http://codepen.io/una/pen/yOpPEG/">Multi-Point Target</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>In the above case, instead of each target being an individual checkbox input, it is a list of three inputs:</p>
+
+<pre><code class="language-html">&lt;!-- HTML for target list --&gt;
+&lt;ul class="game-area"&gt;
+
+&lt;!-- Individual target --&gt;
+  &lt;ul class="target"&gt;
+    &lt;li&gt;&lt;input type="checkbox" class="inner-check"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;input type="checkbox" class="middle-check"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;input type="checkbox" class="outer-check"&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+&lt;!-- Next targets here ... --&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>And each of those would reference the same counter (game) but apply different counter-increment values:</p>
+
+<pre><code class="language-scss">.inner-check {
+  @extend %target-ring;
+  // ... style color and position
+  z-index: 3;
+
+  // counting "game" up by 3
+  &amp;:checked {
+    counter-increment: game 5;
+  }
+
+  &amp;:checked::after {
+    content: '+5';
+  }
+}
+
+.middle-check {
+  @extend %target-ring;
+  // ... style color and position
+  z-index: 2;
+
+  // counting "game" up by 3
+  &amp;:checked {
+    counter-increment: game 3;
+  }
+
+  &amp;:checked::after {
+    content: '+3';
+  }
+}
+
+.outer-check {
+  @extend %target-ring;
+  // ... style color and position
+  z-index: 1;
+
+  // counting "game" up by 1
+  &amp;:checked {
+    counter-increment: game 1;
+  }
+
+  &amp;:checked::after {
+    content: '+1';
+  }
+}
+</code></pre>
+
+<h2 id="checkbox-logic">Checkbox Logic</h2>
+
+<p>Now, you can get really crazy with this by writing some “checkbox logic” — AKA some code to check for specific patterns. You can do this by applying code based on the order of checkboxes using the <code>:checked</code> and <code>:not(:checked)</code> pseudo selectors.</p>
+
+<p>For example something like <code>:checked + :checked</code> provides true as an attribute selector that has a checked element directly next to another checked element. <code>:checked + :not(:checked) + :checked</code> is true for an “on, off, on” pattern.</p>
+
+<p>I used this approach to CSS logic (along with some of the animation tricks mentioned above, this time with z-index for turn-taking) to recreate a CSS-only Tic Tac Toe game. You just have to wait for the green and pink outlines to indicate a change in turns:</p>
+
+<p data-height="600" data-theme-id="5255" data-slug-hash="aNZEbB" data-default-tab="result" data-user="una" class="codepen">See the Pen <a href="http://codepen.io/una/pen/aNZEbB/">Pure CSS Tic Tac Toe!</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>Here is what the logic for Tic Tac Toe looks like for every case in which X can win:</p>
+
+<pre><code class="language-scss">// x | x | x
+//   |   |
+//   |   |
+//
+// note: also works for a horizontal match on the
+// 2nd &amp; 3rd rows, but more logic should be applied
+// to avoid false positives of 3 consecutive checks
+:checked + :checked + :checked ~ span::after { ... }
+
+// x |   |
+// x |   |
+// x |   |
+:checked + :not(:checked) + :not(:checked) + :checked + :not(:checked) + :not(:checked) + :checked ~ span::after { ... }
+
+//   | x |
+//   | x |
+//   | x |
+:not(:checked) + :checked + :not(:checked) + :not(:checked) + :checked + :not(:checked) + :not(:checked) + :checked ~ span::after { ... }
+
+//   |   | x
+//   |   | x
+//   |   | x
+:not(:checked) + :checked + :not(:checked) + :not(:checked) + :checked + :not(:checked) + :not(:checked) + :checked ~ span::after { ... }
+
+//   |   | x
+//   | x |
+// x |   |
+:not(:checked) + :not(:checked) + :checked + :not(:checked) + :checked + :not(:checked) + :checked ~ span::after { ... }
+
+// x |   |
+//   | x |
+//   |   | x
+:checked + :not(:checked) + :not(:checked) + :not(:checked) + :checked + :not(:checked) + :not(:checked) + :not(:checked)+ :checked ~ span::after { ... }
+</code></pre>
+
+<p>This can get complex quickly, but Sass can help out. <a href="http://twitter.com/jake_albaugh">Jake Albaugh</a> created an <em>absolutely incredible</em> demo of a binary calculator using this method which really showcases how powerful it is and how helpful Sass can be. When the logic increases in complexity, you’re going to need some programming powers to help out with maintainability:</p>
+
+<p data-height="800" data-theme-id="5255" data-slug-hash="zrVdME" data-default-tab="result" data-user="jakealbaugh" class="codepen">See the Pen <a href="http://codepen.io/jakealbaugh/pen/zrVdME/">CSS: Binary Writer</a> by Jake Albaugh (<a href="http://codepen.io/jakealbaugh">@jakealbaugh</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<blockquote>
+  <p>If you make anything cool using this technique, I’d love to see it! Please share a link in the comments below:</p>
+</blockquote>
+:ET

@@ -1,0 +1,433 @@
+I"VF<p>If You Know Sass, You know ES2015!…well not exactly, but there <strong>are</strong> a surprising number of similarities! While learning about the <a href="http://www.ecma-international.org/ecma-262/6.0/">latest ECMAScript specification</a>, ES2015 (formerly known as ES6), I came upon a few features that I immediately recognized from Sass. And I kept seeing more and more similarities pop up. A lot of the concepts of Sass development transfer over quite nicely, so if you know some Sass, you’re probably a lot better off than you may think when it comes to diving into modern JavaScript, and visa versa.</p>
+
+<p><img src="../images/posts/sass-js.jpeg" alt="" /></p>
+
+<h2 id="sass-lang-and-es2015">Sass Lang and ES2015</h2>
+
+<p>The <a href="http://sass-lang.com">Sass language</a> was written very intentionally. It was originally released in 2006, and being written in Ruby, also imitated the Ruby syntax and some of its language decisions. Among other features, semicolons and curly braces emerged in <a href="http://sass-lang.com/documentation/file.SASS_CHANGELOG.html#scss_sassy_css">version 3.0.0</a>, which made Sass feel more like (and let it become compatible with) CSS. That change, plus the extensible core Sass functionality of SassScript, meant that there was now a robust programming language newly compatible with CSS. Styling became <em>much</em> more powerful and programming appealed to a wider audience of designers and visual developers. Unfortunately, <a class="twitter-share">Sass devs still get flack for not being “real devs.” I hope this post changes those minds.</a></p>
+
+<figure class="left">
+  <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The more I learn about ES6 features, the more it looks like <a href="https://twitter.com/SassCSS">@SassCSS</a> to me.<br /><br />(i.e. maps, classes, interpolation, constructors)<br /><br />Am I crazy?</p>&mdash; Una Kravets (@Una) <a href="https://twitter.com/Una/status/634051950552571905">August 19, 2015</a></blockquote>
+  <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</figure>
+
+<p>There’s a lot of thought behind every Sass language decision, with a big emphasis on clarity over customization (the <a href="https://github.com/sass/sass/issues/525#issuecomment-8995033">reason why</a> Sass doesn’t allow for custom properties like <a href="http://postcss.org/">PostCSS</a> does). The new ECMAScript 2015 spec (ES2015), released in June of 2015, added a lot of new and very useful features to JavaScript, which also made it more clear and less convoluted to use.</p>
+
+<p>While most browsers still don’t yet <a href="https://kangax.github.io/compat-table/es6/">support</a> ES2015, you can use a transpiler, like <a href="https://babeljs.io/">Babel</a> to convert the code into compatible ES5. The precompile step (yes, I know they’re not exactly the same) is only the beginning of the similarities of the two languages.</p>
+
+<blockquote>
+  <p>There are a lot of Sass features now implemented in ES2015 that you might not realize you have familiarity with as a Sass developer, and visa versa about Sass if you’re a JavaScript developer.</p>
+</blockquote>
+
+<!-- *Let's take a look at 6 new ECMAScript features:* -->
+
+<h2 id="1-template-string-interpolation">1. Template String Interpolation</h2>
+
+<p>This ES2015 feature is the first time I realized how similar the two specs were. The string interpolation is almost identical (and it made me smile a lot). Basically, ES2015 introduced an <em>awesome</em> new inherent string templating feature based on back-ticks.</p>
+
+<aside class="half--right">
+  Wow. <a href="http://dictionary.reference.com/browse/interpolation">Dictionary.com's definition</a> of <b>interpolation</b> really sucks. In this case, it's basically a way to reference your string variable in terms of its real value.
+</aside>
+
+<p>This means you no longer need to use an external templating engine for basic strings and static DOM manipulation (in many cases). Which is great! And allows for more uniformity among code bases.</p>
+
+<p>It looks like this — instead of:</p>
+
+<pre><code class="language-js">"First Name: " + fName + "\nLast Name: " + lName
+</code></pre>
+
+<p>You can simply write:</p>
+
+<pre><code>`First Name: ${fName}
+Last Name: ${lName}`
+</code></pre>
+
+<p>This is <em>just</em> like Sass! Keep in mind, in Sass, variables look like this: <code>$varName</code>, and because that <code>$</code> is already taken, it uses a <code>#</code> to denote interpolation.</p>
+
+<div class="half--left highlight">
+<pre>
+<code class="language-js hljs">//.js
+
+`variable: ${varName}`
+</code></pre>
+</div>
+
+<div class="half--right highlight">
+<pre><code class="language-scss hljs">//.scss
+
+"variable: #{$varName}"
+</code></pre>
+</div>
+
+<p>String interpolation is super handy when writing Sass mixins and writing any sort of output (i.e. via the CSS content property) to the DOM. We’ll see in a later example (maps) why this is so crucial and common to use in Sass development.</p>
+
+<h2 id="2-argument-defaults">2. Argument Defaults</h2>
+
+<p>Argument defaults are <em>so</em> useful when it comes to making flexible functions (and mixins in the case of Sass!). In the past, I’ve used them a lot in Sass to give a <em>pre-determined default argument value when one is not specified</em> in a function or mixin, giving the option to write your own value or to leave it out and accept the default. And now, you too can have all of this in JavaScript!</p>
+
+<p>When instantiating your function, you can now set your variable to a default value right in the argument list (just like Sass):</p>
+
+<div class="half--left highlight">
+<pre>
+<code class="language-js hljs">//.js
+
+function sayHello(recipient = "beautiful") {
+  return "Hello" + recipient;
+}
+
+sayHello();
+sayHello("sunshine");
+</code></pre>
+
+<pre>
+<code class="language-css hljs">/*console*/
+
+&gt; Hello beautiful
+&gt; Hello sunshine
+</code>
+</pre>
+
+</div>
+
+<div class="half--right highlight">
+<pre><code class="language-scss hljs ">//.scss
+
+@mixin showOutline($color: #f00) {
+  outline: 1px solid $color;
+}
+
+.one {
+  @include showOutline()
+}
+
+.two {
+  @include showOutline(#ccc)
+}
+</code></pre>
+
+<pre>
+<code class="language-css hljs">/*css ouput*/
+
+.one {
+  outline: 1px solid #f00;
+}
+
+.two {
+  outline: 1px solid #ccc;
+}
+</code>
+</pre>
+</div>
+
+<div class="clearfix"></div>
+
+<p>Also as in Sass, it is important to note that any arguments with default values must follow arguments which do not have a default (in terms of how they are ordered when writing the initial function/mixin). If you think about the <em>why</em> of this rule, you can easily see how if you had an argument with a default option followed by an argument without a default (making it mandatory to set one), it would break if you left the mandatory argument blank.</p>
+
+<div class="clearfix"></div>
+
+<h2 id="3-rest-parameters">3. Rest Parameters</h2>
+
+<p>On a similar thread of function/mixin arguments, <strong>rest parameters</strong> in ES2015 are a lot like the <strong>arglist</strong> argument types in Sass! Rest parameters (like arglist) must also be the last value of a series of arguments when writing a function.</p>
+
+<p>Rest parameters are created when using the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread operator</a> (<code>...</code>) in a function definition. You may recognize the spread operator for use with iterating items in an array, but using one in a function <em>definition</em> makes it behave a little <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">differently</a>.</p>
+
+<p>You use arglists or rest parameters when there is an <strong>indeterminate input length for an argument</strong>. For example, in Sass, this is commonly used for <em>box shadows</em> or <em>gradients</em>. In JavaScript, rest parameters are denoted with the <code>...</code> <em>before</em> the argument, and in Sass, they come <em>after</em> the argument:</p>
+
+<div class="half--left highlight">
+<pre>
+<code class="language-js hljs">//.js
+
+function PrintMe(firstArg, ...theRest) {
+  console.log(firstArg, theRest);
+}
+
+PrintMe('Hello', 'You', 'Look', 'Nice');
+</code></pre>
+
+<pre>
+<code class="language-css hljs">/*console*/
+
+&gt; Hello ["You", "Look", "Nice"]
+</code>
+</pre>
+</div>
+
+<div class="half--right highlight">
+<pre><code class="language-scss hljs ">//.scss
+
+@mixin funCircle($size, $gradient...) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background: radial-gradient($gradient);
+}
+
+.entrancing {
+  @include funCircle(50px, blue 10%, red 80% ,pink);
+}
+</code></pre>
+
+<pre>
+<code class="language-css hljs">/*css output*/
+
+.entrancing {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(blue 10%, red 80%, pink);
+}
+</code>
+</pre>
+</div>
+
+<div class="clearfix"></div>
+
+<p>In both situations, the arglist/rest parameter values were bucketed and returned together when expected without breaking anything.</p>
+
+<h2 id="4-the-for-of-loop">4. The “for-of” Loop</h2>
+
+<p>The <a href="https://hacks.mozilla.org/2015/04/es6-in-depth-iterators-and-the-for-of-loop/">new looping</a> structure for arrays in ES2015 is very similar to the looping structure in Sass. ES2015 introduced the <em>for-of</em> loop. You may be wondering, <em>how does this differ from for-in?</em></p>
+
+<p>The <em>for-of</em> loop iterator refers to the array <strong>value</strong>, not the <strong>index</strong>. It is more flexible and lets you loop over data (the values in an array) instead of over object properties (what the <em>for-in</em> loop does). Because of this limitation, one of the problems with <em>for-in</em> is that you can’t break out of or return from a <em>for-in</em> loop.</p>
+
+<p>With Sass, any looping works the same way as <em>for-of</em> and not <em>for-in</em>, whether that be a map or a list, or a list of lists. While the syntax is different (<em>each-in</em> vs. <em>for-of</em>) the looping mechanism is the same:</p>
+
+<div class="half--left highlight">
+<pre>
+<code class="language-js hljs">//.js
+
+let colorArray = ["red", "yellow", "green"];
+
+for (let color of colorArray) {
+  console.log(color);
+}
+</code></pre>
+</div>
+
+<div class="half--right highlight">
+<pre><code class="language-scss hljs ">//.scss
+
+$colorList: "red", "yellow", "green";
+
+@each $color in $colorList {
+  @debug $color;
+}
+</code></pre>
+</div>
+
+<div class="clearfix"></div>
+
+<p>If I used <code>for (let color in colorArray)</code> (<strong>in</strong> instead of <strong>of</strong>) the result would be <em>0, 1, 2</em> instead of <em>red, yellow, green</em>. This shows the biggest difference in how these loops work.</p>
+
+<aside style="width: calc(100% - 1em)">In Sass, a <code>@debug</code> statement (shown above for brevity), is most similar to <code>console.log</code>, though, you could also <code>@return</code> values this way. However, these loops are most commonly used for generating multiple classes and styles (there is an example of this in the following section).</aside>
+
+<h2 id="5-maps">5. Maps</h2>
+
+<p>The latest ECMAscript Spec provides us with a new data structure: maps! Maps are excellent for <a href="http://hugogiraudel.com/2014/05/05/bringing-configuration-objects-to-sass/">configuration</a> and allow access to their elements in <code>key : value</code> pairs. <em>How are these different from objects?</em> Good question. With objects, the <em>“keys”</em> are always converted into strings.With <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">maps</a>, values of any type can be keys without being converted into strings. You should still use objects when mixing value types and when you know all of the values before runtime, but maps are really useful otherwise.</p>
+
+<p>Maps are also iterable! So you can use the same syntax as shown above (in the <em>for-of</em> loop) to obtain values (also doable in Sass!). Here is a basic example:</p>
+
+<div class="half--left highlight">
+<pre>
+<code class="language-js hljs">//.js
+
+let colorMap = new Map();
+
+colorMap.set("primary", "red");
+colorMap.set("secondary", "yellow");
+colorMap.set("tertiary", "green");
+
+for (let [key, value] of colorMap) {
+  console.log(`key: ${key}, value: ${value}`);
+}
+</code></pre>
+
+<pre>
+<code class="language-css hljs">/*console*/
+
+&gt; key: primary, value: red
+&gt; key: secondary, value: yellow
+&gt; key: tertiary, value: green
+</code>
+</pre>
+</div>
+
+<div class="half--right highlight">
+<pre><code class="language-scss hljs ">//.scss
+
+$colorMap: (
+  "primary": "red",
+  "secondary": "yellow",
+  "tertiary": "green"
+);
+
+
+@each $key, $value in $colorMap {
+  .color--#{$key} {
+    color: #{$value};
+  }
+}
+</code></pre>
+
+<pre>
+<code class="language-css hljs">/*css output*/
+
+.color--primary {
+  color: red;
+}
+
+.color--secondary {
+  color: yellow;
+}
+
+.color--tertiary {
+  color: green;
+}
+
+</code>
+</pre>
+
+</div>
+
+<div class="clearfix"></div>
+
+<aside style="width: calc(100% - 1em)">You may have noticed that I'm using that <em>interpolation syntax</em> (i.e. <code>#{$value}</code> instead of just <code>$value</code>) in the Sass example. This is because with the latter, Sass will output a string in the result: (i.e. <code>color: "green"</code> instead of <code>color: green</code>). This wouldn't work in CSS.</aside>
+
+<p>Sass provides a few more map niceties like the <code>map-get</code> function, which is commonly it is used to reference map values, and <code>map-has-key</code> which is very helpful in debugging:</p>
+
+<pre><code class="language-scss">//.scss
+
+@if map-has-key($colorMap, $color) {
+    $color: map-get($colorMap, $color);
+} @else {
+  @if type-of($color) != color {
+    @error "Invalid color name: `#{$color}`.";
+  }
+}
+</code></pre>
+
+<figure class="right" style="max-width: 500px; margin-top: 0">
+<img src="../images/posts/sassmaps.png" alt="Sass Maps" />
+<figcaption><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html">Sass map functions</a> are surprisingly robust.</figcaption>
+</figure>
+
+<p>Javascript has <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/get">get and set</a> map methods too! It is simply <code>get()</code> instead of <code>map-get()</code> for JavaScript:</p>
+
+<pre><code class="language-js">//.js
+
+var colorMap = new Map();
+colorMap.set("primary", "red");
+
+colorMap.get("primary");
+// red
+</code></pre>
+
+<p>You can use Sass (as well as JS) to delete from maps, merge, zip, etc. They are a really nice way to organize code, from object information to colors to z-indices.</p>
+
+<h2 id="6-class-extends">6. Class Extends</h2>
+
+<p>Last but not least, ES2015 brings us classes (well, not real classes, but a bit of syntactic sugar over prototypes that let us pretend to write classes). With classes come <code>extends</code>! (Sound familiar yet?)</p>
+
+<p>They work <em>very</em> similarly to the Sass <code>@extend</code> directive. In Javascript, <code>extends</code> allows you to create a new class which inherits the methods and properties from its parent class. (Then, the <code>super()</code> method allows access to the new class’ parent methods). For example, in the case of <code>class Corgi extends Dog</code>), <code>Corgi</code> can access <code>Dog</code>’s <code>bark()</code> method with <code>super.bark()</code>.</p>
+
+<p>You can also run this in the constructor to instantiate <em>all</em> of the parent’s methods. Doing this allows <code>extends</code> to work like <code>@extend</code>!</p>
+
+<p>Confused? It’s easier to show:</p>
+
+<div class="half--left highlight">
+<pre>
+<code class="language-js hljs">//.js
+
+class Dog {
+  constructor(name) {
+    this.name = name;
+  }
+
+  bark(words) {
+    console.log(`WOOF!!! ${words} WOOF!`);
+  }
+}
+
+class Corgi extends Dog {
+  constructor() {
+    super();
+  }
+
+  waddle() {
+   // corgi waddle
+  }
+}
+
+//Steve is a cori
+let steve = new Corgi;
+
+//Steve can bark like a Dog
+steve.bark('I like bacon!')
+
+//AND Steve can waddle, too!
+</code></pre>
+
+<pre>
+<code class="language-css hljs">/*console*/
+
+
+&gt; WOOF!!! I like bacon! WOOF!
+</code>
+</pre>
+</div>
+
+<div class="half--right highlight">
+<pre><code class="language-scss hljs ">//.scss
+
+.plain-link {
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px dotted currentColor;
+}
+
+.pink-link {
+  @extend .plain-link;
+  color: hotpink;
+}
+
+.blue-link {
+  @extend .plain-link;
+  color: blue;
+}
+</code></pre>
+
+<pre>
+<code class="language-css hljs">/*css output*/
+
+.plain-link, .pink-link, .blue-link {
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px dotted currentColor;
+}
+
+.pink-link {
+  color: hotpink;
+}
+
+.blue-link {
+  color: blue
+}
+</code>
+</pre>
+
+</div>
+
+<div class="clearfix"></div>
+
+<p>What’s going on in the Sass here is a key difference between <code>@extend</code> and <code>@include</code> for mixins. With <code>@extend</code> we’re grabbing all of the styles from <code>.plain-link</code> and sharing those among each element which is <em>extending</em> it — akin to the JS methods being pulled from the parent class in the JavaScript example. We may then apply additional unique properties (in the case of Sass, the color; in the case of JavaScript, the waddle method), that are not available in the parent, but are available in the child classes that are extending it.</p>
+
+<aside>I've written all about <code>@extend</code> and how I use them systematically in Sass <a href="/classy-css">here</a> for the curious.</aside>
+
+<p>While some of these aren’t perfect comparisons, <a class="twitter-share">there are <em>very</em> real connections between Sass and JavaScript</a> at play, especially with some of these new ES2015 features.</p>
+
+<p><em>I hope you enjoyed this post and learned something new!</em></p>
+
+<aside>
+  Shoutout to <a href="https://twitter.com/rubencodes">Ruben</a> for making sure my writing made sense!
+</aside>
+:ET

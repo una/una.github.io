@@ -1,0 +1,159 @@
+I"�&<p>I’m having a hard time containing my excitement for CSS grid: a spec thats been in the works for a while, but is finally here! News of grid has been exploding in popularity on the web as its becoming increasingly implemented in browsers (<a href="https://wpdev.uservoice.com/forums/257854-microsoft-edge-developer/suggestions/6514853-update-css-grid">upvote here for Edge</a>). <a href="https://www.mozilla.org/en-US/developer/css-grid/">Firefox</a> also just came out with a pretty sweet Grid editing view in its developer tools, and I imagine Chrome will soon, too.</p>
+
+<p>Current support is as follows:</p>
+
+<p><img src="../images/posts/css-grid/cssgridsupport.jpg" alt="Supported in Firefox 52+, Chrome 57+, Safari 10.1+" /></p>
+
+<p>I had been hearing about grid for a while but never really understood its real potential until I actually used it. And <em>oh my gosh is it going to make our lives so much better!</em> <a class="twitter-share">CSS Grid is one of the most well-thought-out and powerful CSS specs I’ve seen in a long time</a>.</p>
+
+<p>Now, there are a lot of awesome tutorials and learning resources out there (linked at the bottom of this post), so this post isn’t going to be a full on how-to guide, but instead about <em>why</em> CSS grid is so good! Hopefully it’ll convince you to give it a try!</p>
+
+<h2 id="named-areas">Named Areas</h2>
+
+<p>Grid has a few ways to lay out templates, including a new unit called the <em>fr</em>, or <em>fractional</em>, ala <em>a fractional part of the space</em>. My favorite part of the new templating features is <code>grid-template-areas</code>! This allows you to create <em>named</em> areas that correspond to <code>grid-template-columns</code> and <code>grid-template-rows</code> in your layout. You can literally write out a map of your design!</p>
+
+<p>Take this example:</p>
+
+<p data-height="425" data-theme-id="5255" data-slug-hash="BWPbzV" data-default-tab="result" data-user="una" data-embed-version="2" data-pen-title="CSS Grid + Flexbox Layout Demo with Fallback" class="codepen">See the Pen <a href="http://codepen.io/una/pen/BWPbzV/">CSS Grid + Flexbox Layout Demo with Fallback</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<p><br /></p>
+
+<div class="row">
+  <div class="half--left">
+  The code for the grid looks like:
+
+  <pre><code class="css">body {
+    /* columns based at half
+       the viewport width */
+    grid-template-columns: 50vw;
+    /* header + sections = set height
+       but footer is auto-sized */
+    grid-template-rows: 10vh 40vh 40vh auto;
+    /* grid template areas here! */
+    grid-template-areas:
+      "header header"
+      "top-left top-right"
+      "bottom-left bottom-right"
+      "footer footer";
+  }</code></pre>
+  </div>
+
+  <div class="half--right">
+  and translates into:
+  <img src="../images/posts/css-grid/template-areas.jpg" alt="template areas as a grid" style="margin-top:0" />
+  </div>
+</div>
+
+<p><strong>I KNOW, RIGHT!?</strong></p>
+
+<div class="row">
+  <div class="half--left">
+  You can write this in an even <b>more</b> shorthand way too!:
+
+  <pre><code class="css">body {
+    grid-template:
+      "header header" 10vh
+      "top-left top-right" 40vh
+      "bottom-left bottom-right" 40vh
+      "footer footer" / 50vw 50vw;
+    }</code></pre>
+  </div>
+
+  <div class="half--right">
+  And can use emoji, too—which can help you visualize grid spacing:
+
+  <pre><code class="css">body {
+    grid-template:
+      "👸 👸" 10vh
+      "↖️ ↗️" 40vh
+      "↙️ ↘️" 40vh
+      "👠 👠" / 50vw 50vw;
+  }</code></pre>
+  </div>
+</div>
+<style>
+twitterwidget {
+  margin: 0 auto 2em;
+}</style>
+
+<blockquote style="margin: 0 auto; display: block" class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Doing a refactor today and for kicks, I thought I&#39;d try rewriting a Flexbox Grid using CSS Grid...&#13;&#13;Flexbox: 42 lines&#13;Grid: 5 lines</p>&mdash; Dave Rupert (@davatron5000) <a href="https://twitter.com/davatron5000/status/842117892384690176">March 15, 2017</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>Fallbacks in flexbox are possible, but are a bit more hacky and require more lines of code. I’ve even found that writing layouts using CSS Grid first is a good paradigm for understanding how the layout itself flows, which then allows for easier writing of a Flexbox fallback, such as in the initial example.</p>
+
+<h2 id="gutter-the-way-we-want-it">Gutter the Way We Want it</h2>
+
+<p>CSS Grid implements <code>grid-gap</code> which creates a gutter <em>between your elements</em>. This is a problem we’ve been trying to solve for ages with responsive web design grids.</p>
+
+<p>Previously, you would need to use margins for element spacing in your flexbox or float-based grid systems. This also meant weird hacks to remove the margins we don’t want (such as the ones around the sides, top, and bottom of our grid container).</p>
+
+<p>These are some of the things we’ve tried in the past to solve this problem:</p>
+
+<ul>
+  <li>First we had to use JavaScript to count up our elments and apply classes to remove these margins based on where they were in the spread</li>
+  <li>Then, we used responsive grid frameworks, which were mostly percentage based, but we had to specify how many columns we had and what they would span</li>
+  <li>Then, we tried to remove our outer margins with <a href="https://css-tricks.com/snippets/css/remove-margins-first-element/">nth-children</a> but that was very prone to error and brittle when the screen resized</li>
+  <li>Eventually <code>calc</code> was introduced for grid gutters due to the ability to mix units (100% - gutters), but the code was still pretty hacky, and either needed to know how many items were in the row, or used negative positiong hacks and <code>overflow: hidden</code> on the outside gutters</li>
+</ul>
+
+<p>My point is: CSS grid fixes all of this. It places gutters <strong>between elements</strong> where they’re most commonly intended to be in <strong>one line</strong> of <strong>very clear and concise CSS.</strong></p>
+
+<h2 id="minmax">Minmax</h2>
+
+<p>With grid comes <code>minmax()</code>, a CSS function that allows you to set a minimum width (or height) and a maximum width (or height) to a containing element. If you’re like me, you’re already thinkig: <em>“Uhmm… WHAT?! YES. FINALLY”</em>, but you’re probably less nerdy about this kind of stuff than me 🤓 You can use:</p>
+
+<ul>
+  <li>Any fixed unit (i.e. <code>px</code>, <code>em</code>, <code>vw</code>, etc.)</li>
+  <li>Grid units (i.e. <code>1fr</code>)</li>
+  <li>Percentages (i.e. <code>40%</code>)</li>
+  <li><code>min-content</code></li>
+  <li><code>max-content</code></li>
+  <li><code>auto</code></li>
+</ul>
+
+<p>There is a lot of power in a few lines of code right here, and allows for elements to be flexible within their grids but at a certain point stop decreasing/increasing in size. <strong>That means you might not need media queries</strong> and even better, it brings us one step closer to <strong>element queries</strong> where elements flex based on the size of their individual container and not the size of the browser window.</p>
+
+<p>An example is as follows:</p>
+
+<p data-height="300" data-theme-id="5255" data-slug-hash="QpJMyY" data-default-tab="result" data-user="una" data-embed-version="2" data-pen-title="CSS Grid + Flexbox Layout Demo -- minmax (no fallback)" class="codepen">See the Pen <a href="http://codepen.io/una/pen/QpJMyY/">CSS Grid + Flexbox Layout Demo -- minmax</a> by Una Kravets (<a href="http://codepen.io/una">@una</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+<p>That demo doesn’t include a fallback yet, so here’s a gif of what that should look like if you’re not on the latest browser:</p>
+
+<p><img src="../images/posts/css-grid/minmax.gif" alt="CSS Grid minmax demo" /></p>
+
+<p>Minmax + Auto flow means you can make some really awesome layouts. In the example above, the larger content area was set to <code>auto</code> flow while the sidebar has a <code>minmax</code> constraint. The entire grid, with a header and content body next to a sidebar but separated from the footer, looks like:</p>
+
+<pre><code>body {
+  display: grid;
+  grid-gap: $gutter;
+  grid-template-columns: minmax(150px, 400px) auto;
+  grid-template-rows: 10vh $img-sec-h $img-sec-h auto;
+  grid-template-areas:
+    "side     header       header"
+    "side     top-left     top-right"
+    "side     bottom-left  bottom-right"
+    "footer   footer       footer";
+}
+</code></pre>
+
+<p>I didn’t have to set widths on individual elements or use <code>calc</code> or anything! And did I mention since it’s CSS Grid it works <strong>both horizontally and vertically</strong> for rows and columns!? 🎉🎉🎉</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>The CSS grid spec provides a lot of powerful features for developers and designers, and will make layout on the web immensely easier and much more semantic. It just works, and I’m almost angry it’s so easy.</p>
+
+<p>Also note that CSS Grid isn’t a replacement for Flexbox. They work together in unison. Since Flexbox is a <em>linear</em> layout property, it can work well <em>within</em> a grid system, but isn’t the best solution to page layouts, which are both horizontal and vertical. They work together to make layout a dream.</p>
+
+<h2 id="learn-css-grid">Learn CSS Grid</h2>
+
+<p>Take some time to explore these resources and find out what all of the hype is about.</p>
+
+<ul>
+  <li>http://gridbyexample.com/</li>
+  <li>https://cloudfour.com/thinks/first-css-grid-layout/</li>
+  <li>http://labs.jensimmons.com/</li>
+  <li>https://www.mozilla.org/en-US/developer/css-grid/</li>
+  <li>https://alistapart.com/article/practical-grid</li>
+</ul>
+:ET

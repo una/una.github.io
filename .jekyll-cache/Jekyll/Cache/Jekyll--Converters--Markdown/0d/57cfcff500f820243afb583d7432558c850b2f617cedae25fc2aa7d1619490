@@ -1,0 +1,129 @@
+I"@+<p><a href="http://una.im/2015-resolutions">Last year</a> I started a (now annual) tradition of reviewing my personal goals, and setting new ones. Looking back, <strong>I can’t believe how much has happened this year.</strong> It’s definitely been a roller coaster, and I’ve definitely grown a ton as a person. Thank you all for joining me on this journey!</p>
+
+<h2 id="2015-retrospective">2015 Retrospective</h2>
+
+<p>Here are a few projects I’ve launched over the past year (all source code available on GitHub, where I made <strong>2,396 commits</strong> this year):</p>
+
+<ul>
+  <li><a href="http://sassdirector.com/">Sass Director</a>: A file generator for Sass partials that uses a single “director script” (aka your <code>main.scss</code>)</li>
+  <li><a href="https://github.com/una/gulp-starter-env">Gulp Starter Environment</a>: Created for the designers I worked with to learn gulp and get familiar with using Github.</li>
+  <li><a href="http://happy-moments.herokuapp.com">Happy Moments</a>: A node app that pulls in a single happy moment memory from each day I’ve had this year.</li>
+  <li><a href="http://travels.surge.sh/">Travels</a>: A web experiment site that uses filters and blend modes, featuring my travel poetry as content.</li>
+  <li><a href="http://una.im/cssgram">CSSgram</a>: A tiny CSS library recreating Instragram filters using just CSS features.</li>
+  <li><a href="http://toolsday.io/">Toolsday</a>: A 20-ish-minute podcast about the latest in tech tools, tips, and tricks (hosted along with my coworker, <a href="https://twitter.com/chrisdhanaraj">Chris</a>)</li>
+  <li><a href="http://arttheweb.com/">arttheweb.com</a>: A collection of my articles, talks, and web experiments based around designing in the browser.</li>
+</ul>
+
+<p><img src="../../images/posts/2015-review/contribs.png" alt="contribution graph" /></p>
+
+<p>That was all outside of work. At IBM, I worked on two large-scale pattern libraries (one for Watson and one for Bluemix), built prototypes for product iterations, and helped build a Front-End Development community and curriculum for trainings.</p>
+
+<h3 id="knowledge-sharing">Knowledge Sharing</h3>
+
+<p>Last year, I said I wanted to “participate in conferences and community” as one of my goals. With that dream in mind, I went about applying to speak at conferences, hoping to get invited to one. Here’s what actually happened:</p>
+
+<p><img src="../../images/posts/2015-review/dog.gif" alt="dog gif" /></p>
+
+<p>I gave <strong>17 talks/workshops</strong> on Sass, UI interaction, performance optimizations, keyboard ninjary, open source design, goal setting, and CSS filters and blend modes. I wrote <strong>30 blog posts</strong> on topics ranging from experimental (like <a href="http://una.im/sass-pixel-art/">Generative Pixel Art</a> via Sass matrices and blend-mode hacks to create <a href="http://una.im/3d-effect">Faux 3d Effects</a>, to quite practical (<a href="http://www.sitepoint.com/5-great-uses-sass-maps/">5 Uses for Sass Maps</a> and a class-based <a href="http://una.im/classy-css/">CSS architecture</a> system). I also <em>recorded audio for every post I wrote on my blog</em> and the audiobook version of the <a href="http://svgpocketguide.com/book/">SVG Pocket Guide</a>. And finally, I started a <strong>podcast</strong> about developer tools called <a href="http://toolsday.io">Toolsday</a>!</p>
+
+<blockquote class="left">If you'd like to support my code calligraphy or just send a simple thank you, I made an <a href="http://amzn.com/w/2BOPP6HPWDL9S">Amazon wishlist</a> of pens, paper, and audiobooks :)</blockquote>
+
+<p>I also started doing <strong>code calligraphy</strong> as a way to visualize some mnemonic devices and solidify my skills. People on Twitter seemed to really resonate with them, so I want to make more. A lot of people mentioned that they wanted prints, a book, or posters. I’ve got some ideas, but we’ll see how it pans out with time.</p>
+
+<h3 id="other-things">Other Things</h3>
+
+<p>I traveled <em>a lot</em> this year. According to my TripIt data, I traveled a total of <strong>139,872 miles</strong> to <strong>29 cities</strong> in <strong>8 countries</strong>. Where? Australia, England, Belgium, Italy, Switzerland, Germany, and France (and many trips around the US too). While short conference trips can be taxing, I do really love to travel. My <a href="https://www.instagram.com/unakravets/">Instagram</a> is now full of photos from my adventures <em>and</em> I got to meet so many awesome people (the best part of conferences)!</p>
+
+<div class="half--right">
+  <figure>
+    <img src="../../images/posts/2015-review/dotcss.jpg" alt="" />
+  </figure>
+  <p class="caption">Interviewing with Sylvain after my dotCSS talk in Paris.</p>
+</div>
+
+<p>I started to read a lot, too (by read, I really mean <em>listen</em> to audiobooks). I finished <strong>51 books</strong> <a href="https://github.com/una/personal-goals/blob/master/ideas-and-misc/book-checklist.md">this year</a>. My favorites were:</p>
+
+<ul>
+  <li><em>Ready Player One</em> by Ernest Cline</li>
+  <li><em>All the Light We Cannot See</em> by Anthony Doerr</li>
+  <li><em>The Martian</em> by Andy Weir</li>
+  <li><em>Outliers</em> by Malcolm Gladwell</li>
+  <li><em>Ghost in the Wires</em> by Kevin Mitnick</li>
+  <li><em>Ender’s Game</em> by Orson Scott Card</li>
+</ul>
+
+<h3 id="recognition">Recognition</h3>
+
+<p>Apparently people took notice of my work, but didn’t know where to categorize my contributions. I was shortlisted for <a href="https://thenetawards.com/vote/young-designer/">Young Designer of the Year</a> while also getting on a list of <a href="http://blog.bithound.io/2015-top-js-devs/">2015’s Top JS Devs to Follow</a> and <a href="http://skillcrush.com/2015/11/04/50-female-tech-influencers-to-follow-on-twitter/">Female Tech Influencers</a> 💪. One day there will be a place for people like us.</p>
+
+<h3 id="personal-goals-outline">Personal Goals Outline</h3>
+
+<p>So how am I doing on those overall goals I laid out last year?</p>
+
+<ol>
+  <li>Build quickly, ship things, and learn. <em>(yep!)</em></li>
+  <li>Contribute to Open Source <em>(hell yeah!)</em></li>
+  <li>Share knowledge as often as possible <em>(definitely!)</em></li>
+  <li>Appreciate the creative &amp; talented people in my life <em>(I try)</em></li>
+  <li>Use Vim + the keyboard more often <em>(yes!)</em></li>
+  <li>Up my JS Game <em>(I’m definitely better but should learn way more)</em></li>
+  <li>Performance-first advocacy <em>(yep!)</em></li>
+  <li>Foster designer participation in OS projects <em>(around me, yes — outside, maybe?)</em></li>
+  <li>Participate in conferences &amp; community <em>(LOL. yes)</em></li>
+  <li>Use web components <em>(nope)</em></li>
+  <li>Be kinder <em>( ¯\_ (ツ) _/¯ )</em></li>
+</ol>
+
+<p><br /></p>
+
+<figure style="width: 120%; margin-left: -10%;">
+<img src="../../images/posts/2015-review/travels.jpg" />
+<figcaption style="margin-left: 7%;">Some photos from my <a href="http://instagram.com/unakravets">Instagram</a> documenting my travels this year.</figcaption>
+</figure>
+
+<h2 id="2016-small-dreams-are-boring">2016: Small Dreams are Boring</h2>
+
+<figure>
+  <img src="../../images/posts/2015-review/mantra.jpg" />
+  <figcaption>That's my mantra for the year. To dream big and put in the effort to make things happen.</figcaption>
+</figure>
+
+<h3 id="professional-goals">Professional Goals</h3>
+
+<p>There are so many things I want to learn and get better at! First and foremost, <strong>JavaScript.</strong> I feel like I have a general grasp on most web-development concerns (accessibility, performance, progressive enhancement), and I’m pretty darn good at styling (Sass &amp; CSS). So for me, the next step is to really focus on improving my JavaScript skills from just being functional to having a really good base understanding of how to build and work within a web app. <a class="twitter-share">In the current state of the web, Javascript == Power</a>.</p>
+
+<blockquote class="left">I'm going to share as I learn, so get ready to join the JavaScript train, my friends.
+</blockquote>
+
+<p>If you follow me for my CSS content, don’t worry — I’m not going to stop writing about other front-end topics, I just also want to understand flux architecture and all the magics of Webpack. I want to understand good API design and improve my knowledge of algorithms and data structures. I think I just need to start building some apps out for this (and I have a few ideas in mind already!)</p>
+
+<p>I also really want to <strong>write a book</strong> on an entirely different topic — which is about working with images in the browser. It will cover everything from choosing a media format to performance to getting fancy with filters and blend modes. I’m currently in the process of <em>looking for a publisher</em> — so if you know any interested, feel free to forward them my email address (see footer). <em>(also, feel free to send me email to say hello, because why not?)</em></p>
+
+<h3 id="personal-goals">Personal Goals</h3>
+
+<figure class="right">
+  <img src="../../images/posts/2015-review/silks.jpg" />
+  <figcaption>Look, Mom! I'm upside-down!<figcaption>
+&lt;/figure&gt;
+
+First and foremost, after years of hackathons and conferences, I've come to realize that my wardrobe has now come to resemble that of a 20-year-old startup bro. Worse still is that I got comfortable wearing these tshirts and jeans every day ~~to work~~ everywhere. I want to **dress better**. And actually make time to go shopping :) that might help. Pinterest too.
+
+I also want to get fit again (yes, I failed at this in 2015 &mdash; but I blame all of the travel). I started taking classes like aerial silks, which were awesome, and I want to continue those while also training for a **half-marathon**. I know it's going to suck at first, but hopefully I'll learn to love running again. I need to prioritize my health.
+
+My last personal goal from 2015 was to be better at **keeping in touch** with people I think I failed on that too. So I'm going to try to better in the future.
+
+### 2016 Goals Overview
+
+I'm cutting this down to fewer and more concise goals than last years. Here they are:
+
+1. **JavaScript.** It's so powerful, and I want to get much better at it so I can be a powerful wizard, too!
+2. **Write a Book** I have a book idea in mind and I really want to make it a reality.
+3. **Bridge the Designer/Developer Gap** Continue sharing knowledge on front-end topics relevant to both designers and devs.
+4. **Build All The Things** Build things quickly, ship, learn, and then build them better. Open source it all, too.
+5. **Prioritize my Health** Run that half marathon &mdash; fitness is mandatory, not optional.
+
+I'll leave you with this lovely holiday song about the state of developer life from your [Toolsday](http://toolsday.io) hosts (Chris Dhanaraj and me) 😃
+
+<iframe width="100%" height="440" src="https://www.youtube.com/embed/1NV-39LngiM?rel=0" frameborder="0" allowfullscreen=""></iframe>
+</figcaption></figcaption></figure>
+:ET

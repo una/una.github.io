@@ -1,0 +1,77 @@
+I";/<p>We often see blog posts about optimizing our images or HTML, or even our team’s work flow. But what about optimizing our comprehension? In an ever-changing industry where tools, ideas, and opinions grow exponentially, how can we keep up? This is a topic very close to my heart as somebody who is both stubbornly ambitious and also has a really terrible memory.</p>
+
+<p>Front end developers are often bombarded with so many tasks, options, and stimuli, that we end up being overwhelmed by choices, causing a complete paralysis and block to getting anything done at all. This is called <strong>option paralysis</strong> or <strong>analysis paralysis</strong> (that’s a real thing). And it doesn’t help that we work on the internet, where opening a new tab is like walking into a new room, causing us to forget what we were just focused on doing, and starting on a new stimuli instead.</p>
+
+<h2 id="the-doorway-effect">The Doorway Effect</h2>
+
+<p>Tammy Everts wrote a really good <a href="http://www.webperformancetoday.com/2012/03/21/neuroscience-page-speed-web-performance/">blog post</a> about this phenomenon — <strong>“The Doorway Effect”</strong> — where she relates neuroscience to the need for quick and efficient website performance. In short, the Doorway Effect explains why we can go searching for something in one room, walk into another room to look for it, and forget what we were looking for in the first place. This is due to our <a href="http://www.appsychology.com/Book/Cognition/Memory/memoryintro.htm">sensory memory</a>, which works surprisingly similarly to a computer’s memory bank.</p>
+
+<p><img src="../images/posts/learning-types0.svg" alt="" /></p>
+
+<p>This graphic demonstrates the theory of <strong>Persistence of Vision:</strong> a phenomenon where an after-image persists in human memory. A radially spinning rope is percieved as an unbroken circle if spinning faster than 100ms, while breaks are noticed when it spins slower. <strong>Sensory memory</strong>, responsible for <a href="http://link.springer.com/article/10.3758/BF03204258">Persistence of Vision</a>, works in 100ms bursts. Once this time is up, we simply move on to the next sensory input to take up that space. Google’s Urz Holzle, in <a href="https://www.youtube.com/watch?v=MStKwEff_kY">this</a> talk at Velocity 2010, describes how their goal is to make web pages seamless — like they are pages in a book. He says, <em>“we’re really aiming, something very, very, high here, at something like 100ms.”</em> Ironic? Maybe. Maybe not.</p>
+
+<h2 id="learning-modalities">Learning Modalities</h2>
+
+<p>While there is some <a href="http://elearninginfographics.com/the-myth-of-learning-styles-infographic/">disagreement</a> on whether people learn better when tailoring their experience to a particular “learning style” (AKA the “are-learning-styles-even-real?” debate), it is universally agreed upon that various stimuli do influence our ability to recall information. These stimuli come in four “modalities:” <strong>visual, auditory, read/write, and kinesthetic.</strong></p>
+
+<p><img src="../images/posts/learning-types.svg" alt="" /></p>
+
+<p>According to <a href="http://sunnibrown.com/doodlerevolution/">Sunni Brown</a>’s research, in order to really comprehend information and do something with it, <strong>we must engage either two of those modalities, or any one of them paired with an emotional response</strong>. This is because memory is stored in terms of <a href="http://www.readingrockets.org/article/do-visual-auditory-and-kinesthetic-learners-need-visual-auditory-and-kinesthetic-instruction">meaning</a>, and activating multiple senses during any experience makes it more meaningful and memorable.</p>
+
+<h2 id="doodling">Doodling</h2>
+
+<p>Last week, <a href="http://about.me/jodiiiii">Jodi Cutler</a> responded to one of my <a href="http://instagram.com/p/wZJrdHyTlO/?modal=true">Instagram photos</a> of a doodle I drew in an important meeting with a link to this <a href="http://www.ted.com/talks/sunni_brown?language=en">TED Talk</a>. At first, I thought, “shit, I must be in trouble”. But The TED Talk outlines how negative perceptions of doodling are ignorant and inconsistent with statistics based on education research.</p>
+
+<p>Doodling gets a bad reputation as something people do when they’re uninterested or unfocused, but that is far from true! According to recent neuroscience <a href="http://www.wsj.com/articles/the-power-of-the-doodle-improve-your-focus-and-memory-1406675744">studies</a>, <strong>people who doodle were more likely to retain information than those who did not</strong> (about 29% more to be exact). In addition to an increased retention, doodlers have proven to be more creative and spark more ideas. &lt;blockquote class="left"&gt;Drawing an image helps stimulate new images in your brain that spark ideas.&lt;/blockquote&gt; Brown preaches that <em>“doodling should be leveraged in … situations where information density is very high.”</em></p>
+
+<p>This made me feel a lot better about my doodling, which has covered the sides of my school notes and has recently found itself creeping onto Post-Its and sketchbooks. It can be awkward, especially around new teams, where people may think you’re ignoring them or not listening. Education is key here. To further avoid distraction, I personally find that the best method for me is to doodle repetitive, geometric shapes; it keeps my body moving and my mind in a neutral state.</p>
+
+<p><img src="http://photos-b.ak.instagram.com/hphotos-ak-xfa1/10843712_583681585111801_474148502_n.jpg" alt="Sketchnotes from a meeting" /></p>
+<div class="caption">The dot grid doodle from a morning meeting last week</div>
+<p><img src="http://distilleryimage7.ak.instagram.com/032920461feb11e3836422000ae81e59_7.jpg" alt="Sketchnotes from class crits" /></p>
+<div class="caption">If you can see, the side comment in the notebook, says "Chemi's class crits doodle page." Chemi was the professor.</div>
+
+<p><a class="quote twitter-share">“Doodling helps you concentrate and grasp new concepts because it keeps the brain at an ideal state of arousal”</a></p>
+
+<p>This idea relates to a lot of the reasons why <a href="http://swizec.com/blog/why-programmers-work-at-night/swizec/3198">Developers Work At Night</a>. When we’re at 100% brain power, and buzzing, we’re thinking about too many other things to concentrate on a single task. <strong><a href="http://nightowlsbook.com/">Swizec Teller’s</a> theory of the “sleepy brain”</strong>, says that we work best at night because “there isn’t enough left-over brainpower to afford losing concentration.”</p>
+
+<aside>Another fun fact from Teller's book: we're more productive in the morning, yet more creative in the evening.</aside>
+
+<h2 id="listening">Listening</h2>
+
+<p>Something I just started doing lately (unlike doodling) is <strong>listening</strong> to blog posts instead of reading them. This stemmed out of my intense desire to multi-task as much as possible, and my enjoyment of the freedom that podcasts allow. I think its been working pretty well. If I really want to focus on the content, I will do both (read and listen to the same text). That way, if I get distracted and end up on another web page, there is still the <strong>auditory stimuli that keeps my sensory memory flowing</strong> (thus avoiding the “doorway effect”), and keeping me on track.</p>
+
+<p><a class="quote twitter-share right">I liked listening to my blog posts so much, that I started turning ebooks into audiobooks</a></p>
+
+<p>Listening also allows for that mild, ideal temperament to best retain information. One night, while relaxing and crafting holiday cards, I found myself going through 7 or 8 blog posts. The way I do this online is via a Chrome extension called <a href="http://www.ispeech.org/#/home">Select and Speak</a>. So blogs are a good start, but I also have several e-books on my iPad that I wish I could listen to instead of read. I discovered an app called <a href="http://www.voicedream.com/">Voice Dream Reader</a> ($9.99) for the iPad, and have been using that to turn e-books into audiobooks. Voice Dream Reader also integrates with Pocket.</p>
+
+<p><img src="../images/posts/learning-types2.svg" alt="" /></p>
+
+<p>Keep in mind, none of these are ideal solutions — TTS (Text to Speech) has a long way to go, especially when it comes to development or code-heavy posts. The screen reader trying to read code is just downright hilarious (but also very confusing/annoying). That’s why I’ve decided to provide an audio version for this post, and all future blog posts. It also makes the post less robotic to hear, since it’ll be coming from the author’s own voice. Regardless, audio works best for non-code-focused articles.</p>
+
+<p>The task you’re doing while listening is also important. For example, I can’t write while I listen to another audio source, making coding and blogging difficult. However, I do <a class="twitter-share">listen to blog posts while casually browsing the internet, driving, or crafting</a>. Its a great way to passively absorb information, especially when you’ve got a long <a href="http://sharedli.st/ukravets">list</a> like I do..</p>
+
+<h2 id="actively-avoid-your-other-tasks">Actively Avoid Your Other Tasks</h2>
+
+<p>Focusing is something that I often have trouble with. I have so many ideas, so many thoughts, so many things I want to do <em>right now!</em> So yes, I understand how advising someone to “focus on one task” literally means nothing. However, one of my co-workers the other day told me the same thing, but from a different perspective. She said:</p>
+
+<p><a class="quote twitter-share">Pick one thing and try not to think about any of the other things you’re not doing.</a></p>
+
+<p>Well, of course! That makes sense. Instead of actively trying to focus on one task, actively avoid doing other tasks. If you are making a conscious decision that It is in your best interest to put those other tasks aside, it alleviates the anxiety and guilt of not doing them.</p>
+
+<p><a class="twitter-share">Distractions are doorways.</a> Avoiding distractions (or avoiding “The Doorway Effect”), will help you in completing whatever learning you’ve begun rather than just getting lost in a tangle of disjointed links. There are a lot of tools I use to help with distractions while working.</p>
+
+<h3 id="self-control-the-app">Self Control (the App)</h3>
+
+<p>The <a href="http://selfcontrolapp.com/">Self Control App</a> allows you to to block content on distracting websites (i.e. Facebook) for a set period of time. The app prevents your computer from accessing any of the sites on your self-determined “block list,” reminding you to get back to focusing on the task and preventing you from falling into a black hole of distraction.</p>
+
+<h3 id="leverage-habituation">Leverage Habituation</h3>
+
+<p>Nutritional <a href="http://www.dailymail.co.uk/femail/article-2320971/Can-eating-foods-day-make-lose-weight-How-mono-lunchers-consume-fewer-calories-overall.html">studies</a> show that participants who ate the same food each day were more likely to lose weight than those who consumed a more varried diet (even when they ate mac &amp; cheese every day). The researchers said <strong>“habituation”</strong> — the body’s decreasing response to a stimulus after repeated exposure to it — was the cause.</p>
+
+<p>When doing development work, listen to music that’s familiar to you. If I put on new music (i.e. someone else’s playlist), and hear something I like, I’ll end up researching lyrics, adding it to my own playlists, searching other songs by that artist, etc. You get the point. So what I’m basically saying here is, play music that won’t be an unintended distraction.</p>
+
+<p><strong>tl;dr: Doodle at meetings, try listening to blog posts, and actively avoid unrelated tasks.</strong></p>
+
+<aside>I'm curious to hear if these tips help you out. Don't hesitate to leave a comment or tweet at me!</aside>
+:ET

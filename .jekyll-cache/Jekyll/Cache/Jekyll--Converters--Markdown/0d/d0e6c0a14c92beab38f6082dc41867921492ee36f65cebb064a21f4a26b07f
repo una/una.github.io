@@ -1,0 +1,65 @@
+I"J<p>I’m a pretty big fan of delightful interactions and micro-animations in design. They not only bring joys to users, but they can also significantly improve a user’s experience <em>(which means more users!)</em>.</p>
+
+<h2 id="lets-talk-about-neuroscience">Lets Talk About Neuroscience</h2>
+
+<p>If you read my earlier post about <a href="http://una.github.io/comprehension">learning and comprehension</a>, you’ll recall that memory relies on three distinct processes: <em>sensory memory, short-term memory, and long-term memory.</em></p>
+
+<h3 id="sensory-memory">Sensory Memory</h3>
+
+<p><em>Sensory Memory</em> is our unconscious ability to retain impressions of sensory stimuli (visual, auditory, taste, smell, and physical touch) after the original stimuli has ended. This happens automatically as stimuli is perceived and thus does not require conscious thought. <a href="http://education-portal.com/academy/lesson/sensory-memory-definition-examples-types.html"><sup>1</sup></a></p>
+
+<blockquote class="right">Sensory memory degrades very quickly, typically in the region of 100 - 500 milliseconds after the perception of an item.</blockquote>
+
+<p>Humans evolved this sensory ability as a means to deal with situations that require quick reactions (i.e. immediately sensing dangerous situations like a fire or poisonous animal). We will react without objectively thinking through the next steps of the situation <em>(a good thing!)</em>. These situations are also why humans are much more sensitive to movement <em>(read: animation)</em> than finer details and color in our peripheral vision. We wouldn’t want an enemy tribe to sneak up on us.</p>
+
+<h3 id="iconic-memory">Iconic Memory</h3>
+
+<p><strong>Iconic memory</strong> is the visual system within sensory memory and has been described as the cause of this phenomenon: <strong>Persistence of Vision</strong> <a href="https://www.princeton.edu/~achaney/tmve/wiki100k/docs/Persistence_of_vision.html"><sup>2</sup></a>, by which an afterimage is thought to persist for approximately 1/25 of a second on the retina. <em>Try this:</em> Look at a nearby object for a moment, then close your eyes. You’ll see a brief after-image of what you were just looking at. This can also describe why we can see a full circle when looking at a spinning rope. When spun faster than the duration of our sensory memory “bank”, the visual after-image will connect. In contrast, when spun slowly, it shows a visual break in the circle.</p>
+
+<p><img src="../images/posts/learning-types0.svg" alt="iconic memory" /></p>
+
+<div class="caption">Yes, this image stolen from a previous blog <a href="http://una.github.io/comprehension">post.</a></div>
+<p><br /></p>
+
+<p>If interested, here are some more <a href="http://examples.yourdictionary.com/examples-of-iconic-memory.html">examples of Iconic Memory</a>.</p>
+
+<h2 id="using-sensory-memory-to-our-advantage-as-designers">Using Sensory Memory to Our Advantage as Designers</h2>
+
+<p>People are bad at remembering things — we just are (and this is why performance optimization and speed is so vital to our products). As Tammy Everts puts it, <q>our need for web speed is about neuroscience, not entitlement</q>.<a href="http://www.webperformancetoday.com/2012/03/21/neuroscience-page-speed-web-performance/"><sup>4</sup></a> <a class="twitter-share">This sensory time is short and precious, and we need to take advantage of it to improve experiences.</a><small>Tammy’s article is really, really good, by the way. I highly recommend it!</small></p>
+
+<p>Luckily, with design as our tool, we can do just that. Lets look at animations. <a href="http://dl.acm.org/citation.cfm?id=1599820">Studies</a> on cognitive load theory show that animated presentations which visually demonstrate a correlation between items significantly improved motivation and concentration levels without additional mental effort. <strong>Without additional mental effort!</strong> Thats so great! Because people do truly have a <a href="http://whole30.com/2014/04/boost-your-willpower/">limited</a> bank for mental effort.</p>
+
+<p><a class="twitter-share quote">Animations and transitions that visualize connecting views increase the chances that a user will remain on your site and understand the intended task more easily.</a></p>
+
+<h3 id="state-persistence-animation-spa">State Persistence Animation: SPA</h3>
+
+<p>Companies have recently started doing this with animations between visual states. I’d like to refer this technique as <strong>State Persistence Animation</strong> AKA <strong>SPA</strong>. <small>(I was going to call it State Persistence Animations and Transitions but SPAT didn’t sound right.)</small></p>
+
+<figure class="right">
+<img src="../images/posts/spa-animations/twitter-opening.gif" />
+<figcaption><a href="http://iosdevtips.co/post/88481653818/twitter-ios-app-bird-zoom-animation">This</a> post descibes how to mimic this style in Swift and where I stole the gif from because #lazy.</figcaption>
+</figure>
+
+<p>The twitter bird logo (Larry) was, for a time, used as a means of visual continuity between screen changes. He responds to the point at which our fingers touched the icon and becomes the background for the application loading. This not only clarifies a state change for a user, but makes the app feel as though its loading more quickly, much in the same way that <a href="http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/">progressive jpegs</a> do as they load in layers. In this case, it’s a subtle bounce which makes the bird become a little smaller before it takes over the screen. The little things really do make a huge impact.</p>
+
+<p><img class="left" src="../images/posts/spa-animations/yahoo-opening.gif" alt="" /></p>
+
+<p><br />
+<a href="http://www.smashingmagazine.com/2015/01/19/using-motion-for-ux-on-apps-and-websites/">This</a> Smashing Magazine article also touches on the phenomenon in its first example. The article speaks to contextual interactions that mimic the real world. In the real world, nothing happens “suddenly.” We walk <em>up</em> to things (they don’t just appear), and see the world changing around us as we get there.</p>
+
+<p><a style="max-width: 68%; margin-bottom: 1em;" class="twitter-share quote right">One thing that digital world has removed from us is this context of place</a></p>
+
+<p>But this can be mitigated as design begins to increasingly mimic the interactions of the natural world. Have you ever thought about why the pattern of pulling a menu in and out of a page has become so popular? In the physical world, <em>every action has an equal and opposite reaction.</em> Thus, when we open a drawer, or menu, we expect that the same action will close it.</p>
+
+<p>The Smashing article goes on to explain how CSS Transitions can help with the practice of persistence animations in your apps, and here are two more strong examples of using <strong>SPA</strong> within websites:</p>
+
+<p><img src="../images/posts/spa-animations/animation-fleet-feet.gif" alt="Fleet Feet" />
+<img src="../images/posts/spa-animations/animation-apple-menu.gif" alt="Apple Menu" /></p>
+<div class="caption">Those were grabbed from <a href="http://www.newmediacampaigns.com/blog/examples-of-animation-in-web-design">this post</a></div>
+
+<h2 id="spa--less-thinking-more-doing">SPA = Less Thinking, More Doing</h2>
+
+<p>When you use animations to visually demonstrate persistence of state or interaction, it equals gains in usability. The user is doing less thinking about how the two steps are connected, and instead having a more fluid experience with your app or website. <a class="twitter-share">Lessening the cognitive load of a task is key in increasing performance of that task</a>, and motion also has a positive correlation with perceived speed.<a href="http://uxmovement.com/buttons/how-to-make-progress-bars-feel-faster-to-users/"><sup>5</sup></a></p>
+
+<p>As always, find a balance and don’t overdo it. <em>Happy designing!</em></p>
+:ET

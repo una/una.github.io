@@ -1,0 +1,116 @@
+I"X6<p>For the past <a href="http://una.im/2015-resolutions">two</a> <a href="http://una.im/2015-review">years</a> I’ve been reviewing my personal goals, setting new ones, and taking a look back on the year. A lot has happened this year for sure. I started a new job, was a digital nomad for a while (traveled a ton), moved cities (Austin to NYC), embarked on new ventures and met a ton of great people in the process.</p>
+
+<p>I started this 2016 year-in-review kind-of being bummed out that I didn’t accomplish as much this year as <a href="http://una.im/2015-review">last year</a>, but as I compiled everything, I realized how much I actually <em>had</em> done. That’s why I do these reviews. They’re a way to look back on the year and recognize accomplishments and setbacks (and then evaluate those and make new goals for the coming year).</p>
+
+<h1 style="text-align:center">2016 in Review</h1>
+
+<h2 id="dev-things">Dev Things</h2>
+
+<p>I made <strong>1062</strong> commits this year. Here are a few of the projects I launched in 2016:</p>
+
+<ul>
+  <li><a href="https://github.com/una/svg-icon-system-boilerplate">SVG Icon System Boilerplate</a>: A boilerplate for making an SVG icon system using symbol sprites</li>
+  <li><a href="http://diffee.me/">Diffee</a>: A visual diff checker using CSS blend modes</li>
+  <li><a href="https://github.com/una/caniuse-component">CanIUse Component</a>: Live CanIUse data for your presentations</li>
+  <li><a href="http://youmightnotneedjs.com/">YouMightNotNeedJS.com</a>: A showcase of CSS/HTML-only tricks to build interactive UI elements</li>
+  <li><a href="http://vr-pong.com">VR Pong</a>: A collaborative WebVR experiment with <a href="https://twitter.com/MikeRiethmuller">Mike Riethmuller</a></li>
+  <li><a href="http://una.im/little-cli-game/">Little CLI Game</a>: A text-based game to help learn the unix command line</li>
+</ul>
+
+<p><img src="../images/posts/2016-review/contrib-graph.jpg" alt="" /></p>
+
+<p>While I didn’t <em>launch</em> as many projects last year as I did the year before, I did put a significant amount of effort and contribution to a few projects I started last year, including:</p>
+
+<ul>
+  <li><a href="http://una.im/cssgram">CSSgram</a>: A tiny CSS library recreating Instragram filters using just CSS features</li>
+  <li><a href="http://travels.surge.sh/">Travels</a>: An experimental website featuring my travel poetry that uses filters and blend modes for unique layouts</li>
+  <li><a href="http://toolsday.io/">Toolsday</a>: A 20-ish-minute podcast about the latest in tech tools, tips, and tricks (hosted with <a href="https://twitter.com/chrisdhanaraj">Chris Dhanaraj</a>)</li>
+</ul>
+
+<h3 id="speaking--writing--knowledge-sharing">Speaking / Writing / Knowledge Sharing</h3>
+
+<p>In addition to speaking with new people the podcast (we had guests this year!) I spoke on a few other podcasts and did some interviews for blogs. These are the highlights:</p>
+
+<ul>
+  <li>The year kicked off with an interview for <a href="https://superyesmore.com/cartoon-dolls-c2bbe6bb982658b3e614716715beda25">SuperYesMore</a> on how I began coding (there’s an adorable baby photo in there)</li>
+  <li>I got to guest on one of my favorite podcasts, <a href="http://thestart.fm/interviews/the-unacorn">The Start</a></li>
+  <li><a href="#">Sarah Drasner</a> interviewed me for <a href="https://css-tricks.com/an-interview-with-una-kravets/">CSS Tricks</a></li>
+  <li>I did an <a href="https://hashnode.com/ama/with-una-kravets-cive3utpm07w8vi53m48rgth8">AMA on Hashnode</a>, which was a ton of fun</li>
+  <li>I was on the wonderful <a href="https://soundcloud.com/hacktostart/hacktostart-episode-121-una-kravets-ui-engineer-digital-ocean?utm_source=soundcloud&amp;utm_campaign=share&amp;utm_medium=twitter">Hack to Start</a> podcast</li>
+  <li><a href="#">Scott Hanselman</a> interviewed me on <a href="http://hanselminutes.com/557/rethinking-front-end-design-and-development-with-una-kravets">Hanselminutes</a></li>
+  <li>I was interviewed by <a href="#">Karen McGrane</a> and <a href="#">Ethan Marcotte</a> for the <a href="https://responsivewebdesign.com/podcast/digitalocean/">Responsive Web Design podcast</a></li>
+  <li>I had the opportunity to judge the impressive entries for the <a href="https://a-k-apart.com/">10k-Apart</a> competition. The entries blew me away!</li>
+  <li>And I had a feature in the <a href="https://aneventapart.com/news/post/front-end-back-story">An Event Apart Speaker Spotlight</a></li>
+</ul>
+
+<p><img src="../images/posts/2016-review/mixin.jpg" alt="me at Mixin conf" class="right" /></p>
+
+<p>I also spoke at <strong>9 conferences</strong> (way fewer than last year!), and they were all really great 😊 This year I gave talks in San Francisco, New York, Amsterdam, Buenos Aires, Zurich, Freiburg, Bucharest, Perth and Berlin, focusing on <a href="https://vimeo.com/181110918">CSS filters/blend modes in UI</a> and <a href="https://vimeo.com/190871719">image optimization</a> for more performant interfaces. I even got an entire room of people to wear 3D glasses while I showed some 3D CSS image effects. <a href="http://una.im/speaking">Next year</a>’s schedule is starting to fill up with some conferences I’m excited about too :)</p>
+
+<p>I wrote <strong>14 blog posts</strong> this year, which is also much fewer than 2015, but I got to write for <a href="http://alistapart.com/article/finessing-fecolormatrix">A List Apart</a>, <a href="https://www.smashingmagazine.com/2016/05/web-image-effects-performance-showdown/">Smashing Magazine</a>, and the <a href="https://responsivewebdesign.com/podcast/digitalocean/">DigitalOcean Blog</a> this year. The blog post topics were very wide ranging: everything from the product I was working on at work, to experimenting with blend mode performance, to rethinking responsive design and SVG snafus. I learned that I need to give myself challenges to be able to write a lot. For example, I did a 3x3 challenge this year (3 blogs about 3 different things with 3 points each), that I really enjoyed. Maybe I’ll push myself to do more similar things next year.</p>
+
+<h3 id="recognition">Recognition</h3>
+
+<p>I was in a real, live, printed magazine (<a href="http://www.creativebloq.com/net-magazine">Net Magazine</a>) <strong>twice</strong> this year! Once for CSSgram and once to highlight my remote workspace (aka secretly the other side of my bedroom in Austin, TX). <em>My Mom was so proud!</em></p>
+
+<p><img src="../images/posts/2016-review/netmags.jpg" alt="me with my net magazines" style="max-width:480px" class="left" /></p>
+
+<p>I also made <a href="https://twitter.com/rachelandrew">Rachel Andrew’s</a> list of <a href="https://rachelandrew.co.uk/archives/2016/10/11/the-amazing-women-of-css">Women in CSS</a>, another list of <a href="https://www.thebalance.com/programmers-on-twitter-2072010">Programmers to Follow on Facebook</a>, a list of <a href="https://www.keycdn.com/blog/web-performance-experts/">60 Web Performance Experts to Follow</a>, and <a href="http://toolsday.io">Toolsday</a> made it on not one, but <strong>two</strong> lists of <a href="https://www.elegantthemes.com/blog/resources/15-web-design-podcasts-to-add-to-your-listening-queue">15 Web Design Podcasts</a> to <a href="https://www.shopify.com/partners/blog/114348998-15-web-design-podcasts-you-need-to-listen-to-in-2016">Listen to this Year</a>. Thank you all for taking a moment to recognize the work we’ve been doing. It means a lot 💕</p>
+
+<h2 id="life-things">Life Things</h2>
+
+<p>I got to travel to some really awesome new places and had some incredible extended adventures while working remotely at night and adventuring during the day. I visited Romania, Portugal, and Argentina for the first time, bringing my country count to 30. According to my TripIt data, I traveled <strong>125,076 miles</strong> to <strong>32 cities</strong> and <strong>11 countries</strong>. I traveled <strong>117 days</strong> out of the year. That’s almost <strong>1/3 of the year</strong>. Jeez.</p>
+
+<div style="display: inline-block">
+  <figure class="half--left">
+    <img src="../images/posts/2016-review/unakravets-top9.jpg" alt="Instagram top 9 for unakravets" />
+    <p>Top 9 photos from my <a href="http://instagram.com/unakravets">travel instagram</a></p>
+  </figure>
+
+  <figure class="half--right">
+    <img src="../images/posts/2016-review/unadoestype-top9.jpg" alt="Instagram top 9 for unadoestype" />
+    <p>Top 9 photos from my <a href="http://instagram.com/unadoestype">lettering instagram</a></p>
+  </figure>
+</div>
+
+<p>After catching the audiobook bug last year, I never looked back. I read/listened to a total of <strong><a href="https://github.com/una/personal-goals/blob/master/ideas-and-misc/book-checklist.md">37 books</a></strong> this year. My top 5 were:</p>
+
+<ul>
+  <li><a href="https://www.amazon.com/Born-Crime-Stories-African-Childhood/dp/0399588175">Born a Crime by Trevor Noah</a></li>
+  <li><a href="https://www.amazon.com/Dark-Matter-Novel-Blake-Crouch/dp/1101904224">Dark Matter by	Blake Crouch</a></li>
+  <li><a href="https://www.amazon.com/Red-Rising-Pierce-Brown/dp/034553980X">The Red Rising (series) by Pierce Brown</a></li>
+  <li><a href="https://www.amazon.com/Originals-How-Non-Conformists-Move-World/dp/0525429565">Originals by Adam Grant</a></li>
+  <li><a href="https://www.amazon.com/Snow-Crash-Neal-Stephenson/dp/0553380958">Snow Crash by Neal Stephenson</a></li>
+</ul>
+
+<h2 id="this-years-goals">This Year’s Goals</h2>
+
+<p>How did I do on the goals I set last year for 2016? Here they were:</p>
+
+<ol>
+  <li><strong>JavaScript.</strong>: Honestly did not do as much this year as I’d wanted to. Really need to fix that.</li>
+  <li><strong>Write a Book</strong>: I didn’t publish a book this year, but I’m not saying I didn’t start one.</li>
+  <li><strong>Bridge the Designer/Developer Gap</strong>:I think I did a pretty good job of this, giving talks for a mix of skillsets.</li>
+  <li><strong>Build All The Things</strong>: I built <em>some</em> things, but not as many as the previous year, so I say I did <em>okay</em> on this.</li>
+  <li><strong>Prioritize my Health</strong>: Oh yeah, no. Definitely dropped the ball on this one.</li>
+</ol>
+
+<p>If I were to grade myself on how I did on this year’s goals, <strong>I’d give myself a B-</strong>. I could have done better. I think my priorities shifted a bit when I had a more active personal life so some of the other things (i.e. focusing on JavaScript and working out more got replaced with watching movies in blanket forts and eating cheese plates).</p>
+
+<p>But that’s why I do these reviews. It’s okay that I wasn’t perfect this year, but I can be better next year.</p>
+
+<h1 style="text-align:center">2017: Make an Impact</h1>
+<p><br /></p>
+
+<p>I’ve had a very introspective holiday season, which left me thinking: what have I done with my life so far, and now that I have a voice in a small community, what more can I do? How can I break out and make an impact? I want to leave something, build something people care about, and I’m still figuring out exactly what that means.</p>
+
+<ol>
+  <li><strong>JavaScript</strong> <br />&lt;p style="font-size:85%"&gt;This seems to be a continuously looming goal. I want to be able to build and deploy more advanced applications, not just fiddle with DOM JavaScript. Well, when goals are too broad, they sometimes don’t get accomplished, so this year I’m going to break it down into 2 sub-tasks. I want to A) Take a class or workshop in an advanced JS topic, and B) Build an offline webapp called Hieroglyph that I’ve been meaning to build for 3 years now ☕️&lt;/p&gt;</li>
+  <li><strong>Be a Teacher</strong> <br />&lt;p style="font-size:85%"&gt;Educate people as I learn. I’ve been thinking about my strengths as a human. I think I’m pretty solid, but not the best developer that I know by far. What makes me unique is that I’m a creative and effective communicator in a technical field. I want to continue writing and teaching as I learn, writing blog posts or making illustrations that might help others understand 📚&lt;/p&gt;</li>
+  <li><strong>Stay Experimental</strong> <br />&lt;p style="font-size:85%"&gt;I think I lost my spirit of experimenting somewhere toward the middle of this year when people started taking me more seriously and expecting more quality content. I started focusing on the practical side of everything, which is fine, but it’s easy to forget the joy of experimenting and how much we can learn from it. I want to build and publish little experimental or artistic projects here and there more next year 🎨&lt;/p&gt;</li>
+  <li><strong>Publish a Book</strong> <br />&lt;p style="font-size:85%"&gt;I’ve always wanted to publish a book, and leave something tangible for the development community. I want this to be the book I wish I had when entering this field. While a book is a lengthy process, there are a lot of ideas brewing in my head, so watch out for 2017 😎&lt;/p&gt;</li>
+  <li><strong>Start A Daily Run Streak</strong> <br />&lt;p style="font-size:85%"&gt;This is more concrete than last year’s failed goal to “prioritize on health.” I want to start running again. I used to love running but haven’t really been doing it any more. Keeping a daily run streak (1+ mile per day) is an exciting challenge. Also, I have a bridesmaids dress I ordered for early summer that’s too small and  I need to fit into 😅&lt;/p&gt;</li>
+</ol>
+
+<p>So that’s it. I like the idea of having 5 goals and a mantra for the year. Check back next year to see how I did, or follow my progress on my <a href="https://github.com/una/personal-goals">open source goals repo</a> (which will be updated with these goals in a week). Also, feel free to open <a href="https://github.com/una/ama">AMA questions</a> or send a <a href="http://twitter.com/una">tweet!</a></p>
+:ET

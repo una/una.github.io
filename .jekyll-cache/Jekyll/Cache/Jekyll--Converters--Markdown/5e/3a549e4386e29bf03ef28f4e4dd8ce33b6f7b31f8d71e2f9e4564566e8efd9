@@ -1,0 +1,117 @@
+I"�<p>Last week, I gave a talk at <a href="http://2015.cssconf.eu">CSS Conf EU</a> called <em>PS is Dead!: Editing Photos in CSS</em>. My original idea was to outline 10 things you traditionally used Photoshop for that you can now just do in the browser, but when I started to look into filter effects and blend modes there was just <em>so</em> much to explore! I showed a few of those effects in the talk, and now I’m going to write a series of posts to split it into more digestible and sharable bits. Let’s start with something simple and effective!</p>
+
+<h2 id="the-washout-effect">The Washout Effect</h2>
+
+<p>This effect is something we often see in filters trying to get a vintage feel. What happens is that the darkest shade is lightened and the detail in the shadows is lost (washing out the darker details). It appears as a lower contrast because the color (and thus) luminosity range is being limited.</p>
+
+<figure class="half--left">
+<img src="../images/posts/css-effects/1/tahoe-prefilter.jpg" alt="" />
+<figcaption>No washout effect</figcaption>
+</figure>
+
+<figure class="half--right">
+<img src="../images/posts/css-effects/1/tahoe-postfilter.jpg" alt="" />
+<figcaption>Washout effect applied</figcaption>
+</figure>
+
+<p>What is happening here is that we are replacing the dark tones with a slightly lighter shade. If the existing tone is darker than the “new” darkest tone, it is simply overridden by that tone. Thus, the lighten blend mode is perfect for our needs here.</p>
+
+<h2 id="step-1-blend-mode-lighten">Step 1: Blend-Mode: Lighten</h2>
+
+<p>We apply the lighten blend mode to either an overlapping element or a pseudo element. You can use <code>background-blend-mode: lighten</code> on an element with multiple blend modes, or <code>mix-blend-mode: lighten</code> on the overlapping element. However, <em>I’d recommend multiple backgrounds for this (see Application section).</em></p>
+
+<p><small>Please note: the &lt;img&gt; element cannot have its own pseudo elements like :before and :after.</small></p>
+
+<p>With the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/blend-mode">lighten</a> blend mode, the lightness of the pixels (brightness value) is determined between overlapping pixels <em>on every RGB channel</em> and the pixel with the darker luminosity has its tone and hue overriden by the lighter one. If a bright orange overlapped a dark brown, for instance, the pixels would become orange since <em>every</em> channel is lighter. When we mix tones we get a new color from the lightest selected RGB tonality per channel.</p>
+
+<p>A background shade of: <code>rgb(195, 25, 106) //deep pink</code> lightened by: <code>rgb(6, 19, 255) //blue</code> becomes: <code>rgb(195, 25, 255) //magenta</code> because it is taking the red and green value from the first number and the blue value from the last one. Here is a visual:</p>
+
+<figure>
+<img src="../images/posts/css-effects/1/lighten-ex.png" alt="" />
+<figcaption>Note: the reason we lose the box outline is because on the white background, it takes the luminosity of the white (1).</figcaption>
+</figure>
+
+<h2 id="step-2-determine-darkest-color">Step 2: Determine Darkest Color</h2>
+
+<p>We can use this feature to then determine what we want to set as the darkest possible value on the image, therefore eliminating any detail in darker elements and creating that subdued effect. For instance, if we choose our dark shade to be a dimgrey, any pixels darker than dimgrey will become dimgrey, while any pixels lighter than it will remain.</p>
+
+<div class="video-container">
+<video autoplay="" loop="" controls="" src="../images/posts/css-effects/1/vintage-effect-demo--noaudio.mp4"></video>
+</div>
+
+<p><small> Choosing a dark purple or brown color will likely get you the effect you are looking for.</small></p>
+
+<h2 id="application">Application</h2>
+
+<p>The best way to apply this effect is via multiple backgrounds right now. This is because not <a href="http://caniuse.com/#search=blend%20modes">every</a> browser supports blend modes yet. If you use multiple backgrounds, the top image will show regardless and the lightened second background will appear if they are supported as progressive enhancement. Here is a live example:</p>
+
+<div class="half--left vintage-effect">
+</div>
+
+<style contenteditable="" class="css live-code half--right">/* you can edit me! */
+
+.vintage-effect {
+  height: 350px;
+  background:
+    url('../images/posts/css-effects/1/example-img.jpg'),
+    #533a16;
+  background-size: cover;
+  background-blend-mode: lighten;
+}
+</style>
+
+<h2 id="mixin-for-the-win">@Mixin For the Win</h2>
+
+<p>Okay, so that’s cool and all, but we can make it even easier to apply with a <code>@mixin</code>!</p>
+
+<div class="half--left">
+Sass
+<pre><code>@mixin fade-it($img, $shadow: #536) {
+  background: url('#{$img}'), $shadow;
+  background-blend-mode: lighten;
+}
+
+.apply-base {
+  @include fade-it('1.jpg');
+}
+
+.apply-unique-shade {
+  @include fade-it('2.jpg',
+                   #293e78);
+}
+</code></pre>
+</div>
+
+<div class="half--right">
+CSS Output
+
+<pre><code>.apply-base {
+  background: url('1.jpg'), #536;
+  background-blend-mode: lighten;
+}
+
+.apply-unique-shade {
+  background: url('2.jpg'), #293e78;
+  background-blend-mode: lighten;
+}
+</code></pre>
+</div>
+
+<div class="clearfix"></div>
+
+<p><strong>tldr; vintage washout effect = lighten blend mode + element with a background that is the shadow color</strong></p>
+
+<p>For further reading, <a href="http://photoblogstop.com/photoshop/photoshop-blend-modes-explained">this</a> article is an excellent resource on how blend modes work.</p>
+
+<section class="css-effects-series">
+  <h2>More CSS Effects:</h2>
+  <ul>
+    <li><a href="/vintage-washout">Part 1: The Vintage Washout Effect</a></li>
+    <li><a href="/3d-effect">Part 2: 3D Glasses Effect</a></li>
+    <li><a href="/vignettes">Part 3: Vignettes in 3 Ways</a></li>
+    <li><a href="/bokeh">Part 4: Bokeh Textures</a></li>
+    <li><a href="/lomo">Part 5: Lomography Filters</a></li>
+    <li><a href="/infrared">Part 6: Infrared Photo Effect</a></li>
+  </ul>
+</section>
+:ET

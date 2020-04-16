@@ -1,0 +1,125 @@
+I"�,<p>For the past four weeks, I’ve been keeping a public, open-sourced version of my <a href="https://github.com/una/personal-goals">personal goals</a> on Github. Overall, its been a pretty great experience thats bolstered my productivity tremendously. Since then, I’ve been working on making this system better and better, with some terminal aliases for ease-of-use, and some advice to help you out with your own personal goals.</p>
+
+<h2 id="the-structure">The Structure</h2>
+
+<p>If you take a look at <a href="https://github.com/una/personal-goals">my repo</a>, or the <a href="https://github.com/una/personal-goals-starter">starter template</a>, you can see that I organized my file with a few sections:</p>
+
+<h3 id="readmemd">README.MD</h3>
+<p>This is where I store a couple of things: my overall goals, things I plan to do that week, month, and a backlog. I also include links to some of my sub-folders and an overall goal for the week (added later to the process). To break it down by sub-section:</p>
+
+<ul>
+  <li><strong>Overarching Goals:</strong> What are you trying to accomplish in general? Why are you doing this in the first place? Putting these first reminds you every time you open the list.</li>
+  <li><strong>This Week’s Goal:</strong> This is the one thing you’ll mostly focus on for the week. I added it later to the process and it’s really helped me to keep my goals in line from being too scattered.</li>
+  <li><strong>Things I’ll Do This Week:</strong> A checklist of weekly tasks, most should ideally be determined by the <em>weekly goal</em>.</li>
+  <li><strong>Things I’ll Do This Month:</strong> A list of tasks looking further into the future — things which may take longer to accomplish</li>
+  <li><strong>Backlog:</strong> I have two backlog sections: one for <em>side projects</em> I need to remind myself about and one for <em>code things I want to do/play with</em></li>
+</ul>
+
+<h3 id="content-list">/content-list</h3>
+<p>This is where I include resources such as books, reference guides, blog posts, slides, and videos that I want to watch, categorized by subject matter.</p>
+
+<h3 id="accomplishments">/accomplishments</h3>
+<p>This is where I go over my week in review. I think it’s a pretty important part of the process — if not the most important. I take a look at what I did, what I didn’t get to, additional things I did that I didn’t originally plan on, and then write about how the week went in relation to meeting my goals in general. This is where you can review and edit your plan.</p>
+
+<h3 id="etc">/etc</h3>
+<p>You can also include additional folders with more specifics for your goals. For example, one of my goals is to write more blog posts. To help with this, <strong>I have a sub-folder for blog post ideas.</strong> I keep this public in the spirit of open source.</p>
+
+<h2 id="why-it-works">Why It Works</h2>
+
+<ol>
+  <li>It makes you think about your goals</li>
+  <li>Versioning helps you track goals</li>
+  <li>Public goal lists keep you more responsible</li>
+  <li>In moments of downtime, you’ll always have a reference of productive things to do or active goals to be striving for</li>
+  <li>You have access to your goals and resources anywhere</li>
+  <li>Other people can contribute to your personal goals</li>
+</ol>
+
+<p><a class="twitter-share quote right">
+  Writing down your goals make you think about them, and publicizing them holds you more accountable.
+</a></p>
+
+<p>Writing down your goals make you think about them, and publicizing them holds you more accountable. It’s the same reason why keeping a <a href="http://www.ncbi.nlm.nih.gov/pubmed/22795495">food diary</a> yields better results for dieters. The simple act of writing down your day’s actions makes you more likely to stick to a plan.</p>
+
+<p>Reviewing these goals in a positive light at the end of the week definitely made me feel accomplished. <strong>Positive</strong> is the key word here. Don’t beat yourself up for not accomplishing everything you planned at the beginning of the week — simply re-evaluate your time allocation for the following week.</p>
+
+<blockquote class="left">You always have a reference to a productive and actionable list for reaching your goals.</blockquote>
+
+<p>Another huge advantage is that you always have a reference to a productive and actionable list for reaching your goals. A few days after I began open sourcing my goals, I went to a new gym that opened up by me. It had treadmills that were internet-connected. Awesome. I was quickly able to pull up my repo and access my content list. So I ended up watching a video on web components while jogging, allowing me to be super productive in more than one way.</p>
+
+<p>Letting other people contribute to your personal goals seems strange at first — this is <em>personal</em> after all, but it’s actually pretty cool. I’ve had two contributors so far; the first was somebody who added a task for me to do, which I had simply forgotten about, and the second reminded me to make time to enjoy my life and relax to prevent burnout.</p>
+
+<h2 id="a-few-terminal-aliases-to-help">A Few Terminal Aliases to Help</h2>
+
+<p>As a part of my workflow (and as a part of working on my own personal goals), I wrote some useful terminal aliases to help make this list super easy to access and use from anywhere the command line (thats why I’m using absolute links here). You can implement these by editing your <strong>.bash_profile</strong> or <strong>.zshrc</strong> files (depending on which you use), or by creating a <strong>separate shell script file</strong> and linking it inside of your .bash_profile or .zshrc (we’ll get to that in a second).</p>
+
+<p>Replace anything inside of the <code>{}</code> with your own info. These assume that your repo is hosted on Github and has a ‘content-list’ folder.</p>
+
+<pre><code># check off personal goals (open main README.md in vim)
+# i.e. alias pg-ch="vim ~/Dev/personal-goals/README.md"
+alias pg-ch="vim ~{PATH-TO-FOLDER}/README.md"
+
+# add to content list (opens content list folder in vim)
+# usage example: pg-add blog-post
+function pg-add() {
+  if [ $# -eq 0 ]; then
+      print "Oops. Please enter a content type! (i.e. pg-add video)"
+    else
+      vim ~{PATH-TO-FOLDER}/content-list/"$@"s.md
+  fi
+}
+
+# push my changes to my github master branch and open the page
+# The commit message will always be "push from terminal" since I'll probably just be adding more resources or checking things off when using this
+alias pg-gh="cd ~{PATH-TO-FOLDER} &amp;&amp;
+  git checkout master &amp;&amp;
+  git add -A &amp;&amp;
+  git commit -m ‘push from terminal’ &amp;&amp;
+  git push origin master &amp;&amp;
+  open http://github.com/{GITHUB-USERNAME}/personal-goals"
+</code></pre>
+
+<p><br />
+If you’re creating a separate shell script file (i.e. <strong>pg-aliases.sh</strong>) for better organization and to not clutter your <strong>.zshrc</strong> or <strong>.bash-profile</strong>, you would only need one line of code to link it (replacing <code>myusername</code> with your user name on your system):</p>
+
+<pre><code># Personal Goals terminal aliases
+# i.e. source "Users/myusername/.pg-aliases.sh"
+source "{PATH-TO-ALIAS-FILE}/"
+</code></pre>
+
+<p><br />
+So with either of those methods, the aliases I’ve provided are as follows:</p>
+
+<ul>
+  <li><code>pg-add &lt;content-type&gt;</code>: Opens up content page in Vim for adding resources. In my setup, options include <em>blog-post</em>, <em>video</em>, <em>resource</em>, <em>book</em>, or <em>slide</em></li>
+  <li><code>pg-ch</code>: Opens up README.md for quick checking off of weekly goals</li>
+  <li><code>pg-gh</code>: Pushes to your master branch with a commit message of “push from terminal” and opens the Github page online</li>
+</ul>
+
+<p><small>Feel free to edit and configure this workflow to what works best for you. Again, these are <em>personal</em> goals :)</small></p>
+
+<h2 id="a-few-words-of-advice">A Few Words of Advice</h2>
+
+<p>As a budding developer, I often struggle with the fact that there is so much out there to learn, and <a href="" class="twitter-share">the more I learn, the more I realize I don’t know</a>. With this system, I was <strong>continuously enumerating all of the things I didn’t know</strong>. No matter how well-intentioned this was, it quickly became overwhelming and somewhat discouraging. Often, especially at first, my goals would be all over the place, making me constantly add things to my weekly to-do list as I learned about them, which in turn created an ever-growing cycle of to-dos and an ever-growing list of things I didn’t know. <strong>Curation is key.</strong></p>
+
+<p><a class="quote twitter-share left">Open sourcing my personal goals has by far been one of the best things I’ve done for my productivity.</a></p>
+
+<p>Don’t get me wrong, open sourcing my personal goals has by far been one of the best things I’ve done for my productivity. I highly recommend it. But here is some advice that will help you keep your sanity from the start:
+<br /></p>
+
+<h3 id="choose-one-goal-for-the-week">Choose One Goal for the Week</h3>
+<p>I added this later to the process (even after the first draft of this blog was written). I found that my goals were sort-of scattered, and I like continuing a pursuit from the day before. For this reason, I began creating an overall goal for the week before defining specific tasks. It really helped to streamline my tasks for the week.</p>
+
+<h3 id="once-set-dont-add-more-goals-for-the-week">Once Set, Don’t Add More Goals for the Week</h3>
+<p>Once you’ve set your weekly goals, resist the temptation to add more! Instead, if you do things that are different than you had planned, write a bout it in your weekly review. I.e. the list of <strong>“Additional Things I Did This Week”</strong> or get a head start on planning <strong>“Things I Plan To Do Next Week”</strong>. You’ll feel like you did more than you planned this way, instead of feel bogged down by an ever-growing list of things you’ll never get to accomplish in a week.</p>
+
+<h3 id="dont-just-focus-on-code">Don’t Just Focus on Code</h3>
+<p>When you have a reference list of things to do in your spare time, it’s great for being productive — but don’t let that list take over your life. Admittedly, I’m a little bad at this, filling mine with mostly code and work-related items. Chris Eppstein had to remind me of this point via a <a href="https://github.com/una/personal-goals/pull/3">pull request</a> telling me to “enjoy the sun before it’s winter”. He was absolutely right. Remember to make time to make yourself and the people around you happy. After all, <a class="twitter-share">happiness should be one of your overall goals.</a></p>
+
+<h3 id="take-the-time-to-reflect-positively">Take the Time to Reflect Positively</h3>
+<p>I mentioned this at the beginning of the post, where I talk about the structure for <strong>/accomplishments</strong>. It’s really important to focus on what you’ve achieved and not what you didn’t get to. Think of the things you didn’t get to as opportunities for future.</p>
+
+<blockquote> To get started with your own system, fork <a href="https://github.com/una/personal-goals-starter">this repo</a> and fill it up! Also, feel free to reference and contribute to <a href="https://github.com/una/personal-goals">my own repo</a> :)</blockquote>
+
+<p>I’d love to hear about how this goes for y’all!</p>
+:ET

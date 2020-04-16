@@ -1,0 +1,248 @@
+I"�+<p>Today, I’ll be walking you through setting up PageSpeed Insights within your existing gulp project. This way, each time you call <code>gulp psi</code> in your terminal, you can get your page speed insights scores right in your terminal without needing to push your site to a live server, navigate to the PageSpeed Insights website, enter in your URL, etc. I’ll be using ngrok to tunnel your locally hosted site and a few gulp tasks to bring it all together.</p>
+
+<h2 id="pagespeed-insights">PageSpeed Insights</h2>
+
+<p><a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a> is a project by Google that analyzes the performance of your website, giving you a score index based on a variety of factors. <a href="http://addyosmani.com/blog/">Addy Osmani</a> created a neat little node <a href="https://www.npmjs.com/package/psi">module</a> so that we can run PageSpeed insights right in the terminal and get a nicely formated table of scores.</p>
+
+<p>To install this tool globally (which I recommend, because you can use it with any live website, any time), simply type <code>npm install -g psi</code> into your terminal.</p>
+
+<p>The way it works is simple: merely type <code>psi http://example.com</code> in your terminal. For instance, if try google.com, it will give you this:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json">URL:       https://www.google.com/?gws_rd=ssl
+Score:     92
+Strategy:  desktop
+
+Number Resources                           | 13
+Number Hosts                               | 5
+Total Request                              | 2.62 kB
+Number Static Resources                    | 9
+Html Response                              | 116.9 kB
+Image Response                             | 46.02 kB
+Javascript Response                        | 879.68 kB
+Other Response                             | 1.76 kB
+Number Js Resources                        | 5
+                                           |
+Avoid Landing Page Redirects               | 7
+Enable Gzip Compression                    | 0
+Leverage Browser Caching                   | 0
+Main Resource Server Response Time         | 0
+Minify Css                                 | 0
+Minify HTML                                | 0
+Minify Java Script                         | 0.27
+Minimize Render Blocking Resources         | 0
+Optimize Images                            | 0
+Prioritize Visible Content                 | 0</code></pre></figure>
+
+<p>Unfortunately, PageSpeed Insights (psi) doesn’t work on locally hosted websites. So, if you try running <code>psi http://localhost:3000</code> it won’t work. But that’s okay. There are brilliant people on the internet who have developed solutions for us. Enter ngrok!</p>
+
+<h2 id="testing-locally-with-ngrok">Testing Locally with Ngrok</h2>
+
+<p><img src="../images/posts/ngrok-infographic.png" alt="ngrok infographic" /></p>
+<div class="caption">I shamelessly stole this infographic from ngrok's website.</div>
+
+<p><a href="https://ngrok.com/">Ngrok</a> is a pay-what-you-want service that allows users to try out a web site they’re developing without deploying it to the internet. There is a paid tier, but you don’t need to sign up for an account in order to get PageSpeed Insights working locally. You can download ngrok with a binary or via npm:</p>
+
+<pre><code>npm install -g ngrok
+</code></pre>
+
+<p>Now, depending on what server you’re running gulp on, type <code>ngrok http &lt;port&gt;</code> into your terminal. Since I’m using port 3000, I’ll use <code>ngrok http 3000</code>. Then you should see something like this:</p>
+
+<pre><code>Tunnel Status       online
+Version             1.7/1.6
+Forwarding          http://3087cb.ngrok.com -&gt; 127.0.0.1:3000
+Forwarding          https://3087cb.ngrok.com -&gt; 127.0.0.1:3000
+Web Interface       127.0.0.1:4040
+# Conn              37
+Avg Conn Time       828.38ms
+
+</code></pre>
+
+<p>That Forwarding URL is what we’ll use to get our page speed insights. Try it now. Type <code>psi &lt;your forwarding url&gt;</code> and you should see a response!
+Pretty cool right?</p>
+
+<aside>Keep in mind that this may take a few moments, and you do need to be on an internet connection</aside>
+
+<h2 id="pulling-it-together-with-gulp">Pulling it together with Gulp</h2>
+
+<h3 id="install-dependancies">Install Dependancies</h3>
+
+<p>In order to set this up in our development environment, we’ll be using three modules: ngrok, psi, and run-sequence. (and gulp-exit to close out of everything) You can install them all at once, while saving the dependancies to your package.json in one command:</p>
+
+<pre><code>npm install psi ngrok run-sequence gulp-exit --save-dev
+</code></pre>
+
+<p>Alternatively, you can open up your package.json, and under ‘devDependancies”, add the following lines of code:</p>
+
+<pre><code>"ngrok": "^0.1.98",
+"psi": "^1.0.6",
+"gulp-exit": "0.0.2",
+"run-sequence": "^1.0.2"
+</code></pre>
+
+<p>And then run <code>npm install</code>. Great! Now you have the psi, ngrok, and run-sequence modules installed.</p>
+
+<h3 id="ngrok">ngrok</h3>
+
+<p>To start, create an ngrok variable</p>
+
+<pre><code>var ngrok = require('ngrok');
+</code></pre>
+
+<p>create a task to run ngrok and grab the tunnel url it is creating. Again, I am using port 3000 here.</p>
+
+<pre><code>gulp.task('ngrok-url', function(cb) {
+  return ngrok.connect(3000, function (err, url) {
+    site = url;
+    console.log('serving your tunnel from: ' + site);
+    cb();
+  });
+});
+</code></pre>
+
+<p>If you’re wondering what <code>cb</code> is, it stands for <em>callback</em>, and its what allows you to define the end to an asyncronous task. We’ll see this again in the psi tasks below in a second.</p>
+
+<h3 id="pagespeed-insights-1">PageSpeed Insights</h3>
+
+<p>Now we need to add a few tasks for page speed insights in the gulp file. We’ll be referring to Page speed insights as psi. These tasks are pulling from an <a href="https://github.com/addyosmani/psi-gulp-sample/blob/master/gulpfile.js">example</a> given by Addy Osmani.</p>
+
+<p>Create a psi variable</p>
+
+<pre><code>var psi = require('psi');
+</code></pre>
+
+<p>And psi tasks. Here we’re making seperate tasks for both mobile and desktop strategies. For configuration information, check out the <a href="https://github.com/addyosmani/psi">repo</a>.</p>
+
+<pre><code>gulp.task('psi-desktop', function (cb) {
+  psi(site, {
+    nokey: 'true',
+    strategy: 'desktop'
+  }, cb);
+});
+
+gulp.task('psi-mobile', function (cb) {
+  psi(site, {
+    nokey: 'true',
+    strategy: 'mobile'
+  }, cb);
+});
+</code></pre>
+
+<p>If you’re using an API key, be sure to replace the <code>nokey: 'true'</code> line with your <code>key: &lt;your API token here&gt;</code>.</p>
+
+<h3 id="almost-there">Almost there</h3>
+
+<p>Now, everything is almost ready. The only problem is that we need to link the tunnel url that ngrok is creating for us to psi. For this, we’re using the <strong><a href="https://www.npmjs.com/package/run-sequence">run-sequence</a></strong> module to alow variables to pass between in between asynchronous tasks.</p>
+
+<p>We’ve only got two more variables to set up.</p>
+
+<pre><code>var sequence = require('run-sequence');
+var site = '';
+</code></pre>
+
+<p>Now, we can create a sequence to run the ngrok tunnel server, grab its url, and run page speed insights tests for both desktop and mobile.</p>
+
+<pre><code>gulp.task('psi-seq', function (cb) {
+  return sequence(
+    'ngrok-url',
+    'psi-desktop',
+    'psi-mobile',
+    cb
+  );
+});
+</code></pre>
+
+<p>Finally, I made a task to exit out of the sequence once it was complete:</p>
+
+<pre><code>gulp.task('psi', ['psi-seq'], function() {
+  console.log('Woohoo! Check out your page speed scores!')
+  process.exit();
+})
+</code></pre>
+
+<p>So at this point, if you have a server running at port 3000, and run <code>gulp psi</code> in another terminal window, it should give you accurate results. But let’s improve on that. Let’s make a self-contained gulp task that doesn’t depend on another.</p>
+
+<h3 id="servers-ports-and-tasks-oh-my">Servers, Ports, and Tasks, oh my!</h3>
+
+<p>To do that, we need to connect ngrok to our server. Now, I’m not going to dictate how you start your server. Personally, I really like using <a href="http://www.browsersync.io/">Browser Sync</a> for a variety of reasons. A simple <a href="https://www.npmjs.com/package/gulp-connect">Gulp Connect</a> task also exists. Whichever way you do it, add the task in which you’re starting your server before the <code>ngrok-url</code> task in your psi sequence. For example, mine, with brower sync, is:</p>
+
+<pre><code>gulp.task('psi-seq', function (cb) {
+  return sequence(
+    'browser-sync', // name of your server task here
+    'ngrok-url',
+    'psi-desktop',
+    'psi-mobile',
+    cb
+  );
+});
+
+</code></pre>
+
+<p>BrowserSync is really cool in the sense that if a port is taken (i.e. if port:3000 is busy), it will use the next available one (i.e. port: 3001). This can cause issues if you aren’t cognicant of it and may be running multiple development environments at once. Well, what will likely happen is  you’ll just get a <em>false 100</em> in return for your page score value.</p>
+
+<p>Because we’re specifying the port here, we have to make sure that it is available to avoid those faulty scores. To improve this a bit, I set up a separate BrowserSync function seperate from my development task, specifically PageSpeed Insights. This got rid of some of the excess (watch tasks, etc), and I also gave it some more configs like not opening the page in the browser every time I just want to test performance.</p>
+
+<pre><code>// set up a global port variable
+var portVal = 3020;
+
+// my browser sync task for psi which only runs the build and
+// serve function, as well as uses the set port and prevents
+// opening the site in my browser
+gulp.task('browser-sync-psi', ['jekyll-build'], function() {
+  browserSync({
+    port: portVal,
+    open: false,
+    server: {
+      baseDir: '_site'
+    }
+  });
+});
+</code></pre>
+
+<h2 id="tldr">tl;dr</h2>
+
+<h3 id="step-1">Step 1</h3>
+<p><code>npm install psi ngrok run-sequence gulp-exit --save-dev</code></p>
+
+<h3 id="step-2">Step 2</h3>
+
+<pre><code>// variables
+var ngrok     = require('ngrok');
+var psi       = require('psi');
+var sequence  = require('run-sequence');
+var site      = '';
+var portVal   = 3020;
+
+// this is where your server task goes. I'm using browser sync
+gulp.task('browser-sync-psi', ['jekyll-build'], function() {
+  browserSync({
+    port: portVal,
+    open: false,
+    server: {
+      baseDir: '_site'
+    }
+  });
+});
+
+// psi sequence with 'browser-sync-psi' instead
+gulp.task('psi-seq', function (cb) {
+  return sequence(
+    'browser-sync-psi',
+    'ngrok-url',
+    'psi-desktop',
+    'psi-mobile',
+    cb
+  );
+});
+
+// psi task runs and exits
+gulp.task('psi', ['psi-seq'], function() {
+  console.log('Woohoo! Check out your page speed scores!')
+  process.exit();
+})
+</code></pre>
+
+<h3 id="step-3">Step 3</h3>
+<p><code>gulp psi</code></p>
+
+<p><small>Thanks <a href="https://github.com/silenceisgolden">AJ</a> for pointing out the API syntax update and <a href="http://twitter.com/rupl">Chris</a> for updating the article!</small></p>
+:ET
