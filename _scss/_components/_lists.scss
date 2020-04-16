@@ -191,6 +191,21 @@ ol {
 	}
 }
 
+.notice {
+	max-width: 650px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    background: $color--subtlegrey;
+    border-radius: 20px;
+    border: 1px solid $color--hotpink;
+
+	a {
+		color: $color--blue;
+		text-decoration: underline;
+	}
+}
+
 .event-list--past {
 	@extend %post-list;
 	max-width: 1200px;
