@@ -6,7 +6,7 @@
 
   &__img {
     width: 66%;
-    margin: 1em 0 -4em;
+    margin: 1em 0 -4em -4em;
 
     @include breakpoint(lg) {
       width: 100%;
@@ -23,11 +23,11 @@
 
   &__text {
     @extend .post;
-    width: 24em;
+    width: 30em;
     display: block;
     position: absolute;
     top: 2em;
-    left: 55%;
+    left: 50%;
     background: white;
 
     @include breakpoint(lg) {
