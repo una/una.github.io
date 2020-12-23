@@ -126,7 +126,7 @@ The objective is:
 
 > "Return better than you left"
 
-And this has definitely stuck with me all year. I'll be coming out of "quarantine cocoon" a bit more fit (-30 lbs! 🎉) and a bit more creative / practiced in hand lettering. *I am more grateful than ever before for friends, family, the opportunities afforded to me, and especially all the little things.* I'm looking forward to re-discovering the little things with this newborn gratitude as we are able to emerge from our bubbles.
+And this has definitely stuck with me all year. I'll be coming out of "quarantine cocoon" a bit more fit (-30 lbs! 🎉) and a bit more creative / practiced in hand lettering. *I am more grateful than ever before for friends, family, the opportunities afforded to me, and especially all the little things.* I'm looking forward to re-discovering the little things with this newly restored gratitude as we are able to emerge from our bubbles.
 
 ## Highlights
 
@@ -269,7 +269,7 @@ Here are my "top 9" photos from Instagram this year:
 
 ## Travel
 
-The only *"big"* trip (and new place) I got to visit this year was to **Costa Rica** back in February. I constantly feel *very* lucky and blessed that we were able to get this trip in right before COVID really (knowingly) hit the Americas.
+The only *"big"* trip (and new country) I got to visit this year was to **Costa Rica** back in February. I constantly feel *very* lucky and blessed that we were able to get this trip in right before COVID really (knowingly) hit the Americas.
 
 This was a really amazing time! We hiked along a volcano and down to waterfalls, got caught in intense rainstorms, hung out in natural volcanic hot springs, saw a lot of animals, walked along hanging rope bridges, went zip-lining, and ended the trip by staying a few nights at a resort. I would *highly* recommend Costa Rica if you have not yet been! There is so much to see and do! We already want to go back.
 
