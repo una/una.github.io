@@ -112,7 +112,7 @@ Past year-in-review posts:
 
 ## Quarantine Cocoon
 
-COVID is no-doubt one of the biggest influences and shaping forces of this year. And quarantine-at-home/lockdown/social-distancing-indefinitely is hard. It sucks.
+COVID is no-doubt one of the biggest influences and shaping forces of this year. My partner and I have been taking COVID very seriously, and lived in one of the world's epicenters for most of the pandemic. We haven't been seeing friends or going out. Quarantine-at-home/lockdown/social-distancing-indefinitely is hard. It sucks. But it's necessary. COVID is no joke.
 
 I've definitely felt depressed throughout this year, and a big contributor to that is the monotony and routine of every day life now. I'm someone who loves to travel, try new experiences, and work on a lot of different things at once (I think thats why I fit so well in my current role). Outside of work, COVID takes a lot of life's everyday novelty away.
 
@@ -226,7 +226,7 @@ COVID has definitely impacted some major life decisions for us.
 
 It's not ideal to be locked down in a small 1 bedroom NYC apartment with a dog and two people working from home. So, we've been getting out of the city as much as we can to have a little more room. Eventually, we decided to move out of Brooklyn and in with family for the time being. 
 
-But, we've been trying to make the best of it, having creative nights in, seeing friends only outside, and loving on our puppy **[Disco](https://instagram.com/discodoodledog)**. He's becoming quiete the big boy and turned one this year(!).
+But, we've been trying to make the best of it, having creative nights in, and loving on our puppy **[Disco](https://instagram.com/discodoodledog)**. He's becoming quiete the big boy and turned one this year(!).
 
 We're also trying to plan a wedding right now (lol at getting engaged right before a global pandemic) and that's been an interesting challenge. We still plan on getting married next September, but have back up plans just in case we need to push it to ensure everyone's safety.
 
