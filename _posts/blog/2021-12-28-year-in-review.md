@@ -221,15 +221,15 @@ So far, the videos have over **51k views** in the first (holiday) month, so I'm 
 
 ### ❄️ Designcember
 
-This year I also launched [Designcember](https://designcember.com)! This was a celebration of design from the Chrome team, highlighting UI-related work, and a slew of new responsive APIs to get ready for the new year. The site [itself was a demo](https://web.dev/how-we-built-designcember/) that enabled a [new polyfill](https://www.npmjs.com/package/container-query-polyfill) to be created to support container queries in the process.
+This year my team also launched [Designcember](https://designcember.com)! Designcember is a celebration of design from the Chrome team, highlighting UI-related work in the web platform, and a slew of new responsive APIs to get ready for the new year. The site [itself was a demo](https://web.dev/how-we-built-designcember/) that spurred a [new polyfill](https://www.npmjs.com/package/container-query-polyfill) to be created to support container queries in the process.
 
-I organized this initiative from ideation to shipping, including the pitch, hiring a wonderful illustrator, [Alice Lee](https://byalicelee.com), creating a timeline and game plan, getting a team together, mentoring some community contributors, and organizing 31 days of content launches and social posts. In those 31 days, I also produced 5 videos, 4 podcasts, and 1 blog post to ship for Designcember, while organizing all the other things.
+I organized this initiative from ideation to shipping, hired a wonderful illustrator ([Alice Lee](https://byalicelee.com)), creatied a timeline and game plan, got a team together, and organized 31 days of content launches and social posts. In those 31 days, I also produced 5 videos, 4 podcasts, and 1 blog post to ship for Designcember, while organizing all the other things.
 
 <img class="figure" alt="printsheet for designcember.com site" src="../../images/posts/2021-review/printsheet.webp"/>
 
 ### 🗣 Speaking
 
-While I did not travel for any events this year (thanks, COVID), I did participate in some virtual Google events! I was in the [CDS Keynote](https://www.youtube.com/watch?v=n57U2_-3NLQ&t=30s) to talk about [responsive design](https://www.youtube.com/watch?v=dhrX_biPH8c&t=474s) and upcoming CSS properties. I also gave a talk on the same subject for [Google I/O](https://www.youtube.com/watch?v=jUQ2-C5ZNRc) this year, and helped make a bunch of illustrative explainers of [RenderingNG](https://www.youtube.com/watch?v=sUbJPHYKZkU&t=416s) concepts to make them easier to understand.
+While I didn't travel for any events this year (thanks, COVID), I did participate in some virtual Google events. I was in the [CDS Keynote](https://www.youtube.com/watch?v=n57U2_-3NLQ&t=30s) to talk about [responsive design](https://www.youtube.com/watch?v=dhrX_biPH8c&t=474s) and upcoming CSS properties. I also gave a talk on the same subject for [Google I/O](https://www.youtube.com/watch?v=jUQ2-C5ZNRc) this year, and helped make a bunch of illustrative explainers of [RenderingNG](https://www.youtube.com/watch?v=sUbJPHYKZkU&t=416s) concepts to make them easier to understand.
 
 <figure>
 <img class="figure" src="../../images/posts/2021-review/cdskeynote2.png"/>
