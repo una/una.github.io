@@ -145,7 +145,9 @@ subtitle: "Reviewing 2021's highs, lows, and everything in between."
 }
 </style>
 
-Wow, what a year. 2021 was such a mixed bag for me. From some really high highs (so many life events), to some pretty low lows (my grandma passing, debt stress, burnout). Overall it was a good year, and here I am, once again, to bring some thoughts on how everything went, and what I plan to do differently next year.
+Wow, what a year. 2021 was a pretty mixed bag for me, but ultimately I had some pretty amazing experiences and achievements this year. From some really high highs (so many life events!), to some pretty low lows (my grandma passing, debt stress, burnout, getting COVID), we made it, and  that's what matters! 
+
+So here I am, once again, to bring some thoughts on how everything went and what I plan to do differently next year.
 
 Past year-in-review posts:
 
