@@ -265,7 +265,7 @@ This year there's been so much movement in the CSS space. As one person perfectl
 
 > "I reckon 2021 was the best year for CSS since…2015? I haven’t felt this level of excitement and momentum in years." — [Robin Rendel](https://www.robinrendle.com/notes/css-and-momentum/)
 
-And 2022 is set to be even better! Hold onto your hats y'all. My team, along with Chromium engineers and PMs, is to improve developer satisfaction by reducing frustration factors like [interoperability](https://github.com/web-platform-tests/interop-2022) issues, and aiming to satisfy top developer requests. These include:
+And 2022 is set to be even better! Hold onto your hats y'all. My team, along with Chromium engineers and PMs, is working to make  developing websites even better by reducing frustration factors like [interoperability](https://github.com/web-platform-tests/interop-2022) issues, and aiming to satisfy top developer requests. These include:
 
 - Container Queries for responsive component-based design
 - Better form control styling and customization
@@ -281,13 +281,13 @@ My role this year moved from an individual contributor role into more of a lead 
 
 ## Life Things
 
-In year 2 of pandemic-life, we've been trying to make the most of it. We've continued to do a lot of outdoor activities and take active hiking trips.
+In year 2 of the seemingly endless pandemic, my partner and I continued to do a lot of outdoor activities and take active hiking trips, trying to make the most of it.
 
 One big thing we did was move back to Brooklyn, near Prospect Park, which has given everyone a much-needed dopamine boost. Disco and I both love our park mornings together. During the summer we'd go to the park 3-5 times a week.
 
 ### 💒 Wedding
 
-The biggest [highlight](https://www.idaliaphotography.com/village-club-of-sands-point-wedding/) for me has to be that we had [our wedding](https://www.youtube.com/embed/lJUqfRXVWZk) this year! This was huge! We went back and forth about moving it but ultimately we're glad we kept our date and had a "smaller" event than we originally planned (under 100 people), and only included the people closest to us (we have a lot of people close to us). We also had a pretty fun [first dance](https://youtu.be/Uw2ziws_qLI).
+The biggest [highlight](https://www.idaliaphotography.com/village-club-of-sands-point-wedding/) for me has to be that we had [our wedding](https://www.youtube.com/embed/lJUqfRXVWZk) this year! We went back and forth about moving it but ultimately we're glad we kept our date and had a "smaller" event than we originally planned (under 100 people). It was a blast! We also had a pretty fun [first dance](https://youtu.be/Uw2ziws_qLI).
 
 <div class="full-width">
   <img alt="wedding" src="../../images/posts/2021-review/Ceremony-86.jpg"/>
@@ -330,7 +330,7 @@ I did a lot crafts this year. Many of them were in preparation for the wedding (
 
 ## ✈️ Travel
 
-I did a *little* more travel in 2021 than I did in 2021. I went to **Las Vegas** with my friends and **Miami** with Ben. I did go on a *"big"* trip (and to a new country) for our honeymoon in **Greece**. We visited a few of the islands: Mykonos, Paros, Santorini, and Milos, along with a stop-in to Athens. This was an unbelievable trip! I really miss traveling the way I used to before the pandemic, and I'm really hoping to get to do some more trips next year.
+I did a *little* more travel in 2021 than I did in 2020. I went to **Las Vegas** with my friends and **Miami** with Ben. We did go on a *"big"* trip (and to a new country) for our honeymoon in **Greece**. We visited a few of the islands: *Mykonos, Paros, Santorini, and Milos*, along with a stop-in to *Athens*. This was an unbelievable trip! I really miss traveling the way I used to before the pandemic, and I'm really hoping to get to do some more trips next year.
 
 <div class="w-80" style="overflow: hidden">
   <div class="third">
@@ -361,7 +361,7 @@ All of these books are wonderful and I would highly recommend them!
 
 ## 👀 2021 Resolutions Review
 
-In 2021, I focused on "**fitness**, **family**, and **making things**." I'd say I did a pretty good job doing those things. I spent a lotoftime with family, maintained by fitness journey, and made a lot of things! To break down last year's foals:
+In 2021, I focused on "**fitness**, **family**, and **making things**." I'd say I did a pretty good job doing those things. I spent a lot of time with family, maintained my fitness journey (mostly with healthy eating), and made a lot of things! To break down last year's foals:
 
 1. **🏃🏻‍♀️ Fitness**: While I didn't run a 10k this year, I did go to the park and on walks often and feel pretty good about my physical health right now :)
 2. **👰🏼 Wedding**: YAY IT HAPPENED. No more stress now 😜
