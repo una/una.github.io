@@ -353,7 +353,7 @@ My partner and I also spent a lot of time exploring Brooklyn and the East Coast.
 
 ## 📚 Books
 
-I [read](https://www.notion.so/d977d36b03634e1a846ed4feca0bc153?v=e50c58ac1a4a4e3eae5a60944b227465) **12** books this year. That's pretty good :). My favorite were:
+I [read](https://valiant-estimate-64e.notion.site/d977d36b03634e1a846ed4feca0bc153?v=e50c58ac1a4a4e3eae5a60944b227465) **14** books this year. That's pretty good :). My favorite were:
 
 - *The Vanishing Half* by Brit Bennet
 - *Project Hail Mary* by Andy Weir
