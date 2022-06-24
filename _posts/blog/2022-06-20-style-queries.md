@@ -190,6 +190,7 @@ These are just some ideas on how to use style queries in ways that enable a bett
 - [MDN Docs on Container Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Container_Queries)
 - [Designing in the Browser: Container Queries](https://web.dev/shows/designing-in-the-browser/gCNMyYr7F6w/)
 - [Designing in the Browser: Macro & Micro Layouts](https://web.dev/shows/designing-in-the-browser/sdjT0K4sR4k/)
+- [Container Queries & the future of CSS](https://www.miriamsuzanne.com/speaking/responsive-components/)
 - [Next Gen CSS: @container](https://css-tricks.com/next-gen-css-container/)
 
 
