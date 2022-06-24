@@ -13,9 +13,9 @@ header-bg: 'https://images.unsplash.com/photo-1583316174775-bd6dc0e9f298?ixlib=r
 subtitle: "Exploring when and how you would use style queries in your day-to-day work."
 ---
 
-You may have heard of [container queries](https://css-tricks.com/next-gen-css-container/) and the new [contain-level-3 spec](https://www.w3.org/TR/css-contain-3/) landing in [browsers](https://caniuse.com/css-container-queries) soon, but have you heard of style container queries, which are also a part of this (very exciting) spec? 
+You may have heard of [container queries](https://css-tricks.com/next-gen-css-container/) and the new [contain-level-3 spec](https://www.w3.org/TR/css-contain-3/) which is currently in [experimental browsers](https://caniuse.com/css-container-queries), but have you heard of style container queries, which are also a part of this (very exciting) spec? 
 
-**⚠️ Note:** Style queries are *not* landing in the initial implementations of Chromium and Webkit. Both browsers will launch with size queries and container query units.
+**⚠️ Important Note:** While a part of the contain-level-3 spec, style queries are *not* landing in the initial implementation of container queries in Chromium and Webkit. Both browser engines currently plan to initially launch with size query and container query unit support.
 
 Style queries let you query the *style* of any parent element within a page and apply styles to its children based on the styles of its parent. This sounds really cool, but in practice, why would you use this over something like a class or data attribute to apply the styles (both of which are much more performant than a container query)?. I want to investigate *why* and *when* style queries really make sense to use, and provide a capability previously unavailable to us.
 
