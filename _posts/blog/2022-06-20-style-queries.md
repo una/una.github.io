@@ -2,7 +2,7 @@
 layout: post
 title: "Style Queries"
 permalink: /style-queries/
-date: '2022-06-20'
+date: '2022-06-23'
 comments: true
 tags:
 - css
@@ -13,11 +13,11 @@ header-bg: 'https://images.unsplash.com/photo-1583316174775-bd6dc0e9f298?ixlib=r
 subtitle: "TBD."
 ---
 
-You may have heard of [container queries](https://css-tricks.com/next-gen-css-container/) and the new [contain-level-3 spec](https://www.w3.org/TR/css-contain-3/) landing in [browsers](https://caniuse.com/css-container-queries) soon, but have you heard of style queries, which are also a part of this (very exciting) spec? 
-
-Style queries let you query the *style* of any parent element within a page and apply styles to its children based on the styles of its parent. This sounds really cool, but in practice, there are only a few key situations in which you want want to use a style query instead of something like a class name or attribute to apply the styles (both of which are much more performant than a browser query). So I wanted to investigate *why* and *when* style queries really made sense to use.
+You may have heard of [container queries](https://css-tricks.com/next-gen-css-container/) and the new [contain-level-3 spec](https://www.w3.org/TR/css-contain-3/) landing in [browsers](https://caniuse.com/css-container-queries) soon, but have you heard of style container queries, which are also a part of this (very exciting) spec? 
 
 **⚠️ Note:** Style queries are not landing in the initial implementations for Chromium and Webkit. Both browsers will launch with size queries and container query units.
+
+Style queries let you query the *style* of any parent element within a page and apply styles to its children based on the styles of its parent. This sounds really cool, but in practice, why would you use this over something like a class or data attribute to apply the styles (both of which are much more performant than a container query)?. So I wanted to investigate *why* and *when* style queries really make sense to use.
 
 ## Container Queries: a quick summary
 
@@ -44,7 +44,7 @@ You write container queries like so:
 ```
 @container (min-width: 420px) {
   .card {
-    /* styles to apply when the card container becomes >= 420px */
+    /* styles to apply when the card container is >= 420px */
     /* I.e. shift from 1-column to 2-column layout: */
     grid-template-columns: 1fr 1fr;
   }
@@ -53,7 +53,7 @@ You write container queries like so:
 
 ## Style Queries
 
-Much like size-based container queries, you can query the computed style of a parent element using style queries:
+Much like size-based container queries, you can query the computed style of a parent element using [style queries](https://drafts.csswg.org/css-contain-3/#style-container):
 
 ```
 @container (color: hotpink) {
@@ -67,6 +67,177 @@ Much like size-based container queries, you can query the computed style of a pa
 
 Okay, but where does this actually become useful? There are 2 situations in which you can use style queries in a way that you can't elsewhere.
 
+## 1. Immediate parent style queries
+
+As of this week's CSSWG resolution (June 22,2022), elements sre [style containers by default](https://github.com/w3c/csswg-drafts/issues/7066#issuecomment-1163348533). This means you can query an immediate parent to apply styles to a child. One example of where you would want to use an immediate parent style query is with inline text styling.
+
+Say you want to make something stand out inline, <i>like an italicised quote in a paragraph</i>. The previous sentence is italic, and wrapped in an <code>&lt;i&gt;</code> tag. 
+
+<blockquote style="font-style: italic">This is a blockquote that has italic text as a part of the block quote styling.</blockquote> 
+
+If I have an element within it that I want to stand out using the <code>&lt;i&gt;</code> tag, it will not stand out because they'll look the same. This is such an element. But maybe I want to give it a pink background to stand out. 
+
+<blockquote style="font-style: italic">This can be achieved with <span style="background: lavender;">style queries.</span></blockquote> 
+
+Regardless of the type of element (<code>span</code>, <code>i</code>, <code>p</code>, etc.), style queries let you look at the specific style of any parent element to make styling decisions. This enables "chained styles". *If style X, then apply style Y.* The code might look like:
+
+```css
+@container (font-style: italic) {
+  span,
+  i,
+  .etc {
+    background: lavender;
+  }
+}
+```
+
+## 2. Styling non-inheritable properties
+
+This example shows color selection based on a parent's styles (including non-inherited styles). <code>border-color</code> is an example of a property that doesn't inherit. With style queries, we can query a parent's non-inheritable styles to apply to its children. For example, we can query <code>border-color</code> (or even <code>background</code> — see <a href="https://github.com/w3c/csswg-drafts/issues/5292">currentBackgroundColor proposal</a>) to apply styles to the button:
+
+<div class="demo-card">
+  <figure>FPO</figure>
+  <p>This is some text within the card.</p>
+  <button>I am a button</button>
+</div>
+
+```css
+@container (border-color: lightblue) {
+  button {
+    border-color: lightblue;
+  }
+}
+```
+
+## 3. Grouping styles with custom properties
+
+Taking that a step further, we can abstract these values to <a href="https://github.com/w3c/csswg-drafts/issues/5624">higher-level variables</a> like <code>--theme: light</code> or <code>--theme: dark</code>, and apply the styles throughout the card:
+
+<div class="demo-card" style="--theme: dark" data-theme="dark">
+  <figure>FPO</figure>
+  <p>This card has <code>--theme: dark</code> applied to the parent. We can now style its children.</p>
+  <button>I am a button</button>
+</div>
+
+```css
+@container (--theme: dark) {
+  .card {
+    background: royalblue;
+    border-color: navy;
+    color: white;
+  }
+
+  .card button {
+    border-color: navy;
+    background-color: dodgerblue;
+    color: white;
+  }
+}
+```
+
+You could take this further to apply states that might have to do with card interactions or types such as <code>--highlight: true</code> for a card that should be highlighted to stand out from the rest, or <code>--type: post</code> if you have content cards and want to style blog posts differently from videos or other types of content.
+
+If you write your styles using primarily custom properties, you can be even more succinct with higher-order variables by using them to update a series of other custom properties.
+
+## 4. Interactions in CSS
+
+One more way style queries can be really useful is integrating them with behaviors we already use CSS to style, such as `hover` and `focus` states. You can quickly and easily update a CSS custom property with a CSS state, and using the above technique, update a grouping of values in one place.
+
+```css
+/* update the theme on hover */
+.card:hover,
+.card:focus {
+  --theme: darkHover;
+}
+
+/* apply darkHover theme styles */
+@container (--theme: darkHover) {
+  .card {
+    background: dodgerblue;
+    border-color: navy;
+  }
+
+  .card button {
+    border-color: lightblue;
+    background-color: royalblue;
+  }
+}
+```
+
+<div class="demo-card demo-card-2" style="--theme: dark" data-theme="dark">
+  <figure>FPO</figure>
+  <p>This card has <code>--theme: dark</code> applied to the parent. We can now style its children.</p>
+  <button>I am a button</button>
+</div>
+
+## 5. Combinator queries
+
+If you want to get really crazy, you can even combine size queries with style queries to apply some really specific styling logic.
+
+For example, you can use the approach of higher-order variables to group styles (in this example a "highlight" card), with logic based on its intrinsic size:
+
+```css
+@container (min-width: 420px) and (--highlight: true) {
+  /* styles for only highlight components at a minmimum width of 420px */
+}
+```
+
+These are just some ideas on how to use style queries in ways that enable a better developer experience and more flexible component-owned styles. They really shine when integrated within a larger system where these components are reused in multiple places.
+
+<!-- Rest -->
+
 <style>
-  /* Article styles */
+.demo-card {
+  font-size: 80%;
+  background: aliceblue;
+  border: 1px solid lightblue;
+  max-width: 350px;
+  margin: 0 auto 1rem;
+  padding: 1rem;
+  transition-duration: 0.2s;
+}
+
+.demo-card figure {
+  aspect-ratio: 16 / 9;
+  margin: 0 0 1rem 0;
+  display: grid;
+  place-items: center;
+  background-color: lightpink;
+}
+
+.demo-card button {
+  background: white;
+  border: 1px solid lightblue;
+  padding: 0.5rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.demo-card[data-theme="dark"] {
+  background: royalblue;
+  border-color: navy;
+}
+
+.demo-card[data-theme="dark"] p {
+  color: white;
+}
+
+.demo-card[data-theme="dark"] button {
+  border-color: navy;
+  background-color: dodgerblue;
+  color: white;
+}
+
+.demo-card-2:hover,
+.demo-card-2:focus {
+  background: dodgerblue;
+  border-color: navy;
+}
+
+.demo-card-2:hover button,
+.demo-card-2:focus button {
+  border-color: lightblue;
+  background-color: royalblue;
+}
+
 </style>
