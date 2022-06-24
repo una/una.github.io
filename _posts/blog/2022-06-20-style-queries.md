@@ -13,7 +13,7 @@ header-bg: 'https://images.unsplash.com/photo-1583316174775-bd6dc0e9f298?ixlib=r
 subtitle: "Exploring when and how you would use style queries in your day-to-day work."
 ---
 
-You may have heard of [container queries](https://css-tricks.com/next-gen-css-container/) and the new [contain-level-3 spec](https://www.w3.org/TR/css-contain-3/) which is currently in [experimental browsers](https://caniuse.com/css-container-queries), but have you heard of style container queries, which are also a part of this (very exciting) spec? 
+You may have heard of [container queries](https://css-tricks.com/next-gen-css-container/) and the new [contain-level-3 spec](https://drafts.csswg.org/css-contain-3/) which is currently in [experimental browsers](https://caniuse.com/css-container-queries), but have you heard of style container queries, which are also a part of this (very exciting) spec? 
 
 **⚠️ Important Note:** While a part of the contain-level-3 spec, style queries are *not* landing in the initial implementation of container queries in Chromium and Webkit. Both browser engines currently plan to initially launch with size query and container query unit support.
 
@@ -54,10 +54,10 @@ You write container queries like so:
 
 ## Style Queries
 
-Much like size-based container queries, you can query the computed style of a parent element using [style queries](https://drafts.csswg.org/css-contain-3/#style-container):
+Much like size-based container queries, you can query the computed style of a parent element using [style queries](https://drafts.csswg.org/css-contain-3/#style-container). These must be wrapped in `style()` to differentiate style queries from size queries. Why? If you're querying `@container (min-width: 420px)`, you want to apply styles if the size is greater than or equal to 420px at any given time. If you're querying `@container style(min-width: 420px)`, you're looking for a declared style value of `min-width` to equal `420px`.
 
 ```
-@container (color: hotpink) {
+@container style(color: hotpink) {
   .card {
     /* styles to apply when the card container has a color of hotpink */
     /* I.e. change the background to white: */
@@ -83,7 +83,7 @@ If I have an element within it that I want to stand out using the <code>&lt;i&gt
 Regardless of the type of element (<code>span</code>, <code>i</code>, <code>p</code>, etc.), style queries let you look at the specific style of any parent element to make styling decisions. This enables "chained styles". *If style X, then apply style Y.* The code might look like:
 
 ```css
-@container (font-style: italic) {
+@container style(font-style: italic) {
   span,
   i,
   .etc {
@@ -103,7 +103,7 @@ This example shows color selection based on a parent's styles (including non-inh
 </div>
 
 ```css
-@container (border-color: lightblue) {
+@container style(border-color: lightblue) {
   button {
     border-color: royalblue;
   }
@@ -123,7 +123,7 @@ Taking that a step further, we can abstract these values to <a href="https://git
 </div>
 
 ```css
-@container (--theme: dark) {
+@container style(--theme: dark) {
   .card {
     background: royalblue;
     border-color: navy;
@@ -154,7 +154,7 @@ One more way style queries can be really useful is integrating them with behavio
 }
 
 /* apply darkHover theme styles */
-@container (--theme: darkHover) {
+@container style(--theme: darkHover) {
   .card {
     background: dodgerblue;
     border-color: navy;
@@ -180,7 +180,7 @@ If you want to get really crazy, you can even combine size queries with style qu
 For example, you can use the approach of higher-order variables to group styles (in this example a "highlight" card), with logic based on its intrinsic size:
 
 ```css
-@container (min-width: 420px) and (--highlight: true) {
+@container (min-width: 420px) and style(--highlight: true) {
   /* styles for only highlight components at a minmimum width of 420px */
 }
 ```
