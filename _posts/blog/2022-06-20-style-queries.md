@@ -69,7 +69,7 @@ Okay, but where does this actually become useful? There are 2 situations in whic
 
 ## 1. Immediate parent style queries
 
-As of this week's CSSWG resolution (June 22,2022), elements sre [style containers by default](https://github.com/w3c/csswg-drafts/issues/7066#issuecomment-1163348533). This means you can query an immediate parent to apply styles to a child. One example of where you would want to use an immediate parent style query is with inline text styling.
+As of this week's CSSWG resolution (June 22,2022), elements are [style containers by default](https://github.com/w3c/csswg-drafts/issues/7066#issuecomment-1163348533). This means you can query an immediate parent to apply styles to a child. One example of where you would want to use an immediate parent style query is with inline text styling.
 
 Say you want to make something stand out inline, <i>like an italicised quote in a paragraph</i>. The previous sentence is italic, and wrapped in an <code>&lt;i&gt;</code> tag. 
 
