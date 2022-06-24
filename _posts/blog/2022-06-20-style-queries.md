@@ -54,7 +54,9 @@ You write container queries like so:
 
 ## Style Queries
 
-Much like size-based container queries, you can query the computed style of a parent element using [style queries](https://drafts.csswg.org/css-contain-3/#style-container). These must be wrapped in `style()` to differentiate style queries from size queries. Why? If you're querying `@container (min-width: 420px)`, you want to apply styles if the size is greater than or equal to 420px at any given time. If you're querying `@container style(min-width: 420px)`, you're looking for a declared style value of `min-width` to equal `420px`.
+Much like size-based container queries, you can query the computed style of a parent element using [style queries](https://drafts.csswg.org/css-contain-3/#style-container). These must be wrapped in `style()` to differentiate style queries from size queries.
+
+Why? If you're querying `@container (min-width: 420px)`, you want to apply styles if the *rendered size* is greater than or equal to 420px at any given time. If you're querying `@container style(min-width: 420px)`, you're looking for a *computed value* of `min-width` to equal `420px`. The style query looks at the computed *style* value -- not the value of the element when it's rendered on the page. Style and size are different types of [CSS containment](https://developer.mozilla.org/en-US/docs/Web/CSS/contain). 
 
 ```
 @container style(color: hotpink) {
