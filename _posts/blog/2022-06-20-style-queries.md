@@ -2,7 +2,7 @@
 layout: post
 title: "Style Queries"
 permalink: /style-queries/
-date: '2022-06-23'
+date: '2022-06-24'
 comments: true
 tags:
 - css
@@ -10,14 +10,14 @@ tags:
 - container queries
 - 2022
 header-bg: 'https://images.unsplash.com/photo-1583316174775-bd6dc0e9f298?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
-subtitle: "TBD."
+subtitle: "Exploring when and how you would use style queries in your day-to-day work."
 ---
 
 You may have heard of [container queries](https://css-tricks.com/next-gen-css-container/) and the new [contain-level-3 spec](https://www.w3.org/TR/css-contain-3/) landing in [browsers](https://caniuse.com/css-container-queries) soon, but have you heard of style container queries, which are also a part of this (very exciting) spec? 
 
-**⚠️ Note:** Style queries are not landing in the initial implementations for Chromium and Webkit. Both browsers will launch with size queries and container query units.
+**⚠️ Note:** Style queries are *not* landing in the initial implementations of Chromium and Webkit. Both browsers will launch with size queries and container query units.
 
-Style queries let you query the *style* of any parent element within a page and apply styles to its children based on the styles of its parent. This sounds really cool, but in practice, why would you use this over something like a class or data attribute to apply the styles (both of which are much more performant than a container query)?. So I wanted to investigate *why* and *when* style queries really make sense to use.
+Style queries let you query the *style* of any parent element within a page and apply styles to its children based on the styles of its parent. This sounds really cool, but in practice, why would you use this over something like a class or data attribute to apply the styles (both of which are much more performant than a container query)?. I want to investigate *why* and *when* style queries really make sense to use, and provide a capability previously unavailable to us.
 
 ## Container Queries: a quick summary
 
@@ -35,6 +35,7 @@ You write container queries like so:
 
 ```
 .parent {
+  /* query the inline-direction size of this parent */
   container-type: inline-size;
 }
 ```
@@ -65,11 +66,11 @@ Much like size-based container queries, you can query the computed style of a pa
 }
 ```
 
-Okay, but where does this actually become useful? There are 2 situations in which you can use style queries in a way that you can't elsewhere.
+Okay, but where does this actually become useful? There are a few situations in which style queries provide unique capabilities.
 
 ## 1. Immediate parent style queries
 
-As of this week's CSSWG resolution (June 22,2022), elements are [style containers by default](https://github.com/w3c/csswg-drafts/issues/7066#issuecomment-1163348533). This means you can query an immediate parent to apply styles to a child. One example of where you would want to use an immediate parent style query is with inline text styling.
+As of this week's CSSWG resolution (June 22,2022), unlike with size queries, where you need to set `container-type`, all elements are [style containers by default](https://github.com/w3c/csswg-drafts/issues/7066#issuecomment-1163348533). This means you can query an immediate parent to apply styles to a child. One example of where you would want to use an immediate parent style query is with inline text styling.
 
 Say you want to make something stand out inline, <i>like an italicised quote in a paragraph</i>. The previous sentence is italic, and wrapped in an <code>&lt;i&gt;</code> tag. 
 
@@ -93,7 +94,7 @@ Regardless of the type of element (<code>span</code>, <code>i</code>, <code>p</c
 
 ## 2. Styling non-inheritable properties
 
-This example shows color selection based on a parent's styles (including non-inherited styles). <code>border-color</code> is an example of a property that doesn't inherit. With style queries, we can query a parent's non-inheritable styles to apply to its children. For example, we can query <code>border-color</code> (or even <code>background</code> — see <a href="https://github.com/w3c/csswg-drafts/issues/5292">currentBackgroundColor proposal</a>) to apply styles to the button:
+This example shows color selection based on a parent's styles (including non-inherited styles). <code>border-color</code> is an example of a property that doesn't inherit. With style queries, we can query a parent's non-inheritable styles to apply to its children. For example, we can query <code>border-color</code> to apply styles to the button:
 
 <div class="demo-card">
   <figure>FPO</figure>
@@ -104,14 +105,16 @@ This example shows color selection based on a parent's styles (including non-inh
 ```css
 @container (border-color: lightblue) {
   button {
-    border-color: lightblue;
+    border-color: royalblue;
   }
 }
 ```
 
-## 3. Grouping styles with custom properties
+Now, when the card has a `lightblue` border color, we want to set the button within the card's border color to `royalblue`. This kind of chaining is something you couldn't do with custom properties, since they're two distinct values.
 
-Taking that a step further, we can abstract these values to <a href="https://github.com/w3c/csswg-drafts/issues/5624">higher-level variables</a> like <code>--theme: light</code> or <code>--theme: dark</code>, and apply the styles throughout the card:
+## 3. Grouping styles with higher-order variables
+
+Taking that a step further, we can abstract these values to <a href="https://github.com/w3c/csswg-drafts/issues/5624">higher-order variables</a> like <code>--theme: light</code> or <code>--theme: dark</code>, and apply the styles throughout the card:
 
 <div class="demo-card" style="--theme: dark" data-theme="dark">
   <figure>FPO</figure>
@@ -141,7 +144,7 @@ If you write your styles using primarily custom properties, you can be even more
 
 ## 4. Interactions in CSS
 
-One more way style queries can be really useful is integrating them with behaviors we already use CSS to style, such as `hover` and `focus` states. You can quickly and easily update a CSS custom property with a CSS state, and using the above technique, update a grouping of values in one place.
+One more way style queries can be really useful is integrating them with behaviors we already use CSS to style, such as `:hover` and `:focus` states. You can quickly and easily update a CSS custom property with a CSS state, and using the above technique, update a grouping of values in one place.
 
 ```css
 /* update the theme on hover */
@@ -182,7 +185,13 @@ For example, you can use the approach of higher-order variables to group styles 
 }
 ```
 
-These are just some ideas on how to use style queries in ways that enable a better developer experience and more flexible component-owned styles. They really shine when integrated within a larger system where these components are reused in multiple places.
+These are just some ideas on how to use style queries in ways that enable a better developer experience and more flexible component-owned styles. They really shine when integrated within a larger system where these components are reused in multiple places. For more, check out:
+
+- [MDN Docs on Container Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Container_Queries)
+- [Designing in the Browser: Container Queries](https://web.dev/shows/designing-in-the-browser/gCNMyYr7F6w/)
+- [Designing in the Browser: Macro & Micro Layouts](https://web.dev/shows/designing-in-the-browser/sdjT0K4sR4k/)
+- [Next Gen CSS: @container](https://css-tricks.com/next-gen-css-container/)
+
 
 <!-- Rest -->
 
@@ -207,7 +216,7 @@ These are just some ideas on how to use style queries in ways that enable a bett
 
 .demo-card button {
   background: white;
-  border: 1px solid lightblue;
+  border: 1px solid royalblue;
   padding: 0.5rem;
   display: block;
   margin: 0 auto;
