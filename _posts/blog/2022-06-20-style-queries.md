@@ -2,7 +2,7 @@
 layout: post
 title: "Style Queries"
 permalink: /style-queries/
-date: '2022-06-24'
+date: '2022-06-27'
 comments: true
 tags:
 - css
@@ -15,7 +15,11 @@ subtitle: "Exploring when and how you would use style queries in your day-to-day
 
 You may have heard of [container queries](https://css-tricks.com/next-gen-css-container/) and the new [contain-level-3 spec](https://drafts.csswg.org/css-contain-3/) which is currently in [experimental browsers](https://caniuse.com/css-container-queries), but have you heard of style container queries, which are also a part of this (very exciting) spec? 
 
-**⚠️ Important Note:** While a part of the contain-level-3 spec, style queries are *not* landing in the initial implementation of container queries in Chromium and Webkit. Both browser engines currently plan to initially launch with size query and container query unit support.
+<hr style="border-top: 2px solid #0e9daf; border-bottom: none;">
+
+**⚠️ Important Note:** While a part of the contain-level-3 spec, style queries are *not* landing in the initial implementations of container queries in Chromium and Webkit. [Both browser engines](https://webkit.org/blog/12522/release-notes-for-safari-technology-preview-142/) currently [plan to ship](https://groups.google.com/a/chromium.org/g/blink-dev/c/gwzxnTJDLJ8) with size query and container query unit support <span style="font-size: 80%; vertical-align: top"><a href="https://twitter.com/jensimmons/status/1506969133509980163">1</a></span>.
+
+<hr style="border-top: 2px solid #0e9daf; border-bottom: none;">
 
 Style queries let you query the *style* of any parent element within a page and apply styles to its children based on the styles of its parent. This sounds really cool, but in practice, why would you use this over something like a class or data attribute to apply the styles (both of which are much more performant than a container query)?. I want to investigate *why* and *when* style queries really make sense to use, and provide a capability previously unavailable to us.
 
