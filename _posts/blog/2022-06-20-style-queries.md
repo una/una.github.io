@@ -102,11 +102,38 @@ Regardless of the type of element (<code>span</code>, <code>i</code>, <code>p</c
 
 This example shows color selection based on a parent's styles (including non-inherited styles). <code>border-color</code> is an example of a property that doesn't inherit. With style queries, we can query a parent's non-inheritable styles to apply to its children. For example, we can query <code>border-color</code> to apply styles to the button:
 
+```css
+@container style(border-color: lightblue) {
+  button {
+    border-color: lightblue;
+  }
+}
+```
+
 <div class="demo-card">
   <figure>FPO</figure>
   <p>This is some text within the card.</p>
-  <button>I am a button</button>
+  <button style="border-color: lightblue">I am a button</button>
 </div>
+
+We've now "inherited" the `lightblue` border-color and passed it on to button. 
+
+## 3. Chained styles
+
+This is neat, but you could do the above example with a custom property in both places:
+
+
+```
+.card {
+  border-color: var(--colorBorder);
+}
+
+.card button {
+  border-color: var(--colorBorder);
+}
+```
+
+So let's take it a step further and do something we can't do with a shared custom property: apply unique values. instead of using the same value, adjust the value to `royalblue`.
 
 ```css
 @container style(border-color: lightblue) {
@@ -116,9 +143,15 @@ This example shows color selection based on a parent's styles (including non-inh
 }
 ```
 
+<div class="demo-card">
+  <figure>FPO</figure>
+  <p>This is some text within the card.</p>
+  <button>I am a button</button>
+</div>
+
 Now, when the card has a `lightblue` border color, we want to set the button within the card's border color to `royalblue`. This kind of chaining is something you couldn't do with custom properties, since they're two distinct values.
 
-## 3. Grouping styles with higher-order variables
+## 4. Grouping styles with higher-order variables
 
 Taking that a step further, we can abstract these values to <a href="https://github.com/w3c/csswg-drafts/issues/5624">higher-order variables</a> like <code>--theme: light</code> or <code>--theme: dark</code>, and apply the styles throughout the card:
 
@@ -148,7 +181,7 @@ You could take this further to apply states that might have to do with card inte
 
 If you write your styles using primarily custom properties, you can be even more succinct with higher-order variables by using them to update a series of other custom properties.
 
-## 4. Interactions in CSS
+## 5. Interactions in CSS
 
 One more way style queries can be really useful is integrating them with behaviors we already use CSS to style, such as `:hover` and `:focus` states. You can quickly and easily update a CSS custom property with a CSS state, and using the above technique, update a grouping of values in one place.
 
@@ -179,7 +212,7 @@ One more way style queries can be really useful is integrating them with behavio
   <button>I am a button</button>
 </div>
 
-## 5. Combinator queries
+## 6. Combinator queries
 
 If you want to get really crazy, you can even combine size queries with style queries to apply some really specific styling logic.
 
@@ -190,6 +223,8 @@ For example, you can use the approach of higher-order variables to group styles 
   /* styles for only highlight components at a minmimum width of 420px */
 }
 ```
+
+## Conclusion
 
 These are just some ideas on how to use style queries in ways that enable a better developer experience and more flexible component-owned styles. They really shine when integrated within a larger system where these components are reused in multiple places. For more, check out:
 
