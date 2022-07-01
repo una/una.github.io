@@ -6,7 +6,16 @@ title: Speaking
 <div class="speaking center">
 <h1>Upcoming Events</h1>
 <p class="notice"><a href="mailto:una.kravets@gmail.com">Email me</a> to set something up! Also check out my web video series <a href="https://www.youtube.com/watch?v=YK8GZBx3hpg&list=PLNYkxOF6rcIDI0QtJvW6vKonTxn6azCsD">Designing in the Brower</a>, the <a href="https://pod.link/1501895136">CSS Podcast</a>, and the <a href="https://spec.fm/podcasts/toolsday">Toolsday Podcast</a>.</p>
-<ul class="event-list--upcoming">
+<ul class="event-list--upcoming"></ul>
+
+<div class="speaking center">
+    <h1>Video Series</h1>
+    <div class="video-list">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLJNmSoJ620Czy6T49pa6ZiJAXe2AIP6iC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLNYkxOF6rcIDI0QtJvW6vKonTxn6azCsD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+
 {% for post in site.posts reversed %}
     {% if post.upcoming %}
         <li>
@@ -16,7 +25,7 @@ title: Speaking
  {% endfor %}
 </ul>
 
-<h1>Previous Talks</h1>
+<h1>Conference Talks</h1>
 <ul class="event-list--past">
 {% for post in site.posts %}
     {% if post.event %}

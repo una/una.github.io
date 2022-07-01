@@ -328,3 +328,21 @@ ol {
 		width: 100%;
 	}
 }
+
+.video-list {
+	max-width: 1200px; 
+	display: flex; 
+	flex-direction: row;
+	width: 100vw; 
+	gap: 2rem; 
+	justify-content: center; 
+	margin: 0 auto;
+
+	@include breakpoint(md) {
+		flex-direction: column;
+
+		iframe {
+			margin: 0 auto;
+		}
+	}
+}
