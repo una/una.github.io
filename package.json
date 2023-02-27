@@ -44,7 +44,7 @@
   },
   "homepage": "http://una.github.io",
   "dependencies": {
-    "simple-jekyll-search": "^1.7.7",
+    "simple-jekyll-search": "^1.10.0",
     "snyk": "^1.305.1"
   },
   "snyk": true
